@@ -1,0 +1,2317 @@
+{
+  "version": 1,
+  "source": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/.contrib/.db/standard/00%20-%20DB/ReagentsDB.Retail.lua",
+  "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+  "license": "MIT",
+  "sha256": "a3714de637a835d9a2df5b0ceca6e5c2d48377b4fb12398f15f20f5f511d3ff2",
+  "reviewedAt": "2026-10-24",
+  "recipeSpells": [
+    {
+      "craftingSpellId": 21940,
+      "productItemId": 17716,
+      "reagents": [
+        {
+          "itemId": 4389,
+          "quantity": 4
+        },
+        {
+          "itemId": 3860,
+          "quantity": 8
+        },
+        {
+          "itemId": 3829,
+          "quantity": 1
+        },
+        {
+          "itemId": 17202,
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 23129,
+      "productItemId": 18660,
+      "reagents": [
+        {
+          "itemId": 15994,
+          "quantity": 2
+        },
+        {
+          "itemId": 3864,
+          "quantity": 1
+        },
+        {
+          "itemId": 10558,
+          "quantity": 1
+        },
+        {
+          "itemId": 10560,
+          "quantity": 1
+        },
+        {
+          "itemId": 10561,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 23486,
+      "productItemId": 18984,
+      "reagents": [
+        {
+          "itemId": 7077,
+          "quantity": 4
+        },
+        {
+          "itemId": 7910,
+          "quantity": 2
+        },
+        {
+          "itemId": 3860,
+          "quantity": 10
+        },
+        {
+          "itemId": 10586,
+          "quantity": 1
+        },
+        {
+          "itemId": 18631,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 23489,
+      "productItemId": 18986,
+      "reagents": [
+        {
+          "itemId": 7909,
+          "quantity": 4
+        },
+        {
+          "itemId": 7079,
+          "quantity": 2
+        },
+        {
+          "itemId": 3860,
+          "quantity": 12
+        },
+        {
+          "itemId": 9060,
+          "quantity": 1
+        },
+        {
+          "itemId": 7075,
+          "quantity": 4
+        },
+        {
+          "itemId": 18631,
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 30337,
+      "productItemId": 23767,
+      "reagents": [
+        {
+          "itemId": 23782,
+          "quantity": 2
+        },
+        {
+          "itemId": 23783,
+          "quantity": 2
+        },
+        {
+          "itemId": 23784,
+          "quantity": 1
+        },
+        {
+          "itemId": 10558,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 36954,
+      "productItemId": 30542,
+      "reagents": [
+        {
+          "itemId": 23826,
+          "quantity": 2
+        },
+        {
+          "itemId": 23783,
+          "quantity": 4
+        },
+        {
+          "itemId": 23784,
+          "quantity": 1
+        },
+        {
+          "itemId": 23786,
+          "quantity": 1
+        },
+        {
+          "itemId": 21884,
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 36955,
+      "productItemId": 30544,
+      "reagents": [
+        {
+          "itemId": 23783,
+          "quantity": 4
+        },
+        {
+          "itemId": 23784,
+          "quantity": 1
+        },
+        {
+          "itemId": 23786,
+          "quantity": 1
+        },
+        {
+          "itemId": 23787,
+          "quantity": 2
+        },
+        {
+          "itemId": 22451,
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 56472,
+      "productItemId": 40768,
+      "reagents": [
+        {
+          "itemId": 35623,
+          "quantity": 8
+        },
+        {
+          "itemId": 36913,
+          "quantity": 8
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 56473,
+      "productItemId": 40895,
+      "reagents": [
+        {
+          "itemId": 41163,
+          "quantity": 6
+        },
+        {
+          "itemId": 39681,
+          "quantity": 2
+        },
+        {
+          "itemId": 34052,
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 67920,
+      "productItemId": 48933,
+      "reagents": [
+        {
+          "itemId": 35622,
+          "quantity": 2
+        },
+        {
+          "itemId": 35623,
+          "quantity": 2
+        },
+        {
+          "itemId": 35627,
+          "quantity": 2
+        },
+        {
+          "itemId": 41163,
+          "quantity": 8
+        },
+        {
+          "itemId": 36860,
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 84421,
+      "productItemId": 60854,
+      "reagents": [
+        {
+          "itemId": 67749,
+          "quantity": 5
+        },
+        {
+          "itemId": 53039,
+          "quantity": 5
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 95705,
+      "productItemId": 40727,
+      "reagents": [
+        {
+          "itemId": 67749,
+          "quantity": 6
+        },
+        {
+          "itemId": 53039,
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 127129,
+      "productItemId": 87214,
+      "reagents": [
+        {
+          "itemId": 76061,
+          "quantity": 4
+        },
+        {
+          "itemId": 76139,
+          "quantity": 4
+        },
+        {
+          "itemId": 76140,
+          "quantity": 4
+        },
+        {
+          "itemId": 72095,
+          "quantity": 4
+        },
+        {
+          "itemId": 72096,
+          "quantity": 4
+        },
+        {
+          "itemId": 72104,
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 127132,
+      "productItemId": 87215,
+      "reagents": [
+        {
+          "itemId": 76061,
+          "quantity": 2
+        },
+        {
+          "itemId": 72095,
+          "quantity": 12
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 162205,
+      "productItemId": 109167,
+      "reagents": [
+        {
+          "itemId": 111366,
+          "quantity": 50
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 162206,
+      "productItemId": 109183,
+      "reagents": [
+        {
+          "itemId": 111366,
+          "quantity": 50
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 162214,
+      "productItemId": 108745,
+      "reagents": [
+        {
+          "itemId": 111366,
+          "quantity": 50
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 162216,
+      "productItemId": 112059,
+      "reagents": [
+        {
+          "itemId": 111366,
+          "quantity": 50
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 162218,
+      "productItemId": 111821,
+      "reagents": [
+        {
+          "itemId": 111366,
+          "quantity": 100
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 191078,
+      "productItemId": 128536,
+      "reagents": [
+        {
+          "itemId": 124442,
+          "quantity": 1
+        },
+        {
+          "itemId": 124440,
+          "quantity": 100
+        },
+        {
+          "itemId": 124124,
+          "quantity": 5
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 192804,
+      "productItemId": 129211,
+      "reagents": [
+        {
+          "itemId": 129032,
+          "quantity": 50
+        },
+        {
+          "itemId": 129034,
+          "quantity": 24
+        },
+        {
+          "itemId": 39354,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 194775,
+      "productItemId": 129961,
+      "reagents": [
+        {
+          "itemId": 124113,
+          "quantity": 50
+        },
+        {
+          "itemId": 124116,
+          "quantity": 5
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 194776,
+      "productItemId": 129960,
+      "reagents": [
+        {
+          "itemId": 124113,
+          "quantity": 50
+        },
+        {
+          "itemId": 124116,
+          "quantity": 5
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 194778,
+      "productItemId": 129958,
+      "reagents": [
+        {
+          "itemId": 124113,
+          "quantity": 50
+        },
+        {
+          "itemId": 124116,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 194779,
+      "productItemId": 129956,
+      "reagents": [
+        {
+          "itemId": 124113,
+          "quantity": 50
+        },
+        {
+          "itemId": 124116,
+          "quantity": 10
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 195882,
+      "productItemId": 130251,
+      "reagents": [
+        {
+          "itemId": 124444,
+          "quantity": 10
+        },
+        {
+          "itemId": 130178,
+          "quantity": 3
+        },
+        {
+          "itemId": 130179,
+          "quantity": 3
+        },
+        {
+          "itemId": 130180,
+          "quantity": 3
+        },
+        {
+          "itemId": 130181,
+          "quantity": 3
+        },
+        {
+          "itemId": 130182,
+          "quantity": 3
+        },
+        {
+          "itemId": 130183,
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 195883,
+      "productItemId": 130254,
+      "reagents": [
+        {
+          "itemId": 130172,
+          "quantity": 10
+        },
+        {
+          "itemId": 130175,
+          "quantity": 10
+        },
+        {
+          "itemId": 124124,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 198980,
+      "productItemId": 132518,
+      "reagents": [
+        {
+          "itemId": 123918,
+          "quantity": 50
+        },
+        {
+          "itemId": 123919,
+          "quantity": 50
+        },
+        {
+          "itemId": 124444,
+          "quantity": 5
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 232323,
+      "productItemId": 142542,
+      "reagents": [
+        {
+          "itemId": 142543,
+          "quantity": 10
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 247744,
+      "productItemId": 151652,
+      "reagents": [
+        {
+          "itemId": 151568,
+          "quantity": 2
+        },
+        {
+          "itemId": 151564,
+          "quantity": 30
+        },
+        {
+          "itemId": 136633,
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 298930,
+      "productItemId": 168667,
+      "reagents": [
+        {
+          "itemId": 152579,
+          "quantity": 10
+        },
+        {
+          "itemId": 154123,
+          "quantity": 3
+        },
+        {
+          "itemId": 154124,
+          "quantity": 3
+        },
+        {
+          "itemId": 163569,
+          "quantity": 25
+        },
+        {
+          "itemId": 152513,
+          "quantity": 5
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 299105,
+      "productItemId": 168807,
+      "reagents": [
+        {
+          "itemId": 152579,
+          "quantity": 25
+        },
+        {
+          "itemId": 163569,
+          "quantity": 50
+        },
+        {
+          "itemId": 160502,
+          "quantity": 5
+        },
+        {
+          "itemId": 152512,
+          "quantity": 15
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 299106,
+      "productItemId": 168808,
+      "reagents": [
+        {
+          "itemId": 152579,
+          "quantity": 25
+        },
+        {
+          "itemId": 163569,
+          "quantity": 50
+        },
+        {
+          "itemId": 160502,
+          "quantity": 5
+        },
+        {
+          "itemId": 152512,
+          "quantity": 15
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 299411,
+      "productItemId": 168907,
+      "reagents": [
+        {
+          "itemId": 169610,
+          "quantity": 4
+        },
+        {
+          "itemId": 166970,
+          "quantity": 5
+        },
+        {
+          "itemId": 168327,
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 310535,
+      "productItemId": 172924,
+      "reagents": [
+        {
+          "itemId": 171833,
+          "quantity": 3
+        },
+        {
+          "itemId": 171829,
+          "quantity": 10
+        },
+        {
+          "itemId": 171830,
+          "quantity": 10
+        },
+        {
+          "itemId": 171831,
+          "quantity": 10
+        },
+        {
+          "itemId": 171832,
+          "quantity": 10
+        },
+        {
+          "itemId": 172934,
+          "quantity": 20
+        },
+        {
+          "itemId": 172936,
+          "quantity": 7
+        },
+        {
+          "itemId": 172937,
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 319109,
+      "productItemId": 175140,
+      "reagents": [
+        {
+          "itemId": 175141,
+          "quantity": 1
+        },
+        {
+          "itemId": 175142,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 354797,
+      "productItemId": 186686,
+      "reagents": [
+        {
+          "itemId": 172092,
+          "quantity": 14
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 354800,
+      "productItemId": 186702,
+      "reagents": [
+        {
+          "itemId": 172092,
+          "quantity": 20
+        },
+        {
+          "itemId": 177062,
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 355184,
+      "productItemId": 186973,
+      "reagents": [
+        {
+          "itemId": 172231,
+          "quantity": 2
+        },
+        {
+          "itemId": 172230,
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 355354,
+      "productItemId": 186985,
+      "reagents": [
+        {
+          "itemId": 183951,
+          "quantity": 3
+        },
+        {
+          "itemId": 172092,
+          "quantity": 18
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 374522,
+      "productItemId": 193032,
+      "reagents": [
+        {
+          "itemId": 193053,
+          "quantity": 75
+        },
+        {
+          "itemId": 201405,
+          "quantity": 2
+        },
+        {
+          "itemId": 192852,
+          "quantity": 1
+        },
+        {
+          "itemId": 192853,
+          "quantity": 1
+        },
+        {
+          "itemId": 192855,
+          "quantity": 1
+        },
+        {
+          "itemId": 193369,
+          "quantity": 15
+        },
+        {
+          "itemId": 193370,
+          "quantity": 15
+        },
+        {
+          "itemId": 193368,
+          "quantity": 15
+        },
+        {
+          "itemId": 193929,
+          "quantity": 10
+        },
+        {
+          "itemId": 193930,
+          "quantity": 10
+        },
+        {
+          "itemId": 193931,
+          "quantity": 10
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 374525,
+      "productItemId": 193033,
+      "reagents": [
+        {
+          "itemId": 193029,
+          "quantity": 1
+        },
+        {
+          "itemId": 193031,
+          "quantity": 1
+        },
+        {
+          "itemId": 201406,
+          "quantity": 1
+        },
+        {
+          "itemId": 193379,
+          "quantity": 1
+        },
+        {
+          "itemId": 192869,
+          "quantity": 1
+        },
+        {
+          "itemId": 192870,
+          "quantity": 1
+        },
+        {
+          "itemId": 193378,
+          "quantity": 1
+        },
+        {
+          "itemId": 193030,
+          "quantity": 1
+        },
+        {
+          "itemId": 192887,
+          "quantity": 1
+        },
+        {
+          "itemId": 192871,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 375171,
+      "productItemId": 193476,
+      "reagents": [
+        {
+          "itemId": 193208,
+          "quantity": 200
+        },
+        {
+          "itemId": 201399,
+          "quantity": 1
+        },
+        {
+          "itemId": 193210,
+          "quantity": 200
+        },
+        {
+          "itemId": 193218,
+          "quantity": 20
+        },
+        {
+          "itemId": 193224,
+          "quantity": 15
+        },
+        {
+          "itemId": 193223,
+          "quantity": 15
+        },
+        {
+          "itemId": 193222,
+          "quantity": 15
+        },
+        {
+          "itemId": 193217,
+          "quantity": 20
+        },
+        {
+          "itemId": 193216,
+          "quantity": 20
+        },
+        {
+          "itemId": 193211,
+          "quantity": 200
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 375172,
+      "productItemId": 193478,
+      "reagents": [
+        {
+          "itemId": 193053,
+          "quantity": 100
+        },
+        {
+          "itemId": 193208,
+          "quantity": 200
+        },
+        {
+          "itemId": 193210,
+          "quantity": 200
+        },
+        {
+          "itemId": 193218,
+          "quantity": 30
+        },
+        {
+          "itemId": 193217,
+          "quantity": 30
+        },
+        {
+          "itemId": 193216,
+          "quantity": 30
+        },
+        {
+          "itemId": 193211,
+          "quantity": 200
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 376565,
+      "productItemId": 194056,
+      "reagents": [
+        {
+          "itemId": 193053,
+          "quantity": 75
+        },
+        {
+          "itemId": 192095,
+          "quantity": 8
+        },
+        {
+          "itemId": 192097,
+          "quantity": 8
+        },
+        {
+          "itemId": 192096,
+          "quantity": 8
+        },
+        {
+          "itemId": 193929,
+          "quantity": 6
+        },
+        {
+          "itemId": 193930,
+          "quantity": 6
+        },
+        {
+          "itemId": 193931,
+          "quantity": 6
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 376566,
+      "productItemId": 194052,
+      "reagents": [
+        {
+          "itemId": 192095,
+          "quantity": 4
+        },
+        {
+          "itemId": 192097,
+          "quantity": 4
+        },
+        {
+          "itemId": 192096,
+          "quantity": 4
+        },
+        {
+          "itemId": 190331,
+          "quantity": 5
+        },
+        {
+          "itemId": 193929,
+          "quantity": 12
+        },
+        {
+          "itemId": 193930,
+          "quantity": 12
+        },
+        {
+          "itemId": 193931,
+          "quantity": 12
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 376567,
+      "productItemId": 194057,
+      "reagents": [
+        {
+          "itemId": 193053,
+          "quantity": 25
+        },
+        {
+          "itemId": 192095,
+          "quantity": 5
+        },
+        {
+          "itemId": 201401,
+          "quantity": 5
+        },
+        {
+          "itemId": 193937,
+          "quantity": 1
+        },
+        {
+          "itemId": 192097,
+          "quantity": 5
+        },
+        {
+          "itemId": 192096,
+          "quantity": 5
+        },
+        {
+          "itemId": 193935,
+          "quantity": 1
+        },
+        {
+          "itemId": 193936,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 376568,
+      "productItemId": 194058,
+      "reagents": [
+        {
+          "itemId": 193053,
+          "quantity": 25
+        },
+        {
+          "itemId": 192095,
+          "quantity": 5
+        },
+        {
+          "itemId": 193940,
+          "quantity": 1
+        },
+        {
+          "itemId": 193939,
+          "quantity": 1
+        },
+        {
+          "itemId": 201401,
+          "quantity": 5
+        },
+        {
+          "itemId": 192097,
+          "quantity": 5
+        },
+        {
+          "itemId": 192096,
+          "quantity": 5
+        },
+        {
+          "itemId": 193938,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 376569,
+      "productItemId": 194059,
+      "reagents": [
+        {
+          "itemId": 192095,
+          "quantity": 20
+        },
+        {
+          "itemId": 193926,
+          "quantity": 50
+        },
+        {
+          "itemId": 192097,
+          "quantity": 20
+        },
+        {
+          "itemId": 192096,
+          "quantity": 20
+        },
+        {
+          "itemId": 193927,
+          "quantity": 50
+        },
+        {
+          "itemId": 193928,
+          "quantity": 50
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 376570,
+      "productItemId": 194060,
+      "reagents": [
+        {
+          "itemId": 192095,
+          "quantity": 20
+        },
+        {
+          "itemId": 201404,
+          "quantity": 4
+        },
+        {
+          "itemId": 193926,
+          "quantity": 40
+        },
+        {
+          "itemId": 192097,
+          "quantity": 20
+        },
+        {
+          "itemId": 192096,
+          "quantity": 20
+        },
+        {
+          "itemId": 193927,
+          "quantity": 40
+        },
+        {
+          "itemId": 193928,
+          "quantity": 40
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 381547,
+      "productItemId": 197719,
+      "reagents": [
+        {
+          "itemId": 193218,
+          "quantity": 2
+        },
+        {
+          "itemId": 193254,
+          "quantity": 5
+        },
+        {
+          "itemId": 194862,
+          "quantity": 4
+        },
+        {
+          "itemId": 194863,
+          "quantity": 4
+        },
+        {
+          "itemId": 194864,
+          "quantity": 4
+        },
+        {
+          "itemId": 193217,
+          "quantity": 2
+        },
+        {
+          "itemId": 193216,
+          "quantity": 2
+        },
+        {
+          "itemId": 198615,
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 382336,
+      "productItemId": 201930,
+      "reagents": [
+        {
+          "itemId": 190450,
+          "quantity": 3
+        },
+        {
+          "itemId": 198183,
+          "quantity": 6
+        },
+        {
+          "itemId": 198184,
+          "quantity": 6
+        },
+        {
+          "itemId": 198185,
+          "quantity": 6
+        },
+        {
+          "itemId": 198189,
+          "quantity": 4
+        },
+        {
+          "itemId": 198190,
+          "quantity": 4
+        },
+        {
+          "itemId": 198191,
+          "quantity": 4
+        },
+        {
+          "itemId": 198198,
+          "quantity": 1
+        },
+        {
+          "itemId": 198200,
+          "quantity": 1
+        },
+        {
+          "itemId": 198199,
+          "quantity": 1
+        },
+        {
+          "itemId": 137642,
+          "quantity": 15
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 382367,
+      "productItemId": 198156,
+      "reagents": [
+        {
+          "itemId": 198183,
+          "quantity": 2
+        },
+        {
+          "itemId": 198184,
+          "quantity": 2
+        },
+        {
+          "itemId": 198185,
+          "quantity": 2
+        },
+        {
+          "itemId": 198186,
+          "quantity": 1
+        },
+        {
+          "itemId": 198187,
+          "quantity": 1
+        },
+        {
+          "itemId": 198192,
+          "quantity": 2
+        },
+        {
+          "itemId": 198193,
+          "quantity": 2
+        },
+        {
+          "itemId": 198195,
+          "quantity": 3
+        },
+        {
+          "itemId": 198196,
+          "quantity": 3
+        },
+        {
+          "itemId": 198198,
+          "quantity": 1
+        },
+        {
+          "itemId": 198200,
+          "quantity": 1
+        },
+        {
+          "itemId": 198199,
+          "quantity": 1
+        },
+        {
+          "itemId": 198197,
+          "quantity": 3
+        },
+        {
+          "itemId": 198194,
+          "quantity": 2
+        },
+        {
+          "itemId": 198188,
+          "quantity": 1
+        },
+        {
+          "itemId": 190324,
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 382368,
+      "productItemId": 198264,
+      "reagents": [
+        {
+          "itemId": 198183,
+          "quantity": 20
+        },
+        {
+          "itemId": 198184,
+          "quantity": 20
+        },
+        {
+          "itemId": 198185,
+          "quantity": 20
+        },
+        {
+          "itemId": 198186,
+          "quantity": 3
+        },
+        {
+          "itemId": 198187,
+          "quantity": 3
+        },
+        {
+          "itemId": 198195,
+          "quantity": 4
+        },
+        {
+          "itemId": 198196,
+          "quantity": 4
+        },
+        {
+          "itemId": 198198,
+          "quantity": 1
+        },
+        {
+          "itemId": 198200,
+          "quantity": 1
+        },
+        {
+          "itemId": 198199,
+          "quantity": 1
+        },
+        {
+          "itemId": 198197,
+          "quantity": 4
+        },
+        {
+          "itemId": 198188,
+          "quantity": 3
+        },
+        {
+          "itemId": 193379,
+          "quantity": 1
+        },
+        {
+          "itemId": 193378,
+          "quantity": 1
+        },
+        {
+          "itemId": 192887,
+          "quantity": 1
+        },
+        {
+          "itemId": 193919,
+          "quantity": 3
+        },
+        {
+          "itemId": 193921,
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 382369,
+      "productItemId": 198206,
+      "reagents": [
+        {
+          "itemId": 198183,
+          "quantity": 20
+        },
+        {
+          "itemId": 198184,
+          "quantity": 20
+        },
+        {
+          "itemId": 198185,
+          "quantity": 20
+        },
+        {
+          "itemId": 198186,
+          "quantity": 3
+        },
+        {
+          "itemId": 198187,
+          "quantity": 3
+        },
+        {
+          "itemId": 198195,
+          "quantity": 4
+        },
+        {
+          "itemId": 198196,
+          "quantity": 4
+        },
+        {
+          "itemId": 198198,
+          "quantity": 1
+        },
+        {
+          "itemId": 198200,
+          "quantity": 1
+        },
+        {
+          "itemId": 198199,
+          "quantity": 1
+        },
+        {
+          "itemId": 198197,
+          "quantity": 4
+        },
+        {
+          "itemId": 198188,
+          "quantity": 3
+        },
+        {
+          "itemId": 193379,
+          "quantity": 1
+        },
+        {
+          "itemId": 193378,
+          "quantity": 1
+        },
+        {
+          "itemId": 193362,
+          "quantity": 3
+        },
+        {
+          "itemId": 192887,
+          "quantity": 1
+        },
+        {
+          "itemId": 193920,
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 382370,
+      "productItemId": 198227,
+      "reagents": [
+        {
+          "itemId": 198183,
+          "quantity": 6
+        },
+        {
+          "itemId": 198184,
+          "quantity": 6
+        },
+        {
+          "itemId": 198185,
+          "quantity": 6
+        },
+        {
+          "itemId": 198186,
+          "quantity": 3
+        },
+        {
+          "itemId": 198187,
+          "quantity": 3
+        },
+        {
+          "itemId": 198195,
+          "quantity": 2
+        },
+        {
+          "itemId": 198196,
+          "quantity": 2
+        },
+        {
+          "itemId": 198198,
+          "quantity": 1
+        },
+        {
+          "itemId": 198200,
+          "quantity": 1
+        },
+        {
+          "itemId": 198199,
+          "quantity": 1
+        },
+        {
+          "itemId": 198197,
+          "quantity": 2
+        },
+        {
+          "itemId": 198188,
+          "quantity": 3
+        },
+        {
+          "itemId": 192862,
+          "quantity": 2
+        },
+        {
+          "itemId": 192863,
+          "quantity": 2
+        },
+        {
+          "itemId": 192865,
+          "quantity": 2
+        },
+        {
+          "itemId": 192876,
+          "quantity": 2
+        },
+        {
+          "itemId": 192877,
+          "quantity": 2
+        },
+        {
+          "itemId": 192878,
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 382371,
+      "productItemId": 192443,
+      "reagents": [
+        {
+          "itemId": 198183,
+          "quantity": 5
+        },
+        {
+          "itemId": 198184,
+          "quantity": 5
+        },
+        {
+          "itemId": 198185,
+          "quantity": 5
+        },
+        {
+          "itemId": 198189,
+          "quantity": 20
+        },
+        {
+          "itemId": 198190,
+          "quantity": 20
+        },
+        {
+          "itemId": 198191,
+          "quantity": 20
+        },
+        {
+          "itemId": 198195,
+          "quantity": 2
+        },
+        {
+          "itemId": 198196,
+          "quantity": 2
+        },
+        {
+          "itemId": 198198,
+          "quantity": 1
+        },
+        {
+          "itemId": 198200,
+          "quantity": 1
+        },
+        {
+          "itemId": 198229,
+          "quantity": 15
+        },
+        {
+          "itemId": 198230,
+          "quantity": 15
+        },
+        {
+          "itemId": 198228,
+          "quantity": 15
+        },
+        {
+          "itemId": 198199,
+          "quantity": 1
+        },
+        {
+          "itemId": 198197,
+          "quantity": 2
+        },
+        {
+          "itemId": 190321,
+          "quantity": 10
+        },
+        {
+          "itemId": 190327,
+          "quantity": 5
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 382408,
+      "productItemId": 198173,
+      "reagents": [
+        {
+          "itemId": 198183,
+          "quantity": 20
+        },
+        {
+          "itemId": 198184,
+          "quantity": 20
+        },
+        {
+          "itemId": 198185,
+          "quantity": 20
+        },
+        {
+          "itemId": 198186,
+          "quantity": 6
+        },
+        {
+          "itemId": 198187,
+          "quantity": 6
+        },
+        {
+          "itemId": 198192,
+          "quantity": 4
+        },
+        {
+          "itemId": 198193,
+          "quantity": 4
+        },
+        {
+          "itemId": 198195,
+          "quantity": 2
+        },
+        {
+          "itemId": 198196,
+          "quantity": 2
+        },
+        {
+          "itemId": 198198,
+          "quantity": 2
+        },
+        {
+          "itemId": 198200,
+          "quantity": 2
+        },
+        {
+          "itemId": 198199,
+          "quantity": 2
+        },
+        {
+          "itemId": 198197,
+          "quantity": 2
+        },
+        {
+          "itemId": 198194,
+          "quantity": 4
+        },
+        {
+          "itemId": 198188,
+          "quantity": 6
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 390855,
+      "productItemId": 200469,
+      "reagents": [
+        {
+          "itemId": 194123,
+          "quantity": 12
+        },
+        {
+          "itemId": 194124,
+          "quantity": 6
+        },
+        {
+          "itemId": 200113,
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 408230,
+      "productItemId": 204818,
+      "reagents": [
+        {
+          "itemId": 198183,
+          "quantity": 60
+        },
+        {
+          "itemId": 198184,
+          "quantity": 60
+        },
+        {
+          "itemId": 198185,
+          "quantity": 60
+        },
+        {
+          "itemId": 198186,
+          "quantity": 6
+        },
+        {
+          "itemId": 198187,
+          "quantity": 6
+        },
+        {
+          "itemId": 198192,
+          "quantity": 8
+        },
+        {
+          "itemId": 198193,
+          "quantity": 8
+        },
+        {
+          "itemId": 198195,
+          "quantity": 2
+        },
+        {
+          "itemId": 198196,
+          "quantity": 2
+        },
+        {
+          "itemId": 198198,
+          "quantity": 2
+        },
+        {
+          "itemId": 198200,
+          "quantity": 2
+        },
+        {
+          "itemId": 198199,
+          "quantity": 2
+        },
+        {
+          "itemId": 198197,
+          "quantity": 2
+        },
+        {
+          "itemId": 198194,
+          "quantity": 8
+        },
+        {
+          "itemId": 198188,
+          "quantity": 6
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 408231,
+      "productItemId": 205045,
+      "reagents": [
+        {
+          "itemId": 204463,
+          "quantity": 1
+        },
+        {
+          "itemId": 193369,
+          "quantity": 150
+        },
+        {
+          "itemId": 192866,
+          "quantity": 15
+        },
+        {
+          "itemId": 192867,
+          "quantity": 15
+        },
+        {
+          "itemId": 193370,
+          "quantity": 150
+        },
+        {
+          "itemId": 193368,
+          "quantity": 150
+        },
+        {
+          "itemId": 192885,
+          "quantity": 200
+        },
+        {
+          "itemId": 192883,
+          "quantity": 200
+        },
+        {
+          "itemId": 192868,
+          "quantity": 15
+        },
+        {
+          "itemId": 192884,
+          "quantity": 200
+        },
+        {
+          "itemId": 193920,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 416149,
+      "productItemId": 207092,
+      "reagents": [
+        {
+          "itemId": 198183,
+          "quantity": 60
+        },
+        {
+          "itemId": 198184,
+          "quantity": 60
+        },
+        {
+          "itemId": 198185,
+          "quantity": 60
+        },
+        {
+          "itemId": 198192,
+          "quantity": 12
+        },
+        {
+          "itemId": 198193,
+          "quantity": 12
+        },
+        {
+          "itemId": 198195,
+          "quantity": 6
+        },
+        {
+          "itemId": 198196,
+          "quantity": 6
+        },
+        {
+          "itemId": 198198,
+          "quantity": 5
+        },
+        {
+          "itemId": 198200,
+          "quantity": 5
+        },
+        {
+          "itemId": 197768,
+          "quantity": 10
+        },
+        {
+          "itemId": 198199,
+          "quantity": 5
+        },
+        {
+          "itemId": 198197,
+          "quantity": 6
+        },
+        {
+          "itemId": 198194,
+          "quantity": 12
+        },
+        {
+          "itemId": 193919,
+          "quantity": 5
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 435389,
+      "productItemId": 215145,
+      "reagents": [
+        {
+          "itemId": 210931,
+          "quantity": 50
+        },
+        {
+          "itemId": 210938,
+          "quantity": 30
+        },
+        {
+          "itemId": 213756,
+          "quantity": 200
+        },
+        {
+          "itemId": 213757,
+          "quantity": 200
+        },
+        {
+          "itemId": 3423,
+          "quantity": 1
+        },
+        {
+          "itemId": 213758,
+          "quantity": 200
+        },
+        {
+          "itemId": 210939,
+          "quantity": 4
+        },
+        {
+          "itemId": 210937,
+          "quantity": 30
+        },
+        {
+          "itemId": 210936,
+          "quantity": 30
+        },
+        {
+          "itemId": 210935,
+          "quantity": 30
+        },
+        {
+          "itemId": 210934,
+          "quantity": 30
+        },
+        {
+          "itemId": 210933,
+          "quantity": 30
+        },
+        {
+          "itemId": 210932,
+          "quantity": 50
+        },
+        {
+          "itemId": 210930,
+          "quantity": 50
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 435391,
+      "productItemId": 215147,
+      "reagents": [
+        {
+          "itemId": 213219,
+          "quantity": 40
+        },
+        {
+          "itemId": 213220,
+          "quantity": 40
+        },
+        {
+          "itemId": 213221,
+          "quantity": 40
+        },
+        {
+          "itemId": 213759,
+          "quantity": 5
+        },
+        {
+          "itemId": 213760,
+          "quantity": 5
+        },
+        {
+          "itemId": 213761,
+          "quantity": 5
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 443570,
+      "productItemId": 219403,
+      "reagents": [
+        {
+          "itemId": 221854,
+          "quantity": 32
+        },
+        {
+          "itemId": 221856,
+          "quantity": 6
+        },
+        {
+          "itemId": 221858,
+          "quantity": 6
+        },
+        {
+          "itemId": 221860,
+          "quantity": 12
+        },
+        {
+          "itemId": 221857,
+          "quantity": 6
+        },
+        {
+          "itemId": 221868,
+          "quantity": 2
+        },
+        {
+          "itemId": 221869,
+          "quantity": 2
+        },
+        {
+          "itemId": 221870,
+          "quantity": 2
+        },
+        {
+          "itemId": 221861,
+          "quantity": 12
+        },
+        {
+          "itemId": 221859,
+          "quantity": 12
+        },
+        {
+          "itemId": 221855,
+          "quantity": 32
+        },
+        {
+          "itemId": 221853,
+          "quantity": 32
+        },
+        {
+          "itemId": 219150,
+          "quantity": 50
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 447369,
+      "productItemId": 219387,
+      "reagents": [
+        {
+          "itemId": 221854,
+          "quantity": 50
+        },
+        {
+          "itemId": 221856,
+          "quantity": 24
+        },
+        {
+          "itemId": 221858,
+          "quantity": 24
+        },
+        {
+          "itemId": 221860,
+          "quantity": 10
+        },
+        {
+          "itemId": 221857,
+          "quantity": 24
+        },
+        {
+          "itemId": 221866,
+          "quantity": 8
+        },
+        {
+          "itemId": 221868,
+          "quantity": 3
+        },
+        {
+          "itemId": 221869,
+          "quantity": 3
+        },
+        {
+          "itemId": 221870,
+          "quantity": 3
+        },
+        {
+          "itemId": 221867,
+          "quantity": 8
+        },
+        {
+          "itemId": 221865,
+          "quantity": 8
+        },
+        {
+          "itemId": 221861,
+          "quantity": 10
+        },
+        {
+          "itemId": 221859,
+          "quantity": 10
+        },
+        {
+          "itemId": 221855,
+          "quantity": 50
+        },
+        {
+          "itemId": 221853,
+          "quantity": 50
+        },
+        {
+          "itemId": 219150,
+          "quantity": 50
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 447370,
+      "productItemId": 221962,
+      "reagents": [
+        {
+          "itemId": 221854,
+          "quantity": 75
+        },
+        {
+          "itemId": 221856,
+          "quantity": 10
+        },
+        {
+          "itemId": 221858,
+          "quantity": 10
+        },
+        {
+          "itemId": 221860,
+          "quantity": 16
+        },
+        {
+          "itemId": 221857,
+          "quantity": 10
+        },
+        {
+          "itemId": 221862,
+          "quantity": 6
+        },
+        {
+          "itemId": 221864,
+          "quantity": 6
+        },
+        {
+          "itemId": 221868,
+          "quantity": 2
+        },
+        {
+          "itemId": 221869,
+          "quantity": 2
+        },
+        {
+          "itemId": 221870,
+          "quantity": 2
+        },
+        {
+          "itemId": 221863,
+          "quantity": 6
+        },
+        {
+          "itemId": 221861,
+          "quantity": 16
+        },
+        {
+          "itemId": 221859,
+          "quantity": 16
+        },
+        {
+          "itemId": 221855,
+          "quantity": 75
+        },
+        {
+          "itemId": 221853,
+          "quantity": 75
+        },
+        {
+          "itemId": 219150,
+          "quantity": 50
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 447371,
+      "productItemId": 221964,
+      "reagents": [
+        {
+          "itemId": 221854,
+          "quantity": 100
+        },
+        {
+          "itemId": 221856,
+          "quantity": 6
+        },
+        {
+          "itemId": 221858,
+          "quantity": 6
+        },
+        {
+          "itemId": 221860,
+          "quantity": 8
+        },
+        {
+          "itemId": 221857,
+          "quantity": 6
+        },
+        {
+          "itemId": 221862,
+          "quantity": 1
+        },
+        {
+          "itemId": 221864,
+          "quantity": 1
+        },
+        {
+          "itemId": 221868,
+          "quantity": 1
+        },
+        {
+          "itemId": 221869,
+          "quantity": 1
+        },
+        {
+          "itemId": 221870,
+          "quantity": 1
+        },
+        {
+          "itemId": 221863,
+          "quantity": 1
+        },
+        {
+          "itemId": 221861,
+          "quantity": 8
+        },
+        {
+          "itemId": 221859,
+          "quantity": 8
+        },
+        {
+          "itemId": 221855,
+          "quantity": 100
+        },
+        {
+          "itemId": 221853,
+          "quantity": 100
+        },
+        {
+          "itemId": 219150,
+          "quantity": 50
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 447372,
+      "productItemId": 221966,
+      "reagents": [
+        {
+          "itemId": 221854,
+          "quantity": 125
+        },
+        {
+          "itemId": 221856,
+          "quantity": 8
+        },
+        {
+          "itemId": 221858,
+          "quantity": 8
+        },
+        {
+          "itemId": 221860,
+          "quantity": 16
+        },
+        {
+          "itemId": 221857,
+          "quantity": 8
+        },
+        {
+          "itemId": 221866,
+          "quantity": 4
+        },
+        {
+          "itemId": 221868,
+          "quantity": 4
+        },
+        {
+          "itemId": 221869,
+          "quantity": 4
+        },
+        {
+          "itemId": 221870,
+          "quantity": 4
+        },
+        {
+          "itemId": 221867,
+          "quantity": 4
+        },
+        {
+          "itemId": 221865,
+          "quantity": 4
+        },
+        {
+          "itemId": 221861,
+          "quantity": 16
+        },
+        {
+          "itemId": 221859,
+          "quantity": 16
+        },
+        {
+          "itemId": 221855,
+          "quantity": 125
+        },
+        {
+          "itemId": 221853,
+          "quantity": 125
+        },
+        {
+          "itemId": 219150,
+          "quantity": 50
+        }
+      ]
+    },
+    {
+      "craftingSpellId": 1229928,
+      "productItemId": 248485,
+      "reagents": [
+        {
+          "itemId": 243575,
+          "quantity": 1
+        },
+        {
+          "itemId": 243574,
+          "quantity": 1
+        },
+        {
+          "itemId": 253303,
+          "quantity": 3
+        },
+        {
+          "itemId": 243581,
+          "quantity": 1
+        },
+        {
+          "itemId": 243582,
+          "quantity": 1
+        }
+      ]
+    }
+  ],
+  "warnings": [
+    "Each row comes from reagentItemID \u2192 recipeSpellID \u2192 [productItemID, quantityOfThisReagent].",
+    "Do not sum quality rank variants as separate mandatory reagent slots. Preserve as raw associations until live recipe schematic or verified slot grouping establishes alternatives.",
+    "This table identifies output and reagents, not how to learn the recipe or its profession tier/skill requirements. Join CreateRecipe source records for acquisition prerequisites.",
+    "CraftingSpellId is a spell namespace; this is not the Blizzard web API recipe record ID.",
+    "The table may not include output quantity or optional reagent effects. Do not infer them."
+  ]
+}

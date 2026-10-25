@@ -1,0 +1,11 @@
+{
+  "addon": "2.4.0",
+  "companion": "1.4.0",
+  "retailBuild": "12.1.5.70575",
+  "sha256": {
+    "ToyboxExport.zip": "7f23470d58fcb6d193256d447aa903580c9fb3a8aebe3186d421a149841bfcff",
+    "ToyboxCompanion.zip": "1c4ac3659fd3bbc6c7bd31a6d654dd2b53e703c9a339a1fc05bec02ffeca1be4",
+    "ToyboxGuides-source.zip": "bf29a493a71988e6c2d59dce85153d30a046c94fcf903b13d46552565fbdd10e"
+  },
+  "reproducible": true
+}

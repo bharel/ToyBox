@@ -1,0 +1,245 @@
+{
+  "revision": "0bb8f4be59bcc0262830400914516ef1698d789e",
+  "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/0bb8f4be59bcc0262830400914516ef1698d789e/.contrib/.db/standard/10%20-%20Professions/Archaeology.lua",
+  "rewards": [
+    {
+      "id": "blood",
+      "itemId": 131743,
+      "name": "Blood of Young Mannoroth",
+      "quests": [
+        {
+          "id": 41164,
+          "name": "One Step Closer"
+        },
+        {
+          "id": 41165,
+          "name": "Deciphering Demonology"
+        },
+        {
+          "id": 41166,
+          "name": "Dark Secrets"
+        }
+      ]
+    },
+    {
+      "id": "eye",
+      "itemId": 131724,
+      "name": "Crystalline Eye of Undravius",
+      "quests": [
+        {
+          "id": 40857,
+          "name": "Bits and Pieces"
+        },
+        {
+          "id": 41157,
+          "name": "Corrupted Studies"
+        }
+      ]
+    },
+    {
+      "id": "imp",
+      "itemId": 131735,
+      "name": "Imp Generator",
+      "quests": [
+        {
+          "id": 41158,
+          "name": "Fragments of the Fjords"
+        },
+        {
+          "id": 41159,
+          "name": "Process of Elimination"
+        },
+        {
+          "id": 41802,
+          "name": "The Gates of Valor"
+        }
+      ]
+    },
+    {
+      "id": "purple-hills",
+      "itemId": 131732,
+      "name": "Purple Hills of Eredath",
+      "quests": [
+        {
+          "id": 41167,
+          "name": "Fel Fragments"
+        },
+        {
+          "id": 41168,
+          "name": "The Purple Hills of Eredath"
+        },
+        {
+          "id": 41169,
+          "name": "Darkheart Thicket: Through the Fog"
+        }
+      ]
+    },
+    {
+      "id": "wyrmy",
+      "itemId": 136922,
+      "name": "Wyrmy Tunkins",
+      "quests": [
+        {
+          "id": 41161,
+          "name": "Out of the Frying Pan"
+        },
+        {
+          "id": 41162,
+          "name": "And Into the Fel Fire"
+        },
+        {
+          "id": 41163,
+          "name": "The Apocalypse Bringer"
+        }
+      ]
+    },
+    {
+      "id": "crown-jewels",
+      "itemId": 131740,
+      "name": "Crown Jewels of Suramar",
+      "quests": [
+        {
+          "id": 41174,
+          "name": "Worth Its Weight"
+        },
+        {
+          "id": 41175,
+          "name": "Fit for an Elven Queen"
+        },
+        {
+          "id": 41176,
+          "name": "Sifting Through the Rubble"
+        }
+      ]
+    },
+    {
+      "id": "sciallax",
+      "itemId": 134076,
+      "name": "Crystallized Shard of Sciallax",
+      "quests": [
+        {
+          "id": 41180,
+          "name": "Unspeakable Power"
+        },
+        {
+          "id": 41181,
+          "name": "Narrowing Down"
+        },
+        {
+          "id": 41182,
+          "name": "Uncovering the Orb of Sciallax"
+        }
+      ]
+    },
+    {
+      "id": "kalyndras",
+      "itemId": 131745,
+      "name": "Key of Kalyndras",
+      "quests": [
+        {
+          "id": 41177,
+          "name": "Goblin Archaeology"
+        },
+        {
+          "id": 41178,
+          "name": "Explosive Results"
+        },
+        {
+          "id": 41179,
+          "name": "What Once Was Lost"
+        }
+      ]
+    },
+    {
+      "id": "academy",
+      "itemId": 131744,
+      "name": "Key to Nar\u2019thalas Academy",
+      "quests": [
+        {
+          "id": 41183,
+          "name": "Academic Exploration"
+        },
+        {
+          "id": 41184,
+          "name": "Tried and True"
+        },
+        {
+          "id": 41185,
+          "name": "The Keys to Success"
+        }
+      ]
+    },
+    {
+      "id": "beacon",
+      "itemId": 131717,
+      "name": "Starlight Beacon",
+      "quests": [
+        {
+          "id": 41171,
+          "name": "The Reliquary Calls"
+        },
+        {
+          "id": 41172,
+          "name": "Echoes of My Ancestors"
+        },
+        {
+          "id": 41173,
+          "name": "A Beacon of Hope"
+        }
+      ]
+    },
+    {
+      "id": "prizerock",
+      "itemId": 131736,
+      "name": "Prizerock Neckband",
+      "quests": [
+        {
+          "id": 41189,
+          "name": "A New Lead"
+        },
+        {
+          "id": 41190,
+          "name": "Crystal Eyes"
+        },
+        {
+          "id": 41191,
+          "name": "Drogbar Deception"
+        }
+      ]
+    },
+    {
+      "id": "rethu",
+      "itemId": 131733,
+      "name": "Spear of Rethu",
+      "quests": [
+        {
+          "id": 41186,
+          "name": "History of Highmountain"
+        },
+        {
+          "id": 41187,
+          "name": "Surveying Student"
+        },
+        {
+          "id": 41188,
+          "name": "Neltharion's Lair: Misdirected"
+        }
+      ]
+    },
+    {
+      "id": "echero",
+      "itemId": 131734,
+      "name": "Spirit of Eche\u2019ro",
+      "quests": [
+        {
+          "id": 41192,
+          "name": "The Right Path"
+        },
+        {
+          "id": 41193,
+          "name": "Laying to Rest"
+        }
+      ]
+    }
+  ]
+}

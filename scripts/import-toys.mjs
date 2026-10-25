@@ -1,0 +1,8 @@
+import {writeFile} from 'node:fs/promises';
+const revision='03c63ed885079691df4fecc4ee4b4c8075a7bd8d';
+const source=`https://raw.githubusercontent.com/kevinclement/SimpleArmory/${revision}/static/data/toys.json`;
+const response=await fetch(source);if(!response.ok)throw Error('Catalogue download failed');const input=await response.json();const map=new Map();
+function walk(nodes,path=[],parentInfo=[]){for(const node of nodes){const trail=node.name?[...path,node.name]:path;const info=[...parentInfo,...(node.info?[node.info]:[])];for(const item of node.items||[]){if(!Number.isInteger(item.ID)||!Number.isInteger(item.itemId))throw Error('Invalid catalogue identity');const previous=map.get(item.itemId)||{toyId:item.ID,itemId:item.itemId,name:item.name,icon:item.icon,routes:[]};if(previous.toyId!==item.ID)throw Error('Conflicting identities');previous.routes.push({path:trail,...Object.fromEntries(['notObtainable','notReleased','resale','side','obtainSide','obtainClasses'].filter(k=>item[k]!==undefined).map(k=>[k,item[k]])),...(info.length?{info:info.join(' · ')}:{})});map.set(item.itemId,previous);}walk(node.subcats||[],trail,info);}}
+walk(input);if(map.size<1100)throw Error('Unexpected catalogue size');
+await writeFile('lib/data/toys.json',JSON.stringify({version:1,revision,source,retrievedAt:new Date().toISOString(),toys:[...map.values()].sort((a,b)=>a.itemId-b.itemId)}));
+const license=await fetch(`https://raw.githubusercontent.com/kevinclement/SimpleArmory/${revision}/LICENSE`);if(!license.ok)throw Error('License download failed');await writeFile('lib/data/SimpleArmory-LICENSE',await license.text());console.log(`${map.size} toys imported from pinned Simple Armory metadata`);

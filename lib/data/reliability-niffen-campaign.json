@@ -1,0 +1,3845 @@
+{
+  "version": 1,
+  "contentVersion": "niffen-connected-checkpoint-1",
+  "reviewedAt": "2026-10-25",
+  "retailBuild": "12.1.5.70575",
+  "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+  "authorship": "Original Toybox instructions from factual quest records and consulted mechanics; no imported guide prose or executable logic.",
+  "sources": [
+    {
+      "id": "niffen-source-e9e0a202ff11",
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/.contrib/.db/standard/02%20-%20Outdoor%20Zones/14%20Dragon%20Isles/The%20Forbidden%20Reach/Quests.lua",
+      "retrievedAt": "2026-10-25",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sha256": "5851cbeee7e2270ba5a4902ea36253913f1d2a3d615112fca86906c1280a15e3",
+      "license": "MIT",
+      "use": "permitted factual source import with ATT attribution",
+      "local": "work/research/priority/The Forbidden Reach-Quests.lua"
+    },
+    {
+      "id": "niffen-source-cda37ad70104",
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/.contrib/.db/standard/02%20-%20Outdoor%20Zones/14%20Dragon%20Isles/Zaralek%20Cavern/Quests.lua",
+      "retrievedAt": "2026-10-25",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sha256": "1543bc4ddfbcc6dbcb3f530b0aa5a4f5c074037479f8a99b824f88cf63bac281",
+      "license": "MIT",
+      "use": "permitted factual source import with ATT attribution",
+      "local": "work/research/priority/Zaralek Cavern-Quests.lua"
+    },
+    {
+      "id": "niffen-source-6ac9e51f1702",
+      "url": "https://nether.wowhead.com/tooltip/quest/74381",
+      "retrievedAt": "2026-10-25",
+      "sha256": "a2d791012b88602fc0867d95ef07ee0530168647e1cd279480cce960dd3aae1f",
+      "local": "work/research/reliability-niffen/quest-74381-tooltip.json",
+      "use": "factual quest objective consultation; original Toybox instructions",
+      "edition": "Retail tooltip retrieved 2026-10-25"
+    },
+    {
+      "id": "niffen-source-4ad15c9e7138",
+      "url": "https://nether.wowhead.com/tooltip/quest/73076",
+      "retrievedAt": "2026-10-25",
+      "sha256": "0b4f6c26312c6ac549159c3a76c338fbeb8a402c871fe94632f7d9b3426308fc",
+      "local": "work/research/reliability-niffen/quest-73076-tooltip.json",
+      "use": "factual quest objective consultation; original Toybox instructions",
+      "edition": "Retail tooltip retrieved 2026-10-25"
+    },
+    {
+      "id": "niffen-source-84bd0f4a7e15",
+      "url": "https://nether.wowhead.com/tooltip/quest/72712",
+      "retrievedAt": "2026-10-25",
+      "sha256": "fd62781b59a5a25bb9c15b70a2db6e4ad991572fbcd5ceedb7631b8de08c6a31",
+      "local": "work/research/reliability-niffen/quest-72712-tooltip.json",
+      "use": "factual quest objective consultation; original Toybox instructions",
+      "edition": "Retail tooltip retrieved 2026-10-25"
+    },
+    {
+      "id": "niffen-source-b81806d37365",
+      "url": "https://nether.wowhead.com/tooltip/quest/72713",
+      "retrievedAt": "2026-10-25",
+      "sha256": "1b36cbc4bfdd64e0038d82e30b7886595e0aeac3a866dee351e2f12a825edf67",
+      "local": "work/research/reliability-niffen/quest-72713-tooltip.json",
+      "use": "factual quest objective consultation; original Toybox instructions",
+      "edition": "Retail tooltip retrieved 2026-10-25"
+    },
+    {
+      "id": "niffen-source-28e3579a8e60",
+      "url": "https://nether.wowhead.com/tooltip/quest/72545",
+      "retrievedAt": "2026-10-25",
+      "sha256": "5ce017863e77ceeac2e75236c6eb1f3f595995d41dcbbc10ca81763d3490c1d7",
+      "local": "work/research/reliability-niffen/quest-72545-tooltip.json",
+      "use": "factual quest objective consultation; original Toybox instructions",
+      "edition": "Retail tooltip retrieved 2026-10-25"
+    },
+    {
+      "id": "niffen-source-70f8b69276d1",
+      "url": "https://nether.wowhead.com/tooltip/quest/73094",
+      "retrievedAt": "2026-10-25",
+      "sha256": "70ae8d30b99d704177daaefc05f99fff82682cf779f93c05438aadf603dbb7c2",
+      "local": "work/research/reliability-niffen/quest-73094-tooltip.json",
+      "use": "factual quest objective consultation; original Toybox instructions",
+      "edition": "Retail tooltip retrieved 2026-10-25"
+    },
+    {
+      "id": "niffen-source-77b5ce2d02eb",
+      "url": "https://nether.wowhead.com/tooltip/quest/72714",
+      "retrievedAt": "2026-10-25",
+      "sha256": "75cc7cebc79fd2e7ce8e9b1c12e931e0f69616cbf94309bb1cc0e77e89ea8280",
+      "local": "work/research/reliability-niffen/quest-72714-tooltip.json",
+      "use": "factual quest objective consultation; original Toybox instructions",
+      "edition": "Retail tooltip retrieved 2026-10-25"
+    },
+    {
+      "id": "niffen-source-102b98a27dbc",
+      "url": "https://nether.wowhead.com/tooltip/quest/72715",
+      "retrievedAt": "2026-10-25",
+      "sha256": "aedef5eca7b2b44c4e39a657ae7f6d064727b8dc3b9dfd8dd31253fa024d94a7",
+      "local": "work/research/reliability-niffen/quest-72715-tooltip.json",
+      "use": "factual quest objective consultation; original Toybox instructions",
+      "edition": "Retail tooltip retrieved 2026-10-25"
+    },
+    {
+      "id": "niffen-source-bcd77849a3b9",
+      "url": "https://nether.wowhead.com/tooltip/quest/73137",
+      "retrievedAt": "2026-10-25",
+      "sha256": "af58e1f01f62fb45b9fdcc8529f804f8d19bdb16a62b19652f4772e45f870373",
+      "local": "work/research/reliability-niffen/quest-73137-tooltip.json",
+      "use": "factual quest objective consultation; original Toybox instructions",
+      "edition": "Retail tooltip retrieved 2026-10-25"
+    },
+    {
+      "id": "niffen-source-27c8b5926886",
+      "url": "https://nether.wowhead.com/tooltip/quest/72717",
+      "retrievedAt": "2026-10-25",
+      "sha256": "e22ecf2f745d293db60f4ab81dd87ed6cc1dd6b7310c93d01fab12f0189ad075",
+      "local": "work/research/reliability-niffen/quest-72717-tooltip.json",
+      "use": "factual quest objective consultation; original Toybox instructions",
+      "edition": "Retail tooltip retrieved 2026-10-25"
+    },
+    {
+      "id": "niffen-source-ca160c970a25",
+      "url": "https://nether.wowhead.com/tooltip/quest/72975",
+      "retrievedAt": "2026-10-25",
+      "sha256": "0f179ca46860f44572670004e60b64e56a1dfec877f0a20dfac5c02b626e3e6e",
+      "local": "work/research/reliability-niffen/quest-72975-tooltip.json",
+      "use": "factual quest objective consultation; original Toybox instructions",
+      "edition": "Retail tooltip retrieved 2026-10-25"
+    },
+    {
+      "id": "niffen-source-042b41c35bfb",
+      "url": "https://nether.wowhead.com/tooltip/quest/75456",
+      "retrievedAt": "2026-10-25",
+      "sha256": "e68d7fa49ef18182c71deb7dd17a581b336f9f0f5373c856f23ee289e2cbdc09",
+      "local": "work/research/reliability-niffen/quest-75456-tooltip.json",
+      "use": "factual quest objective consultation; original Toybox instructions",
+      "edition": "Retail tooltip retrieved 2026-10-25"
+    },
+    {
+      "id": "niffen-source-e6860e7dc637",
+      "url": "https://nether.wowhead.com/tooltip/quest/72976",
+      "retrievedAt": "2026-10-25",
+      "sha256": "b2c85f9a24d4b5cae9bf8b9826695709d191cc9820a41657dbcf80ab2066c3cd",
+      "local": "work/research/reliability-niffen/quest-72976-tooltip.json",
+      "use": "factual quest objective consultation; original Toybox instructions",
+      "edition": "Retail tooltip retrieved 2026-10-25"
+    },
+    {
+      "id": "niffen-source-8a8ef76bb950",
+      "url": "https://nether.wowhead.com/tooltip/quest/72977",
+      "retrievedAt": "2026-10-25",
+      "sha256": "7c1d663180be9a6af09d2525162d8de1f19134e1ebcfff5e43b81df99f673778",
+      "local": "work/research/reliability-niffen/quest-72977-tooltip.json",
+      "use": "factual quest objective consultation; original Toybox instructions",
+      "edition": "Retail tooltip retrieved 2026-10-25"
+    },
+    {
+      "id": "niffen-source-1b54789e9732",
+      "url": "https://nether.wowhead.com/tooltip/quest/72978",
+      "retrievedAt": "2026-10-25",
+      "sha256": "b629f4c74c8a741fb763db5065c0460f41d40b371fc767f54975e54882a3c2b9",
+      "local": "work/research/reliability-niffen/quest-72978-tooltip.json",
+      "use": "factual quest objective consultation; original Toybox instructions",
+      "edition": "Retail tooltip retrieved 2026-10-25"
+    },
+    {
+      "id": "niffen-source-b9840a751392",
+      "url": "https://nether.wowhead.com/tooltip/quest/72981",
+      "retrievedAt": "2026-10-25",
+      "sha256": "be6538a99efed31e2bebf3650576a6cda7695ddea301f7c969db69c161353dd7",
+      "local": "work/research/reliability-niffen/quest-72981-tooltip.json",
+      "use": "factual quest objective consultation; original Toybox instructions",
+      "edition": "Retail tooltip retrieved 2026-10-25"
+    },
+    {
+      "id": "niffen-source-c26f1b79e335",
+      "url": "https://nether.wowhead.com/tooltip/quest/72872",
+      "retrievedAt": "2026-10-25",
+      "sha256": "8ef8891ae339a00172db61f04abcd93d67081e7d10635f7fbdc93c8137aebaab",
+      "local": "work/research/reliability-niffen/quest-72872-tooltip.json",
+      "use": "factual quest objective consultation; original Toybox instructions",
+      "edition": "Retail tooltip retrieved 2026-10-25"
+    },
+    {
+      "id": "niffen-source-a704cd0aabaa",
+      "url": "https://nether.wowhead.com/tooltip/quest/72873",
+      "retrievedAt": "2026-10-25",
+      "sha256": "6563c9f2513f5f073d27865ac79d61702f1ed0eedc467122485fa267a81a178d",
+      "local": "work/research/reliability-niffen/quest-72873-tooltip.json",
+      "use": "factual quest objective consultation; original Toybox instructions",
+      "edition": "Retail tooltip retrieved 2026-10-25"
+    },
+    {
+      "id": "niffen-source-975503cdafc6",
+      "url": "https://nether.wowhead.com/tooltip/quest/72970",
+      "retrievedAt": "2026-10-25",
+      "sha256": "399b5690d8848dadb4d1eb8e196e0b998bb81c8e54204c2fbc63da65f74e7c00",
+      "local": "work/research/reliability-niffen/quest-72970-tooltip.json",
+      "use": "factual quest objective consultation; original Toybox instructions",
+      "edition": "Retail tooltip retrieved 2026-10-25"
+    },
+    {
+      "id": "niffen-source-535d463527e8",
+      "url": "https://nether.wowhead.com/tooltip/quest/72980",
+      "retrievedAt": "2026-10-25",
+      "sha256": "fa53dc7344820beff320b100e2676840e979f76e203b9af71adab5a20762de2e",
+      "local": "work/research/reliability-niffen/quest-72980-tooltip.json",
+      "use": "factual quest objective consultation; original Toybox instructions",
+      "edition": "Retail tooltip retrieved 2026-10-25"
+    },
+    {
+      "id": "niffen-source-3706f3bb0f24",
+      "url": "https://nether.wowhead.com/tooltip/quest/72874",
+      "retrievedAt": "2026-10-25",
+      "sha256": "ffbc905cdc0990162e45dfcf615e2c71c216df384e6053df888c112fb5634b8c",
+      "local": "work/research/reliability-niffen/quest-72874-tooltip.json",
+      "use": "factual quest objective consultation; original Toybox instructions",
+      "edition": "Retail tooltip retrieved 2026-10-25"
+    },
+    {
+      "id": "niffen-source-9d0f5b5aa454",
+      "url": "https://nether.wowhead.com/tooltip/quest/72979",
+      "retrievedAt": "2026-10-25",
+      "sha256": "e94027ad8b32c49825334fb6746e34b3f21f6bf3bc8815be510f14f382afb900",
+      "local": "work/research/reliability-niffen/quest-72979-tooltip.json",
+      "use": "factual quest objective consultation; original Toybox instructions",
+      "edition": "Retail tooltip retrieved 2026-10-25"
+    },
+    {
+      "id": "niffen-source-f34b57849a6c",
+      "url": "https://nether.wowhead.com/tooltip/quest/72973",
+      "retrievedAt": "2026-10-25",
+      "sha256": "ffdcf6d1ad62f4c1efc00ef950dfdab031b60b218c7a31a2e5e9516e1216c5ec",
+      "local": "work/research/reliability-niffen/quest-72973-tooltip.json",
+      "use": "factual quest objective consultation; original Toybox instructions",
+      "edition": "Retail tooltip retrieved 2026-10-25"
+    },
+    {
+      "id": "niffen-source-f81465891805",
+      "url": "https://nether.wowhead.com/tooltip/quest/75643",
+      "retrievedAt": "2026-10-25",
+      "sha256": "e0081194072c7a4790144e3c24f3d5ee197ae517b09ecda724ba23b4c25a4769",
+      "local": "work/research/reliability-niffen/quest-75643-tooltip.json",
+      "use": "factual quest objective consultation; original Toybox instructions",
+      "edition": "Retail tooltip retrieved 2026-10-25"
+    },
+    {
+      "id": "niffen-source-7b9a6d4f5b2d",
+      "url": "https://nether.wowhead.com/tooltip/quest/72974",
+      "retrievedAt": "2026-10-25",
+      "sha256": "7aa4865796a08bf39abdc14627674e77c1e3f0d3b3746ee34a308e64ab005dbb",
+      "local": "work/research/reliability-niffen/quest-72974-tooltip.json",
+      "use": "factual quest objective consultation; original Toybox instructions",
+      "edition": "Retail tooltip retrieved 2026-10-25"
+    },
+    {
+      "id": "niffen-source-1f99859d1a16",
+      "url": "https://nether.wowhead.com/tooltip/quest/75644",
+      "retrievedAt": "2026-10-25",
+      "sha256": "f90060f014890b81dd078bb2c8866c9fc0e86fcd37f576589d342bd427ddb5ab",
+      "local": "work/research/reliability-niffen/quest-75644-tooltip.json",
+      "use": "factual quest objective consultation; original Toybox instructions",
+      "edition": "Retail tooltip retrieved 2026-10-25"
+    },
+    {
+      "id": "niffen-source-1d7ab1f95357",
+      "url": "https://worldofwarcraft.blizzard.com/en-gb/news/23934660",
+      "retrievedAt": "2026-10-25",
+      "use": "primary Blizzard statement of first-chapter and account repeatable-content unlock",
+      "published": "2023-04-13",
+      "updated": "2023-04-27"
+    },
+    {
+      "id": "niffen-source-bf16627f872f",
+      "url": "https://warcraft.wiki.gg/wiki/Hidden_Legacies",
+      "retrievedAt": "2026-10-25",
+      "use": "factual consultation: automatic start, Kurazidaia and optional alt introduction skip"
+    },
+    {
+      "id": "niffen-source-70611bc00344",
+      "url": "https://www.wowhead.com/quest=72712/the-best-we-have",
+      "retrievedAt": "2026-10-25",
+      "use": "factual consultation: campaign skip, location and distinction from introduction skip"
+    },
+    {
+      "id": "niffen-source-988f6c0f0aad",
+      "url": "https://eu.forums.blizzard.com/en/wow/t/cant-see-any-wq-in-zaralek-caverns-please-help/616633",
+      "retrievedAt": "2026-10-25",
+      "use": "dated player bug report; conflict/recovery evidence, not normative unlock rules"
+    },
+    {
+      "id": "niffen-source-b83f294aae1c",
+      "url": "https://warcraft.wiki.gg/wiki/A_Crack_in_the_World",
+      "retrievedAt": "2026-10-25",
+      "use": "factual consultation only; independently authored instructions",
+      "edition": "Retail, Dragonflight-added quest; facts checked against current tooltip"
+    },
+    {
+      "id": "niffen-source-4825441fba55",
+      "url": "https://warcraft.wiki.gg/wiki/Scar_of_Earth_and_Fire",
+      "retrievedAt": "2026-10-25",
+      "use": "factual consultation only; independently authored instructions",
+      "edition": "Retail, Dragonflight-added quest; facts checked against current tooltip"
+    },
+    {
+      "id": "niffen-source-2fd6368afbde",
+      "url": "https://warcraft.wiki.gg/wiki/The_Patience_of_Princes",
+      "retrievedAt": "2026-10-25",
+      "use": "factual consultation only; independently authored instructions",
+      "edition": "Retail, Dragonflight-added quest; facts checked against current tooltip"
+    },
+    {
+      "id": "niffen-source-c627d43d9529",
+      "url": "https://warcraft.wiki.gg/wiki/It_Was_Not_Enough",
+      "retrievedAt": "2026-10-25",
+      "use": "factual consultation only; independently authored instructions",
+      "edition": "Retail, Dragonflight-added quest; facts checked against current tooltip"
+    },
+    {
+      "id": "niffen-source-d6e8d5414796",
+      "url": "https://warcraft.wiki.gg/wiki/Niffen_and_Goliath",
+      "retrievedAt": "2026-10-25",
+      "use": "factual consultation only; independently authored instructions",
+      "edition": "Retail, Dragonflight-added quest; facts checked against current tooltip"
+    },
+    {
+      "id": "niffen-source-270c9286c11b",
+      "url": "https://warcraft.wiki.gg/wiki/Brother%27s_Keeper",
+      "retrievedAt": "2026-10-25",
+      "use": "factual consultation only; independently authored instructions",
+      "edition": "Retail, Dragonflight-added quest; facts checked against current tooltip"
+    },
+    {
+      "id": "niffen-source-c1f4deb7b59d",
+      "url": "https://warcraft.wiki.gg/wiki/The_Earth_Gives_Way",
+      "retrievedAt": "2026-10-25",
+      "use": "factual consultation only; independently authored instructions",
+      "edition": "Retail, Dragonflight-added quest; facts checked against current tooltip"
+    },
+    {
+      "id": "niffen-source-93789b2830c1",
+      "url": "https://warcraft.wiki.gg/wiki/Smells_Like_Loamm",
+      "retrievedAt": "2026-10-25",
+      "use": "factual consultation only; independently authored instructions",
+      "edition": "Retail, Dragonflight-added quest; facts checked against current tooltip"
+    },
+    {
+      "id": "niffen-source-c3294dc69109",
+      "url": "https://warcraft.wiki.gg/wiki/Orientation%3A_Loamm_Niffen",
+      "retrievedAt": "2026-10-25",
+      "use": "factual consultation only; independently authored instructions",
+      "edition": "Retail, Dragonflight-added quest; facts checked against current tooltip"
+    },
+    {
+      "id": "niffen-source-ba80eea3c9c7",
+      "url": "https://warcraft.wiki.gg/wiki/Welcome_to_the_City_of_Smells",
+      "retrievedAt": "2026-10-25",
+      "use": "factual consultation only; independently authored instructions",
+      "edition": "Retail, Dragonflight-added quest; facts checked against current tooltip"
+    },
+    {
+      "id": "niffen-source-9b52e88aa694",
+      "url": "https://warcraft.wiki.gg/wiki/Six_Hundred_Feet_Under",
+      "retrievedAt": "2026-10-25",
+      "use": "factual consultation only; independently authored instructions",
+      "edition": "Retail, Dragonflight-added quest; facts checked against current tooltip"
+    },
+    {
+      "id": "niffen-source-07e08d147b94",
+      "url": "https://www.wowhead.com/quest=72981/the-patience-of-princes",
+      "retrievedAt": "2026-10-25",
+      "use": "current Retail scenario, end NPC and recovery consultation"
+    },
+    {
+      "id": "niffen-source-6d15d0cf190a",
+      "url": "https://www.wowhead.com/quest=72873/it-was-not-enough",
+      "retrievedAt": "2026-10-25",
+      "use": "objective and dated extra-action/follow recovery consultation"
+    },
+    {
+      "id": "niffen-source-a6da15074930",
+      "url": "https://www.wowhead.com/quest=72874/secrets-from-our-father",
+      "retrievedAt": "2026-10-25",
+      "use": "relic objective and cave-entrance factual consultation; reported entrance pins remain advisory"
+    },
+    {
+      "id": "niffen-source-183c703f05cb",
+      "url": "https://www.wowhead.com/quest=72974/welcome-to-the-city-of-smells",
+      "retrievedAt": "2026-10-25",
+      "use": "specific trade interactions and independently corroborated objective coordinates"
+    }
+  ],
+  "guide": {
+    "id": "reliability-niffen-breaking-ground",
+    "title": "Unlock Loamm Niffen repeatable activities",
+    "sourceChecked": true,
+    "playableFromEstablishedEntryCheckpoint": true,
+    "completeFromEstablishedEntryCheckpoint": true,
+    "completeFreshCharacterRoot": false,
+    "actuallyPlaytested": false,
+    "entryCondition": {
+      "any": [
+        {
+          "kind": "questOfferedAny",
+          "questIds": [
+            72975,
+            75456,
+            72976,
+            72977,
+            72978,
+            72981,
+            72872,
+            72873,
+            72970,
+            72980,
+            72874,
+            72979,
+            72973,
+            75643,
+            72974,
+            75644
+          ]
+        },
+        {
+          "kind": "questInLogAny",
+          "questIds": [
+            72975,
+            75456,
+            72976,
+            72977,
+            72978,
+            72981,
+            72872,
+            72873,
+            72970,
+            72980,
+            72874,
+            72979,
+            72973,
+            75643,
+            72974,
+            75644
+          ]
+        }
+      ]
+    },
+    "questIds": [
+      72975,
+      75456,
+      72976,
+      72977,
+      72978,
+      72981,
+      72872,
+      72873,
+      72970,
+      72980,
+      72874,
+      72979,
+      72973,
+      75643,
+      72974,
+      75644
+    ],
+    "entryAlternatives": {
+      "groupId": "niffen-entry-breadcrumb",
+      "questIds": [
+        72975,
+        75456
+      ],
+      "requiredCount": 1
+    },
+    "terminal": {
+      "kind": "questTurnedIn",
+      "questId": 75644,
+      "scope": "character"
+    },
+    "navigationPolicy": "Positive native objective and quest-end waypoints are supported destinations. Fixed researched points are alternatives; do not reinterpret acceptance coordinates or scenario interior coordinates across maps.",
+    "eligibilityPolicy": "Conditions use current quest offers, quest log, completion and scenario evidence. Never require completion of both alternative breadcrumbs. Resume at the first unfinished eligible action, not an old cursor.",
+    "parallelGroups": [
+      {
+        "id": "niffen:deepflayer-rescue",
+        "questIds": [
+          72872,
+          72873
+        ],
+        "acceptTogether": true,
+        "objectiveWorkOverlaps": true,
+        "turnInRequiresBothObjectivesOrPeerTurnedIn": true
+      },
+      {
+        "id": "niffen:loamm-orientation",
+        "questIds": [
+          75643,
+          72974
+        ],
+        "acceptTogether": true,
+        "turnInBeforeQuestId": 75644,
+        "requiredCount": 2
+      }
+    ],
+    "rewardCheckpoints": [
+      {
+        "questId": 72981,
+        "itemId": 204389,
+        "kind": "toy",
+        "terminal": "Toy Box ownership; prior quest completion does not prove the reward was received or learned."
+      }
+    ],
+    "notIncludedAsMandatory": [
+      75985
+    ],
+    "recoveryPolicy": "A temporary repair returns to the original action only after its actual condition is established. Quest abandonment, gossip skips, reward selection and transports remain player-controlled.",
+    "gapBoundary": "The connected chapter is fully authored from a currently offered/active chapter quest. Availability of the fresh-character root before Hidden Legacies and exceptional global phase defects remain outside that completeness claim."
+  },
+  "quests": [
+    {
+      "questId": 74381,
+      "title": "Hidden Legacies",
+      "scope": "character quest completion; unlock scope classified separately",
+      "historicalPrerequisites": {
+        "allQuestTurnedIn": []
+      },
+      "entryOverride": {
+        "kind": "positiveQuestOfferOrActiveQuest",
+        "reason": "A native downstream offer is actual access evidence. Missing historical flags do not force a replay or become new completion flags."
+      },
+      "branchGroup": null,
+      "maxVariantsRequired": null,
+      "stopId": "niffen:quest-74381",
+      "sourceChecked": true,
+      "sourceLines": [
+        11,
+        14
+      ],
+      "sourceIds": [
+        "niffen-source-e9e0a202ff11",
+        "niffen-source-6ac9e51f1702"
+      ],
+      "steps": [
+        {
+          "id": "niffen-unlock:q74381:accept",
+          "kind": "accept",
+          "questId": 74381,
+          "text": "Accept the automatically offered introduction when it appears.",
+          "navigation": {
+            "kind": "automaticQuestOffer",
+            "zoneMapID": 2112,
+            "followUpNpcId": 201398,
+            "destination": {
+              "x": 0.61,
+              "y": 0.266,
+              "mapKey": "VALDRAKKEN",
+              "mapID": 2112
+            },
+            "sources": [
+              "niffen-source-bf16627f872f"
+            ]
+          },
+          "completeWhen": {
+            "any": [
+              {
+                "kind": "questInLog",
+                "questId": 74381
+              },
+              {
+                "kind": "questTurnedIn",
+                "questId": 74381,
+                "scope": "character"
+              }
+            ]
+          },
+          "sources": [
+            "niffen-source-e9e0a202ff11",
+            "niffen-source-6ac9e51f1702"
+          ]
+        },
+        {
+          "id": "niffen-unlock:q74381:objectives",
+          "kind": "objective",
+          "questId": 74381,
+          "instructions": [
+            "In Valdrakken, check for the automatically offered Forbidden Reach introduction. Go to Kurazidaia on the Seat of the Aspects roof and ask for her report.",
+            "If an eligible alt skip is offered, read its forfeited-reward warning and choose it yourself; the guide resumes only after observing the resulting downstream quest state."
+          ],
+          "navigation": {
+            "kind": "nativeQuestObjective",
+            "questId": 74381,
+            "sourceChecked": true,
+            "fixedPoints": [],
+            "fallback": "Use the tracked game objective/area marker and the written location. Missing native data stays unknown; never substitute the acceptance pin for an objective."
+          },
+          "completeWhen": {
+            "kind": "questReadyForTurnIn",
+            "questId": 74381
+          },
+          "preserveAuthoredText": true,
+          "overlayLiveCounters": true,
+          "sources": [
+            "niffen-source-e9e0a202ff11",
+            "niffen-source-6ac9e51f1702"
+          ]
+        },
+        {
+          "id": "niffen-unlock:q74381:turn-in",
+          "kind": "turnIn",
+          "questId": 74381,
+          "text": "Follow the live quest-end marker and turn in Hidden Legacies. Choose any reward yourself.",
+          "navigation": {
+            "kind": "nativeQuestEnd",
+            "questId": 74381,
+            "sourceChecked": true,
+            "fixedPoint": null,
+            "fallback": "Follow the currently observed quest-end marker; an inferred next-giver location is not published as a verified endpoint."
+          },
+          "completeWhen": {
+            "kind": "questTurnedIn",
+            "questId": 74381,
+            "scope": "character"
+          },
+          "sources": [
+            "niffen-source-e9e0a202ff11",
+            "niffen-source-6ac9e51f1702"
+          ]
+        }
+      ],
+      "recovery": [
+        "Refresh this exact quest’s log and native markers. If it was abandoned, return to its observed giver and reacquire it manually. A missing or unreadable response cannot advance the action.",
+        "If a giver or phase is absent, recheck the immediately preceding quest or choose another activity. Continue and Skip move the cursor only."
+      ],
+      "coverage": "prerequisite-support; fresh root offer eligibility not fully established",
+      "actuallyPlaytested": false
+    },
+    {
+      "questId": 73076,
+      "title": "Return to the Reach",
+      "scope": "character quest completion; unlock scope classified separately",
+      "historicalPrerequisites": {
+        "allQuestTurnedIn": [
+          74381
+        ]
+      },
+      "entryOverride": {
+        "kind": "positiveQuestOfferOrActiveQuest",
+        "reason": "A native downstream offer is actual access evidence. Missing historical flags do not force a replay or become new completion flags."
+      },
+      "branchGroup": null,
+      "maxVariantsRequired": null,
+      "stopId": "niffen:quest-73076",
+      "sourceChecked": true,
+      "sourceLines": [
+        15,
+        22
+      ],
+      "sourceIds": [
+        "niffen-source-e9e0a202ff11",
+        "niffen-source-4ad15c9e7138"
+      ],
+      "steps": [
+        {
+          "id": "niffen-unlock:q73076:accept",
+          "kind": "accept",
+          "questId": 73076,
+          "text": "Accept Return to the Reach from the current quest giver.",
+          "navigation": {
+            "kind": "fixed",
+            "destination": {
+              "x": 0.608,
+              "y": 0.264,
+              "mapKey": "VALDRAKKEN",
+              "mapID": 2112
+            },
+            "npcId": 201398,
+            "evidence": "pinned ATT explicit quest giver; coordinate is acceptance only"
+          },
+          "completeWhen": {
+            "any": [
+              {
+                "kind": "questInLog",
+                "questId": 73076
+              },
+              {
+                "kind": "questTurnedIn",
+                "questId": 73076,
+                "scope": "character"
+              }
+            ]
+          },
+          "sources": [
+            "niffen-source-e9e0a202ff11",
+            "niffen-source-4ad15c9e7138"
+          ]
+        },
+        {
+          "id": "niffen-unlock:q73076:objectives",
+          "kind": "objective",
+          "questId": 73076,
+          "instructions": [
+            "Ask Flightmaster Aluri for the quest flight to the Forbidden Reach, or follow the active quest destination if already there.",
+            "Find Emberthal above Morqut Village and speak with her. Do not substitute a normal discovered flight for completion of the live quest."
+          ],
+          "navigation": {
+            "kind": "nativeQuestObjective",
+            "questId": 73076,
+            "sourceChecked": true,
+            "fixedPoints": [],
+            "fallback": "Use the tracked game objective/area marker and the written location. Missing native data stays unknown; never substitute the acceptance pin for an objective."
+          },
+          "completeWhen": {
+            "kind": "questReadyForTurnIn",
+            "questId": 73076
+          },
+          "preserveAuthoredText": true,
+          "overlayLiveCounters": true,
+          "sources": [
+            "niffen-source-e9e0a202ff11",
+            "niffen-source-4ad15c9e7138"
+          ]
+        },
+        {
+          "id": "niffen-unlock:q73076:turn-in",
+          "kind": "turnIn",
+          "questId": 73076,
+          "text": "Follow the live quest-end marker and turn in Return to the Reach. Choose any reward yourself.",
+          "navigation": {
+            "kind": "nativeQuestEnd",
+            "questId": 73076,
+            "sourceChecked": true,
+            "fixedPoint": null,
+            "fallback": "Follow the currently observed quest-end marker; an inferred next-giver location is not published as a verified endpoint."
+          },
+          "completeWhen": {
+            "kind": "questTurnedIn",
+            "questId": 73076,
+            "scope": "character"
+          },
+          "sources": [
+            "niffen-source-e9e0a202ff11",
+            "niffen-source-4ad15c9e7138"
+          ]
+        }
+      ],
+      "recovery": [
+        "Refresh this exact quest’s log and native markers. If it was abandoned, return to its observed giver and reacquire it manually. A missing or unreadable response cannot advance the action.",
+        "If a giver or phase is absent, recheck the immediately preceding quest or choose another activity. Continue and Skip move the cursor only."
+      ],
+      "coverage": "prerequisite-support; fresh root offer eligibility not fully established",
+      "actuallyPlaytested": false
+    },
+    {
+      "questId": 72712,
+      "title": "The Best We Have",
+      "scope": "character quest completion; unlock scope classified separately",
+      "historicalPrerequisites": {
+        "allQuestTurnedIn": [
+          73076
+        ]
+      },
+      "entryOverride": {
+        "kind": "positiveQuestOfferOrActiveQuest",
+        "reason": "A native downstream offer is actual access evidence. Missing historical flags do not force a replay or become new completion flags."
+      },
+      "branchGroup": null,
+      "maxVariantsRequired": null,
+      "stopId": "niffen:quest-72712",
+      "sourceChecked": true,
+      "sourceLines": [
+        54,
+        58
+      ],
+      "sourceIds": [
+        "niffen-source-e9e0a202ff11",
+        "niffen-source-84bd0f4a7e15"
+      ],
+      "steps": [
+        {
+          "id": "niffen-unlock:q72712:accept",
+          "kind": "accept",
+          "questId": 72712,
+          "text": "Accept The Best We Have from the current quest giver.",
+          "navigation": {
+            "kind": "fixed",
+            "destination": {
+              "x": 0.326,
+              "y": 0.603,
+              "mapKey": "THE_FORBIDDEN_REACH",
+              "mapID": 2151
+            },
+            "npcId": 199532,
+            "evidence": "pinned ATT explicit quest giver; coordinate is acceptance only"
+          },
+          "completeWhen": {
+            "any": [
+              {
+                "kind": "questInLog",
+                "questId": 72712
+              },
+              {
+                "kind": "questTurnedIn",
+                "questId": 72712,
+                "scope": "character"
+              }
+            ]
+          },
+          "sources": [
+            "niffen-source-e9e0a202ff11",
+            "niffen-source-84bd0f4a7e15"
+          ]
+        },
+        {
+          "id": "niffen-unlock:q72712:objectives",
+          "kind": "objective",
+          "questId": 72712,
+          "instructions": [
+            "Carry Emberthal’s orders to Talon Damos at the Lost Atheneum. Check the elevated platform when the marker seems above the entrance.",
+            "An offered campaign skip is optional and separate from the earlier introduction skip. Choosing either remains a player action."
+          ],
+          "navigation": {
+            "kind": "nativeQuestObjective",
+            "questId": 72712,
+            "sourceChecked": true,
+            "fixedPoints": [],
+            "fallback": "Use the tracked game objective/area marker and the written location. Missing native data stays unknown; never substitute the acceptance pin for an objective."
+          },
+          "completeWhen": {
+            "kind": "questReadyForTurnIn",
+            "questId": 72712
+          },
+          "preserveAuthoredText": true,
+          "overlayLiveCounters": true,
+          "sources": [
+            "niffen-source-e9e0a202ff11",
+            "niffen-source-84bd0f4a7e15"
+          ]
+        },
+        {
+          "id": "niffen-unlock:q72712:turn-in",
+          "kind": "turnIn",
+          "questId": 72712,
+          "text": "Follow the live quest-end marker and turn in The Best We Have. Choose any reward yourself.",
+          "navigation": {
+            "kind": "nativeQuestEnd",
+            "questId": 72712,
+            "sourceChecked": true,
+            "fixedPoint": null,
+            "fallback": "Follow the currently observed quest-end marker; an inferred next-giver location is not published as a verified endpoint."
+          },
+          "completeWhen": {
+            "kind": "questTurnedIn",
+            "questId": 72712,
+            "scope": "character"
+          },
+          "sources": [
+            "niffen-source-e9e0a202ff11",
+            "niffen-source-84bd0f4a7e15"
+          ]
+        }
+      ],
+      "recovery": [
+        "Refresh this exact quest’s log and native markers. If it was abandoned, return to its observed giver and reacquire it manually. A missing or unreadable response cannot advance the action.",
+        "If a giver or phase is absent, recheck the immediately preceding quest or choose another activity. Continue and Skip move the cursor only."
+      ],
+      "coverage": "prerequisite-support; fresh root offer eligibility not fully established",
+      "actuallyPlaytested": false
+    },
+    {
+      "questId": 72713,
+      "title": "Inheritance",
+      "scope": "character quest completion; unlock scope classified separately",
+      "historicalPrerequisites": {
+        "allQuestTurnedIn": [
+          72712
+        ]
+      },
+      "entryOverride": {
+        "kind": "positiveQuestOfferOrActiveQuest",
+        "reason": "A native downstream offer is actual access evidence. Missing historical flags do not force a replay or become new completion flags."
+      },
+      "branchGroup": null,
+      "maxVariantsRequired": null,
+      "stopId": "niffen:quest-72713",
+      "sourceChecked": true,
+      "sourceLines": [
+        59,
+        63
+      ],
+      "sourceIds": [
+        "niffen-source-e9e0a202ff11",
+        "niffen-source-b81806d37365"
+      ],
+      "steps": [
+        {
+          "id": "niffen-unlock:q72713:accept",
+          "kind": "accept",
+          "questId": 72713,
+          "text": "Accept Inheritance from the current quest giver.",
+          "navigation": {
+            "kind": "fixed",
+            "destination": {
+              "x": 0.55,
+              "y": 0.37200000000000005,
+              "mapKey": "THE_FORBIDDEN_REACH",
+              "mapID": 2151
+            },
+            "npcId": 200403,
+            "evidence": "pinned ATT explicit quest giver; coordinate is acceptance only"
+          },
+          "completeWhen": {
+            "any": [
+              {
+                "kind": "questInLog",
+                "questId": 72713
+              },
+              {
+                "kind": "questTurnedIn",
+                "questId": 72713,
+                "scope": "character"
+              }
+            ]
+          },
+          "sources": [
+            "niffen-source-e9e0a202ff11",
+            "niffen-source-b81806d37365"
+          ]
+        },
+        {
+          "id": "niffen-unlock:q72713:objectives",
+          "kind": "objective",
+          "questId": 72713,
+          "instructions": [
+            "Help the three indicated scout groups secure the Lost Atheneum. Follow each live quest marker and finish the local assistance interaction or encounter.",
+            "Use the three assistance counters, rather than treating every hidden NPC credit in a database tooltip as an additional kill requirement."
+          ],
+          "navigation": {
+            "kind": "nativeQuestObjective",
+            "questId": 72713,
+            "sourceChecked": true,
+            "fixedPoints": [],
+            "fallback": "Use the tracked game objective/area marker and the written location. Missing native data stays unknown; never substitute the acceptance pin for an objective."
+          },
+          "completeWhen": {
+            "kind": "questReadyForTurnIn",
+            "questId": 72713
+          },
+          "preserveAuthoredText": true,
+          "overlayLiveCounters": true,
+          "sources": [
+            "niffen-source-e9e0a202ff11",
+            "niffen-source-b81806d37365"
+          ]
+        },
+        {
+          "id": "niffen-unlock:q72713:turn-in",
+          "kind": "turnIn",
+          "questId": 72713,
+          "text": "Follow the live quest-end marker and turn in Inheritance. Choose any reward yourself.",
+          "navigation": {
+            "kind": "nativeQuestEnd",
+            "questId": 72713,
+            "sourceChecked": true,
+            "fixedPoint": null,
+            "fallback": "Follow the currently observed quest-end marker; an inferred next-giver location is not published as a verified endpoint."
+          },
+          "completeWhen": {
+            "kind": "questTurnedIn",
+            "questId": 72713,
+            "scope": "character"
+          },
+          "sources": [
+            "niffen-source-e9e0a202ff11",
+            "niffen-source-b81806d37365"
+          ]
+        }
+      ],
+      "recovery": [
+        "Refresh this exact quest’s log and native markers. If it was abandoned, return to its observed giver and reacquire it manually. A missing or unreadable response cannot advance the action.",
+        "If a giver or phase is absent, recheck the immediately preceding quest or choose another activity. Continue and Skip move the cursor only."
+      ],
+      "coverage": "prerequisite-support; fresh root offer eligibility not fully established",
+      "actuallyPlaytested": false
+    },
+    {
+      "questId": 72545,
+      "title": "Creche Fallen",
+      "scope": "character quest completion; unlock scope classified separately",
+      "historicalPrerequisites": {
+        "allQuestTurnedIn": [
+          72713
+        ]
+      },
+      "entryOverride": {
+        "kind": "positiveQuestOfferOrActiveQuest",
+        "reason": "A native downstream offer is actual access evidence. Missing historical flags do not force a replay or become new completion flags."
+      },
+      "branchGroup": null,
+      "maxVariantsRequired": null,
+      "stopId": "niffen:quest-72545",
+      "sourceChecked": true,
+      "sourceLines": [
+        64,
+        74
+      ],
+      "sourceIds": [
+        "niffen-source-e9e0a202ff11",
+        "niffen-source-28e3579a8e60"
+      ],
+      "steps": [
+        {
+          "id": "niffen-unlock:q72545:accept",
+          "kind": "accept",
+          "questId": 72545,
+          "text": "Accept Creche Fallen from the current quest giver.",
+          "navigation": {
+            "kind": "fixed",
+            "destination": {
+              "x": 0.551,
+              "y": 0.358,
+              "mapKey": "THE_FORBIDDEN_REACH",
+              "mapID": 2151
+            },
+            "npcId": 199531,
+            "evidence": "pinned ATT explicit quest giver; coordinate is acceptance only"
+          },
+          "completeWhen": {
+            "any": [
+              {
+                "kind": "questInLog",
+                "questId": 72545
+              },
+              {
+                "kind": "questTurnedIn",
+                "questId": 72545,
+                "scope": "character"
+              }
+            ]
+          },
+          "sources": [
+            "niffen-source-e9e0a202ff11",
+            "niffen-source-28e3579a8e60"
+          ]
+        },
+        {
+          "id": "niffen-unlock:q72545:objectives",
+          "kind": "objective",
+          "questId": 72545,
+          "instructions": [
+            "Find the four marked signets belonging to Tetsos, Arrosh, Ekrati and Talon Hermin in the Lost Atheneum.",
+            "Loot or interact with the marked objective at each location; check the actual quest counters before leaving."
+          ],
+          "navigation": {
+            "kind": "nativeQuestObjective",
+            "questId": 72545,
+            "sourceChecked": true,
+            "fixedPoints": [],
+            "fallback": "Use the tracked game objective/area marker and the written location. Missing native data stays unknown; never substitute the acceptance pin for an objective."
+          },
+          "completeWhen": {
+            "kind": "questReadyForTurnIn",
+            "questId": 72545
+          },
+          "preserveAuthoredText": true,
+          "overlayLiveCounters": true,
+          "sources": [
+            "niffen-source-e9e0a202ff11",
+            "niffen-source-28e3579a8e60"
+          ]
+        },
+        {
+          "id": "niffen-unlock:q72545:turn-in",
+          "kind": "turnIn",
+          "questId": 72545,
+          "text": "Follow the live quest-end marker and turn in Creche Fallen. Choose any reward yourself.",
+          "navigation": {
+            "kind": "nativeQuestEnd",
+            "questId": 72545,
+            "sourceChecked": true,
+            "fixedPoint": null,
+            "fallback": "Follow the currently observed quest-end marker; an inferred next-giver location is not published as a verified endpoint."
+          },
+          "completeWhen": {
+            "kind": "questTurnedIn",
+            "questId": 72545,
+            "scope": "character"
+          },
+          "sources": [
+            "niffen-source-e9e0a202ff11",
+            "niffen-source-28e3579a8e60"
+          ]
+        }
+      ],
+      "recovery": [
+        "Refresh this exact quest’s log and native markers. If it was abandoned, return to its observed giver and reacquire it manually. A missing or unreadable response cannot advance the action.",
+        "If a giver or phase is absent, recheck the immediately preceding quest or choose another activity. Continue and Skip move the cursor only."
+      ],
+      "coverage": "prerequisite-support; fresh root offer eligibility not fully established",
+      "actuallyPlaytested": false
+    },
+    {
+      "questId": 73094,
+      "title": "Aiding the Expedition",
+      "scope": "character quest completion; unlock scope classified separately",
+      "historicalPrerequisites": {
+        "allQuestTurnedIn": [
+          72545
+        ]
+      },
+      "entryOverride": {
+        "kind": "positiveQuestOfferOrActiveQuest",
+        "reason": "A native downstream offer is actual access evidence. Missing historical flags do not force a replay or become new completion flags."
+      },
+      "branchGroup": null,
+      "maxVariantsRequired": null,
+      "stopId": "niffen:quest-73094",
+      "sourceChecked": true,
+      "sourceLines": [
+        75,
+        79
+      ],
+      "sourceIds": [
+        "niffen-source-e9e0a202ff11",
+        "niffen-source-70f8b69276d1"
+      ],
+      "steps": [
+        {
+          "id": "niffen-unlock:q73094:accept",
+          "kind": "accept",
+          "questId": 73094,
+          "text": "Accept Aiding the Expedition from the current quest giver.",
+          "navigation": {
+            "kind": "fixed",
+            "destination": {
+              "x": 0.551,
+              "y": 0.358,
+              "mapKey": "THE_FORBIDDEN_REACH",
+              "mapID": 2151
+            },
+            "npcId": 199531,
+            "evidence": "pinned ATT explicit quest giver; coordinate is acceptance only"
+          },
+          "completeWhen": {
+            "any": [
+              {
+                "kind": "questInLog",
+                "questId": 73094
+              },
+              {
+                "kind": "questTurnedIn",
+                "questId": 73094,
+                "scope": "character"
+              }
+            ]
+          },
+          "sources": [
+            "niffen-source-e9e0a202ff11",
+            "niffen-source-70f8b69276d1"
+          ]
+        },
+        {
+          "id": "niffen-unlock:q73094:objectives",
+          "kind": "objective",
+          "questId": 73094,
+          "instructions": [
+            "Leave the Atheneum and meet Emberthal and Ebyssian at Stormsunder Crater."
+          ],
+          "navigation": {
+            "kind": "nativeQuestObjective",
+            "questId": 73094,
+            "sourceChecked": true,
+            "fixedPoints": [],
+            "fallback": "Use the tracked game objective/area marker and the written location. Missing native data stays unknown; never substitute the acceptance pin for an objective."
+          },
+          "completeWhen": {
+            "kind": "questReadyForTurnIn",
+            "questId": 73094
+          },
+          "preserveAuthoredText": true,
+          "overlayLiveCounters": true,
+          "sources": [
+            "niffen-source-e9e0a202ff11",
+            "niffen-source-70f8b69276d1"
+          ]
+        },
+        {
+          "id": "niffen-unlock:q73094:turn-in",
+          "kind": "turnIn",
+          "questId": 73094,
+          "text": "Follow the live quest-end marker and turn in Aiding the Expedition. Choose any reward yourself.",
+          "navigation": {
+            "kind": "nativeQuestEnd",
+            "questId": 73094,
+            "sourceChecked": true,
+            "fixedPoint": null,
+            "fallback": "Follow the currently observed quest-end marker; an inferred next-giver location is not published as a verified endpoint."
+          },
+          "completeWhen": {
+            "kind": "questTurnedIn",
+            "questId": 73094,
+            "scope": "character"
+          },
+          "sources": [
+            "niffen-source-e9e0a202ff11",
+            "niffen-source-70f8b69276d1"
+          ]
+        }
+      ],
+      "recovery": [
+        "Refresh this exact quest’s log and native markers. If it was abandoned, return to its observed giver and reacquire it manually. A missing or unreadable response cannot advance the action.",
+        "If a giver or phase is absent, recheck the immediately preceding quest or choose another activity. Continue and Skip move the cursor only."
+      ],
+      "coverage": "prerequisite-support; fresh root offer eligibility not fully established",
+      "actuallyPlaytested": false
+    },
+    {
+      "questId": 72714,
+      "title": "An Interdisciplinary Approach",
+      "scope": "character quest completion; unlock scope classified separately",
+      "historicalPrerequisites": {
+        "allQuestTurnedIn": [
+          73094
+        ]
+      },
+      "entryOverride": {
+        "kind": "positiveQuestOfferOrActiveQuest",
+        "reason": "A native downstream offer is actual access evidence. Missing historical flags do not force a replay or become new completion flags."
+      },
+      "branchGroup": null,
+      "maxVariantsRequired": null,
+      "stopId": "niffen:quest-72714",
+      "sourceChecked": true,
+      "sourceLines": [
+        85,
+        89
+      ],
+      "sourceIds": [
+        "niffen-source-e9e0a202ff11",
+        "niffen-source-77b5ce2d02eb"
+      ],
+      "steps": [
+        {
+          "id": "niffen-unlock:q72714:accept",
+          "kind": "accept",
+          "questId": 72714,
+          "text": "Accept An Interdisciplinary Approach from the current quest giver.",
+          "navigation": {
+            "kind": "fixed",
+            "destination": {
+              "x": 0.616,
+              "y": 0.614,
+              "mapKey": "THE_FORBIDDEN_REACH",
+              "mapID": 2151
+            },
+            "npcId": 199520,
+            "evidence": "pinned ATT explicit quest giver; coordinate is acceptance only"
+          },
+          "completeWhen": {
+            "any": [
+              {
+                "kind": "questInLog",
+                "questId": 72714
+              },
+              {
+                "kind": "questTurnedIn",
+                "questId": 72714,
+                "scope": "character"
+              }
+            ]
+          },
+          "sources": [
+            "niffen-source-e9e0a202ff11",
+            "niffen-source-77b5ce2d02eb"
+          ]
+        },
+        {
+          "id": "niffen-unlock:q72714:objectives",
+          "kind": "objective",
+          "questId": 72714,
+          "instructions": [
+            "Rescue five frightened researchers around Talonlords’ Perch. Complete the nearby hostile encounter or interaction indicated by each live quest marker."
+          ],
+          "navigation": {
+            "kind": "nativeQuestObjective",
+            "questId": 72714,
+            "sourceChecked": true,
+            "fixedPoints": [],
+            "fallback": "Use the tracked game objective/area marker and the written location. Missing native data stays unknown; never substitute the acceptance pin for an objective."
+          },
+          "completeWhen": {
+            "kind": "questReadyForTurnIn",
+            "questId": 72714
+          },
+          "preserveAuthoredText": true,
+          "overlayLiveCounters": true,
+          "sources": [
+            "niffen-source-e9e0a202ff11",
+            "niffen-source-77b5ce2d02eb"
+          ]
+        },
+        {
+          "id": "niffen-unlock:q72714:turn-in",
+          "kind": "turnIn",
+          "questId": 72714,
+          "text": "Follow the live quest-end marker and turn in An Interdisciplinary Approach. Choose any reward yourself.",
+          "navigation": {
+            "kind": "nativeQuestEnd",
+            "questId": 72714,
+            "sourceChecked": true,
+            "fixedPoint": null,
+            "fallback": "Follow the currently observed quest-end marker; an inferred next-giver location is not published as a verified endpoint."
+          },
+          "completeWhen": {
+            "kind": "questTurnedIn",
+            "questId": 72714,
+            "scope": "character"
+          },
+          "sources": [
+            "niffen-source-e9e0a202ff11",
+            "niffen-source-77b5ce2d02eb"
+          ]
+        }
+      ],
+      "recovery": [
+        "Refresh this exact quest’s log and native markers. If it was abandoned, return to its observed giver and reacquire it manually. A missing or unreadable response cannot advance the action.",
+        "If a giver or phase is absent, recheck the immediately preceding quest or choose another activity. Continue and Skip move the cursor only."
+      ],
+      "coverage": "prerequisite-support; fresh root offer eligibility not fully established",
+      "actuallyPlaytested": false
+    },
+    {
+      "questId": 72715,
+      "title": "Keeping the Flame at Bay",
+      "scope": "character quest completion; unlock scope classified separately",
+      "historicalPrerequisites": {
+        "allQuestTurnedIn": [
+          73094
+        ]
+      },
+      "entryOverride": {
+        "kind": "positiveQuestOfferOrActiveQuest",
+        "reason": "A native downstream offer is actual access evidence. Missing historical flags do not force a replay or become new completion flags."
+      },
+      "branchGroup": null,
+      "maxVariantsRequired": null,
+      "stopId": "niffen:quest-72715",
+      "sourceChecked": true,
+      "sourceLines": [
+        80,
+        84
+      ],
+      "sourceIds": [
+        "niffen-source-e9e0a202ff11",
+        "niffen-source-102b98a27dbc"
+      ],
+      "steps": [
+        {
+          "id": "niffen-unlock:q72715:accept",
+          "kind": "accept",
+          "questId": 72715,
+          "text": "Accept Keeping the Flame at Bay from the current quest giver.",
+          "navigation": {
+            "kind": "fixed",
+            "destination": {
+              "x": 0.614,
+              "y": 0.615,
+              "mapKey": "THE_FORBIDDEN_REACH",
+              "mapID": 2151
+            },
+            "npcId": 199175,
+            "evidence": "pinned ATT explicit quest giver; coordinate is acceptance only"
+          },
+          "completeWhen": {
+            "any": [
+              {
+                "kind": "questInLog",
+                "questId": 72715
+              },
+              {
+                "kind": "questTurnedIn",
+                "questId": 72715,
+                "scope": "character"
+              }
+            ]
+          },
+          "sources": [
+            "niffen-source-e9e0a202ff11",
+            "niffen-source-102b98a27dbc"
+          ]
+        },
+        {
+          "id": "niffen-unlock:q72715:objectives",
+          "kind": "objective",
+          "questId": 72715,
+          "instructions": [
+            "Defeat four Sundered Pillagers, six Sundered Ruinstalkers and Winglord Iyazael in the High Creche.",
+            "This can overlap the researcher rescues; keep both quests and all three kill counters visible."
+          ],
+          "navigation": {
+            "kind": "nativeQuestObjective",
+            "questId": 72715,
+            "sourceChecked": true,
+            "fixedPoints": [],
+            "fallback": "Use the tracked game objective/area marker and the written location. Missing native data stays unknown; never substitute the acceptance pin for an objective."
+          },
+          "completeWhen": {
+            "kind": "questReadyForTurnIn",
+            "questId": 72715
+          },
+          "preserveAuthoredText": true,
+          "overlayLiveCounters": true,
+          "sources": [
+            "niffen-source-e9e0a202ff11",
+            "niffen-source-102b98a27dbc"
+          ]
+        },
+        {
+          "id": "niffen-unlock:q72715:turn-in",
+          "kind": "turnIn",
+          "questId": 72715,
+          "text": "Follow the live quest-end marker and turn in Keeping the Flame at Bay. Choose any reward yourself.",
+          "navigation": {
+            "kind": "nativeQuestEnd",
+            "questId": 72715,
+            "sourceChecked": true,
+            "fixedPoint": null,
+            "fallback": "Follow the currently observed quest-end marker; an inferred next-giver location is not published as a verified endpoint."
+          },
+          "completeWhen": {
+            "kind": "questTurnedIn",
+            "questId": 72715,
+            "scope": "character"
+          },
+          "sources": [
+            "niffen-source-e9e0a202ff11",
+            "niffen-source-102b98a27dbc"
+          ]
+        }
+      ],
+      "recovery": [
+        "Refresh this exact quest’s log and native markers. If it was abandoned, return to its observed giver and reacquire it manually. A missing or unreadable response cannot advance the action.",
+        "If a giver or phase is absent, recheck the immediately preceding quest or choose another activity. Continue and Skip move the cursor only."
+      ],
+      "coverage": "prerequisite-support; fresh root offer eligibility not fully established",
+      "actuallyPlaytested": false
+    },
+    {
+      "questId": 73137,
+      "title": "Chasing the Flame",
+      "scope": "character quest completion; unlock scope classified separately",
+      "historicalPrerequisites": {
+        "allQuestTurnedIn": [
+          72715,
+          72714
+        ]
+      },
+      "entryOverride": {
+        "kind": "positiveQuestOfferOrActiveQuest",
+        "reason": "A native downstream offer is actual access evidence. Missing historical flags do not force a replay or become new completion flags."
+      },
+      "branchGroup": null,
+      "maxVariantsRequired": null,
+      "stopId": "niffen:quest-73137",
+      "sourceChecked": true,
+      "sourceLines": [
+        90,
+        97
+      ],
+      "sourceIds": [
+        "niffen-source-e9e0a202ff11",
+        "niffen-source-bcd77849a3b9"
+      ],
+      "steps": [
+        {
+          "id": "niffen-unlock:q73137:accept",
+          "kind": "accept",
+          "questId": 73137,
+          "text": "Accept Chasing the Flame from the current quest giver.",
+          "navigation": {
+            "kind": "fixed",
+            "destination": {
+              "x": 0.5870000000000001,
+              "y": 0.7020000000000001,
+              "mapKey": "THE_FORBIDDEN_REACH",
+              "mapID": 2151
+            },
+            "npcId": 199521,
+            "evidence": "pinned ATT explicit quest giver; coordinate is acceptance only"
+          },
+          "completeWhen": {
+            "any": [
+              {
+                "kind": "questInLog",
+                "questId": 73137
+              },
+              {
+                "kind": "questTurnedIn",
+                "questId": 73137,
+                "scope": "character"
+              }
+            ]
+          },
+          "sources": [
+            "niffen-source-e9e0a202ff11",
+            "niffen-source-bcd77849a3b9"
+          ]
+        },
+        {
+          "id": "niffen-unlock:q73137:objectives",
+          "kind": "objective",
+          "questId": 73137,
+          "instructions": [
+            "Travel to Dragonskull Island and find Emberthal at the active quest marker."
+          ],
+          "navigation": {
+            "kind": "nativeQuestObjective",
+            "questId": 73137,
+            "sourceChecked": true,
+            "fixedPoints": [],
+            "fallback": "Use the tracked game objective/area marker and the written location. Missing native data stays unknown; never substitute the acceptance pin for an objective."
+          },
+          "completeWhen": {
+            "kind": "questReadyForTurnIn",
+            "questId": 73137
+          },
+          "preserveAuthoredText": true,
+          "overlayLiveCounters": true,
+          "sources": [
+            "niffen-source-e9e0a202ff11",
+            "niffen-source-bcd77849a3b9"
+          ]
+        },
+        {
+          "id": "niffen-unlock:q73137:turn-in",
+          "kind": "turnIn",
+          "questId": 73137,
+          "text": "Follow the live quest-end marker and turn in Chasing the Flame. Choose any reward yourself.",
+          "navigation": {
+            "kind": "nativeQuestEnd",
+            "questId": 73137,
+            "sourceChecked": true,
+            "fixedPoint": null,
+            "fallback": "Follow the currently observed quest-end marker; an inferred next-giver location is not published as a verified endpoint."
+          },
+          "completeWhen": {
+            "kind": "questTurnedIn",
+            "questId": 73137,
+            "scope": "character"
+          },
+          "sources": [
+            "niffen-source-e9e0a202ff11",
+            "niffen-source-bcd77849a3b9"
+          ]
+        }
+      ],
+      "recovery": [
+        "Refresh this exact quest’s log and native markers. If it was abandoned, return to its observed giver and reacquire it manually. A missing or unreadable response cannot advance the action.",
+        "If a giver or phase is absent, recheck the immediately preceding quest or choose another activity. Continue and Skip move the cursor only."
+      ],
+      "coverage": "prerequisite-support; fresh root offer eligibility not fully established",
+      "actuallyPlaytested": false
+    },
+    {
+      "questId": 72717,
+      "title": "A Creche Divided",
+      "scope": "character quest completion; unlock scope classified separately",
+      "historicalPrerequisites": {
+        "allQuestTurnedIn": [
+          73137
+        ]
+      },
+      "entryOverride": {
+        "kind": "positiveQuestOfferOrActiveQuest",
+        "reason": "A native downstream offer is actual access evidence. Missing historical flags do not force a replay or become new completion flags."
+      },
+      "branchGroup": null,
+      "maxVariantsRequired": null,
+      "stopId": "niffen:quest-72717",
+      "sourceChecked": true,
+      "sourceLines": [
+        98,
+        105
+      ],
+      "sourceIds": [
+        "niffen-source-e9e0a202ff11",
+        "niffen-source-27c8b5926886"
+      ],
+      "steps": [
+        {
+          "id": "niffen-unlock:q72717:accept",
+          "kind": "accept",
+          "questId": 72717,
+          "text": "Accept A Creche Divided from the current quest giver.",
+          "navigation": {
+            "kind": "fixed",
+            "destination": {
+              "x": 0.743,
+              "y": 0.369,
+              "mapKey": "THE_FORBIDDEN_REACH",
+              "mapID": 2151
+            },
+            "npcId": 199538,
+            "evidence": "pinned ATT explicit quest giver; coordinate is acceptance only"
+          },
+          "completeWhen": {
+            "any": [
+              {
+                "kind": "questInLog",
+                "questId": 72717
+              },
+              {
+                "kind": "questTurnedIn",
+                "questId": 72717,
+                "scope": "character"
+              }
+            ]
+          },
+          "sources": [
+            "niffen-source-e9e0a202ff11",
+            "niffen-source-27c8b5926886"
+          ]
+        },
+        {
+          "id": "niffen-unlock:q72717:objectives",
+          "kind": "objective",
+          "questId": 72717,
+          "instructions": [
+            "Accompany Emberthal through the caves below Dragonskull Island. Explore the marked entrance, pit, cavern and tunnel.",
+            "Inspect the four marked Forbidden Memoires and defeat the failed scalecommanders required by the live quest. Keep following the quest sequence rather than leaving after one cave encounter."
+          ],
+          "navigation": {
+            "kind": "nativeQuestObjective",
+            "questId": 72717,
+            "sourceChecked": true,
+            "fixedPoints": [],
+            "fallback": "Use the tracked game objective/area marker and the written location. Missing native data stays unknown; never substitute the acceptance pin for an objective."
+          },
+          "completeWhen": {
+            "kind": "questReadyForTurnIn",
+            "questId": 72717
+          },
+          "preserveAuthoredText": true,
+          "overlayLiveCounters": true,
+          "sources": [
+            "niffen-source-e9e0a202ff11",
+            "niffen-source-27c8b5926886"
+          ]
+        },
+        {
+          "id": "niffen-unlock:q72717:turn-in",
+          "kind": "turnIn",
+          "questId": 72717,
+          "text": "Follow the live quest-end marker and turn in A Creche Divided. Choose any reward yourself.",
+          "navigation": {
+            "kind": "nativeQuestEnd",
+            "questId": 72717,
+            "sourceChecked": true,
+            "fixedPoint": null,
+            "fallback": "Follow the currently observed quest-end marker; an inferred next-giver location is not published as a verified endpoint."
+          },
+          "completeWhen": {
+            "kind": "questTurnedIn",
+            "questId": 72717,
+            "scope": "character"
+          },
+          "sources": [
+            "niffen-source-e9e0a202ff11",
+            "niffen-source-27c8b5926886"
+          ]
+        }
+      ],
+      "recovery": [
+        "Refresh this exact quest’s log and native markers. If it was abandoned, return to its observed giver and reacquire it manually. A missing or unreadable response cannot advance the action.",
+        "If a giver or phase is absent, recheck the immediately preceding quest or choose another activity. Continue and Skip move the cursor only."
+      ],
+      "coverage": "prerequisite-support; fresh root offer eligibility not fully established",
+      "actuallyPlaytested": false
+    },
+    {
+      "questId": 72975,
+      "title": "The Land Beneath",
+      "scope": "character quest completion; unlock scope classified separately",
+      "historicalPrerequisites": {
+        "allQuestTurnedIn": [
+          72717
+        ]
+      },
+      "entryOverride": {
+        "kind": "positiveQuestOfferOrActiveQuest",
+        "reason": "A native downstream offer is actual access evidence. Missing historical flags do not force a replay or become new completion flags."
+      },
+      "branchGroup": "niffen-entry-breadcrumb",
+      "maxVariantsRequired": 1,
+      "stopId": "niffen:quest-72975",
+      "sourceChecked": true,
+      "sourceLines": [
+        11,
+        15
+      ],
+      "sourceIds": [
+        "niffen-source-cda37ad70104",
+        "niffen-source-ca160c970a25"
+      ],
+      "steps": [
+        {
+          "id": "niffen-unlock:q72975:accept",
+          "kind": "accept",
+          "questId": 72975,
+          "text": "Accept The Land Beneath from the current quest giver.",
+          "navigation": {
+            "kind": "fixed",
+            "destination": {
+              "x": 0.513,
+              "y": 0.35200000000000004,
+              "mapKey": "VALDRAKKEN",
+              "mapID": 2112
+            },
+            "npcId": 201401,
+            "evidence": "pinned ATT explicit quest giver; coordinate is acceptance only"
+          },
+          "completeWhen": {
+            "any": [
+              {
+                "kind": "questInLog",
+                "questId": 72975
+              },
+              {
+                "kind": "questTurnedIn",
+                "questId": 72975,
+                "scope": "character"
+              }
+            ]
+          },
+          "sources": [
+            "niffen-source-cda37ad70104",
+            "niffen-source-ca160c970a25"
+          ]
+        },
+        {
+          "id": "niffen-unlock:q72975:objectives",
+          "kind": "objective",
+          "questId": 72975,
+          "instructions": [
+            "Go to the Seat of the Aspects in Valdrakken and speak with the black dragonflight at the active quest-end marker.",
+            "This and News From Beneath are alternative entry breadcrumbs. Complete the one already offered to this character."
+          ],
+          "navigation": {
+            "kind": "nativeQuestObjective",
+            "questId": 72975,
+            "sourceChecked": true,
+            "fixedPoints": [],
+            "fallback": "Use the tracked game objective/area marker and the written location. Missing native data stays unknown; never substitute the acceptance pin for an objective."
+          },
+          "completeWhen": {
+            "kind": "questReadyForTurnIn",
+            "questId": 72975
+          },
+          "preserveAuthoredText": true,
+          "overlayLiveCounters": true,
+          "sources": [
+            "niffen-source-cda37ad70104",
+            "niffen-source-ca160c970a25"
+          ]
+        },
+        {
+          "id": "niffen-unlock:q72975:turn-in",
+          "kind": "turnIn",
+          "questId": 72975,
+          "text": "Follow the live quest-end marker and turn in The Land Beneath. Choose any reward yourself.",
+          "navigation": {
+            "kind": "nativeQuestEnd",
+            "questId": 72975,
+            "sourceChecked": true,
+            "fixedPoint": null,
+            "fallback": "Follow the currently observed quest-end marker; an inferred next-giver location is not published as a verified endpoint."
+          },
+          "completeWhen": {
+            "kind": "questTurnedIn",
+            "questId": 72975,
+            "scope": "character"
+          },
+          "sources": [
+            "niffen-source-cda37ad70104",
+            "niffen-source-ca160c970a25"
+          ]
+        }
+      ],
+      "recovery": [
+        "Refresh this exact quest’s log and native markers. If it was abandoned, return to its observed giver and reacquire it manually. A missing or unreadable response cannot advance the action.",
+        "If a giver or phase is absent, recheck the immediately preceding quest or choose another activity. Continue and Skip move the cursor only."
+      ],
+      "coverage": "connected-checkpoint",
+      "actuallyPlaytested": false
+    },
+    {
+      "questId": 75456,
+      "title": "News From Beneath",
+      "scope": "character quest completion; unlock scope classified separately",
+      "historicalPrerequisites": {
+        "allQuestTurnedIn": [
+          72717
+        ]
+      },
+      "entryOverride": {
+        "kind": "positiveQuestOfferOrActiveQuest",
+        "reason": "A native downstream offer is actual access evidence. Missing historical flags do not force a replay or become new completion flags."
+      },
+      "branchGroup": "niffen-entry-breadcrumb",
+      "maxVariantsRequired": 1,
+      "stopId": "niffen:quest-75456",
+      "sourceChecked": true,
+      "sourceLines": [
+        16,
+        20
+      ],
+      "sourceIds": [
+        "niffen-source-cda37ad70104",
+        "niffen-source-042b41c35bfb"
+      ],
+      "steps": [
+        {
+          "id": "niffen-unlock:q75456:accept",
+          "kind": "accept",
+          "questId": 75456,
+          "text": "Accept News From Beneath from the current quest giver.",
+          "navigation": {
+            "kind": "fixed",
+            "destination": {
+              "x": 0.768,
+              "y": 0.382,
+              "mapKey": "THE_FORBIDDEN_REACH",
+              "mapID": 2151
+            },
+            "npcId": 200277,
+            "evidence": "pinned ATT explicit quest giver; coordinate is acceptance only"
+          },
+          "completeWhen": {
+            "any": [
+              {
+                "kind": "questInLog",
+                "questId": 75456
+              },
+              {
+                "kind": "questTurnedIn",
+                "questId": 75456,
+                "scope": "character"
+              }
+            ]
+          },
+          "sources": [
+            "niffen-source-cda37ad70104",
+            "niffen-source-042b41c35bfb"
+          ]
+        },
+        {
+          "id": "niffen-unlock:q75456:objectives",
+          "kind": "objective",
+          "questId": 75456,
+          "instructions": [
+            "Speak with Ebyssian in the Forbidden Reach. If his quest travel option is offered, choose it yourself to accompany him.",
+            "Meet the dragons at the Seat of the Aspects in Valdrakken; the alternative Valdrakken breadcrumb need not also be completed."
+          ],
+          "navigation": {
+            "kind": "nativeQuestObjective",
+            "questId": 75456,
+            "sourceChecked": true,
+            "fixedPoints": [],
+            "fallback": "Use the tracked game objective/area marker and the written location. Missing native data stays unknown; never substitute the acceptance pin for an objective."
+          },
+          "completeWhen": {
+            "kind": "questReadyForTurnIn",
+            "questId": 75456
+          },
+          "preserveAuthoredText": true,
+          "overlayLiveCounters": true,
+          "sources": [
+            "niffen-source-cda37ad70104",
+            "niffen-source-042b41c35bfb"
+          ]
+        },
+        {
+          "id": "niffen-unlock:q75456:turn-in",
+          "kind": "turnIn",
+          "questId": 75456,
+          "text": "Follow the live quest-end marker and turn in News From Beneath. Choose any reward yourself.",
+          "navigation": {
+            "kind": "nativeQuestEnd",
+            "questId": 75456,
+            "sourceChecked": true,
+            "fixedPoint": null,
+            "fallback": "Follow the currently observed quest-end marker; an inferred next-giver location is not published as a verified endpoint."
+          },
+          "completeWhen": {
+            "kind": "questTurnedIn",
+            "questId": 75456,
+            "scope": "character"
+          },
+          "sources": [
+            "niffen-source-cda37ad70104",
+            "niffen-source-042b41c35bfb"
+          ]
+        }
+      ],
+      "recovery": [
+        "Refresh this exact quest’s log and native markers. If it was abandoned, return to its observed giver and reacquire it manually. A missing or unreadable response cannot advance the action.",
+        "If a giver or phase is absent, recheck the immediately preceding quest or choose another activity. Continue and Skip move the cursor only."
+      ],
+      "coverage": "connected-checkpoint",
+      "actuallyPlaytested": false
+    },
+    {
+      "questId": 72976,
+      "title": "A Crack in the World",
+      "scope": "character quest completion; unlock scope classified separately",
+      "historicalPrerequisites": {
+        "anyQuestTurnedIn": [
+          72975,
+          75456
+        ]
+      },
+      "entryOverride": {
+        "kind": "positiveQuestOfferOrActiveQuest",
+        "reason": "A native downstream offer is actual access evidence. Missing historical flags do not force a replay or become new completion flags."
+      },
+      "branchGroup": null,
+      "maxVariantsRequired": null,
+      "stopId": "niffen:quest-72976",
+      "sourceChecked": true,
+      "sourceLines": [
+        21,
+        29
+      ],
+      "sourceIds": [
+        "niffen-source-cda37ad70104",
+        "niffen-source-e6860e7dc637",
+        "niffen-source-b83f294aae1c"
+      ],
+      "steps": [
+        {
+          "id": "niffen-unlock:q72976:accept",
+          "kind": "accept",
+          "questId": 72976,
+          "text": "Accept A Crack in the World from the current quest giver.",
+          "navigation": {
+            "kind": "fixed",
+            "destination": {
+              "x": 0.614,
+              "y": 0.423,
+              "mapKey": "VALDRAKKEN",
+              "mapID": 2112
+            },
+            "npcId": 201281,
+            "evidence": "pinned ATT explicit quest giver; coordinate is acceptance only"
+          },
+          "completeWhen": {
+            "any": [
+              {
+                "kind": "questInLog",
+                "questId": 72976
+              },
+              {
+                "kind": "questTurnedIn",
+                "questId": 72976,
+                "scope": "character"
+              }
+            ]
+          },
+          "sources": [
+            "niffen-source-cda37ad70104",
+            "niffen-source-e6860e7dc637",
+            "niffen-source-b83f294aae1c"
+          ]
+        },
+        {
+          "id": "niffen-unlock:q72976:objectives",
+          "kind": "objective",
+          "questId": 72976,
+          "instructions": [
+            "Speak with Alexstrasza at the Seat of the Aspects and use her quest dialogue about the Incarnates.",
+            "Let the scene finish, then speak with Ebyssian at his updated quest-end marker. Merely reaching the roof does not complete the conversation."
+          ],
+          "navigation": {
+            "kind": "nativeQuestObjective",
+            "questId": 72976,
+            "sourceChecked": true,
+            "fixedPoints": [
+              {
+                "mapID": 2112,
+                "x": 0.591,
+                "y": 0.37200000000000005,
+                "label": "Alexstrasza"
+              }
+            ],
+            "fallback": "Use the tracked game objective/area marker and the written location. Missing native data stays unknown; never substitute the acceptance pin for an objective."
+          },
+          "completeWhen": {
+            "kind": "questReadyForTurnIn",
+            "questId": 72976
+          },
+          "preserveAuthoredText": true,
+          "overlayLiveCounters": true,
+          "sources": [
+            "niffen-source-cda37ad70104",
+            "niffen-source-e6860e7dc637",
+            "niffen-source-b83f294aae1c"
+          ]
+        },
+        {
+          "id": "niffen-unlock:q72976:turn-in",
+          "kind": "turnIn",
+          "questId": 72976,
+          "text": "Follow the live quest-end marker and turn in A Crack in the World. Choose any reward yourself.",
+          "navigation": {
+            "kind": "nativeQuestEnd",
+            "questId": 72976,
+            "sourceChecked": true,
+            "fixedPoint": {
+              "mapID": 2112,
+              "x": 0.589,
+              "y": 0.385,
+              "label": "Ebyssian"
+            },
+            "fallback": "Follow the currently observed quest-end marker; an inferred next-giver location is not published as a verified endpoint."
+          },
+          "completeWhen": {
+            "kind": "questTurnedIn",
+            "questId": 72976,
+            "scope": "character"
+          },
+          "sources": [
+            "niffen-source-cda37ad70104",
+            "niffen-source-e6860e7dc637",
+            "niffen-source-b83f294aae1c"
+          ]
+        }
+      ],
+      "recovery": [
+        "Refresh this exact quest’s log and native markers. If it was abandoned, return to its observed giver and reacquire it manually. A missing or unreadable response cannot advance the action.",
+        "If a giver or phase is absent, recheck the immediately preceding quest or choose another activity. Continue and Skip move the cursor only."
+      ],
+      "coverage": "connected-checkpoint",
+      "actuallyPlaytested": false
+    },
+    {
+      "questId": 72977,
+      "title": "Where the Flames Fell",
+      "scope": "character quest completion; unlock scope classified separately",
+      "historicalPrerequisites": {
+        "allQuestTurnedIn": [
+          72976
+        ]
+      },
+      "entryOverride": {
+        "kind": "positiveQuestOfferOrActiveQuest",
+        "reason": "A native downstream offer is actual access evidence. Missing historical flags do not force a replay or become new completion flags."
+      },
+      "branchGroup": null,
+      "maxVariantsRequired": null,
+      "stopId": "niffen:quest-72977",
+      "sourceChecked": true,
+      "sourceLines": [
+        30,
+        34
+      ],
+      "sourceIds": [
+        "niffen-source-cda37ad70104",
+        "niffen-source-8a8ef76bb950"
+      ],
+      "steps": [
+        {
+          "id": "niffen-unlock:q72977:accept",
+          "kind": "accept",
+          "questId": 72977,
+          "text": "Accept Where the Flames Fell from the current quest giver.",
+          "navigation": {
+            "kind": "fixed",
+            "destination": {
+              "x": 0.589,
+              "y": 0.384,
+              "mapKey": "VALDRAKKEN",
+              "mapID": 2112
+            },
+            "npcId": 201281,
+            "evidence": "pinned ATT explicit quest giver; coordinate is acceptance only"
+          },
+          "completeWhen": {
+            "any": [
+              {
+                "kind": "questInLog",
+                "questId": 72977
+              },
+              {
+                "kind": "questTurnedIn",
+                "questId": 72977,
+                "scope": "character"
+              }
+            ]
+          },
+          "sources": [
+            "niffen-source-cda37ad70104",
+            "niffen-source-8a8ef76bb950"
+          ]
+        },
+        {
+          "id": "niffen-unlock:q72977:objectives",
+          "kind": "objective",
+          "questId": 72977,
+          "instructions": [
+            "Travel to Cascades Canyon in the Ohn’ahran Plains. Regroup with Sabellian and Wrathion by the newly opened Zaralek entrance.",
+            "Stay for their arrival and check the quest’s ready-to-turn-in state before talking to Wrathion."
+          ],
+          "navigation": {
+            "kind": "nativeQuestObjective",
+            "questId": 72977,
+            "sourceChecked": true,
+            "fixedPoints": [],
+            "fallback": "Use the tracked game objective/area marker and the written location. Missing native data stays unknown; never substitute the acceptance pin for an objective."
+          },
+          "completeWhen": {
+            "kind": "questReadyForTurnIn",
+            "questId": 72977
+          },
+          "preserveAuthoredText": true,
+          "overlayLiveCounters": true,
+          "sources": [
+            "niffen-source-cda37ad70104",
+            "niffen-source-8a8ef76bb950"
+          ]
+        },
+        {
+          "id": "niffen-unlock:q72977:turn-in",
+          "kind": "turnIn",
+          "questId": 72977,
+          "text": "Follow the live quest-end marker and turn in Where the Flames Fell. Choose any reward yourself.",
+          "navigation": {
+            "kind": "nativeQuestEnd",
+            "questId": 72977,
+            "sourceChecked": true,
+            "fixedPoint": null,
+            "fallback": "Follow the currently observed quest-end marker; an inferred next-giver location is not published as a verified endpoint."
+          },
+          "completeWhen": {
+            "kind": "questTurnedIn",
+            "questId": 72977,
+            "scope": "character"
+          },
+          "sources": [
+            "niffen-source-cda37ad70104",
+            "niffen-source-8a8ef76bb950"
+          ]
+        }
+      ],
+      "recovery": [
+        "Refresh this exact quest’s log and native markers. If it was abandoned, return to its observed giver and reacquire it manually. A missing or unreadable response cannot advance the action.",
+        "If a giver or phase is absent, recheck the immediately preceding quest or choose another activity. Continue and Skip move the cursor only."
+      ],
+      "coverage": "connected-checkpoint",
+      "actuallyPlaytested": false
+    },
+    {
+      "questId": 72978,
+      "title": "Scar of Earth and Fire",
+      "scope": "character quest completion; unlock scope classified separately",
+      "historicalPrerequisites": {
+        "allQuestTurnedIn": [
+          72977
+        ]
+      },
+      "entryOverride": {
+        "kind": "positiveQuestOfferOrActiveQuest",
+        "reason": "A native downstream offer is actual access evidence. Missing historical flags do not force a replay or become new completion flags."
+      },
+      "branchGroup": null,
+      "maxVariantsRequired": null,
+      "stopId": "niffen:quest-72978",
+      "sourceChecked": true,
+      "sourceLines": [
+        35,
+        39
+      ],
+      "sourceIds": [
+        "niffen-source-cda37ad70104",
+        "niffen-source-1b54789e9732",
+        "niffen-source-4825441fba55"
+      ],
+      "steps": [
+        {
+          "id": "niffen-unlock:q72978:accept",
+          "kind": "accept",
+          "questId": 72978,
+          "text": "Accept Scar of Earth and Fire from the current quest giver.",
+          "navigation": {
+            "kind": "fixed",
+            "destination": {
+              "x": 0.872,
+              "y": 0.278,
+              "mapKey": "OHNAHRAN_PLAINS",
+              "mapID": 2023
+            },
+            "npcId": 201311,
+            "evidence": "pinned ATT explicit quest giver; coordinate is acceptance only"
+          },
+          "completeWhen": {
+            "any": [
+              {
+                "kind": "questInLog",
+                "questId": 72978
+              },
+              {
+                "kind": "questTurnedIn",
+                "questId": 72978,
+                "scope": "character"
+              }
+            ]
+          },
+          "sources": [
+            "niffen-source-cda37ad70104",
+            "niffen-source-1b54789e9732",
+            "niffen-source-4825441fba55"
+          ]
+        },
+        {
+          "id": "niffen-unlock:q72978:objectives",
+          "kind": "objective",
+          "questId": 72978,
+          "instructions": [
+            "Question Khasar by the remains, inspect the ash pile and broken spear, then speak with Sabellian.",
+            "Finish all four investigation counters and report to Wrathion. Rest Well, Warrior is an optional neighboring quest, not a required step in this path."
+          ],
+          "navigation": {
+            "kind": "nativeQuestObjective",
+            "questId": 72978,
+            "sourceChecked": true,
+            "fixedPoints": [
+              {
+                "mapID": 2023,
+                "x": 0.87,
+                "y": 0.273,
+                "label": "Khasar and investigation scene"
+              },
+              {
+                "mapID": 2023,
+                "x": 0.8740000000000001,
+                "y": 0.275,
+                "label": "Sabellian"
+              }
+            ],
+            "fallback": "Use the tracked game objective/area marker and the written location. Missing native data stays unknown; never substitute the acceptance pin for an objective."
+          },
+          "completeWhen": {
+            "kind": "questReadyForTurnIn",
+            "questId": 72978
+          },
+          "preserveAuthoredText": true,
+          "overlayLiveCounters": true,
+          "sources": [
+            "niffen-source-cda37ad70104",
+            "niffen-source-1b54789e9732",
+            "niffen-source-4825441fba55"
+          ]
+        },
+        {
+          "id": "niffen-unlock:q72978:turn-in",
+          "kind": "turnIn",
+          "questId": 72978,
+          "text": "Follow the live quest-end marker and turn in Scar of Earth and Fire. Choose any reward yourself.",
+          "navigation": {
+            "kind": "nativeQuestEnd",
+            "questId": 72978,
+            "sourceChecked": true,
+            "fixedPoint": {
+              "mapID": 2023,
+              "x": 0.873,
+              "y": 0.276,
+              "label": "Wrathion"
+            },
+            "fallback": "Follow the currently observed quest-end marker; an inferred next-giver location is not published as a verified endpoint."
+          },
+          "completeWhen": {
+            "kind": "questTurnedIn",
+            "questId": 72978,
+            "scope": "character"
+          },
+          "sources": [
+            "niffen-source-cda37ad70104",
+            "niffen-source-1b54789e9732",
+            "niffen-source-4825441fba55"
+          ]
+        }
+      ],
+      "recovery": [
+        "Refresh this exact quest’s log and native markers. If it was abandoned, return to its observed giver and reacquire it manually. A missing or unreadable response cannot advance the action.",
+        "If a giver or phase is absent, recheck the immediately preceding quest or choose another activity. Continue and Skip move the cursor only."
+      ],
+      "coverage": "connected-checkpoint",
+      "actuallyPlaytested": false
+    },
+    {
+      "questId": 72981,
+      "title": "The Patience of Princes",
+      "scope": "character quest completion; unlock scope classified separately",
+      "historicalPrerequisites": {
+        "allQuestTurnedIn": [
+          72978
+        ]
+      },
+      "entryOverride": {
+        "kind": "positiveQuestOfferOrActiveQuest",
+        "reason": "A native downstream offer is actual access evidence. Missing historical flags do not force a replay or become new completion flags."
+      },
+      "branchGroup": null,
+      "maxVariantsRequired": null,
+      "stopId": "niffen:quest-72981",
+      "sourceChecked": true,
+      "sourceLines": [
+        48,
+        56
+      ],
+      "sourceIds": [
+        "niffen-source-cda37ad70104",
+        "niffen-source-b9840a751392",
+        "niffen-source-2fd6368afbde",
+        "niffen-source-07e08d147b94"
+      ],
+      "steps": [
+        {
+          "id": "niffen-unlock:q72981:accept",
+          "kind": "accept",
+          "questId": 72981,
+          "text": "Accept The Patience of Princes from the current quest giver.",
+          "navigation": {
+            "kind": "fixed",
+            "destination": {
+              "x": 0.8740000000000001,
+              "y": 0.275,
+              "mapKey": "OHNAHRAN_PLAINS",
+              "mapID": 2023
+            },
+            "npcId": 200085,
+            "evidence": "pinned ATT explicit quest giver; coordinate is acceptance only"
+          },
+          "completeWhen": {
+            "any": [
+              {
+                "kind": "questInLog",
+                "questId": 72981
+              },
+              {
+                "kind": "questTurnedIn",
+                "questId": 72981,
+                "scope": "character"
+              }
+            ]
+          },
+          "sources": [
+            "niffen-source-cda37ad70104",
+            "niffen-source-b9840a751392",
+            "niffen-source-2fd6368afbde",
+            "niffen-source-07e08d147b94"
+          ]
+        },
+        {
+          "id": "niffen-unlock:q72981:objectives",
+          "kind": "objective",
+          "questId": 72981,
+          "instructions": [
+            "Follow the dragons into Iridikron’s Gambit and descend until the scenario begins. Speak with Sabellian to start its plan.",
+            "Advance through the ground forces and defeat Cliffkeeper Bouldani, then continue through the fire forces to Portalkeeper Cimbra.",
+            "When the last barrier opens, defeat Summitshaper Lorac and his encounter. Allow the transition and cutscenes to finish; turn in to Elder Honeypelt in the Deepflayer Nests.",
+            "Use the live scenario criteria. An intermediate boss death or entering Zaralek alone is not the quest terminal."
+          ],
+          "navigation": {
+            "kind": "nativeQuestObjective",
+            "questId": 72981,
+            "sourceChecked": true,
+            "fixedPoints": [],
+            "fallback": "Use the tracked game objective/area marker and the written location. Missing native data stays unknown; never substitute the acceptance pin for an objective."
+          },
+          "completeWhen": {
+            "kind": "questReadyForTurnIn",
+            "questId": 72981
+          },
+          "preserveAuthoredText": true,
+          "overlayLiveCounters": true,
+          "sources": [
+            "niffen-source-cda37ad70104",
+            "niffen-source-b9840a751392",
+            "niffen-source-2fd6368afbde",
+            "niffen-source-07e08d147b94"
+          ]
+        },
+        {
+          "id": "niffen-unlock:q72981:turn-in",
+          "kind": "turnIn",
+          "questId": 72981,
+          "text": "Follow the live quest-end marker and turn in The Patience of Princes. Choose any reward yourself.",
+          "navigation": {
+            "kind": "nativeQuestEnd",
+            "questId": 72981,
+            "sourceChecked": true,
+            "fixedPoint": null,
+            "fallback": "Follow the currently observed quest-end marker; an inferred next-giver location is not published as a verified endpoint."
+          },
+          "completeWhen": {
+            "kind": "questTurnedIn",
+            "questId": 72981,
+            "scope": "character"
+          },
+          "sources": [
+            "niffen-source-cda37ad70104",
+            "niffen-source-b9840a751392",
+            "niffen-source-2fd6368afbde",
+            "niffen-source-07e08d147b94"
+          ]
+        }
+      ],
+      "recovery": [
+        "If the scenario did not begin or you left it, return to the active quest marker at Sabellian and inspect any offered return-to-underground dialogue. Use the live destination; do not repeat an already finished scenario on cursor history alone.",
+        "If its final encounter is dead but credit is absent, refresh the quest/scenario observations and report or defer. Abandoning is an optional manual last resort, never an automatic repair."
+      ],
+      "coverage": "connected-checkpoint",
+      "actuallyPlaytested": false
+    },
+    {
+      "questId": 72872,
+      "title": "Culling the Deep",
+      "scope": "character quest completion; unlock scope classified separately",
+      "historicalPrerequisites": {
+        "allQuestTurnedIn": [
+          72981
+        ]
+      },
+      "entryOverride": {
+        "kind": "positiveQuestOfferOrActiveQuest",
+        "reason": "A native downstream offer is actual access evidence. Missing historical flags do not force a replay or become new completion flags."
+      },
+      "branchGroup": null,
+      "maxVariantsRequired": null,
+      "stopId": "niffen:deepflayer-rescue",
+      "sourceChecked": true,
+      "sourceLines": [
+        57,
+        61
+      ],
+      "sourceIds": [
+        "niffen-source-cda37ad70104",
+        "niffen-source-c26f1b79e335"
+      ],
+      "steps": [
+        {
+          "id": "niffen-unlock:q72872:accept",
+          "kind": "accept",
+          "questId": 72872,
+          "text": "Accept Culling the Deep from the current quest giver.",
+          "navigation": {
+            "kind": "fixed",
+            "destination": {
+              "x": 0.647,
+              "y": 0.376,
+              "mapKey": "ZARALEK_CAVERN",
+              "mapID": 2133
+            },
+            "npcId": 200116,
+            "evidence": "pinned ATT explicit quest giver; coordinate is acceptance only"
+          },
+          "completeWhen": {
+            "any": [
+              {
+                "kind": "questInLog",
+                "questId": 72872
+              },
+              {
+                "kind": "questTurnedIn",
+                "questId": 72872,
+                "scope": "character"
+              }
+            ]
+          },
+          "sources": [
+            "niffen-source-cda37ad70104",
+            "niffen-source-c26f1b79e335"
+          ]
+        },
+        {
+          "id": "niffen-unlock:q72872:objectives",
+          "kind": "objective",
+          "questId": 72872,
+          "instructions": [
+            "Accept both of Honeypelt’s offered quests before leaving the crystal-prison area.",
+            "Defeat eight quest-credit deepflayers while following her rescue route. Save the turn-in until the rescue is also finished and Honeypelt has reached the endpoint."
+          ],
+          "navigation": {
+            "kind": "nativeQuestObjective",
+            "questId": 72872,
+            "sourceChecked": true,
+            "fixedPoints": [],
+            "fallback": "Use the tracked game objective/area marker and the written location. Missing native data stays unknown; never substitute the acceptance pin for an objective."
+          },
+          "completeWhen": {
+            "kind": "questReadyForTurnIn",
+            "questId": 72872
+          },
+          "preserveAuthoredText": true,
+          "overlayLiveCounters": true,
+          "sources": [
+            "niffen-source-cda37ad70104",
+            "niffen-source-c26f1b79e335"
+          ]
+        },
+        {
+          "id": "niffen-unlock:q72872:turn-in",
+          "kind": "turnIn",
+          "questId": 72872,
+          "text": "Follow the live quest-end marker and turn in Culling the Deep. Choose any reward yourself.",
+          "navigation": {
+            "kind": "nativeQuestEnd",
+            "questId": 72872,
+            "sourceChecked": true,
+            "fixedPoint": null,
+            "fallback": "Follow the currently observed quest-end marker; an inferred next-giver location is not published as a verified endpoint."
+          },
+          "completeWhen": {
+            "kind": "questTurnedIn",
+            "questId": 72872,
+            "scope": "character"
+          },
+          "sources": [
+            "niffen-source-cda37ad70104",
+            "niffen-source-c26f1b79e335"
+          ],
+          "eligibleWhen": {
+            "all": [
+              {
+                "kind": "questReadyForTurnIn",
+                "questId": 72872
+              },
+              {
+                "any": [
+                  {
+                    "kind": "questReadyForTurnIn",
+                    "questId": 72873
+                  },
+                  {
+                    "kind": "questTurnedIn",
+                    "questId": 72873,
+                    "scope": "character"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "recovery": [
+        "Honeypelt’s endpoint can depend on finishing both paired quests. Recheck It Was Not Enough before searching for a separate turn-in NPC."
+      ],
+      "coverage": "connected-checkpoint",
+      "actuallyPlaytested": false
+    },
+    {
+      "questId": 72873,
+      "title": "It Was Not Enough",
+      "scope": "character quest completion; unlock scope classified separately",
+      "historicalPrerequisites": {
+        "allQuestTurnedIn": [
+          72981
+        ]
+      },
+      "entryOverride": {
+        "kind": "positiveQuestOfferOrActiveQuest",
+        "reason": "A native downstream offer is actual access evidence. Missing historical flags do not force a replay or become new completion flags."
+      },
+      "branchGroup": null,
+      "maxVariantsRequired": null,
+      "stopId": "niffen:deepflayer-rescue",
+      "sourceChecked": true,
+      "sourceLines": [
+        62,
+        66
+      ],
+      "sourceIds": [
+        "niffen-source-cda37ad70104",
+        "niffen-source-a704cd0aabaa",
+        "niffen-source-c627d43d9529",
+        "niffen-source-6d15d0cf190a"
+      ],
+      "steps": [
+        {
+          "id": "niffen-unlock:q72873:accept",
+          "kind": "accept",
+          "questId": 72873,
+          "text": "Accept It Was Not Enough from the current quest giver.",
+          "navigation": {
+            "kind": "fixed",
+            "destination": {
+              "x": 0.647,
+              "y": 0.376,
+              "mapKey": "ZARALEK_CAVERN",
+              "mapID": 2133
+            },
+            "npcId": 200116,
+            "evidence": "pinned ATT explicit quest giver; coordinate is acceptance only"
+          },
+          "completeWhen": {
+            "any": [
+              {
+                "kind": "questInLog",
+                "questId": 72873
+              },
+              {
+                "kind": "questTurnedIn",
+                "questId": 72873,
+                "scope": "character"
+              }
+            ]
+          },
+          "sources": [
+            "niffen-source-cda37ad70104",
+            "niffen-source-a704cd0aabaa",
+            "niffen-source-c627d43d9529",
+            "niffen-source-6d15d0cf190a"
+          ]
+        },
+        {
+          "id": "niffen-unlock:q72873:objectives",
+          "kind": "objective",
+          "questId": 72873,
+          "instructions": [
+            "Accept both offered Honeypelt quests. Use the supplied extra-action ability to escape the crystal prison, then speak with her again.",
+            "Follow her from stop to stop. Clear nearby deepflayers before interacting with the indicated mound or continuing her search.",
+            "Rescue Wrathion and continue until Sabellian is found. Check the native quest completion state; one follow marker does not finish the whole escort."
+          ],
+          "navigation": {
+            "kind": "nativeQuestObjective",
+            "questId": 72873,
+            "sourceChecked": true,
+            "fixedPoints": [],
+            "fallback": "Use the tracked game objective/area marker and the written location. Missing native data stays unknown; never substitute the acceptance pin for an objective."
+          },
+          "completeWhen": {
+            "kind": "questReadyForTurnIn",
+            "questId": 72873
+          },
+          "preserveAuthoredText": true,
+          "overlayLiveCounters": true,
+          "sources": [
+            "niffen-source-cda37ad70104",
+            "niffen-source-a704cd0aabaa",
+            "niffen-source-c627d43d9529",
+            "niffen-source-6d15d0cf190a"
+          ]
+        },
+        {
+          "id": "niffen-unlock:q72873:turn-in",
+          "kind": "turnIn",
+          "questId": 72873,
+          "text": "Follow the live quest-end marker and turn in It Was Not Enough. Choose any reward yourself.",
+          "navigation": {
+            "kind": "nativeQuestEnd",
+            "questId": 72873,
+            "sourceChecked": true,
+            "fixedPoint": {
+              "mapID": 2133,
+              "x": 0.602,
+              "y": 0.37799999999999995,
+              "label": "Elder Honeypelt"
+            },
+            "fallback": "Follow the currently observed quest-end marker; an inferred next-giver location is not published as a verified endpoint."
+          },
+          "completeWhen": {
+            "kind": "questTurnedIn",
+            "questId": 72873,
+            "scope": "character"
+          },
+          "sources": [
+            "niffen-source-cda37ad70104",
+            "niffen-source-a704cd0aabaa",
+            "niffen-source-c627d43d9529",
+            "niffen-source-6d15d0cf190a"
+          ],
+          "eligibleWhen": {
+            "all": [
+              {
+                "kind": "questReadyForTurnIn",
+                "questId": 72873
+              },
+              {
+                "any": [
+                  {
+                    "kind": "questReadyForTurnIn",
+                    "questId": 72872
+                  },
+                  {
+                    "kind": "questTurnedIn",
+                    "questId": 72872,
+                    "scope": "character"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "recovery": [
+        "If the escape button is missing, verify both offered quests are accepted and the quest log has space. Check the game extra-action control; a hidden action-bar button is not absent quest progress.",
+        "If Honeypelt stops, clear nearby deepflayers, inspect the next mound and speak with her again. If she remains absent, refresh observations; manual quest reacquisition may reset the escort and is never performed automatically."
+      ],
+      "coverage": "connected-checkpoint",
+      "actuallyPlaytested": false
+    },
+    {
+      "questId": 72970,
+      "title": "Niffen and Goliath",
+      "scope": "character quest completion; unlock scope classified separately",
+      "historicalPrerequisites": {
+        "allQuestTurnedIn": [
+          72872,
+          72873
+        ]
+      },
+      "entryOverride": {
+        "kind": "positiveQuestOfferOrActiveQuest",
+        "reason": "A native downstream offer is actual access evidence. Missing historical flags do not force a replay or become new completion flags."
+      },
+      "branchGroup": null,
+      "maxVariantsRequired": null,
+      "stopId": "niffen:quest-72970",
+      "sourceChecked": true,
+      "sourceLines": [
+        67,
+        80
+      ],
+      "sourceIds": [
+        "niffen-source-cda37ad70104",
+        "niffen-source-975503cdafc6",
+        "niffen-source-d6e8d5414796"
+      ],
+      "steps": [
+        {
+          "id": "niffen-unlock:q72970:accept",
+          "kind": "accept",
+          "questId": 72970,
+          "text": "Accept Niffen and Goliath from the current quest giver.",
+          "navigation": {
+            "kind": "fixed",
+            "destination": {
+              "x": 0.602,
+              "y": 0.37799999999999995,
+              "mapKey": "ZARALEK_CAVERN",
+              "mapID": 2133
+            },
+            "npcId": 201587,
+            "evidence": "pinned ATT explicit quest giver; coordinate is acceptance only"
+          },
+          "completeWhen": {
+            "any": [
+              {
+                "kind": "questInLog",
+                "questId": 72970
+              },
+              {
+                "kind": "questTurnedIn",
+                "questId": 72970,
+                "scope": "character"
+              }
+            ]
+          },
+          "sources": [
+            "niffen-source-cda37ad70104",
+            "niffen-source-975503cdafc6",
+            "niffen-source-d6e8d5414796"
+          ]
+        },
+        {
+          "id": "niffen-unlock:q72970:objectives",
+          "kind": "objective",
+          "questId": 72970,
+          "instructions": [
+            "Follow Honeypelt and Wrathion to the ambush cave. If the broodmatron has not appeared, place the provided bait at the indicated bait object.",
+            "Defeat the Deepflayer Broodmatron, then return to Honeypelt. The bait interaction alone is not completion. Choose any equipment reward yourself."
+          ],
+          "navigation": {
+            "kind": "nativeQuestObjective",
+            "questId": 72970,
+            "sourceChecked": true,
+            "fixedPoints": [
+              {
+                "mapID": 2133,
+                "x": 0.584,
+                "y": 0.39,
+                "label": "Optional bait placement"
+              }
+            ],
+            "fallback": "Use the tracked game objective/area marker and the written location. Missing native data stays unknown; never substitute the acceptance pin for an objective."
+          },
+          "completeWhen": {
+            "kind": "questReadyForTurnIn",
+            "questId": 72970
+          },
+          "preserveAuthoredText": true,
+          "overlayLiveCounters": true,
+          "sources": [
+            "niffen-source-cda37ad70104",
+            "niffen-source-975503cdafc6",
+            "niffen-source-d6e8d5414796"
+          ]
+        },
+        {
+          "id": "niffen-unlock:q72970:turn-in",
+          "kind": "turnIn",
+          "questId": 72970,
+          "text": "Follow the live quest-end marker and turn in Niffen and Goliath. Choose any reward yourself.",
+          "navigation": {
+            "kind": "nativeQuestEnd",
+            "questId": 72970,
+            "sourceChecked": true,
+            "fixedPoint": {
+              "mapID": 2133,
+              "x": 0.602,
+              "y": 0.37799999999999995,
+              "label": "Elder Honeypelt"
+            },
+            "fallback": "Follow the currently observed quest-end marker; an inferred next-giver location is not published as a verified endpoint."
+          },
+          "completeWhen": {
+            "kind": "questTurnedIn",
+            "questId": 72970,
+            "scope": "character"
+          },
+          "sources": [
+            "niffen-source-cda37ad70104",
+            "niffen-source-975503cdafc6",
+            "niffen-source-d6e8d5414796"
+          ]
+        }
+      ],
+      "recovery": [
+        "Refresh this exact quest’s log and native markers. If it was abandoned, return to its observed giver and reacquire it manually. A missing or unreadable response cannot advance the action.",
+        "If a giver or phase is absent, recheck the immediately preceding quest or choose another activity. Continue and Skip move the cursor only."
+      ],
+      "coverage": "connected-checkpoint",
+      "actuallyPlaytested": false
+    },
+    {
+      "questId": 72980,
+      "title": "Brother's Keeper",
+      "scope": "character quest completion; unlock scope classified separately",
+      "historicalPrerequisites": {
+        "allQuestTurnedIn": [
+          72970
+        ]
+      },
+      "entryOverride": {
+        "kind": "positiveQuestOfferOrActiveQuest",
+        "reason": "A native downstream offer is actual access evidence. Missing historical flags do not force a replay or become new completion flags."
+      },
+      "branchGroup": null,
+      "maxVariantsRequired": null,
+      "stopId": "niffen:quest-72980",
+      "sourceChecked": true,
+      "sourceLines": [
+        81,
+        85
+      ],
+      "sourceIds": [
+        "niffen-source-cda37ad70104",
+        "niffen-source-535d463527e8",
+        "niffen-source-270c9286c11b"
+      ],
+      "steps": [
+        {
+          "id": "niffen-unlock:q72980:accept",
+          "kind": "accept",
+          "questId": 72980,
+          "text": "Accept Brother's Keeper from the current quest giver.",
+          "navigation": {
+            "kind": "fixed",
+            "destination": {
+              "x": 0.601,
+              "y": 0.375,
+              "mapKey": "ZARALEK_CAVERN",
+              "mapID": 2133
+            },
+            "npcId": 201583,
+            "evidence": "pinned ATT explicit quest giver; coordinate is acceptance only"
+          },
+          "completeWhen": {
+            "any": [
+              {
+                "kind": "questInLog",
+                "questId": 72980
+              },
+              {
+                "kind": "questTurnedIn",
+                "questId": 72980,
+                "scope": "character"
+              }
+            ]
+          },
+          "sources": [
+            "niffen-source-cda37ad70104",
+            "niffen-source-535d463527e8",
+            "niffen-source-270c9286c11b"
+          ]
+        },
+        {
+          "id": "niffen-unlock:q72980:objectives",
+          "kind": "objective",
+          "questId": 72980,
+          "instructions": [
+            "Find Sabellian beside the scavenged relics southeast of Honeypelt’s previous stop and speak with him."
+          ],
+          "navigation": {
+            "kind": "nativeQuestObjective",
+            "questId": 72980,
+            "sourceChecked": true,
+            "fixedPoints": [
+              {
+                "mapID": 2133,
+                "x": 0.606,
+                "y": 0.401,
+                "label": "Sabellian"
+              }
+            ],
+            "fallback": "Use the tracked game objective/area marker and the written location. Missing native data stays unknown; never substitute the acceptance pin for an objective."
+          },
+          "completeWhen": {
+            "kind": "questReadyForTurnIn",
+            "questId": 72980
+          },
+          "preserveAuthoredText": true,
+          "overlayLiveCounters": true,
+          "sources": [
+            "niffen-source-cda37ad70104",
+            "niffen-source-535d463527e8",
+            "niffen-source-270c9286c11b"
+          ]
+        },
+        {
+          "id": "niffen-unlock:q72980:turn-in",
+          "kind": "turnIn",
+          "questId": 72980,
+          "text": "Follow the live quest-end marker and turn in Brother's Keeper. Choose any reward yourself.",
+          "navigation": {
+            "kind": "nativeQuestEnd",
+            "questId": 72980,
+            "sourceChecked": true,
+            "fixedPoint": {
+              "mapID": 2133,
+              "x": 0.606,
+              "y": 0.401,
+              "label": "Sabellian"
+            },
+            "fallback": "Follow the currently observed quest-end marker; an inferred next-giver location is not published as a verified endpoint."
+          },
+          "completeWhen": {
+            "kind": "questTurnedIn",
+            "questId": 72980,
+            "scope": "character"
+          },
+          "sources": [
+            "niffen-source-cda37ad70104",
+            "niffen-source-535d463527e8",
+            "niffen-source-270c9286c11b"
+          ]
+        }
+      ],
+      "recovery": [
+        "Refresh this exact quest’s log and native markers. If it was abandoned, return to its observed giver and reacquire it manually. A missing or unreadable response cannot advance the action.",
+        "If a giver or phase is absent, recheck the immediately preceding quest or choose another activity. Continue and Skip move the cursor only."
+      ],
+      "coverage": "connected-checkpoint",
+      "actuallyPlaytested": false
+    },
+    {
+      "questId": 72874,
+      "title": "Secrets From Our Father",
+      "scope": "character quest completion; unlock scope classified separately",
+      "historicalPrerequisites": {
+        "allQuestTurnedIn": [
+          72980
+        ]
+      },
+      "entryOverride": {
+        "kind": "positiveQuestOfferOrActiveQuest",
+        "reason": "A native downstream offer is actual access evidence. Missing historical flags do not force a replay or become new completion flags."
+      },
+      "branchGroup": null,
+      "maxVariantsRequired": null,
+      "stopId": "niffen:quest-72874",
+      "sourceChecked": true,
+      "sourceLines": [
+        86,
+        90
+      ],
+      "sourceIds": [
+        "niffen-source-cda37ad70104",
+        "niffen-source-3706f3bb0f24",
+        "niffen-source-a6da15074930"
+      ],
+      "steps": [
+        {
+          "id": "niffen-unlock:q72874:accept",
+          "kind": "accept",
+          "questId": 72874,
+          "text": "Accept Secrets From Our Father from the current quest giver.",
+          "navigation": {
+            "kind": "fixed",
+            "destination": {
+              "x": 0.606,
+              "y": 0.401,
+              "mapKey": "ZARALEK_CAVERN",
+              "mapID": 2133
+            },
+            "npcId": 201589,
+            "evidence": "pinned ATT explicit quest giver; coordinate is acceptance only"
+          },
+          "completeWhen": {
+            "any": [
+              {
+                "kind": "questInLog",
+                "questId": 72874
+              },
+              {
+                "kind": "questTurnedIn",
+                "questId": 72874,
+                "scope": "character"
+              }
+            ]
+          },
+          "sources": [
+            "niffen-source-cda37ad70104",
+            "niffen-source-3706f3bb0f24",
+            "niffen-source-a6da15074930"
+          ]
+        },
+        {
+          "id": "niffen-unlock:q72874:objectives",
+          "kind": "objective",
+          "questId": 72874,
+          "instructions": [
+            "Investigate the Rusted, Damaged and Humming Relics at the three live objective markers in the nearby caves.",
+            "Use the actual cave entrances and ground paths; an outdoor arrow above a cave ceiling is not an instruction to climb the mountain. Return to Sabellian after all three investigations register."
+          ],
+          "navigation": {
+            "kind": "nativeQuestObjective",
+            "questId": 72874,
+            "sourceChecked": true,
+            "fixedPoints": [],
+            "fallback": "Use the tracked game objective/area marker and the written location. Missing native data stays unknown; never substitute the acceptance pin for an objective."
+          },
+          "completeWhen": {
+            "kind": "questReadyForTurnIn",
+            "questId": 72874
+          },
+          "preserveAuthoredText": true,
+          "overlayLiveCounters": true,
+          "sources": [
+            "niffen-source-cda37ad70104",
+            "niffen-source-3706f3bb0f24",
+            "niffen-source-a6da15074930"
+          ]
+        },
+        {
+          "id": "niffen-unlock:q72874:turn-in",
+          "kind": "turnIn",
+          "questId": 72874,
+          "text": "Follow the live quest-end marker and turn in Secrets From Our Father. Choose any reward yourself.",
+          "navigation": {
+            "kind": "nativeQuestEnd",
+            "questId": 72874,
+            "sourceChecked": true,
+            "fixedPoint": null,
+            "fallback": "Follow the currently observed quest-end marker; an inferred next-giver location is not published as a verified endpoint."
+          },
+          "completeWhen": {
+            "kind": "questTurnedIn",
+            "questId": 72874,
+            "scope": "character"
+          },
+          "sources": [
+            "niffen-source-cda37ad70104",
+            "niffen-source-3706f3bb0f24",
+            "niffen-source-a6da15074930"
+          ]
+        }
+      ],
+      "recovery": [
+        "For a relic marker above or behind stone, look for the nearby cave mouth and follow the interior path. Reported cave entrances near 61.83,41.77 and 59.14,40.92 are advisory references, not independently verified objective coordinates."
+      ],
+      "coverage": "connected-checkpoint",
+      "actuallyPlaytested": false
+    },
+    {
+      "questId": 72979,
+      "title": "The Earth Gives Way",
+      "scope": "character quest completion; unlock scope classified separately",
+      "historicalPrerequisites": {
+        "allQuestTurnedIn": [
+          72874
+        ]
+      },
+      "entryOverride": {
+        "kind": "positiveQuestOfferOrActiveQuest",
+        "reason": "A native downstream offer is actual access evidence. Missing historical flags do not force a replay or become new completion flags."
+      },
+      "branchGroup": null,
+      "maxVariantsRequired": null,
+      "stopId": "niffen:quest-72979",
+      "sourceChecked": true,
+      "sourceLines": [
+        91,
+        95
+      ],
+      "sourceIds": [
+        "niffen-source-cda37ad70104",
+        "niffen-source-9d0f5b5aa454",
+        "niffen-source-c1f4deb7b59d"
+      ],
+      "steps": [
+        {
+          "id": "niffen-unlock:q72979:accept",
+          "kind": "accept",
+          "questId": 72979,
+          "text": "Accept The Earth Gives Way from the current quest giver.",
+          "navigation": {
+            "kind": "fixed",
+            "destination": {
+              "x": 0.606,
+              "y": 0.401,
+              "mapKey": "ZARALEK_CAVERN",
+              "mapID": 2133
+            },
+            "npcId": 201589,
+            "evidence": "pinned ATT explicit quest giver; coordinate is acceptance only"
+          },
+          "completeWhen": {
+            "any": [
+              {
+                "kind": "questInLog",
+                "questId": 72979
+              },
+              {
+                "kind": "questTurnedIn",
+                "questId": 72979,
+                "scope": "character"
+              }
+            ]
+          },
+          "sources": [
+            "niffen-source-cda37ad70104",
+            "niffen-source-9d0f5b5aa454",
+            "niffen-source-c1f4deb7b59d"
+          ]
+        },
+        {
+          "id": "niffen-unlock:q72979:objectives",
+          "kind": "objective",
+          "questId": 72979,
+          "instructions": [
+            "Leave Sabellian’s relic site and speak with Wrathion near Honeypelt at the cave exit. Allow the departure conversation to finish."
+          ],
+          "navigation": {
+            "kind": "nativeQuestObjective",
+            "questId": 72979,
+            "sourceChecked": true,
+            "fixedPoints": [
+              {
+                "mapID": 2133,
+                "x": 0.57,
+                "y": 0.38299999999999995,
+                "label": "Wrathion"
+              }
+            ],
+            "fallback": "Use the tracked game objective/area marker and the written location. Missing native data stays unknown; never substitute the acceptance pin for an objective."
+          },
+          "completeWhen": {
+            "kind": "questReadyForTurnIn",
+            "questId": 72979
+          },
+          "preserveAuthoredText": true,
+          "overlayLiveCounters": true,
+          "sources": [
+            "niffen-source-cda37ad70104",
+            "niffen-source-9d0f5b5aa454",
+            "niffen-source-c1f4deb7b59d"
+          ]
+        },
+        {
+          "id": "niffen-unlock:q72979:turn-in",
+          "kind": "turnIn",
+          "questId": 72979,
+          "text": "Follow the live quest-end marker and turn in The Earth Gives Way. Choose any reward yourself.",
+          "navigation": {
+            "kind": "nativeQuestEnd",
+            "questId": 72979,
+            "sourceChecked": true,
+            "fixedPoint": {
+              "mapID": 2133,
+              "x": 0.57,
+              "y": 0.38299999999999995,
+              "label": "Wrathion"
+            },
+            "fallback": "Follow the currently observed quest-end marker; an inferred next-giver location is not published as a verified endpoint."
+          },
+          "completeWhen": {
+            "kind": "questTurnedIn",
+            "questId": 72979,
+            "scope": "character"
+          },
+          "sources": [
+            "niffen-source-cda37ad70104",
+            "niffen-source-9d0f5b5aa454",
+            "niffen-source-c1f4deb7b59d"
+          ]
+        }
+      ],
+      "recovery": [
+        "Refresh this exact quest’s log and native markers. If it was abandoned, return to its observed giver and reacquire it manually. A missing or unreadable response cannot advance the action.",
+        "If a giver or phase is absent, recheck the immediately preceding quest or choose another activity. Continue and Skip move the cursor only."
+      ],
+      "coverage": "connected-checkpoint",
+      "actuallyPlaytested": false
+    },
+    {
+      "questId": 72973,
+      "title": "Smells Like Loamm",
+      "scope": "character quest completion; unlock scope classified separately",
+      "historicalPrerequisites": {
+        "allQuestTurnedIn": [
+          72979
+        ]
+      },
+      "entryOverride": {
+        "kind": "positiveQuestOfferOrActiveQuest",
+        "reason": "A native downstream offer is actual access evidence. Missing historical flags do not force a replay or become new completion flags."
+      },
+      "branchGroup": null,
+      "maxVariantsRequired": null,
+      "stopId": "niffen:quest-72973",
+      "sourceChecked": true,
+      "sourceLines": [
+        96,
+        100
+      ],
+      "sourceIds": [
+        "niffen-source-cda37ad70104",
+        "niffen-source-f34b57849a6c",
+        "niffen-source-93789b2830c1"
+      ],
+      "steps": [
+        {
+          "id": "niffen-unlock:q72973:accept",
+          "kind": "accept",
+          "questId": 72973,
+          "text": "Accept Smells Like Loamm from the current quest giver.",
+          "navigation": {
+            "kind": "fixed",
+            "destination": {
+              "x": 0.57,
+              "y": 0.382,
+              "mapKey": "ZARALEK_CAVERN",
+              "mapID": 2133
+            },
+            "npcId": 201584,
+            "evidence": "pinned ATT explicit quest giver; coordinate is acceptance only"
+          },
+          "completeWhen": {
+            "any": [
+              {
+                "kind": "questInLog",
+                "questId": 72973
+              },
+              {
+                "kind": "questTurnedIn",
+                "questId": 72973,
+                "scope": "character"
+              }
+            ]
+          },
+          "sources": [
+            "niffen-source-cda37ad70104",
+            "niffen-source-f34b57849a6c",
+            "niffen-source-93789b2830c1"
+          ]
+        },
+        {
+          "id": "niffen-unlock:q72973:objectives",
+          "kind": "objective",
+          "questId": 72973,
+          "instructions": [
+            "Meet Honeypelt on the outskirts of Loamm and remain with the arriving party until the introduction advances.",
+            "Follow the updated quest-end marker to Aurantia in Loamm. Entering the town alone does not replace the introduction."
+          ],
+          "navigation": {
+            "kind": "nativeQuestObjective",
+            "questId": 72973,
+            "sourceChecked": true,
+            "fixedPoints": [
+              {
+                "mapID": 2133,
+                "x": 0.586,
+                "y": 0.546,
+                "label": "Honeypelt outside Loamm"
+              }
+            ],
+            "fallback": "Use the tracked game objective/area marker and the written location. Missing native data stays unknown; never substitute the acceptance pin for an objective."
+          },
+          "completeWhen": {
+            "kind": "questReadyForTurnIn",
+            "questId": 72973
+          },
+          "preserveAuthoredText": true,
+          "overlayLiveCounters": true,
+          "sources": [
+            "niffen-source-cda37ad70104",
+            "niffen-source-f34b57849a6c",
+            "niffen-source-93789b2830c1"
+          ]
+        },
+        {
+          "id": "niffen-unlock:q72973:turn-in",
+          "kind": "turnIn",
+          "questId": 72973,
+          "text": "Follow the live quest-end marker and turn in Smells Like Loamm. Choose any reward yourself.",
+          "navigation": {
+            "kind": "nativeQuestEnd",
+            "questId": 72973,
+            "sourceChecked": true,
+            "fixedPoint": {
+              "mapID": 2133,
+              "x": 0.57,
+              "y": 0.557,
+              "label": "Aurantia"
+            },
+            "fallback": "Follow the currently observed quest-end marker; an inferred next-giver location is not published as a verified endpoint."
+          },
+          "completeWhen": {
+            "kind": "questTurnedIn",
+            "questId": 72973,
+            "scope": "character"
+          },
+          "sources": [
+            "niffen-source-cda37ad70104",
+            "niffen-source-f34b57849a6c",
+            "niffen-source-93789b2830c1"
+          ]
+        }
+      ],
+      "recovery": [
+        "Refresh this exact quest’s log and native markers. If it was abandoned, return to its observed giver and reacquire it manually. A missing or unreadable response cannot advance the action.",
+        "If a giver or phase is absent, recheck the immediately preceding quest or choose another activity. Continue and Skip move the cursor only."
+      ],
+      "coverage": "connected-checkpoint",
+      "actuallyPlaytested": false
+    },
+    {
+      "questId": 75643,
+      "title": "Orientation: Loamm Niffen",
+      "scope": "character quest completion; unlock scope classified separately",
+      "historicalPrerequisites": {
+        "allQuestTurnedIn": [
+          72973
+        ]
+      },
+      "entryOverride": {
+        "kind": "positiveQuestOfferOrActiveQuest",
+        "reason": "A native downstream offer is actual access evidence. Missing historical flags do not force a replay or become new completion flags."
+      },
+      "branchGroup": null,
+      "maxVariantsRequired": null,
+      "stopId": "niffen:loamm-orientation",
+      "sourceChecked": true,
+      "sourceLines": [
+        101,
+        105
+      ],
+      "sourceIds": [
+        "niffen-source-cda37ad70104",
+        "niffen-source-f81465891805",
+        "niffen-source-c3294dc69109"
+      ],
+      "steps": [
+        {
+          "id": "niffen-unlock:q75643:accept",
+          "kind": "accept",
+          "questId": 75643,
+          "text": "Accept Orientation: Loamm Niffen from the current quest giver.",
+          "navigation": {
+            "kind": "fixed",
+            "destination": {
+              "x": 0.569,
+              "y": 0.557,
+              "mapKey": "ZARALEK_CAVERN",
+              "mapID": 2133
+            },
+            "npcId": 204522,
+            "evidence": "pinned ATT explicit quest giver; coordinate is acceptance only"
+          },
+          "completeWhen": {
+            "any": [
+              {
+                "kind": "questInLog",
+                "questId": 75643
+              },
+              {
+                "kind": "questTurnedIn",
+                "questId": 75643,
+                "scope": "character"
+              }
+            ]
+          },
+          "sources": [
+            "niffen-source-cda37ad70104",
+            "niffen-source-f81465891805",
+            "niffen-source-c3294dc69109"
+          ]
+        },
+        {
+          "id": "niffen-unlock:q75643:objectives",
+          "kind": "objective",
+          "questId": 75643,
+          "instructions": [
+            "Meet Loamm’s flight master at the active objective marker and complete the required introduction.",
+            "Check the current quest counters before returning to Aurantia. Older references also list the Keeper of Renown and quartermaster; visit them only if the live quest still requires it or you want their services."
+          ],
+          "navigation": {
+            "kind": "nativeQuestObjective",
+            "questId": 75643,
+            "sourceChecked": true,
+            "fixedPoints": [
+              {
+                "mapID": 2133,
+                "x": 0.556,
+                "y": 0.5479999999999999,
+                "label": "Loamm flight master"
+              }
+            ],
+            "fallback": "Use the tracked game objective/area marker and the written location. Missing native data stays unknown; never substitute the acceptance pin for an objective."
+          },
+          "completeWhen": {
+            "kind": "questReadyForTurnIn",
+            "questId": 75643
+          },
+          "preserveAuthoredText": true,
+          "overlayLiveCounters": true,
+          "sources": [
+            "niffen-source-cda37ad70104",
+            "niffen-source-f81465891805",
+            "niffen-source-c3294dc69109"
+          ]
+        },
+        {
+          "id": "niffen-unlock:q75643:turn-in",
+          "kind": "turnIn",
+          "questId": 75643,
+          "text": "Follow the live quest-end marker and turn in Orientation: Loamm Niffen. Choose any reward yourself.",
+          "navigation": {
+            "kind": "nativeQuestEnd",
+            "questId": 75643,
+            "sourceChecked": true,
+            "fixedPoint": {
+              "mapID": 2133,
+              "x": 0.546,
+              "y": 0.547,
+              "label": "Aurantia"
+            },
+            "fallback": "Follow the currently observed quest-end marker; an inferred next-giver location is not published as a verified endpoint."
+          },
+          "completeWhen": {
+            "kind": "questTurnedIn",
+            "questId": 75643,
+            "scope": "character"
+          },
+          "sources": [
+            "niffen-source-cda37ad70104",
+            "niffen-source-f81465891805",
+            "niffen-source-c3294dc69109"
+          ]
+        }
+      ],
+      "recovery": [
+        "Use the live objective list. Current Retail tooltip data lists the flight master only; do not block on two additional historical introduction objectives that the game no longer requires."
+      ],
+      "coverage": "connected-checkpoint",
+      "actuallyPlaytested": false
+    },
+    {
+      "questId": 72974,
+      "title": "Welcome to the City of Smells",
+      "scope": "character quest completion; unlock scope classified separately",
+      "historicalPrerequisites": {
+        "allQuestTurnedIn": [
+          72973
+        ]
+      },
+      "entryOverride": {
+        "kind": "positiveQuestOfferOrActiveQuest",
+        "reason": "A native downstream offer is actual access evidence. Missing historical flags do not force a replay or become new completion flags."
+      },
+      "branchGroup": null,
+      "maxVariantsRequired": null,
+      "stopId": "niffen:loamm-orientation",
+      "sourceChecked": true,
+      "sourceLines": [
+        106,
+        122
+      ],
+      "sourceIds": [
+        "niffen-source-cda37ad70104",
+        "niffen-source-7b9a6d4f5b2d",
+        "niffen-source-ba80eea3c9c7",
+        "niffen-source-183c703f05cb"
+      ],
+      "steps": [
+        {
+          "id": "niffen-unlock:q72974:accept",
+          "kind": "accept",
+          "questId": 72974,
+          "text": "Accept Welcome to the City of Smells from the current quest giver.",
+          "navigation": {
+            "kind": "fixed",
+            "destination": {
+              "x": 0.57,
+              "y": 0.5579999999999999,
+              "mapKey": "ZARALEK_CAVERN",
+              "mapID": 2133
+            },
+            "npcId": 200054,
+            "evidence": "pinned ATT explicit quest giver; coordinate is acceptance only"
+          },
+          "completeWhen": {
+            "any": [
+              {
+                "kind": "questInLog",
+                "questId": 72974
+              },
+              {
+                "kind": "questTurnedIn",
+                "questId": 72974,
+                "scope": "character"
+              }
+            ]
+          },
+          "sources": [
+            "niffen-source-cda37ad70104",
+            "niffen-source-7b9a6d4f5b2d",
+            "niffen-source-ba80eea3c9c7",
+            "niffen-source-183c703f05cb"
+          ]
+        },
+        {
+          "id": "niffen-unlock:q72974:objectives",
+          "kind": "objective",
+          "questId": 72974,
+          "instructions": [
+            "Speak with Brynnsahce to start the delivery tour.",
+            "At Myrrit, inspect the revealed dirt piles until the payment crystal is found. At the coach, speak with Quicksmack Magk and finish the sparring encounter.",
+            "At the teacher, interact with the hopping Gumm when he lands. At Cenka, open the jar behind him and defeat the escaping meal moths.",
+            "Check all four trade objectives, then return to Honeypelt at her moved location. These are quest interactions; do not buy vendor goods to manufacture trade credit."
+          ],
+          "navigation": {
+            "kind": "nativeQuestObjective",
+            "questId": 72974,
+            "sourceChecked": true,
+            "fixedPoints": [
+              {
+                "mapID": 2133,
+                "x": 0.556,
+                "y": 0.574,
+                "label": "Myrrit"
+              },
+              {
+                "mapID": 2133,
+                "x": 0.5770000000000001,
+                "y": 0.564,
+                "label": "Coach and Magk"
+              },
+              {
+                "mapID": 2133,
+                "x": 0.5770000000000001,
+                "y": 0.534,
+                "label": "Teacher and Gumm"
+              },
+              {
+                "mapID": 2133,
+                "x": 0.542,
+                "y": 0.565,
+                "label": "Cenka and jar"
+              }
+            ],
+            "fallback": "Use the tracked game objective/area marker and the written location. Missing native data stays unknown; never substitute the acceptance pin for an objective."
+          },
+          "completeWhen": {
+            "kind": "questReadyForTurnIn",
+            "questId": 72974
+          },
+          "preserveAuthoredText": true,
+          "overlayLiveCounters": true,
+          "sources": [
+            "niffen-source-cda37ad70104",
+            "niffen-source-7b9a6d4f5b2d",
+            "niffen-source-ba80eea3c9c7",
+            "niffen-source-183c703f05cb"
+          ]
+        },
+        {
+          "id": "niffen-unlock:q72974:turn-in",
+          "kind": "turnIn",
+          "questId": 72974,
+          "text": "Follow the live quest-end marker and turn in Welcome to the City of Smells. Choose any reward yourself.",
+          "navigation": {
+            "kind": "nativeQuestEnd",
+            "questId": 72974,
+            "sourceChecked": true,
+            "fixedPoint": null,
+            "fallback": "Follow the currently observed quest-end marker; an inferred next-giver location is not published as a verified endpoint."
+          },
+          "completeWhen": {
+            "kind": "questTurnedIn",
+            "questId": 72974,
+            "scope": "character"
+          },
+          "sources": [
+            "niffen-source-cda37ad70104",
+            "niffen-source-7b9a6d4f5b2d",
+            "niffen-source-ba80eea3c9c7",
+            "niffen-source-183c703f05cb"
+          ]
+        }
+      ],
+      "recovery": [
+        "For Myrrit’s payment, inspect the quest dirt piles; for Cenka’s payment, use the jar and defeat the spawned moths. Neither step requires purchasing stock.",
+        "If Honeypelt is missing at the starting location, follow the current quest-end marker toward the meeting point. Keep the quest unfinished if no endpoint is available."
+      ],
+      "coverage": "connected-checkpoint",
+      "actuallyPlaytested": false
+    },
+    {
+      "questId": 75644,
+      "title": "Six Hundred Feet Under",
+      "scope": "character quest completion; unlock scope classified separately",
+      "historicalPrerequisites": {
+        "allQuestTurnedIn": [
+          72974,
+          75643
+        ]
+      },
+      "entryOverride": {
+        "kind": "positiveQuestOfferOrActiveQuest",
+        "reason": "A native downstream offer is actual access evidence. Missing historical flags do not force a replay or become new completion flags."
+      },
+      "branchGroup": null,
+      "maxVariantsRequired": null,
+      "stopId": "niffen:loamm-orientation",
+      "sourceChecked": true,
+      "sourceLines": [
+        123,
+        133
+      ],
+      "sourceIds": [
+        "niffen-source-cda37ad70104",
+        "niffen-source-1f99859d1a16",
+        "niffen-source-9b52e88aa694"
+      ],
+      "steps": [
+        {
+          "id": "niffen-unlock:q75644:accept",
+          "kind": "accept",
+          "questId": 75644,
+          "text": "Accept Six Hundred Feet Under from the current quest giver.",
+          "navigation": {
+            "kind": "fixed",
+            "destination": {
+              "x": 0.546,
+              "y": 0.547,
+              "mapKey": "ZARALEK_CAVERN",
+              "mapID": 2133
+            },
+            "npcId": 200052,
+            "evidence": "pinned ATT explicit quest giver; coordinate is acceptance only"
+          },
+          "completeWhen": {
+            "any": [
+              {
+                "kind": "questInLog",
+                "questId": 75644
+              },
+              {
+                "kind": "questTurnedIn",
+                "questId": 75644,
+                "scope": "character"
+              }
+            ]
+          },
+          "sources": [
+            "niffen-source-cda37ad70104",
+            "niffen-source-1f99859d1a16",
+            "niffen-source-9b52e88aa694"
+          ]
+        },
+        {
+          "id": "niffen-unlock:q75644:objectives",
+          "kind": "objective",
+          "questId": 75644,
+          "instructions": [
+            "Regroup with Ebyssian and the other companions beside the Loamm meeting point. Speak with Ebyssian and finish the planning conversation.",
+            "Turn the quest in to Ebyssian. This concludes Breaking Ground and establishes the documented account unlock; actual repeatable quest availability is still read from the game."
+          ],
+          "navigation": {
+            "kind": "nativeQuestObjective",
+            "questId": 75644,
+            "sourceChecked": true,
+            "fixedPoints": [
+              {
+                "mapID": 2133,
+                "x": 0.547,
+                "y": 0.545,
+                "label": "Ebyssian"
+              }
+            ],
+            "fallback": "Use the tracked game objective/area marker and the written location. Missing native data stays unknown; never substitute the acceptance pin for an objective."
+          },
+          "completeWhen": {
+            "kind": "questReadyForTurnIn",
+            "questId": 75644
+          },
+          "preserveAuthoredText": true,
+          "overlayLiveCounters": true,
+          "sources": [
+            "niffen-source-cda37ad70104",
+            "niffen-source-1f99859d1a16",
+            "niffen-source-9b52e88aa694"
+          ]
+        },
+        {
+          "id": "niffen-unlock:q75644:turn-in",
+          "kind": "turnIn",
+          "questId": 75644,
+          "text": "Follow the live quest-end marker and turn in Six Hundred Feet Under. Choose any reward yourself.",
+          "navigation": {
+            "kind": "nativeQuestEnd",
+            "questId": 75644,
+            "sourceChecked": true,
+            "fixedPoint": {
+              "mapID": 2133,
+              "x": 0.547,
+              "y": 0.545,
+              "label": "Ebyssian"
+            },
+            "fallback": "Follow the currently observed quest-end marker; an inferred next-giver location is not published as a verified endpoint."
+          },
+          "completeWhen": {
+            "kind": "questTurnedIn",
+            "questId": 75644,
+            "scope": "character"
+          },
+          "sources": [
+            "niffen-source-cda37ad70104",
+            "niffen-source-1f99859d1a16",
+            "niffen-source-9b52e88aa694"
+          ]
+        }
+      ],
+      "recovery": [
+        "If account completion is known but world quests or the weekly remain absent, visit Mimuup and inspect current quest offers and the zone map. The source unlock and actual availability are different observations. Do not mark the weekly completed or force every alt to repeat the campaign."
+      ],
+      "coverage": "connected-checkpoint",
+      "actuallyPlaytested": false
+    }
+  ],
+  "accountAccess": {
+    "id": "niffen-account-repeatable-access",
+    "sourceChecked": true,
+    "sourceIds": [
+      "niffen-source-1d7ab1f95357",
+      "niffen-source-9b52e88aa694"
+    ],
+    "documentedAccountUnlockQuestId": 75644,
+    "scope": "account repeatable-content unlock; not character quest-history attribution",
+    "observationsThatEstablishCurrentCharacterAccess": [
+      {
+        "kind": "questOffered",
+        "questId": 75665
+      },
+      {
+        "kind": "questInLog",
+        "questId": 75665
+      },
+      {
+        "kind": "observedZoneWorldQuestAvailability",
+        "mapID": 2133
+      }
+    ],
+    "behavior": "An established account unlock permits the repeatable-content access branch without replaying the chapter on each alt. Use current native offers and map observations to resolve actual availability; never set local quest completion flags from account access.",
+    "recoverySources": [
+      "niffen-source-988f6c0f0aad"
+    ],
+    "unavailableBehavior": "If the documented unlock exists but no live content appears, explain the mismatch, refresh observations and offer another activity or a report. Do not create a new unlock confirmation form."
+  },
+  "optionalSkipObservations": [
+    {
+      "id": "niffen:forbidden-reach-intro-skip",
+      "sourceIds": [
+        "niffen-source-bf16627f872f"
+      ],
+      "npcId": 201398,
+      "questContextId": 74381,
+      "meaning": "Skip the Forbidden Reach introduction and travel to the downstream entry when the game offers it.",
+      "playerControlled": true,
+      "requiresObservedOffer": true,
+      "neverInferGossipOptionId": true,
+      "recordOnly": "The resulting actual downstream state, not an invented set of quest completions."
+    },
+    {
+      "id": "niffen:forbidden-reach-campaign-skip",
+      "sourceIds": [
+        "niffen-source-70611bc00344"
+      ],
+      "questContextId": 72712,
+      "meaning": "A separate eligible campaign skip can lead to the completed campaign/Return to Viridia state.",
+      "playerControlled": true,
+      "requiresObservedOffer": true,
+      "neverInferGossipOptionId": true,
+      "recordOnly": "Observe resulting quests and chapter access. Do not confuse this with Kurazidaia’s shorter introduction skip."
+    }
+  ],
+  "compatibilityNotes": [
+    "Current Retail tooltip75643 lists only the flight master objective; historical references listing three introductions must not add two mandatory objectives.",
+    "Some tooltip rows are hidden kill-credit implementation details. Track actual native objectives rather than displaying them as independent kill tasks.",
+    "Pinned source acceptance coordinates and older reference level70 are not proof of current minimum level. Prefer actual offer evidence."
+  ],
+  "unresolvedGaps": [
+    {
+      "id": "niffen:fresh-root",
+      "severity": "coverage-boundary",
+      "detail": "The conditions before the automatic Hidden Legacies offer are not comprehensively established for every character/boost/phase. The connected chapter claims completeness only from a positive offered/active chapter checkpoint."
+    },
+    {
+      "id": "niffen:fixed-endpoints",
+      "severity": "fallback-supported",
+      "detail": "Several quest ends rely on actual native quest-end observations; no invented static endpoint or inferred next-giver pin is shipped."
+    },
+    {
+      "id": "niffen:playtest",
+      "severity": "playtesting-pending",
+      "detail": "No game session was conducted by this research task. Source-checked checkpoint content remains usable before playtesting."
+    }
+  ]
+}

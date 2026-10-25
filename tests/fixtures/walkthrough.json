@@ -1,0 +1,744 @@
+[
+  {
+    "name": "all needs every prerequisite",
+    "rule": {
+      "all": [
+        {
+          "kind": "questTurnedIn",
+          "questId": 1
+        },
+        {
+          "kind": "questTurnedIn",
+          "questId": 2
+        }
+      ]
+    },
+    "state": {
+      "flags": {
+        "1": {
+          "value": true,
+          "at": 1000000
+        },
+        "2": {
+          "value": false,
+          "at": 1000000
+        }
+      }
+    },
+    "expected": false
+  },
+  {
+    "name": "alternative starter is sufficient",
+    "rule": {
+      "any": [
+        {
+          "kind": "questTurnedIn",
+          "questId": 41368
+        },
+        {
+          "kind": "questTurnedIn",
+          "questId": 41411
+        }
+      ]
+    },
+    "state": {
+      "flags": {
+        "41411": {
+          "value": true,
+          "at": 1000000
+        }
+      }
+    },
+    "expected": true
+  },
+  {
+    "name": "account achievement is not character access",
+    "rule": {
+      "kind": "achievement",
+      "achievementId": 42,
+      "scope": "character"
+    },
+    "state": {
+      "achievements": {
+        "42": {
+          "completed": true,
+          "at": 1000000
+        }
+      }
+    },
+    "expected": null
+  },
+  {
+    "name": "account reward achievement",
+    "rule": {
+      "kind": "achievement",
+      "achievementId": 42,
+      "scope": "account"
+    },
+    "state": {
+      "achievements": {
+        "42": {
+          "completed": true,
+          "at": 1000000
+        }
+      }
+    },
+    "expected": true
+  },
+  {
+    "name": "stale bag data stays unknown",
+    "rule": {
+      "kind": "itemCount",
+      "itemId": 1
+    },
+    "state": {
+      "inventory": {
+        "at": 999000,
+        "data": {
+          "1": 1
+        }
+      }
+    },
+    "expected": null
+  },
+  {
+    "name": "weekly lifetime flag not dated",
+    "rule": {
+      "kind": "questTurnedIn",
+      "questId": 1,
+      "cadence": "weekly"
+    },
+    "state": {
+      "flags": {
+        "1": {
+          "value": true,
+          "at": 1000000,
+          "source": "history"
+        }
+      },
+      "weeklyResetAt": 1000100
+    },
+    "expected": null
+  },
+  {
+    "name": "weekly current flag explicitly allowed",
+    "rule": {
+      "kind": "questTurnedIn",
+      "questId": 1,
+      "cadence": "weekly",
+      "currentPeriodFlag": true
+    },
+    "state": {
+      "flags": {
+        "1": {
+          "value": true,
+          "at": 1000000,
+          "source": "current-client"
+        }
+      },
+      "weeklyResetAt": 1000100
+    },
+    "expected": true
+  },
+  {
+    "name": "weekly expires offline",
+    "rule": {
+      "kind": "questTurnedIn",
+      "questId": 1,
+      "cadence": "weekly"
+    },
+    "state": {
+      "turnIns": {
+        "1": 999900
+      },
+      "weeklyResetAt": 999999
+    },
+    "expected": null
+  },
+  {
+    "name": "archaeology window complete",
+    "rule": {
+      "kind": "questTurnedIn",
+      "questId": 41173,
+      "cadence": "fortnightly"
+    },
+    "state": {
+      "turnIns": {
+        "41173": 999900
+      },
+      "archaeology": {
+        "id": "beacon",
+        "endAt": 1000100,
+        "at": 1000000
+      }
+    },
+    "expected": true
+  },
+  {
+    "name": "old archaeology turn-in cannot finish new window",
+    "rule": {
+      "kind": "questTurnedIn",
+      "questId": 41173,
+      "cadence": "fortnightly"
+    },
+    "state": {
+      "turnIns": {
+        "41173": 100
+      },
+      "archaeology": {
+        "id": "beacon",
+        "endAt": 2300000,
+        "at": 1000000
+      }
+    },
+    "expected": null
+  },
+  {
+    "name": "observed chain does not require predicted calendar",
+    "rule": {
+      "kind": "archaeologyChain",
+      "chainId": "beacon"
+    },
+    "state": {
+      "archaeology": {
+        "id": "beacon",
+        "at": 1000000
+      }
+    },
+    "expected": true
+  },
+  {
+    "name": "changing profession invalidates recipe",
+    "rule": {
+      "kind": "recipeLearned",
+      "spellId": 127130
+    },
+    "state": {
+      "recipes": {
+        "127130": {
+          "learned": true,
+          "invalidatedAt": 999999
+        }
+      }
+    },
+    "expected": null
+  },
+  {
+    "name": "later active stage resumes chain",
+    "rule": {
+      "kind": "questReached",
+      "questIds": [
+        2,
+        3
+      ],
+      "cadence": "once"
+    },
+    "state": {
+      "questsAt": 1000000,
+      "quests": {
+        "3": {
+          "complete": false
+        }
+      }
+    },
+    "expected": true
+  },
+  {
+    "name": "weekly account completion shared across EU characters",
+    "rule": {
+      "kind": "questTurnedIn",
+      "questId": 77236,
+      "cadence": "weekly",
+      "scope": "warband"
+    },
+    "state": {
+      "weeklyResetAt": 1000100
+    },
+    "expected": true,
+    "characters": [
+      {
+        "guid": "Player-2-DEF",
+        "region": "EU",
+        "turnIns": {
+          "77236": 999990
+        },
+        "weeklyResetAt": 1000100
+      }
+    ]
+  },
+  {
+    "name": "other region does not supply weekly evidence",
+    "rule": {
+      "kind": "questTurnedIn",
+      "questId": 77236,
+      "cadence": "weekly",
+      "scope": "warband"
+    },
+    "state": {
+      "weeklyResetAt": 1000100
+    },
+    "expected": null,
+    "characters": [
+      {
+        "guid": "Player-2-DEF",
+        "region": "US",
+        "turnIns": {
+          "77236": 999990
+        },
+        "weeklyResetAt": 1000100
+      }
+    ]
+  },
+  {
+    "name": "equipped requirement uses actual observation",
+    "rule": {
+      "kind": "itemEquipped",
+      "itemId": 123
+    },
+    "state": {
+      "equipped": {
+        "at": 1000000,
+        "data": {
+          "123": true
+        }
+      }
+    },
+    "expected": true
+  },
+  {
+    "name": "three rewards stay separate",
+    "rule": {
+      "all": [
+        {
+          "kind": "questTurnedIn",
+          "questId": 70906,
+          "cadence": "weekly"
+        },
+        {
+          "kind": "questTurnedIn",
+          "questId": 71136,
+          "cadence": "weekly"
+        },
+        {
+          "kind": "questTurnedIn",
+          "questId": 71137,
+          "cadence": "weekly"
+        }
+      ]
+    },
+    "state": {
+      "turnIns": {
+        "70906": 999999
+      },
+      "weeklyResetAt": 1000100
+    },
+    "expected": null
+  },
+  {
+    "name": "authored text preserved with live counters",
+    "graph": {
+      "version": 2,
+      "contentVersion": "test",
+      "routeIds": [],
+      "nodes": [
+        {
+          "id": "accept",
+          "kind": "accept",
+          "text": "Accept the original quest.",
+          "sources": [
+            "https://example.org"
+          ],
+          "questId": 1,
+          "completeWhen": {
+            "kind": "questInLog",
+            "questId": 1
+          }
+        },
+        {
+          "id": "objective",
+          "kind": "objective",
+          "text": "Collect the three original widgets.",
+          "sources": [
+            "https://example.org"
+          ],
+          "questId": 1,
+          "after": [
+            "accept"
+          ],
+          "requires": {
+            "kind": "questInLog",
+            "questId": 1
+          },
+          "completeWhen": {
+            "kind": "questObjectivesComplete",
+            "questId": 1
+          }
+        },
+        {
+          "id": "turnin",
+          "kind": "turnin",
+          "text": "Return to the correct NPC.",
+          "sources": [
+            "https://example.org"
+          ],
+          "questId": 1,
+          "after": [
+            "objective"
+          ],
+          "requires": {
+            "kind": "questObjectivesComplete",
+            "questId": 1
+          },
+          "completeWhen": {
+            "kind": "questTurnedIn",
+            "questId": 1
+          }
+        }
+      ]
+    },
+    "state": {
+      "questsAt": 1000000,
+      "quests": {
+        "1": {
+          "complete": false,
+          "objectives": [
+            {
+              "text": "Widgets 2/3",
+              "numFulfilled": 2,
+              "numRequired": 3,
+              "finished": false
+            }
+          ]
+        }
+      }
+    },
+    "expected": {
+      "complete": false,
+      "rows": [
+        {
+          "id": "objective",
+          "text": "Collect the three original widgets.",
+          "available": true,
+          "counters": "Widgets 2/3"
+        }
+      ]
+    }
+  },
+  {
+    "name": "turn-in distinct from objectives",
+    "graph": {
+      "version": 2,
+      "contentVersion": "test",
+      "routeIds": [],
+      "nodes": [
+        {
+          "id": "accept",
+          "kind": "accept",
+          "text": "Accept the original quest.",
+          "sources": [
+            "https://example.org"
+          ],
+          "questId": 1,
+          "completeWhen": {
+            "kind": "questInLog",
+            "questId": 1
+          }
+        },
+        {
+          "id": "objective",
+          "kind": "objective",
+          "text": "Collect the three original widgets.",
+          "sources": [
+            "https://example.org"
+          ],
+          "questId": 1,
+          "after": [
+            "accept"
+          ],
+          "requires": {
+            "kind": "questInLog",
+            "questId": 1
+          },
+          "completeWhen": {
+            "kind": "questObjectivesComplete",
+            "questId": 1
+          }
+        },
+        {
+          "id": "turnin",
+          "kind": "turnin",
+          "text": "Return to the correct NPC.",
+          "sources": [
+            "https://example.org"
+          ],
+          "questId": 1,
+          "after": [
+            "objective"
+          ],
+          "requires": {
+            "kind": "questObjectivesComplete",
+            "questId": 1
+          },
+          "completeWhen": {
+            "kind": "questTurnedIn",
+            "questId": 1
+          }
+        }
+      ]
+    },
+    "state": {
+      "questsAt": 1000000,
+      "quests": {
+        "1": {
+          "complete": true,
+          "objectives": []
+        }
+      }
+    },
+    "expected": {
+      "complete": false,
+      "rows": [
+        {
+          "id": "turnin",
+          "text": "Return to the correct NPC.",
+          "available": true,
+          "counters": null
+        }
+      ]
+    }
+  },
+  {
+    "name": "wrong faction and unobserved candidates are hidden",
+    "graph": {
+      "version": 2,
+      "contentVersion": "test",
+      "routeIds": [],
+      "nodes": [
+        {
+          "id": "a",
+          "kind": "observe",
+          "text": "Alliance instructions.",
+          "sources": [
+            "https://example.org"
+          ],
+          "when": {
+            "kind": "faction",
+            "value": "Alliance"
+          },
+          "manual": true
+        },
+        {
+          "id": "h",
+          "kind": "observe",
+          "text": "Horde instructions.",
+          "sources": [
+            "https://example.org"
+          ],
+          "when": {
+            "kind": "faction",
+            "value": "Horde"
+          },
+          "manual": true
+        },
+        {
+          "id": "unknown",
+          "kind": "observe",
+          "text": "Unobserved candidate.",
+          "sources": [
+            "https://example.org"
+          ],
+          "when": {
+            "kind": "questOffered",
+            "questId": 5
+          },
+          "hideWhenUnknown": true,
+          "manual": true
+        }
+      ]
+    },
+    "state": {
+      "faction": "Alliance"
+    },
+    "expected": {
+      "complete": false,
+      "rows": [
+        {
+          "id": "a",
+          "text": "Alliance instructions.",
+          "available": true,
+          "counters": null
+        }
+      ]
+    }
+  },
+  {
+    "name": "observed daily set needs every offered turn-in",
+    "rule": {
+      "kind": "observedQuestSetComplete",
+      "setId": "posters",
+      "cadence": "daily"
+    },
+    "state": {
+      "dailyResetAt": 1000100,
+      "questSets": {
+        "posters": {
+          "resetAt": 1000100,
+          "quests": {
+            "1": 1000000,
+            "2": 1000000
+          }
+        }
+      },
+      "turnIns": {
+        "1": 999999
+      }
+    },
+    "expected": null
+  },
+  {
+    "name": "observed daily set complete in its current period",
+    "rule": {
+      "kind": "observedQuestSetComplete",
+      "setId": "posters",
+      "cadence": "daily"
+    },
+    "state": {
+      "dailyResetAt": 1000100,
+      "questSets": {
+        "posters": {
+          "resetAt": 1000100,
+          "quests": {
+            "1": 1000000,
+            "2": 1000000
+          }
+        }
+      },
+      "turnIns": {
+        "1": 999999,
+        "2": 999999
+      }
+    },
+    "expected": true
+  },
+  {
+    "name": "observed set expires at reset",
+    "rule": {
+      "kind": "observedQuestSetComplete",
+      "setId": "posters",
+      "cadence": "daily"
+    },
+    "state": {
+      "dailyResetAt": 1000100,
+      "questSets": {
+        "posters": {
+          "resetAt": 1000000,
+          "quests": {
+            "1": 999999
+          }
+        }
+      },
+      "turnIns": {
+        "1": 999999
+      }
+    },
+    "expected": null
+  },
+  {
+    "name": "expired aura does not complete a puzzle",
+    "rule": {
+      "kind": "auraStacks",
+      "spellId": 367499,
+      "quantity": 6
+    },
+    "state": {
+      "auras": {
+        "367499": {
+          "at": 999990,
+          "stacks": 6,
+          "expiresAt": 1000000
+        }
+      }
+    },
+    "expected": false
+  },
+  {
+    "name": "future observations remain unknown",
+    "rule": {
+      "kind": "questInLog",
+      "questId": 1
+    },
+    "state": {
+      "questsAt": 1000001,
+      "quests": {
+        "1": {
+          "complete": true
+        }
+      }
+    },
+    "expected": null
+  },
+  {
+    "name": "mission readiness estimate does not establish fresh collection",
+    "rule": {
+      "kind": "missionState",
+      "missionId": 1,
+      "state": "collect"
+    },
+    "state": {
+      "missions": {
+        "1": {
+          "at": 999000,
+          "running": [
+            {
+              "missionID": 1,
+              "missionEndTime": 999999
+            }
+          ]
+        }
+      }
+    },
+    "expected": null
+  },
+  {
+    "name": "stale available mission is unknown",
+    "rule": {
+      "kind": "missionState",
+      "missionId": 1,
+      "state": "available"
+    },
+    "state": {
+      "missions": {
+        "1": {
+          "at": 999000,
+          "available": [
+            {
+              "missionID": 1
+            }
+          ]
+        }
+      }
+    },
+    "expected": null
+  },
+  {
+    "name": "permanent warband unlock from another EU character",
+    "rule": {
+      "kind": "questTurnedIn",
+      "questId": 10,
+      "scope": "warband"
+    },
+    "state": {},
+    "characters": [
+      {
+        "region": "EU",
+        "flags": {
+          "10": {
+            "at": 999000,
+            "value": true
+          }
+        }
+      }
+    ],
+    "expected": true
+  }
+]

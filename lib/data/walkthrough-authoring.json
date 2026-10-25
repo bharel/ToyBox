@@ -1,0 +1,778 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-10-24",
+  "retailBuild": "12.1.5.70575",
+  "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+  "sources": [
+    {
+      "id": "att-zones",
+      "url": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "license": "MIT",
+      "use": "import factual relationships and permitted original source hints"
+    },
+    {
+      "id": "att-secrets",
+      "url": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Secrets.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "license": "MIT",
+      "use": "import factual relationships and permitted original source hints"
+    },
+    {
+      "id": "postmaster-guide",
+      "url": "https://www.wowhead.com/guide/postmasters-questline-rewards-tips-tricks-walkthrough-5797",
+      "retrievedAt": "2026-10-24",
+      "updatedAt": "2025-10-28",
+      "use": "factual consultation; original Toybox wording"
+    },
+    {
+      "id": "huge-package",
+      "url": "https://www.wowhead.com/quest=41397/a-huge-package",
+      "retrievedAt": "2026-10-24",
+      "use": "factual consultation; distinguish quest sack from farmed Solid Stone"
+    },
+    {
+      "id": "dummy-comments",
+      "url": "https://www.wowhead.com/item=201933/black-dragons-challenge-dummy",
+      "retrievedAt": "2026-10-24",
+      "use": "factual consultation and corroboration; original Toybox wording"
+    }
+  ],
+  "routes": [
+    {
+      "id": "katy-stampwhistle-postmaster",
+      "itemId": 156833,
+      "title": "Katy’s Stampwhistle: the Postmaster",
+      "sourceIds": [
+        "att-zones",
+        "postmaster-guide",
+        "huge-package"
+      ],
+      "sourceChecked": true,
+      "playtested": false,
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 156833
+      },
+      "questIds": [
+        41368,
+        41411,
+        46278,
+        41397,
+        41367,
+        41394,
+        41395,
+        50247
+      ],
+      "terminalAchievementId": 12431,
+      "rewardContainerItemId": 156836,
+      "alternativeStart": {
+        "questIds": [
+          41368,
+          41411
+        ],
+        "itemIds": [
+          134859,
+          135479
+        ],
+        "semantics": "Either starter is sufficient. They are not cumulative prerequisites."
+      },
+      "facts": {
+        "questgiverId": 103976,
+        "johnnyAwesomeNpcId": 52562,
+        "mailroomEntry": {
+          "mapID": 627,
+          "x": 0.33,
+          "y": 0.317,
+          "label": "Mail Tube near Dalaran pet cemetery"
+        },
+        "mailroomInteriorHint": {
+          "mapID": 627,
+          "x": 0.386,
+          "y": 0.408,
+          "label": "The Postmaster inside the mailroom"
+        },
+        "johnnyAwesome": {
+          "mapID": 69,
+          "x": 0.6859999999999999,
+          "y": 0.731,
+          "label": "Johnny Awesome at the Steam Pools"
+        },
+        "starterObjectId": 247797,
+        "starterItemNames": {
+          "134859": "Lost Mail",
+          "135479": "Lost Mail"
+        },
+        "sourceItemIds": [
+          134857,
+          135464,
+          135463
+        ],
+        "accountAchievementDoesNotProveCharacterQuestAccess": true
+      },
+      "steps": [
+        {
+          "id": "lost-mail",
+          "kind": "acquire",
+          "text": "Find Lost Mail beside a mailbox in Legion Dalaran, or obtain the tradable copy from another player or the Auction House.",
+          "itemIds": [
+            134859,
+            135479
+          ],
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 134859,
+                "quantity": 1
+              },
+              {
+                "kind": "itemCount",
+                "itemId": 135479,
+                "quantity": 1
+              },
+              {
+                "kind": "questInLog",
+                "questId": 41368
+              },
+              {
+                "kind": "questInLog",
+                "questId": 41411
+              },
+              {
+                "kind": "questTurnedIn",
+                "questId": 41368
+              },
+              {
+                "kind": "questTurnedIn",
+                "questId": 41411
+              }
+            ]
+          },
+          "recovery": "Spawn time is unknown. Do not display a countdown; offer the alternative item route."
+        },
+        {
+          "id": "lost-mail-quest",
+          "kind": "quest",
+          "text": "Use your copy of Lost Mail and deliver it to Madam Goya in the Underbelly.",
+          "questIds": [
+            41368,
+            41411
+          ],
+          "destination": {
+            "kind": "liveQuestWaypoint",
+            "questIds": [
+              41368,
+              41411
+            ]
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "questTurnedIn",
+                "questId": 41368
+              },
+              {
+                "kind": "questTurnedIn",
+                "questId": 41411
+              }
+            ]
+          }
+        },
+        {
+          "id": "mailroom-invitation",
+          "kind": "observe-mail",
+          "text": "Check a mailbox for the Postmaster’s invitation, then enter the Mail Tube beside the pet cemetery.",
+          "destination": {
+            "mapID": 627,
+            "x": 0.33,
+            "y": 0.317,
+            "label": "Mail Tube near Dalaran pet cemetery"
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "questInLog",
+                "questId": 46278
+              },
+              {
+                "kind": "questTurnedIn",
+                "questId": 46278
+              }
+            ]
+          },
+          "recovery": "If the tube is missing, finish Lost Mail and read the invitation. Do not assume the questgiver’s surface-map coordinates represent the entrance."
+        },
+        {
+          "id": "return-to-sender",
+          "kind": "quest",
+          "text": "Take Return to Sender from the Postmaster. Gather the nine floating letters and turn it in.",
+          "questId": 46278,
+          "destination": {
+            "mapID": 627,
+            "x": 0.33,
+            "y": 0.317,
+            "label": "Mail Tube near Dalaran pet cemetery"
+          },
+          "interiorHint": {
+            "mapID": 627,
+            "x": 0.386,
+            "y": 0.408,
+            "label": "The Postmaster inside the mailroom"
+          },
+          "completeOn": {
+            "kind": "questTurnedIn",
+            "questId": 46278
+          },
+          "questTitle": "Return to Sender"
+        },
+        {
+          "id": "huge-package",
+          "kind": "quest",
+          "text": "Take A Huge Package. Pick up the provided sack, carry it to the Consortium portal, deliver it, and return.",
+          "questId": 41397,
+          "destination": {
+            "kind": "liveQuestWaypoint",
+            "questId": 41397
+          },
+          "fallbackDestination": {
+            "mapID": 627,
+            "x": 0.33,
+            "y": 0.317,
+            "label": "Mail Tube near Dalaran pet cemetery"
+          },
+          "completeOn": {
+            "kind": "questTurnedIn",
+            "questId": 41397
+          },
+          "details": "The sack is supplied inside the mailroom. Do not gather or buy 1,362 pieces of Solid Stone. Use the quest action when prompted.",
+          "questTitle": "A Huge Package"
+        },
+        {
+          "id": "priority-delivery",
+          "kind": "quest",
+          "text": "Take Priority Delivery. Use the offered quest portal, recover the delivery, then bring it to Johnny Awesome.",
+          "questId": 41367,
+          "destination": {
+            "kind": "liveQuestWaypoint",
+            "questId": 41367
+          },
+          "turnInDestination": {
+            "mapID": 69,
+            "x": 0.6859999999999999,
+            "y": 0.731,
+            "label": "Johnny Awesome at the Steam Pools"
+          },
+          "completeOn": {
+            "kind": "questTurnedIn",
+            "questId": 41367
+          },
+          "recovery": "This uses a quest scenario; do not route through a normal Icecrown Citadel raid clear.",
+          "questTitle": "Priority Delivery"
+        },
+        {
+          "id": "service-with-a-smile",
+          "kind": "quest",
+          "text": "Take Service with a Smile. Speak to Gott Weedlespan, the assistant resort director, to sell the quest-provided duplicate delivery; then return to Johnny Awesome.",
+          "questId": 41394,
+          "destination": {
+            "kind": "liveQuestWaypoint",
+            "questId": 41394
+          },
+          "turnInDestination": {
+            "mapID": 69,
+            "x": 0.6859999999999999,
+            "y": 0.731,
+            "label": "Johnny Awesome at the Steam Pools"
+          },
+          "completeOn": {
+            "kind": "questTurnedIn",
+            "questId": 41394
+          },
+          "questTitle": "Service with a Smile"
+        },
+        {
+          "id": "due-reward",
+          "kind": "quest",
+          "text": "Take Due Reward. Follow the active quest to Twinkles’ memorial in Hillsbrad Foothills and place the tribute.",
+          "questId": 41395,
+          "destination": {
+            "kind": "liveQuestWaypoint",
+            "questId": 41395
+          },
+          "completeOn": {
+            "kind": "questTurnedIn",
+            "questId": 41395
+          },
+          "recovery": "Johnny is the starting NPC in Feralas; he is not the destination for this objective.",
+          "questTitle": "Due Reward"
+        },
+        {
+          "id": "mail-must-flow",
+          "kind": "quest",
+          "text": "Read the new invitation and return through the Mail Tube. Complete the fifteen-letter sorting quest and turn it in.",
+          "questId": 50247,
+          "destination": {
+            "mapID": 627,
+            "x": 0.33,
+            "y": 0.317,
+            "label": "Mail Tube near Dalaran pet cemetery"
+          },
+          "completeOn": {
+            "kind": "questTurnedIn",
+            "questId": 50247
+          },
+          "questTitle": "The Mail Must Flow"
+        },
+        {
+          "id": "check-early-reward-mail",
+          "kind": "observe-mail",
+          "text": "Check your mailbox for the Bulging Package before doing more sorting. If it has not arrived, Continue to the optional challenge.",
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 156836
+              },
+              {
+                "kind": "itemCount",
+                "itemId": 156833
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 156833
+              }
+            ]
+          },
+          "recovery": "Reports differ on whether the toy arrives after the quest or the achievement. The guide follows actual reward receipt and never assumes a drop or mail delivery."
+        },
+        {
+          "id": "post-haste",
+          "kind": "achievement",
+          "text": "If the toy has not arrived, ask the Postmaster for another sorting round. Earn Post Haste by sorting thirty fully addressed letters within one minute.",
+          "achievementId": 12431,
+          "destination": {
+            "mapID": 627,
+            "x": 0.33,
+            "y": 0.317,
+            "label": "Mail Tube near Dalaran pet cemetery"
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "achievement",
+                "achievementId": 12431,
+                "scope": "account"
+              },
+              {
+                "kind": "itemCount",
+                "itemId": 156836,
+                "quantity": 1
+              },
+              {
+                "kind": "itemCount",
+                "itemId": 156833,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 156833
+              }
+            ]
+          },
+          "details": "Priority Mail is the separate incomplete-address challenge for the title. Reports disagree about when the toy mail arrives; check bags and mail after the main chain before repeating challenges."
+        },
+        {
+          "id": "reward-mail",
+          "kind": "receive",
+          "text": "Check a mailbox for the Bulging Package and take its attachments.",
+          "itemId": 156836,
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 156836,
+                "quantity": 1
+              },
+              {
+                "kind": "itemCount",
+                "itemId": 156833,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 156833
+              }
+            ]
+          }
+        },
+        {
+          "id": "open-package",
+          "kind": "open",
+          "text": "Open the Bulging Package and take Katy’s Stampwhistle.",
+          "itemId": 156836,
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 156833,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 156833
+              }
+            ]
+          }
+        },
+        {
+          "id": "learn",
+          "kind": "learn",
+          "text": "Use Katy’s Stampwhistle from your bags to add it to the Toy Box.",
+          "itemId": 156833,
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 156833
+          }
+        }
+      ],
+      "unresolved": [
+        "Exact starter mailbox distribution is not proven; offer searching near mailboxes without claiming a guaranteed spawn.",
+        "Use native quest waypoints for Consortium portal, scenario objectives and Twinkles memorial. Static questgiver coordinates cannot substitute for these objectives.",
+        "Pinned ATT awards the toy via achievement12431; user comments contain contradictory reward timing. Ownership and item receipt short-circuit the challenge."
+      ]
+    },
+    {
+      "id": "black-dragons-challenge-dummy",
+      "itemId": 201933,
+      "title": "Black Dragon’s Challenge Dummy",
+      "sourceIds": [
+        "att-secrets",
+        "dummy-comments"
+      ],
+      "sourceChecked": true,
+      "playtested": false,
+      "questIds": [
+        70018
+      ],
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 201933
+      },
+      "steps": [
+        {
+          "id": "sour-apple",
+          "kind": "loot",
+          "text": "Collect a Sour Apple from the ground beside the pack goat on the road to Obsidian Bulwark.",
+          "objectId": 377485,
+          "itemId": 194122,
+          "destination": {
+            "mapID": 2022,
+            "x": 0.43700000000000006,
+            "y": 0.7170000000000001,
+            "label": "Sour Apple"
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 194122,
+                "quantity": 1
+              },
+              {
+                "kind": "itemCount",
+                "itemId": 198085,
+                "quantity": 1
+              },
+              {
+                "kind": "questTurnedIn",
+                "questId": 70018
+              }
+            ]
+          }
+        },
+        {
+          "id": "feed-shadowclaw",
+          "kind": "interaction",
+          "text": "Use the Sour Apple on the Blacktalon Shadowclaw, then interact with the bird to ride to the cave.",
+          "npcId": 191851,
+          "itemId": 194122,
+          "destination": {
+            "mapID": 2022,
+            "x": 0.43200000000000005,
+            "y": 0.6729999999999999,
+            "label": "Blacktalon Shadowclaw"
+          },
+          "completion": "Observation-limited transport: Continue may advance the cursor only. Key acquisition or treasure tracking can supersede it.",
+          "recovery": "If you fall or leave before collecting the key, collect another apple and ride again."
+        },
+        {
+          "id": "cache-key",
+          "kind": "loot",
+          "text": "At the cave entrance, pick up the key beside the Blacktalon Assassin.",
+          "objectId": 379168,
+          "itemId": 198085,
+          "destination": {
+            "mapID": 2022,
+            "x": 0.43700000000000006,
+            "y": 0.696,
+            "label": "Lost Cache Key"
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 198085,
+                "quantity": 1
+              },
+              {
+                "kind": "questTurnedIn",
+                "questId": 70018
+              }
+            ]
+          }
+        },
+        {
+          "id": "lost-cache",
+          "kind": "loot",
+          "text": "Continue inside the cave and open the Lost Obsidian Cache with the key.",
+          "objectId": 378857,
+          "itemId": 201933,
+          "destination": {
+            "mapID": 2022,
+            "x": 0.446,
+            "y": 0.701,
+            "label": "Lost Obsidian Cache"
+          },
+          "trackingQuestId": 70018,
+          "costs": [
+            [
+              "i",
+              198085,
+              1
+            ]
+          ],
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 201933,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 201933
+              }
+            ]
+          },
+          "recovery": "This is a treasure tracking flag, not a quest to accept. After the chest is looted, check bags before repeating the puzzle."
+        },
+        {
+          "id": "learn",
+          "kind": "learn",
+          "text": "Use the Black Dragon’s Challenge Dummy from your bags.",
+          "itemId": 201933,
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 201933
+          }
+        }
+      ]
+    },
+    {
+      "id": "stored-wisdom-device",
+      "itemId": 192485,
+      "title": "Stored Wisdom Device",
+      "sourceIds": [
+        "att-secrets"
+      ],
+      "sourceChecked": true,
+      "playtested": false,
+      "questIds": [
+        65470,
+        65488
+      ],
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 192485
+      },
+      "steps": [
+        {
+          "id": "venari-echo",
+          "kind": "interaction",
+          "text": "Speak to Ve’nari’s echo in her Maw refuge and ask about Zereth Mortis.",
+          "npcId": 162804,
+          "destination": {
+            "mapID": 1543,
+            "x": 0.469,
+            "y": 0.41700000000000004,
+            "label": "Ve’nari’s refuge"
+          },
+          "trackingQuestId": 65470,
+          "completeOn": {
+            "kind": "questTurnedIn",
+            "questId": 65470
+          },
+          "recovery": "If this dialogue is absent, show the observed dialogue and phase as an unresolved access condition; do not mark the interaction done."
+        },
+        {
+          "id": "venari-corpse",
+          "kind": "interaction",
+          "text": "Travel to the Creation Catalyst. Inspect Ve’nari’s body inside and choose the closer-inspection dialogue.",
+          "npcId": 185083,
+          "destination": {
+            "mapID": 1970,
+            "x": 0.474,
+            "y": 0.8859999999999999,
+            "label": "Creation Catalyst"
+          },
+          "trackingQuestId": 65488,
+          "completeOn": {
+            "kind": "questTurnedIn",
+            "questId": 65488
+          }
+        },
+        {
+          "id": "wait-mail",
+          "kind": "wait",
+          "text": "Check your mailbox for Ve’nari’s letter after the delivery delay.",
+          "mailDelaySeconds": 432000,
+          "delayStartsAt": "observed completion of tracking quest65488",
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 192485,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 192485
+              }
+            ]
+          },
+          "details": "The pinned source reports five days. If the interaction was already complete before Toybox observed it, the start time is unknown; do not invent a ready timestamp."
+        },
+        {
+          "id": "learn",
+          "kind": "learn",
+          "text": "Take the Stored Wisdom Device from the mail and use it from your bags.",
+          "itemId": 192485,
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 192485
+          }
+        }
+      ],
+      "unresolved": [
+        "Earlier Maw/Creation Catalyst phase access is not specified by this source. Use observed access and separately authored unlock subguides; do not claim a completely covered prerequisite route until those are linked."
+      ]
+    },
+    {
+      "id": "angry-beehive",
+      "itemId": 117550,
+      "title": "Angry Beehive",
+      "sourceIds": [
+        "att-zones"
+      ],
+      "sourceChecked": true,
+      "playtested": false,
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 117550
+      },
+      "steps": [
+        {
+          "id": "hive",
+          "kind": "loot",
+          "text": "Find and open the Swamplighter Hive in Shadowmoon Valley.",
+          "objectId": 232592,
+          "destination": {
+            "mapID": 539,
+            "x": 0.5529999999999999,
+            "y": 0.748,
+            "label": "Swamplighter Hive"
+          },
+          "trackingQuestId": 35580,
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 117550,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 117550
+              }
+            ]
+          },
+          "recovery": "Quest35580 is the hidden treasure flag. If flagged but the toy is missing, check bags, bank and mail; do not ask the player to accept it."
+        },
+        {
+          "id": "learn",
+          "kind": "learn",
+          "text": "Use the Angry Beehive from your bags.",
+          "itemId": 117550,
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 117550
+          }
+        }
+      ]
+    }
+  ],
+  "importRecommendations": {
+    "preserveFields": [
+      "description",
+      "maps",
+      "qss",
+      "altQuests",
+      "nextQuests",
+      "isBreadcrumb",
+      "difficulties",
+      "lockCriteria",
+      "isAccountWide",
+      "isRepeatable",
+      "repeatable",
+      "providers",
+      "provider",
+      "objectiveID",
+      "achievementID",
+      "criteriaID",
+      "cost",
+      "qgs",
+      "crs",
+      "sourceQuest",
+      "sourceQuests",
+      "requireSkill",
+      "skillID",
+      "rank",
+      "minReputation",
+      "maxReputation",
+      "customCollect",
+      "u",
+      "awp",
+      "rwp"
+    ],
+    "preserveStructure": [
+      "nearest source entity type and ID",
+      "ancestor entities and header meaning",
+      "child order within unique secret/chain groups",
+      "reward container item ancestry",
+      "explicit fields versus inherited fields",
+      "separate faction/class branch fact variants",
+      "direct source path plus line or content hash"
+    ],
+    "guardrails": [
+      "Object/npc tracking quest is not automatically an accepted quest.",
+      "ATT aggregate difficulty114 is not a selectable Blizzard difficulty.",
+      "sourceQuests alone does not encode AND versus OR.",
+      "Missing recipeID on a crafted toy is an importer gap, not proof the recipe is unknown.",
+      "Generic ancestor description and coordinates need entity ownership; do not apply every ancestor cost to every action.",
+      "Quest giver coordinates are not quest objective or turn-in coordinates.",
+      "Chapter achievement completion cannot stand in for toy learned.",
+      "Use source-specific daily/fortnightly schedules rather than inheriting broad weekly/daily flags."
+    ]
+  }
+}

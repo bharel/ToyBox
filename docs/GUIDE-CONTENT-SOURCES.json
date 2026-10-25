@@ -1,0 +1,660 @@
+{
+  "version": 1,
+  "release": "2.4.0",
+  "retailBuild": "12.1.5.70575",
+  "imports": [
+    {
+      "id": "priority-1",
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/.contrib/.db/standard/02%20-%20Outdoor%20Zones/14%20Dragon%20Isles/The%20Azure%20Span/Community%20Feast.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sha256": "9a71f8a1d68eacfd3b55f211fd418dbca378e4eb63822584ad7b08d38a0e0f7c",
+      "license": "MIT"
+    },
+    {
+      "id": "priority-2",
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/.contrib/.db/standard/02%20-%20Outdoor%20Zones/14%20Dragon%20Isles/The%20Waking%20Shores/Siege%20on%20Dragonbane%20Keep.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sha256": "256dcffa5127f8995a99ef80671933df5391220d2b85ae52dcb617e2a40e07be",
+      "license": "MIT"
+    },
+    {
+      "id": "priority-3",
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/.contrib/.db/standard/06%20-%20Expansion%20Features/03%20-%20Wrath%20of%20the%20Lich%20King/Argent%20Tournament.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sha256": "5f156ef46318386fd8e21a8582744ad8b40285d7ee366e58996593f652b9865a",
+      "license": "MIT"
+    },
+    {
+      "id": "priority-4",
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/.contrib/.db/standard/06%20-%20Expansion%20Features/10%20-%20Dragonflight/02%20Maruuk%20Centaur/Grand%20Hunts.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sha256": "db7ed11ac2112bea3830af9d0daa5b7eaeed52e1455712d4668f2703ae98a4a0",
+      "license": "MIT"
+    },
+    {
+      "id": "priority-5",
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/.contrib/.db/standard/06%20-%20Expansion%20Features/10%20-%20Dragonflight/03%20Iskaara%20Tuskarr/Community%20Feast.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sha256": "c8863260c59d8044a111e3ee755154b564ab1c9de384a1b45ed42ce3317f1dad",
+      "license": "MIT"
+    },
+    {
+      "id": "priority-6",
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/.contrib/.db/standard/06%20-%20Expansion%20Features/10%20-%20Dragonflight/04%20Valdrakken%20Accord/Siege%20on%20Dragonbane%20Keep.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sha256": "b18f69c41eb4f5cc1b2df605013c304ed382dffb33df95cc0ec9c0262188b551",
+      "license": "MIT"
+    },
+    {
+      "id": "priority-7",
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/.contrib/.db/standard/06%20-%20Expansion%20Features/10%20-%20Dragonflight/05%20Loamm%20Niffen/Quests.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sha256": "b14142bf1a1b9ae0ef35961e399d1fc160019799930e9e14e229714848e72f58",
+      "license": "MIT"
+    },
+    {
+      "id": "priority-8",
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/.contrib/.db/standard/10%20-%20Professions/Archaeology.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sha256": "d7fbf460b8665c93e27700a246b30ca85bbc85cdc923a75108209370756e4334",
+      "license": "MIT"
+    },
+    {
+      "id": "priority-9",
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/.contrib/.db/standard/10%20-%20Professions/Engineering.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sha256": "235b9feee6de164f0bf3c8fbdf4de905245b77abc675baa65c4edef35c59b655",
+      "license": "MIT"
+    },
+    {
+      "id": "priority-10",
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/.contrib/.db/standard/02%20-%20Outdoor%20Zones/14%20Dragon%20Isles/Thaldraszus/Time%20Rifts.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sha256": "3449de6e7dbf3135d9477be2b467daeb048e3416755c10bb82128157a84478ef",
+      "license": "MIT"
+    },
+    {
+      "id": "priority-11",
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/.contrib/.db/standard/06%20-%20Expansion%20Features/10%20-%20Dragonflight/01%20Dragonscale%20Expedition/Quests.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sha256": "4d80ee6e0d69d4cba880736efa7c16bb468616d7506579f81f207e0de6ba9bc5",
+      "license": "MIT"
+    },
+    {
+      "id": "priority-12",
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/.contrib/.db/standard/02%20-%20Outdoor%20Zones/14%20Dragon%20Isles/Zaralek%20Cavern/Quests.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sha256": "1543bc4ddfbcc6dbcb3f530b0aa5a4f5c074037479f8a99b824f88cf63bac281",
+      "license": "MIT"
+    },
+    {
+      "id": "priority-13",
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/.contrib/.db/standard/06%20-%20Expansion%20Features/10%20-%20Dragonflight/01%20Dragonscale%20Expedition/Quests.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sha256": "4d80ee6e0d69d4cba880736efa7c16bb468616d7506579f81f207e0de6ba9bc5",
+      "license": "MIT"
+    },
+    {
+      "id": "priority-14",
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/.contrib/.db/standard/06%20-%20Expansion%20Features/10%20-%20Dragonflight/01%20Dragonscale%20Expedition/Vendors.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sha256": "0dbf0a8d498bd185d93b732b3e57dda4b89dba57899aaf89eec7f2df7b37b8be",
+      "license": "MIT"
+    },
+    {
+      "id": "priority-15",
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/.contrib/.db/standard/06%20-%20Expansion%20Features/10%20-%20Dragonflight/02%20Maruuk%20Centaur/Vendors.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sha256": "ab988dea104187699b143f90a9c84b0a6115616f04d9467946d793c643f2b064",
+      "license": "MIT"
+    },
+    {
+      "id": "priority-16",
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/.contrib/.db/standard/06%20-%20Expansion%20Features/10%20-%20Dragonflight/03%20Iskaara%20Tuskarr/Vendors.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sha256": "41bff74bd556a20c95a77c164bbb7eaceb834aa926adb23dccc97ecd254471df",
+      "license": "MIT"
+    },
+    {
+      "id": "priority-17",
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/.contrib/.db/standard/06%20-%20Expansion%20Features/10%20-%20Dragonflight/05%20Loamm%20Niffen/Vendors.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sha256": "cb0ff82ea3357f0d0f74247be076192f6b2a42b1c4315f636a72bc4e13dff25a",
+      "license": "MIT"
+    },
+    {
+      "id": "priority-18",
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/.contrib/.db/standard/06%20-%20Expansion%20Features/10%20-%20Dragonflight/02%20Maruuk%20Centaur/Quests.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sha256": "77be74d793b5190628f96cab9c4d003db7b6a32821e0f3b5d58a962737c4c39d",
+      "license": "MIT"
+    },
+    {
+      "id": "priority-19",
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/.contrib/.db/standard/06%20-%20Expansion%20Features/10%20-%20Dragonflight/03%20Iskaara%20Tuskarr/Quests.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sha256": "b3b93c7be97d441920f65c4754fbe8ec569ee395447cbb428d828e7ee28501a9",
+      "license": "MIT"
+    },
+    {
+      "id": "priority-20",
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/.contrib/.db/standard/06%20-%20Expansion%20Features/10%20-%20Dragonflight/04%20Valdrakken%20Accord/Quests.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sha256": "947af1161912a9526ac44ae6296df4a2e665ecd4b17bea76bf9b58dc0e59a2f9",
+      "license": "MIT"
+    },
+    {
+      "id": "priority-21",
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/.contrib/.db/standard/02%20-%20Outdoor%20Zones/14%20Dragon%20Isles/The%20Forbidden%20Reach/Quests.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sha256": "5851cbeee7e2270ba5a4902ea36253913f1d2a3d615112fca86906c1280a15e3",
+      "license": "MIT"
+    },
+    {
+      "id": "att-1",
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/BlackMarket.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sha256": "dae16ba3b0497e6f35b7fa89b41ba8e60a1bca0b933c095fd889fd9d8ff801f2",
+      "license": "MIT"
+    },
+    {
+      "id": "att-2",
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Character.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sha256": "fcb0508ae980c3400c57909b8c4100eb26c64fcde031ea22c70dfa6cd33e5cdb",
+      "license": "MIT"
+    },
+    {
+      "id": "att-3",
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Craftables.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sha256": "336f1d5cb18c8214c73149d48f0cd541e37dd839dc7af82a115bece057ecf6f5",
+      "license": "MIT"
+    },
+    {
+      "id": "att-4",
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Delves.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sha256": "c052638428a51d4d7ac70f715734bc589892eeca30265510f75495806c17a561",
+      "license": "MIT"
+    },
+    {
+      "id": "att-5",
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/ExpansionFeatures.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sha256": "a75b0483934cca7f6fc978927e0205e20753e869a612800e06d4811de0372886",
+      "license": "MIT"
+    },
+    {
+      "id": "att-6",
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/GroupFinder.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sha256": "44ab6edb930238b9083d3934a783ebfc40e96a8eaa552dc28313ef6b0c117930",
+      "license": "MIT"
+    },
+    {
+      "id": "att-7",
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/HiddenAchievementTriggers.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sha256": "139de5be6d4197c76602e76e1145df8115a7c58ab8bee26ba2e59eed7f72bb28",
+      "license": "MIT"
+    },
+    {
+      "id": "att-8",
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/HiddenCurrencyTriggers.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sha256": "42ab39af66e73bc1a17bbe27d3441d0d6716aff2d13272f721571429939c3e74",
+      "license": "MIT"
+    },
+    {
+      "id": "att-9",
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/HiddenQuestTriggers.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sha256": "71387e97c4e7d9055ff998889d4cdf7e536a9bfa334c405f41821e1f096324dc",
+      "license": "MIT"
+    },
+    {
+      "id": "att-10",
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Holidays.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sha256": "4f64339287ea61438bbdb866c08980aeb61a9e51101506727d46bee7a2481c62",
+      "license": "MIT"
+    },
+    {
+      "id": "att-11",
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Housing.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sha256": "8f87f7ca68c7b6a371a144ea383a95ecb6bbc5cb9732af2e62cbded1fbf25f71",
+      "license": "MIT"
+    },
+    {
+      "id": "att-12",
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/InGameShop.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sha256": "df1c8a71a1662ec6b72940c1cedb682042445664ea0482949b252df77d0a8be0",
+      "license": "MIT"
+    },
+    {
+      "id": "att-13",
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Instances.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sha256": "43bb8ae1343d0797251238c02607a82e3834093775a656db7fafdef8a7637d7b",
+      "license": "MIT"
+    },
+    {
+      "id": "att-14",
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/NeverImplemented.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sha256": "7a0bf3c129b7ee7e209d602423150199067896979dc79f6a1000a60aa44d3a18",
+      "license": "MIT"
+    },
+    {
+      "id": "att-15",
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/PVP.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sha256": "4b9366ad35c1b302be3c67bdf35e6b691f9b1f0d686eac24c3b336bf42158828",
+      "license": "MIT"
+    },
+    {
+      "id": "att-16",
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Professions.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sha256": "e7fb725104a86136c39db602b656fb01a9c2531d5404641ff523b8284b1faa90",
+      "license": "MIT"
+    },
+    {
+      "id": "att-17",
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Promotions.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sha256": "ce2819078eba7cd0c979bcd7b8cb39abdfe7a0218e0ce7d8c204418c04a10e1f",
+      "license": "MIT"
+    },
+    {
+      "id": "att-18",
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Secrets.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sha256": "83c92b05b769dce1ff970db75562230e1f1f0c656dc3890cca183f3bb54794bd",
+      "license": "MIT"
+    },
+    {
+      "id": "att-19",
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Sourceless.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sha256": "79620b5dffb77cd83f2e8be1e1b1931ea1ed6bb80b510da0fe318b8a9d9bf584",
+      "license": "MIT"
+    },
+    {
+      "id": "att-20",
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/TradingPost.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sha256": "643635ff102672bfbd4672fb8fa978b0403daa268a2a53225076e4a514775882",
+      "license": "MIT"
+    },
+    {
+      "id": "att-21",
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Unsorted.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sha256": "68549ec4a81fe3a341942637a61dc5bc208063233bcbd19ceca7fe23281406f8",
+      "license": "MIT"
+    },
+    {
+      "id": "att-22",
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/WorldDrops.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sha256": "cf9f768f23f71bdcc4754bb6e4e4ef00496c99417a12c265f2b00330efc6d196",
+      "license": "MIT"
+    },
+    {
+      "id": "att-23",
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/WorldEvents.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sha256": "fe231c21739c45663ceea8264d465ae41f8daf3d340dbacd5a3c3f81553e5d13",
+      "license": "MIT"
+    },
+    {
+      "id": "att-24",
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sha256": "26f62a8a7866d36db8922cd2f19a2f8ba742d9b0735faf93b75593fc64cd1c08",
+      "license": "MIT"
+    },
+    {
+      "id": "toy-reagents",
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/.contrib/.db/standard/00%20-%20DB/ReagentsDB.Retail.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sha256": "a3714de637a835d9a2df5b0ceca6e5c2d48377b4fb12398f15f20f5f511d3ff2",
+      "license": "MIT"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/.contrib/.db/standard/02%20-%20Outdoor%20Zones/08%20Broken%20Isles/1%20-%20Dalaran/Vendors.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sha256": "a3145863926e0d1dc2a435e3dd646c959cc4e83082b9f11ff32720c5cf693367",
+      "license": "MIT",
+      "id": "progression-1"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/.contrib/.db/standard/06%20-%20Expansion%20Features/06%20-%20Warlords%20of%20Draenor/Draenor%20Garrison/Common/Buildings/Engineering%20Works.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sha256": "6d4fe7987cb054f8ba8683190c7a6417f6276c2a108ab220edc6dd98810cd385",
+      "license": "MIT",
+      "id": "progression-2"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/.contrib/.db/standard/02%20-%20Outdoor%20Zones/04%20Northrend/1%20-%20Dalaran.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sha256": "21db91e1086434171d61286aba6a5e2d679674322853cf019e6f2eb8257b80b3",
+      "license": "MIT",
+      "id": "progression-3"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/.contrib/.db/standard/02%20-%20Outdoor%20Zones/07%20Draenor/1%20-%20Stormshield.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sha256": "ee3965e90450e1bfcb9490f516aaf4ddf92ca318361026276dd80e32153a7c21",
+      "license": "MIT",
+      "id": "progression-4"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/.contrib/.db/standard/02%20-%20Outdoor%20Zones/07%20Draenor/2%20-%20Warspear.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sha256": "dfa4a58e141d793e2d7e419e981457c01dff564e0be28675a930e2c639d072f6",
+      "license": "MIT",
+      "id": "progression-5"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/.contrib/.db/standard/00%20-%20Profession%20DB/Engineering.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sha256": "16cb6834c08982b7811044d25c6c497264fcc30f1f0f414636ca4024c50e9997",
+      "license": "MIT",
+      "id": "progression-6"
+    }
+  ],
+  "references": [
+    {
+      "name": "HandyNotes",
+      "url": "https://github.com/zarillion/handynotes-plugins/tree/2b1dbb16f6720cc29de759fa324dc6e6bdc49517",
+      "use": "factual consultation; original Toybox instructions, no restricted code or prose imported"
+    },
+    {
+      "name": "BtWQuests",
+      "url": "https://www.curseforge.com/wow/addons/btw-quests",
+      "use": "factual consultation; original Toybox instructions, no restricted code or prose imported"
+    },
+    {
+      "name": "SilverDragon",
+      "url": "https://github.com/kemayo/wow-silverdragon",
+      "use": "factual consultation; original Toybox instructions, no restricted code or prose imported"
+    },
+    {
+      "name": "WoW-Pro",
+      "url": "https://github.com/Ludovicus-Maior/WoW-Pro-Guides",
+      "use": "factual consultation; original Toybox instructions, no restricted code or prose imported"
+    },
+    {
+      "name": "Wowhead Postmaster",
+      "url": "https://www.wowhead.com/guide/postmasters-questline-rewards-tips-tricks-walkthrough-5797",
+      "use": "factual consultation; original Toybox instructions, no restricted code or prose imported"
+    },
+    {
+      "name": "HandyNotes mechanics cross-check",
+      "url": "https://github.com/zarillion/handynotes-plugins/blob/2b1dbb16f6720cc29de759fa324dc6e6bdc49517/plugins/09_Shadowlands/localization/enUS.lua",
+      "revision": "2b1dbb16f6720cc29de759fa324dc6e6bdc49517",
+      "use": "Consult factual mechanics; original Toybox instructions. No guide prose or executable logic imported.",
+      "retrievedAt": "2026-10-24"
+    },
+    {
+      "name": "HandyNotes mechanics cross-check",
+      "url": "https://github.com/zarillion/handynotes-plugins/blob/2b1dbb16f6720cc29de759fa324dc6e6bdc49517/plugins/10_Dragonflight/localization/enUS.lua",
+      "revision": "2b1dbb16f6720cc29de759fa324dc6e6bdc49517",
+      "use": "Consult factual mechanics; original Toybox instructions. No guide prose or executable logic imported.",
+      "retrievedAt": "2026-10-24"
+    }
+  ],
+  "contentInputs": {
+    "lib/data/priority-guide-facts.json": "0988de298701aecec907943350ad142a09537baf43e2b82c6224dc97d3eb9a4e",
+    "lib/data/toy-recipe-facts.json": "a594e1d94bcc4911b7a6aeebc0caeada3a195a8524b4a8d0905f6fca79335b31",
+    "lib/data/walkthrough-extra-facts.json": "c2eb0022b90a25485596b07efd77578a405e54ce125a5dfe2c5f11853f96a0ef"
+  },
+  "approvedInputs": [
+    {
+      "path": "lib/data/walkthrough-authoring.json",
+      "sha256": "46c861a30dded0f016453c078050b92dd045f70c5c6e6c0b5bddbcefb7095dd1"
+    },
+    {
+      "path": "lib/data/walkthrough-extra-facts.json",
+      "sha256": "c2eb0022b90a25485596b07efd77578a405e54ce125a5dfe2c5f11853f96a0ef"
+    },
+    {
+      "path": "lib/data/walkthrough-progression-facts.json",
+      "sha256": "83cced57a7bf5e303b13950df13c4ef0871f2422a1907ae5d2d425e6505029d7"
+    },
+    {
+      "path": "lib/data/walkthrough-batch-facts.json",
+      "sha256": "dd72fa9ad0625645e997706060be6c35742f58a219b7fc4f0291bd15884a1a55"
+    },
+    {
+      "path": "lib/data/priority-guide-facts.json",
+      "sha256": "0988de298701aecec907943350ad142a09537baf43e2b82c6224dc97d3eb9a4e"
+    },
+    {
+      "path": "lib/data/toy-recipe-facts.json",
+      "sha256": "a594e1d94bcc4911b7a6aeebc0caeada3a195a8524b4a8d0905f6fca79335b31"
+    }
+  ],
+  "sessionInputs": [
+    {
+      "path": "lib/data/session-priority-paths.json",
+      "sha256": "96f328becab4df329cdc55fcc1174ed798d18620f9727c19d107b989df56aa05",
+      "reviewedAt": "2026-10-25",
+      "routeCandidates": 54,
+      "sources": [
+        {
+          "id": "source-97077e41faae",
+          "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/.contrib/.db/standard/06%20-%20Expansion%20Features/10%20-%20Dragonflight/05%20Loamm%20Niffen/Vendors.lua",
+          "revision": "52895ee664b61e08f091d514fe1556568d411570",
+          "license": "MIT",
+          "sha256": "cb0ff82ea3357f0d0f74247be076192f6b2a42b1c4315f636a72bc4e13dff25a",
+          "retrievedAt": "2026-10-25"
+        },
+        {
+          "id": "source-b346ce7da031",
+          "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/.contrib/.db/standard/06%20-%20Expansion%20Features/10%20-%20Dragonflight/02%20Maruuk%20Centaur/Vendors.lua",
+          "revision": "52895ee664b61e08f091d514fe1556568d411570",
+          "license": "MIT",
+          "sha256": "ab988dea104187699b143f90a9c84b0a6115616f04d9467946d793c643f2b064",
+          "retrievedAt": "2026-10-25"
+        },
+        {
+          "id": "source-dc6efd5f09aa",
+          "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/.contrib/.db/standard/06%20-%20Expansion%20Features/10%20-%20Dragonflight/01%20Dragonscale%20Expedition/Vendors.lua",
+          "revision": "52895ee664b61e08f091d514fe1556568d411570",
+          "license": "MIT",
+          "sha256": "0dbf0a8d498bd185d93b732b3e57dda4b89dba57899aaf89eec7f2df7b37b8be",
+          "retrievedAt": "2026-10-25"
+        },
+        {
+          "id": "source-05ca7f91f181",
+          "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/.contrib/.db/standard/06%20-%20Expansion%20Features/10%20-%20Dragonflight/03%20Iskaara%20Tuskarr/Vendors.lua",
+          "revision": "52895ee664b61e08f091d514fe1556568d411570",
+          "license": "MIT",
+          "sha256": "41bff74bd556a20c95a77c164bbb7eaceb834aa926adb23dccc97ecd254471df",
+          "retrievedAt": "2026-10-25"
+        },
+        {
+          "id": "source-06a751e63363",
+          "url": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/ExpansionFeatures.lua",
+          "revision": "52895ee664b61e08f091d514fe1556568d411570",
+          "license": "MIT",
+          "sha256": "e9fe4240fa5d595a5ba2a743e11cff79d08409844dee9c26f8c7e556876bd855",
+          "retrievedAt": "2026-10-25"
+        },
+        {
+          "id": "source-f58a63991d44",
+          "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/.contrib/.db/standard/06%20-%20Expansion%20Features/10%20-%20Dragonflight/01%20Dragonscale%20Expedition/Quests.lua",
+          "revision": "52895ee664b61e08f091d514fe1556568d411570",
+          "license": "MIT",
+          "sha256": "4d80ee6e0d69d4cba880736efa7c16bb468616d7506579f81f207e0de6ba9bc5",
+          "retrievedAt": "2026-10-25"
+        },
+        {
+          "id": "source-840e8427fcc2",
+          "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/.contrib/.db/standard/06%20-%20Expansion%20Features/10%20-%20Dragonflight/02%20Maruuk%20Centaur/Quests.lua",
+          "revision": "52895ee664b61e08f091d514fe1556568d411570",
+          "license": "MIT",
+          "sha256": "77be74d793b5190628f96cab9c4d003db7b6a32821e0f3b5d58a962737c4c39d",
+          "retrievedAt": "2026-10-25"
+        },
+        {
+          "id": "source-36f090890e69",
+          "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/.contrib/.db/standard/06%20-%20Expansion%20Features/10%20-%20Dragonflight/03%20Iskaara%20Tuskarr/Quests.lua",
+          "revision": "52895ee664b61e08f091d514fe1556568d411570",
+          "license": "MIT",
+          "sha256": "b3b93c7be97d441920f65c4754fbe8ec569ee395447cbb428d828e7ee28501a9",
+          "retrievedAt": "2026-10-25"
+        },
+        {
+          "id": "source-04868150b7a4",
+          "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/.contrib/.db/standard/06%20-%20Expansion%20Features/10%20-%20Dragonflight/04%20Valdrakken%20Accord/Quests.lua",
+          "revision": "52895ee664b61e08f091d514fe1556568d411570",
+          "license": "MIT",
+          "sha256": "947af1161912a9526ac44ae6296df4a2e665ecd4b17bea76bf9b58dc0e59a2f9",
+          "retrievedAt": "2026-10-25"
+        },
+        {
+          "id": "source-b875adf1eec3",
+          "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/.contrib/.db/standard/06%20-%20Expansion%20Features/10%20-%20Dragonflight/05%20Loamm%20Niffen/Quests.lua",
+          "revision": "52895ee664b61e08f091d514fe1556568d411570",
+          "license": "MIT",
+          "sha256": "b14142bf1a1b9ae0ef35961e399d1fc160019799930e9e14e229714848e72f58",
+          "retrievedAt": "2026-10-25"
+        },
+        {
+          "id": "source-c1d37cd425b9",
+          "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/.contrib/.db/standard/02%20-%20Outdoor%20Zones/14%20Dragon%20Isles/Thaldraszus/Time%20Rifts.lua",
+          "revision": "52895ee664b61e08f091d514fe1556568d411570",
+          "license": "MIT",
+          "sha256": "3449de6e7dbf3135d9477be2b467daeb048e3416755c10bb82128157a84478ef",
+          "retrievedAt": "2026-10-25"
+        },
+        {
+          "id": "source-2002ec424e74",
+          "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/52895ee664b61e08f091d514fe1556568d411570/.contrib/.db/standard/06%20-%20Expansion%20Features/03%20-%20Wrath%20of%20the%20Lich%20King/Argent%20Tournament.lua",
+          "revision": "52895ee664b61e08f091d514fe1556568d411570",
+          "license": "MIT",
+          "sha256": "5f156ef46318386fd8e21a8582744ad8b40285d7ee366e58996593f652b9865a",
+          "retrievedAt": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "path": "lib/data/session-catalogue-paths.json",
+      "sha256": "a2842aad403b742cc852b9951a1e20f450294169e9f6a4735aaba94bd9686c5a",
+      "reviewedAt": "2026-10-25",
+      "routeCandidates": 8,
+      "sources": [
+        {
+          "id": "att-retail-zones",
+          "url": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+          "revision": "52895ee664b61e08f091d514fe1556568d411570",
+          "license": "MIT",
+          "use": "Pinned factual import; original Toybox instructions."
+        },
+        {
+          "id": "wowhead-holed-up",
+          "url": "https://www.wowhead.com/quest=30682/holed-up",
+          "retrievedAt": "2026-10-25",
+          "use": "Factual consultation: four rescue objectives, building locations and quest ender; older comments corroborated against pinned Retail quest record. No guide files copied."
+        },
+        {
+          "id": "wowhead-slovan",
+          "url": "https://www.wowhead.com/quest=30169/raid-leader-slovan",
+          "retrievedAt": "2026-10-25",
+          "use": "Factual consultation: target, den behind Krasari Falls, same start/ender. Conflicting objective coordinates are not imported."
+        },
+        {
+          "id": "wowhead-gokklok",
+          "url": "https://www.wowhead.com/de/npc=62767/gokklok",
+          "retrievedAt": "2026-10-25",
+          "use": "Retail NPC and player observations: kill starts reward quest; no copied solo estimates or obsolete health values."
+        },
+        {
+          "id": "wowhead-gold",
+          "url": "https://www.wowhead.com/mx/quest=31083/promesas-de-oro",
+          "retrievedAt": "2026-10-25",
+          "use": "Retail quest objective and reward relationship: report to Chief Rikkitun for the shell."
+        },
+        {
+          "id": "wowhead-rikkitun",
+          "url": "https://www.wowhead.com/es/quest=31084/ligan-el-encanto",
+          "retrievedAt": "2026-10-25",
+          "use": "Factual consultation only: village arrival point near Chief Rikkitun; use native quest turn-in waypoint for exact position."
+        },
+        {
+          "id": "wowhead-companions",
+          "url": "https://www.wowhead.com/quest=66226/emotional-support-companions",
+          "retrievedAt": "2026-10-25",
+          "use": "Factual consultation: waterfall cave entrance, four rescue mechanisms, reward. Original condensed instructions; do not import comments."
+        }
+      ]
+    }
+  ],
+  "reliabilityInputs": [
+    {
+      "path": "lib/data/reliability-archaeology-paths.json",
+      "sha256": "6b1ad20749ef3ec55aca925b9df067923c9a4f97552a1dc477ce8411ca66c892",
+      "reviewedAt": "2026-10-25"
+    },
+    {
+      "path": "lib/data/reliability-argent-paths.json",
+      "sha256": "3d2edd62e9717f8f96b303034bc8423396e4da7308c6ea7bfcacb658900811a5",
+      "reviewedAt": "2026-10-25"
+    },
+    {
+      "path": "lib/data/reliability-catalogue-paths.json",
+      "sha256": "65b6893869111bd792f9ae8e62f888cc5f400e35ab67c7caab8d7e594885dd2c",
+      "reviewedAt": "2026-10-25"
+    },
+    {
+      "path": "lib/data/reliability-niffen-campaign.json",
+      "sha256": "aee8635438fa1e43cfda4bcb2a9b9fff6e4401613d77f57ad4be48c3e6089df9",
+      "reviewedAt": "2026-10-25"
+    },
+    {
+      "path": "lib/data/reliability-priority-facts.json",
+      "sha256": "6ba79787211ffc56f7c725e4af7e5a9d6645727377e841e0dcba3a0c98250f8f",
+      "reviewedAt": "2026-10-25"
+    },
+    {
+      "path": "lib/data/reliability-reputation-unlocks.json",
+      "sha256": "f0f279000ed9e24923a07b1657d9e5a7534bdc88f0da3427f0a487dd18d80059",
+      "reviewedAt": "2026-10-25"
+    }
+  ],
+  "catalogueInputs": [
+    {
+      "path": "lib/data/catalogue-vendor-paths.json",
+      "sha256": "60d38087ec9cf503eed5c7a4ba4ef48d1e6a6419b415b6a7caafeeda763c063d",
+      "status": "source-checked candidates; exact runtime graph gates decide complete paths"
+    },
+    {
+      "path": "lib/data/catalogue-instance-paths.json",
+      "sha256": "d7758c914f5139fe96add76f379a6a2cadd97b7ed99f8ec3a439eb236e3ae5f1",
+      "status": "source-checked candidates; exact runtime graph gates decide complete paths"
+    },
+    {
+      "path": "lib/data/catalogue-crafting-walkthroughs.json",
+      "sha256": "a9d2dc9eb43d9271065a2fc9b3c249d99993e4a86bcac5930751dfc36ef09b4c",
+      "status": "source-checked candidates; exact runtime graph gates decide complete paths"
+    },
+    {
+      "path": "lib/data/catalogue-quest-paths.json",
+      "sha256": "f4a1c041ccc08c23b90e89a057bcc6de60f210eba21da096ddcffecf94f77371",
+      "status": "source-checked candidates; exact runtime graph gates decide complete paths"
+    }
+  ],
+  "catalogueFreeze": {
+    "path": "lib/data/catalogue-active-freeze.json",
+    "sha256": "47e32f83fc22a457e1592b850b14f5bd1f920cee9b5253bce1a7c30e53f0825e",
+    "activeRoutes": 1000,
+    "reviewedAt": "2026-10-25"
+  }
+}

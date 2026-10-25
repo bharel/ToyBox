@@ -1,0 +1,5 @@
+import {readFileSync} from 'node:fs';
+import {resolve,dirname} from 'node:path';
+import ts from 'typescript';
+export function moduleLoader(overrides={}){const cache=new Map();return function load(path){path=resolve(path);if(path.endsWith('.json'))return JSON.parse(readFileSync(path,'utf8'));if(cache.has(path))return cache.get(path);const m={exports:{}};cache.set(path,m.exports);const code=ts.transpileModule(readFileSync(path,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,esModuleInterop:true,target:ts.ScriptTarget.ES2022}}).outputText;new Function('require','module','exports',code)(name=>name in overrides?overrides[name]:load(resolve(dirname(path),name+(name.endsWith('.json')?'':'.ts'))),m,m.exports);return m.exports;};}
+export const fixtureSettings={priest:'Examplepriest',druid:'Exampledruid',priestRealm:'Example Realm',druidRealm:'Alt Realm',timezone:'Asia/Jerusalem',weeklyHour:4,dailyHour:4,bindings:{priest:{region:'EU',id:42,name:'Examplepriest',realm:'Example Realm',realmSlug:'example-realm',classId:5},druid:{region:'EU',id:43,name:'Exampledruid',realm:'Alt Realm',realmSlug:'alt-realm',classId:11}}};

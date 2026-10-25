@@ -1,0 +1,1774 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-10-24",
+  "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+  "license": "MIT",
+  "routes": [
+    {
+      "id": "authored-117573",
+      "itemId": 117573,
+      "title": "Wayfarer's Bonfire",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceChecked": true,
+      "playtested": false,
+      "destination": {
+        "mapID": 84,
+        "x": 0.381,
+        "y": 0.644
+      },
+      "sourceFacts": {
+        "coords": {
+          "84": [
+            [
+              38.1,
+              64.4
+            ]
+          ]
+        },
+        "npcID": 112958
+      },
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 117573
+      },
+      "steps": [
+        {
+          "id": "soulare",
+          "text": "Find Soulare of Andorhal in Stormwind and use /tired while targeting him. Take the Wayfarer’s Bonfire reward.",
+          "kind": "emote",
+          "npcId": 112958,
+          "destination": {
+            "mapID": 84,
+            "x": 0.381,
+            "y": 0.644
+          },
+          "playerAction": "/tired",
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 117573,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 117573
+              }
+            ]
+          }
+        },
+        {
+          "id": "learn",
+          "text": "Use Wayfarer's Bonfire from your bags to add it to the Toy Box.",
+          "kind": "learn",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 117573
+          }
+        }
+      ],
+      "details": "The pinned source explicitly permits either faction. A recruited Soulare in a garrison is an alternative route; the city route avoids requiring that follower."
+    },
+    {
+      "id": "authored-187344",
+      "itemId": 187344,
+      "title": "Offering Kit Maker",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceChecked": true,
+      "playtested": false,
+      "destination": {
+        "mapID": 1961,
+        "x": 0.45299999999999996,
+        "y": 0.6709999999999999
+      },
+      "sourceFacts": {
+        "coords": {
+          "1961": [
+            [
+              45.3,
+              67.1
+            ]
+          ]
+        },
+        "questID": 64268,
+        "cost": [
+          [
+            "i",
+            187033,
+            1
+          ]
+        ],
+        "objectID": 369232
+      },
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 187344
+      },
+      "steps": [
+        {
+          "id": "offering-key",
+          "text": "Climb the outside of the building and pick up the Small Offering Key.",
+          "kind": "loot",
+          "itemId": 187033,
+          "destination": {
+            "mapID": 1961,
+            "x": 0.435,
+            "y": 0.675
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 187033,
+                "quantity": 1
+              },
+              {
+                "any": [
+                  {
+                    "kind": "itemCount",
+                    "itemId": 187344,
+                    "quantity": 1
+                  },
+                  {
+                    "kind": "toyOwned",
+                    "itemId": 187344
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "offering",
+          "text": "Use the key to open the Small Offering treasure and take the toy.",
+          "kind": "loot",
+          "objectId": 369232,
+          "destination": {
+            "mapID": 1961,
+            "x": 0.453,
+            "y": 0.671
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 187344,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 187344
+              }
+            ]
+          }
+        },
+        {
+          "id": "learn",
+          "text": "Use Offering Kit Maker from your bags to add it to the Toy Box.",
+          "kind": "learn",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 187344
+          }
+        }
+      ],
+      "corroboration": {
+        "revision": "2b1dbb16f6720cc29de759fa324dc6e6bdc49517",
+        "url": "https://github.com/zarillion/handynotes-plugins/blob/2b1dbb16f6720cc29de759fa324dc6e6bdc49517/plugins/09_Shadowlands/zones/korthia.lua",
+        "use": "factual consultation only"
+      }
+    },
+    {
+      "id": "authored-205418",
+      "itemId": 205418,
+      "title": "Blazing Shadowflame Cinder",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceChecked": true,
+      "playtested": false,
+      "destination": {
+        "mapID": 2133,
+        "x": 0.28600000000000003,
+        "y": 0.479
+      },
+      "sourceFacts": {
+        "coords": {
+          "2133": [
+            [
+              28.6,
+              47.9
+            ]
+          ]
+        },
+        "questID": 72986,
+        "cost": [
+          [
+            "i",
+            15138,
+            1
+          ]
+        ],
+        "objectID": 385565
+      },
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 205418
+      },
+      "steps": [
+        {
+          "id": "cloak",
+          "text": "Obtain an Onyxia Scale Cloak and equip it before approaching the chest.",
+          "kind": "prepare",
+          "itemId": 15138,
+          "completeOn": {
+            "kind": "itemEquipped",
+            "itemId": 15138
+          },
+          "recovery": "Having the appearance as a transmog is not equivalent to equipping the item. Toybox never equips or purchases it automatically."
+        },
+        {
+          "id": "shadowflame-chest",
+          "text": "With the cloak equipped, open the Blazing Shadowflame Chest and take its toy.",
+          "kind": "loot",
+          "objectId": 385565,
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 205418,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 205418
+              }
+            ]
+          }
+        },
+        {
+          "id": "learn",
+          "text": "Use Blazing Shadowflame Cinder from your bags to add it to the Toy Box.",
+          "kind": "learn",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 205418
+          }
+        }
+      ]
+    },
+    {
+      "id": "authored-225347",
+      "itemId": 225347,
+      "title": "Web-Vandal's Spinning Wheel",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceChecked": true,
+      "playtested": false,
+      "destination": {
+        "mapID": 2255,
+        "x": 0.7859999999999999,
+        "y": 0.332
+      },
+      "sourceFacts": {
+        "coords": {
+          "2255": [
+            [
+              78.6,
+              33.2
+            ]
+          ]
+        },
+        "questID": 82527,
+        "cost": [
+          [
+            "i",
+            223901,
+            1
+          ],
+          [
+            "i",
+            223903,
+            1
+          ],
+          [
+            "i",
+            223902,
+            1
+          ]
+        ],
+        "objectID": 446420
+      },
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 225347
+      },
+      "steps": [
+        {
+          "id": "silk",
+          "text": "Collect one of each colored Silk Scrap from the nearby platform.",
+          "kind": "loot",
+          "itemIds": [
+            223901,
+            223903,
+            223902
+          ],
+          "completeOn": {
+            "any": [
+              {
+                "all": [
+                  {
+                    "kind": "itemCount",
+                    "itemId": 223901,
+                    "quantity": 1
+                  },
+                  {
+                    "kind": "itemCount",
+                    "itemId": 223903,
+                    "quantity": 1
+                  },
+                  {
+                    "kind": "itemCount",
+                    "itemId": 223902,
+                    "quantity": 1
+                  }
+                ]
+              },
+              {
+                "any": [
+                  {
+                    "kind": "itemCount",
+                    "itemId": 225347,
+                    "quantity": 1
+                  },
+                  {
+                    "kind": "toyOwned",
+                    "itemId": 225347
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "silk-chest",
+          "text": "Use the three silk scraps to open the treasure and loot the spinning wheel.",
+          "kind": "loot",
+          "objectId": 446420,
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 225347,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 225347
+              }
+            ]
+          }
+        },
+        {
+          "id": "learn",
+          "text": "Use Web-Vandal's Spinning Wheel from your bags to add it to the Toy Box.",
+          "kind": "learn",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 225347
+          }
+        }
+      ]
+    },
+    {
+      "id": "authored-224552",
+      "itemId": 224552,
+      "title": "Cave Spelunker's Torch",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceChecked": true,
+      "playtested": false,
+      "destination": {
+        "mapID": 2215,
+        "x": 0.584,
+        "y": 0.272
+      },
+      "sourceFacts": {
+        "coords": {
+          "2215": [
+            [
+              58.4,
+              27.2
+            ]
+          ]
+        },
+        "questID": 81468,
+        "objectID": 437211
+      },
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 224552
+      },
+      "steps": [
+        {
+          "id": "glimmerfly",
+          "text": "Find the Starblessed Glimmerfly. Stand in its illuminated ground circles to catch five Lightning Orbs, then open the revealed treasure.",
+          "kind": "interaction",
+          "npcId": 220703,
+          "objectId": 437211,
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 224552,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 224552
+              }
+            ]
+          },
+          "details": "The source gives a five-orb requirement but no reliable buff/objective ID. Do not display a fabricated live orb counter; show the instruction until the treasure is looted."
+        },
+        {
+          "id": "learn",
+          "text": "Use Cave Spelunker's Torch from your bags to add it to the Toy Box.",
+          "kind": "learn",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 224552
+          }
+        }
+      ]
+    },
+    {
+      "id": "authored-190853",
+      "itemId": 190853,
+      "title": "Bushel of Mysterious Fruit",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceChecked": true,
+      "playtested": false,
+      "destination": {
+        "mapID": 1970,
+        "x": 0.475,
+        "y": 0.9520000000000001
+      },
+      "sourceFacts": {
+        "coords": {
+          "1970": [
+            [
+              47.5,
+              95.2
+            ]
+          ]
+        },
+        "questID": 65573,
+        "objectID": 375496
+      },
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 190853
+      },
+      "steps": [
+        {
+          "id": "servitors",
+          "text": "First defeat a Nascent Servitor that has the door-opening effect, then defeat more servitors to reach five stacks. Break open the door and loot the treasure.",
+          "kind": "interaction",
+          "npcId": 182368,
+          "objectId": 375496,
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 190853,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 190853
+              }
+            ]
+          },
+          "details": "The first servitor must carry aura360945. Later servitors need not have it. Show the player’s observed aura stacks; missing stacks are not inferred from kills.",
+          "auraSpellId": 360945,
+          "auraStacksRequired": 5
+        },
+        {
+          "id": "learn",
+          "text": "Use Bushel of Mysterious Fruit from your bags to add it to the Toy Box.",
+          "kind": "learn",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 190853
+          }
+        }
+      ],
+      "corroboration": {
+        "source": "HandyNotes factual consultation only; no code or prose imported",
+        "revision": "2b1dbb16f6720cc29de759fa324dc6e6bdc49517",
+        "license": "All rights reserved",
+        "urls": [
+          "https://github.com/zarillion/handynotes-plugins/blob/2b1dbb16f6720cc29de759fa324dc6e6bdc49517/plugins/09_Shadowlands/zones/zereth_mortis.lua",
+          "https://github.com/zarillion/handynotes-plugins/blob/2b1dbb16f6720cc29de759fa324dc6e6bdc49517/plugins/09_Shadowlands/localization/enUS.lua"
+        ]
+      }
+    },
+    {
+      "id": "authored-184075",
+      "itemId": 184075,
+      "title": "Stonewrought Sentry",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceChecked": true,
+      "playtested": false,
+      "destination": {
+        "mapID": 1525,
+        "x": 0.473,
+        "y": 0.5529999999999999
+      },
+      "sourceFacts": {
+        "coords": {
+          "1525": [
+            [
+              47.3,
+              55.3
+            ]
+          ]
+        },
+        "questID": 62243,
+        "objectID": 358298
+      },
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 184075
+      },
+      "steps": [
+        {
+          "id": "anima-canister",
+          "text": "Take the Anima Canister and use it to drain Silent Observers. Beside the Chamber Guardian, use the quest’s extra action button, then loot the treasure.",
+          "kind": "interaction",
+          "npcIds": [
+            173786,
+            173838
+          ],
+          "objectId": 358298,
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 184075,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 184075
+              }
+            ]
+          },
+          "details": "All item and extra-action uses remain player-controlled."
+        },
+        {
+          "id": "learn",
+          "text": "Use Stonewrought Sentry from your bags to add it to the Toy Box.",
+          "kind": "learn",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 184075
+          }
+        }
+      ]
+    },
+    {
+      "id": "authored-184318",
+      "itemId": 184318,
+      "title": "Battlecry of Krexus",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceChecked": true,
+      "playtested": false,
+      "destination": {
+        "mapID": 1536,
+        "x": 0.44,
+        "y": 0.39799999999999996
+      },
+      "sourceFacts": {
+        "coords": {
+          "1536": [
+            [
+              44,
+              39.8
+            ]
+          ]
+        },
+        "questID": 60368,
+        "objectID": 352086
+      },
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 184318
+      },
+      "steps": [
+        {
+          "id": "krexus-room",
+          "text": "Open Krexus’s room using the Necrolord Visectus interaction, or enter while another player has the door open. Loot the treasure inside.",
+          "kind": "interaction",
+          "objectId": 352086,
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 184318,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 184318
+              }
+            ]
+          },
+          "details": "A character of any covenant can use an already open door. Do not impose Necrolord as a universal character prerequisite. The source says old toy/Soulshape shortcuts no longer work."
+        },
+        {
+          "id": "learn",
+          "text": "Use Battlecry of Krexus from your bags to add it to the Toy Box.",
+          "kind": "learn",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 184318
+          }
+        }
+      ]
+    },
+    {
+      "id": "authored-119432",
+      "itemId": 119432,
+      "title": "Botani Camouflage",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceChecked": true,
+      "playtested": false,
+      "destination": {
+        "mapID": 543,
+        "x": 0.6920000000000001,
+        "y": 0.446
+      },
+      "sourceFacts": {
+        "coords": {
+          "543": [
+            [
+              69.2,
+              44.6
+            ]
+          ]
+        },
+        "questID": 37369,
+        "npcID": 86257
+      },
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 119432
+      },
+      "steps": [
+        {
+          "id": "botani",
+          "text": "Defeat the two companions before killing Basten. Kill Basten last, then loot him for the camouflage toy.",
+          "kind": "kill-and-loot",
+          "npcIds": [
+            86258,
+            86259,
+            86257
+          ],
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 119432,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 119432
+              }
+            ]
+          },
+          "recovery": "Killing Basten first can make his corpse unlootable; wait for a new spawn rather than recording toy ownership."
+        },
+        {
+          "id": "learn",
+          "text": "Use Botani Camouflage from your bags to add it to the Toy Box.",
+          "kind": "learn",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 119432
+          }
+        }
+      ],
+      "outcome": "random-drop"
+    },
+    {
+      "id": "authored-113631",
+      "itemId": 113631,
+      "title": "Hypnosis Goggles",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceChecked": true,
+      "playtested": false,
+      "destination": {
+        "mapID": 539,
+        "x": 0.376,
+        "y": 0.49
+      },
+      "sourceFacts": {
+        "coords": {
+          "539": [
+            [
+              37.6,
+              49
+            ]
+          ]
+        },
+        "questID": 35558,
+        "npcID": 79524
+      },
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 113631
+      },
+      "steps": [
+        {
+          "id": "waterfall-cave",
+          "text": "Enter the cave behind the waterfall. Defeat and loot the marked rare inside for a chance at the goggles.",
+          "kind": "kill-and-loot",
+          "npcId": 79524,
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 113631,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 113631
+              }
+            ]
+          }
+        },
+        {
+          "id": "learn",
+          "text": "Use Hypnosis Goggles from your bags to add it to the Toy Box.",
+          "kind": "learn",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 113631
+          }
+        }
+      ],
+      "outcome": "random-drop",
+      "corroboration": {
+        "source": "SilverDragon factual consultation only",
+        "revision": "104969cafdb2a331aee91f13d6e18ff73ea89a47",
+        "url": "https://github.com/kemayo/wow-silverdragon/blob/104969cafdb2a331aee91f13d6e18ff73ea89a47/Data/Warlords/zones/ShadowmoonValley.lua",
+        "note": "NPC, item and hiddenquest relationships independently agree. Approximate patrol/position coordinates differ slightly."
+      }
+    },
+    {
+      "id": "authored-113543",
+      "itemId": 113543,
+      "title": "Spirit of Shinri",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceChecked": true,
+      "playtested": false,
+      "destination": {
+        "mapID": 539,
+        "x": 0.598,
+        "y": 0.586
+      },
+      "sourceFacts": {
+        "coords": {
+          "539": [
+            [
+              59.8,
+              58.6
+            ],
+            [
+              60.4,
+              51.4
+            ],
+            [
+              62.8,
+              50.2
+            ],
+            [
+              63.6,
+              57.6
+            ]
+          ]
+        },
+        "questID": 35732,
+        "npcID": 82415
+      },
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 113543
+      },
+      "steps": [
+        {
+          "id": "shinri",
+          "text": "Search the marked patrol locations for Shinri. Approach from behind when he is stationary; defeat and loot him.",
+          "kind": "kill-and-loot",
+          "npcId": 82415,
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 113543,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 113543
+              }
+            ]
+          },
+          "details": "The source says Shinri cannot be attacked while running. Spawn and patrol timing remain unknown."
+        },
+        {
+          "id": "learn",
+          "text": "Use Spirit of Shinri from your bags to add it to the Toy Box.",
+          "kind": "learn",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 113543
+          }
+        }
+      ],
+      "outcome": "random-drop",
+      "corroboration": {
+        "source": "SilverDragon factual consultation only",
+        "revision": "104969cafdb2a331aee91f13d6e18ff73ea89a47",
+        "url": "https://github.com/kemayo/wow-silverdragon/blob/104969cafdb2a331aee91f13d6e18ff73ea89a47/Data/Warlords/zones/ShadowmoonValley.lua",
+        "note": "NPC, item and hiddenquest relationships independently agree. Approximate patrol/position coordinates differ slightly."
+      }
+    },
+    {
+      "id": "authored-116122",
+      "itemId": 116122,
+      "title": "Burning Legion Missive",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceChecked": true,
+      "playtested": false,
+      "destination": {
+        "mapID": 535,
+        "x": 0.564,
+        "y": 0.6579999999999999
+      },
+      "sourceFacts": {
+        "coords": {
+          "535": [
+            [
+              56.4,
+              65.8
+            ],
+            [
+              56.6,
+              62.6
+            ],
+            [
+              56.6,
+              64
+            ]
+          ]
+        },
+        "questID": 35219,
+        "npcID": 78713
+      },
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 116122
+      },
+      "steps": [
+        {
+          "id": "shared-spawn",
+          "text": "Search the marked locations for Sikthiss, Kharazos or Galzomar. They share this spawn; defeat and loot whichever is present.",
+          "kind": "kill-and-loot",
+          "npcIds": [
+            78710,
+            78713,
+            78715
+          ],
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 116122,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 116122
+              }
+            ]
+          },
+          "details": "Treat these variants as one shared farming opportunity, not three independent guaranteed spawns."
+        },
+        {
+          "id": "learn",
+          "text": "Use Burning Legion Missive from your bags to add it to the Toy Box.",
+          "kind": "learn",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 116122
+          }
+        }
+      ],
+      "outcome": "random-drop"
+    },
+    {
+      "id": "authored-187176",
+      "itemId": 187176,
+      "title": "Vesper of Harmony",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceChecked": true,
+      "playtested": false,
+      "destination": {
+        "mapID": 1961,
+        "x": 0.469,
+        "y": 0.35100000000000003
+      },
+      "sourceFacts": {
+        "coords": {
+          "1961": [
+            [
+              46.9,
+              35.1
+            ],
+            [
+              56.8,
+              32.6
+            ]
+          ]
+        },
+        "questID": 64338,
+        "npcID": 180032
+      },
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 187176
+      },
+      "steps": [
+        {
+          "id": "popo",
+          "text": "Find Popo on her east-to-west patrol. A Kyrian player starts the escort. Help her friends until the rare is summoned, then defeat and loot it.",
+          "kind": "escort-and-loot",
+          "npcIds": [
+            180028,
+            180032
+          ],
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 187176,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 187176
+              }
+            ]
+          },
+          "details": "Other players may join an escort that is already active. Do not make Kyrian membership mandatory for everyone receiving loot."
+        },
+        {
+          "id": "learn",
+          "text": "Use Vesper of Harmony from your bags to add it to the Toy Box.",
+          "kind": "learn",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 187176
+          }
+        }
+      ],
+      "outcome": "random-drop"
+    },
+    {
+      "id": "authored-141331",
+      "itemId": 141331,
+      "title": "Vial of Green Goo",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Instances.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceChecked": true,
+      "playtested": false,
+      "destination": {
+        "mapID": 30,
+        "x": 0.301,
+        "y": 0.746
+      },
+      "sourceFacts": {
+        "coords": {
+          "30": [
+            [
+              30.1,
+              74.6
+            ]
+          ]
+        },
+        "npcID": 113621
+      },
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 141331
+      },
+      "steps": [
+        {
+          "id": "gnomeregan",
+          "text": "Enter Gnomeregan and defeat its final ordinary boss.",
+          "kind": "instance",
+          "destination": {
+            "mapID": 30,
+            "x": 0.301,
+            "y": 0.746
+          },
+          "completion": "Use observed boss kill or an explicit cursor Continue; no ownership/completion is manufactured."
+        },
+        {
+          "id": "hidden-button",
+          "text": "In the final room, find the small button behind the pillar to the left of the entrance. Press it to summon Endgineer Omegaplugg.",
+          "kind": "interaction",
+          "npcId": 113621,
+          "completion": "Continue changes cursor only; observed Omegaplugg combat or loot supersedes it."
+        },
+        {
+          "id": "omegaplugg",
+          "text": "Fight Endgineer Omegaplugg. Disable the large red conduits counterclockwise, starting with the first on the entrance’s right, to stop bombs; defeat and loot him.",
+          "kind": "kill-and-loot",
+          "npcId": 113621,
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 141331,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 141331
+              }
+            ]
+          },
+          "details": "The source says this encounter scales to maximum level. Do not infer solo readiness from character level."
+        },
+        {
+          "id": "learn",
+          "text": "Use Vial of Green Goo from your bags to add it to the Toy Box.",
+          "kind": "learn",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 141331
+          }
+        }
+      ],
+      "playStyle": "group",
+      "outcome": "unknown-drop"
+    },
+    {
+      "id": "authored-190457",
+      "itemId": 190457,
+      "title": "Protopological Cube",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceChecked": true,
+      "playtested": false,
+      "destination": {
+        "mapID": 1970,
+        "x": 0.7753,
+        "y": 0.582,
+        "label": "Syntactic Vault"
+      },
+      "sourceFacts": {
+        "coords": {
+          "1970": [
+            [
+              76.8,
+              46.6
+            ],
+            [
+              77,
+              58.9
+            ],
+            [
+              77,
+              60.3
+            ],
+            [
+              77.5,
+              58.2
+            ],
+            [
+              78.1,
+              53.3
+            ],
+            [
+              80.9,
+              56.2
+            ],
+            [
+              81.2,
+              50.4
+            ]
+          ]
+        },
+        "questID": 65565,
+        "objectID": 375492
+      },
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 190457
+      },
+      "steps": [
+        {
+          "id": "pylons",
+          "text": "Touch the six glowing symbol pylons around the island, collecting six stacks. Enter the cave, activate its glowing object and loot the cube.",
+          "kind": "puzzle",
+          "objectId": 375492,
+          "waypoints": [
+            {
+              "mapID": 1970,
+              "x": 0.77,
+              "y": 0.589
+            },
+            {
+              "mapID": 1970,
+              "x": 0.77,
+              "y": 0.603
+            },
+            {
+              "mapID": 1970,
+              "x": 0.7809999999999999,
+              "y": 0.5329999999999999
+            },
+            {
+              "mapID": 1970,
+              "x": 0.768,
+              "y": 0.466
+            },
+            {
+              "mapID": 1970,
+              "x": 0.812,
+              "y": 0.504
+            },
+            {
+              "mapID": 1970,
+              "x": 0.809,
+              "y": 0.562
+            }
+          ],
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 190457,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 190457
+              }
+            ]
+          },
+          "details": "Runic Syllables grant aura367499. Show its observed stack count up to six. Pylon proximity never proves interaction.",
+          "auraSpellId": 367499,
+          "auraStacksRequired": 6
+        },
+        {
+          "id": "learn",
+          "text": "Use Protopological Cube from your bags to add it to the Toy Box.",
+          "kind": "learn",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 190457
+          }
+        }
+      ],
+      "corroboration": {
+        "source": "HandyNotes factual consultation only; no code or prose imported",
+        "revision": "2b1dbb16f6720cc29de759fa324dc6e6bdc49517",
+        "license": "All rights reserved",
+        "urls": [
+          "https://github.com/zarillion/handynotes-plugins/blob/2b1dbb16f6720cc29de759fa324dc6e6bdc49517/plugins/09_Shadowlands/zones/zereth_mortis.lua",
+          "https://github.com/zarillion/handynotes-plugins/blob/2b1dbb16f6720cc29de759fa324dc6e6bdc49517/plugins/09_Shadowlands/localization/enUS.lua"
+        ]
+      }
+    },
+    {
+      "id": "authored-190196",
+      "itemId": 190196,
+      "title": "Enlightened Hearthstone",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceChecked": true,
+      "playtested": false,
+      "destination": {
+        "mapID": 1970,
+        "x": 0.475,
+        "y": 0.564,
+        "label": "Ponderer’s Portal"
+      },
+      "sourceFacts": {},
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 190196
+      },
+      "steps": [
+        {
+          "id": "ponderers",
+          "text": "Assemble six players with Sphere of Enlightened Cogitation. Put one player on each hexagonal pillar around the pool beneath the Forge of Afterlives, sit and use the spheres together.",
+          "kind": "group-puzzle",
+          "requiresOtherToy": "Sphere of Enlightened Cogitation",
+          "completion": "The opened portal is a world observation; Continue may move to the loot instruction without recording it as a completed unlock.",
+          "requiresOtherToyItemId": 190177,
+          "waypoints": [
+            {
+              "mapID": 1970,
+              "x": 0.475,
+              "y": 0.5
+            },
+            {
+              "mapID": 1970,
+              "x": 0.496,
+              "y": 0.515
+            },
+            {
+              "mapID": 1970,
+              "x": 0.455,
+              "y": 0.517
+            },
+            {
+              "mapID": 1970,
+              "x": 0.496,
+              "y": 0.552
+            },
+            {
+              "mapID": 1970,
+              "x": 0.455,
+              "y": 0.552
+            },
+            {
+              "mapID": 1970,
+              "x": 0.475,
+              "y": 0.569
+            }
+          ],
+          "details": "If another group has opened the portal, anyone can loot it without owning Sphere190177. Sphere ownership gates helping summon it, not looting the result."
+        },
+        {
+          "id": "ponderers-loot",
+          "text": "When the portal-opening announcement appears, go to the southern pillar and loot the white glowing Ponderer’s Portal.",
+          "kind": "loot",
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 190196,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 190196
+              }
+            ]
+          }
+        },
+        {
+          "id": "learn",
+          "text": "Use Enlightened Hearthstone from your bags to add it to the Toy Box.",
+          "kind": "learn",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 190196
+          }
+        }
+      ],
+      "playStyle": "group",
+      "corroboration": {
+        "source": "HandyNotes factual consultation only; no code or prose imported",
+        "revision": "2b1dbb16f6720cc29de759fa324dc6e6bdc49517",
+        "license": "All rights reserved",
+        "urls": [
+          "https://github.com/zarillion/handynotes-plugins/blob/2b1dbb16f6720cc29de759fa324dc6e6bdc49517/plugins/09_Shadowlands/zones/zereth_mortis.lua",
+          "https://github.com/zarillion/handynotes-plugins/blob/2b1dbb16f6720cc29de759fa324dc6e6bdc49517/plugins/09_Shadowlands/localization/enUS.lua"
+        ]
+      }
+    },
+    {
+      "id": "authored-109739",
+      "itemId": 109739,
+      "title": "Star Chart",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceChecked": true,
+      "playtested": false,
+      "destination": {
+        "mapID": 539,
+        "x": 0.494,
+        "y": 0.376
+      },
+      "sourceFacts": {
+        "coords": {
+          "539": [
+            [
+              49.4,
+              37.6
+            ]
+          ]
+        },
+        "questID": 33867,
+        "objectID": 226831
+      },
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 109739
+      },
+      "steps": [
+        {
+          "id": "star-chart",
+          "text": "Open the Star Chart treasure at the marked location.",
+          "kind": "loot",
+          "objectId": 226831,
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 109739,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 109739
+              }
+            ]
+          },
+          "recovery": "If it is missing on an Alliance character, complete the local quests, leave the map area and return. The source does not name the exact prerequisite quests; this recovery is an explicit coverage gap, not a verified unlock graph."
+        },
+        {
+          "id": "learn",
+          "text": "Use Star Chart from your bags to add it to the Toy Box.",
+          "kind": "learn",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 109739
+          }
+        }
+      ],
+      "unresolved": [
+        "Exact local phasing prerequisite quest IDs are absent from this source; do not count full prerequisite coverage."
+      ]
+    },
+    {
+      "id": "authored-200636",
+      "itemId": 200636,
+      "title": "Primal Invocation Quintessence",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Craftables.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceChecked": true,
+      "playtested": false,
+      "destination": null,
+      "sourceFacts": {
+        "cost": [
+          [
+            "i",
+            200634,
+            18
+          ],
+          [
+            "i",
+            200633,
+            26
+          ],
+          [
+            "i",
+            200618,
+            51
+          ]
+        ]
+      },
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 200636
+      },
+      "steps": [
+        {
+          "id": "extracts",
+          "text": "Accumulate 2,600 Primal Invocation points on this character by using Primal Invocation Extracts. Each use has a one-hour cooldown.",
+          "kind": "repeated-item-use",
+          "rankItems": [
+            {
+              "itemId": 200618,
+              "points": 51
+            },
+            {
+              "itemId": 200633,
+              "points": 100
+            },
+            {
+              "itemId": 200634,
+              "points": 150
+            }
+          ],
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 200636,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 200636
+              }
+            ]
+          },
+          "details": "Rank3 gives150points, rank2 gives100 and rank1 gives51. Seventeen rank3 extracts leave50points, so one extract of any rank finishes. Eighteen rank3,26rank2 or51rank1 are alternative complete plans, not a combined shopping list. The source says the six-hour displayed buff duration need not be maintained.",
+          "recovery": "Do not distribute uses across characters or reset the total when the cosmetic buff expires."
+        },
+        {
+          "id": "learn",
+          "text": "Use Primal Invocation Quintessence from your bags to add it to the Toy Box.",
+          "kind": "learn",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 200636
+          }
+        }
+      ],
+      "unresolved": [
+        "A reliable persisted point counter is not supplied here. Do not invent the current total from inventory or elapsed time. Track uses observed by Toybox and label any reconstructed count as an estimate."
+      ]
+    },
+    {
+      "id": "zandalari-effigy-barter",
+      "itemId": 156649,
+      "title": "Zandalari Effigy Amulet",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceChecked": true,
+      "playtested": false,
+      "requirements": {
+        "faction": "Horde"
+      },
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 156649
+      },
+      "steps": [
+        {
+          "id": "sack",
+          "kind": "purchase",
+          "text": "Buy the Sack of “Discarded” Hearthstones from Griftah.",
+          "npcId": 132114,
+          "itemId": 156647,
+          "destination": {
+            "mapID": 1165,
+            "x": 0.5302,
+            "y": 0.8993000000000001
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 156647,
+                "quantity": 1
+              },
+              {
+                "kind": "itemCount",
+                "itemId": 156650,
+                "quantity": 1
+              },
+              {
+                "kind": "itemCount",
+                "itemId": 156651,
+                "quantity": 1
+              },
+              {
+                "kind": "itemCount",
+                "itemId": 156652,
+                "quantity": 1
+              },
+              {
+                "kind": "itemCount",
+                "itemId": 156655,
+                "quantity": 1
+              },
+              {
+                "kind": "itemCount",
+                "itemId": 156659,
+                "quantity": 1
+              },
+              {
+                "kind": "itemCount",
+                "itemId": 156649,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 156649
+              }
+            ]
+          },
+          "recovery": "If you already hold a later trade item, resume at that item’s next exchange. Trades are player-controlled."
+        },
+        {
+          "id": "pepper",
+          "kind": "trade",
+          "text": "Trade the sack to Rakle the Wretched for the Much-Too-Hot Pepper.",
+          "npcId": 126330,
+          "itemId": 156650,
+          "destination": {
+            "mapID": 1165,
+            "x": 0.3477,
+            "y": 0.1158
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 156650,
+                "quantity": 1
+              },
+              {
+                "kind": "itemCount",
+                "itemId": 156651,
+                "quantity": 1
+              },
+              {
+                "kind": "itemCount",
+                "itemId": 156652,
+                "quantity": 1
+              },
+              {
+                "kind": "itemCount",
+                "itemId": 156655,
+                "quantity": 1
+              },
+              {
+                "kind": "itemCount",
+                "itemId": 156659,
+                "quantity": 1
+              },
+              {
+                "kind": "itemCount",
+                "itemId": 156649,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 156649
+              }
+            ]
+          },
+          "recovery": "If you already hold a later trade item, resume at that item’s next exchange. Trades are player-controlled."
+        },
+        {
+          "id": "seeds",
+          "kind": "trade",
+          "text": "Trade the pepper to Trader Haw’li for Golden Seeds.",
+          "npcId": 129597,
+          "itemId": 156651,
+          "destination": {
+            "mapID": 1165,
+            "x": 0.37810000000000005,
+            "y": 0.1472
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 156651,
+                "quantity": 1
+              },
+              {
+                "kind": "itemCount",
+                "itemId": 156652,
+                "quantity": 1
+              },
+              {
+                "kind": "itemCount",
+                "itemId": 156655,
+                "quantity": 1
+              },
+              {
+                "kind": "itemCount",
+                "itemId": 156659,
+                "quantity": 1
+              },
+              {
+                "kind": "itemCount",
+                "itemId": 156649,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 156649
+              }
+            ]
+          },
+          "recovery": "If you already hold a later trade item, resume at that item’s next exchange. Trades are player-controlled."
+        },
+        {
+          "id": "blossom",
+          "kind": "trade",
+          "text": "Trade the seeds to Granda Watae for the Centennial Blossom.",
+          "npcId": 132130,
+          "itemId": 156652,
+          "destination": {
+            "mapID": 1165,
+            "x": 0.4216,
+            "y": 0.3578
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 156652,
+                "quantity": 1
+              },
+              {
+                "kind": "itemCount",
+                "itemId": 156655,
+                "quantity": 1
+              },
+              {
+                "kind": "itemCount",
+                "itemId": 156659,
+                "quantity": 1
+              },
+              {
+                "kind": "itemCount",
+                "itemId": 156649,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 156649
+              }
+            ]
+          },
+          "recovery": "If you already hold a later trade item, resume at that item’s next exchange. Trades are player-controlled."
+        },
+        {
+          "id": "head",
+          "kind": "trade",
+          "text": "Trade the blossom to Trader Nog for the Preserved Night Elf Head.",
+          "npcId": 125311,
+          "itemId": 156655,
+          "destination": {
+            "mapID": 1165,
+            "x": 0.5715,
+            "y": 0.9147
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 156655,
+                "quantity": 1
+              },
+              {
+                "kind": "itemCount",
+                "itemId": 156659,
+                "quantity": 1
+              },
+              {
+                "kind": "itemCount",
+                "itemId": 156649,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 156649
+              }
+            ]
+          },
+          "recovery": "If you already hold a later trade item, resume at that item’s next exchange. Trades are player-controlled."
+        },
+        {
+          "id": "mask",
+          "kind": "trade",
+          "text": "Trade the head to “Black Eye” Zenru for the Counterfeit Rastakhan Mask.",
+          "npcId": 132153,
+          "itemId": 156659,
+          "destination": {
+            "mapID": 1165,
+            "x": 0.5377000000000001,
+            "y": 0.8597
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 156659,
+                "quantity": 1
+              },
+              {
+                "kind": "itemCount",
+                "itemId": 156649,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 156649
+              }
+            ]
+          },
+          "recovery": "If you already hold a later trade item, resume at that item’s next exchange. Trades are player-controlled."
+        },
+        {
+          "id": "amulet",
+          "kind": "trade",
+          "text": "Return to Griftah and exchange the mask for the Zandalari Effigy Amulet.",
+          "npcId": 132114,
+          "itemId": 156649,
+          "destination": {
+            "mapID": 1165,
+            "x": 0.5302,
+            "y": 0.8993000000000001
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 156649,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 156649
+              }
+            ]
+          },
+          "recovery": "If you already hold a later trade item, resume at that item’s next exchange. Trades are player-controlled."
+        },
+        {
+          "id": "learn",
+          "kind": "learn",
+          "text": "Use the Zandalari Effigy Amulet from your bags.",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 156649
+          }
+        }
+      ],
+      "deduplication": "All source branches under intermediate items belong to this one barter workflow.",
+      "unresolved": [
+        "Gold price of initial sack is absent from pinned source. Observe merchant price and label preparation cost unknown until observed."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+<Bindings>
+ <Binding name="TOYBOX_TOGGLE" header="TOYBOXGUIDES">ToyboxGuides.UI:Toggle()</Binding>
+ <Binding name="TOYBOX_SKIP">ToyboxGuides:DispatchCommand("skip", "")</Binding>
+ <Binding name="TOYBOX_BACK">ToyboxGuides:DispatchCommand("back", "")</Binding>
+ <Binding name="TOYBOX_UNDO">ToyboxGuides:DispatchCommand("undo", "")</Binding>
+</Bindings>

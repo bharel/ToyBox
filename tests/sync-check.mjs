@@ -1,0 +1,118 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {resolve,dirname} from 'node:path';
+import ts from 'typescript';
+import {getPlatformProxy} from 'wrangler';
+const proxy=await getPlatformProxy({configPath:'dist/server/wrangler.json',persist:{path:'.wrangler/sync-integration-check'},remoteBindings:false,envFiles:[]});
+let actor=null;
+const env={...proxy.env,BLIZZARD_TOKEN_KEY:Buffer.from(crypto.getRandomValues(new Uint8Array(32))).toString('base64url')};
+const cache=new Map();
+function load(path){path=resolve(path);if(path.endsWith('.json'))return JSON.parse(readFileSync(path,'utf8'));if(cache.has(path))return cache.get(path);const m={exports:{}};cache.set(path,m.exports);const code=ts.transpileModule(readFileSync(path,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,esModuleInterop:true,target:ts.ScriptTarget.ES2022}}).outputText;new Function('require','module','exports',code)(name=>name==='cloudflare:workers'?{env}:name.includes('chatgpt-auth')?{getChatGPTUser:async()=>actor}:load(resolve(dirname(path),name+(name.endsWith('.json')?'':'.ts'))),m,m.exports);cache.set(path,m.exports);return m.exports;}
+let raidFailure=false;
+import {fixtureSettings} from './helpers.mjs';
+const thisWeek=Date.now()-1000;
+const raidResponse={expansions:[{instances:[{instance:{id:786,name:'The Nighthold'},modes:['NORMAL','HEROIC','MYTHIC','LFR'].map(type=>({difficulty:{type,name:type},progress:{encounters:[{encounter:{id:1866,name:"Gul'dan"},completed_count:4,last_kill_timestamp:type==='MYTHIC'?thisWeek-8*86400000:thisWeek}]}}))}]}]};
+const originalFetch=globalThis.fetch;
+globalThis.fetch=async(url,options={})=>{
+ const u=new URL(url);const ok=d=>Response.json(d);
+ if(u.host==='oauth.battle.net'){assert(options.headers.Authorization.startsWith('Basic '));return ok({access_token:'fixture-access-token',expires_in:3600});}
+ assert.equal(u.host,'eu.api.blizzard.com');assert.equal(options.headers.Authorization,'Bearer fixture-access-token');
+ if(u.pathname==='/profile/user/wow/collections/toys')return ok({toys:[{toy:{id:1173,name:'Dominated Hearthstone'}},{toy:{id:55555,name:'Outside the starter catalog'}}]});
+ if(u.pathname==='/profile/user/wow')return ok({wow_accounts:[{characters:[{id:42,name:'Examplepriest',realm:{slug:'example-realm',name:'Example Realm'},level:90,playable_class:{id:5,name:'Priest'}}]}]});
+ if(u.pathname==='/data/wow/toy/1173')return ok({id:1173,item:{id:188952}});
+ if(u.pathname==='/data/wow/toy/55555')return ok({id:55555,item:{id:999999}});
+ if(u.pathname.startsWith('/data/wow/media/item/'))return ok({assets:[{key:'icon',value:'https://render.worldofwarcraft.com/eu/icons/56/test.jpg'}]});
+ if(/^\/profile\/wow\/character\/[^/]+\/[^/]+$/.test(u.pathname))return ok({id:42,level:90,character_class:{id:5},race:{id:1},faction:{type:'ALLIANCE'}});
+ if(u.pathname.endsWith('/professions'))return ok({primaries:[],secondaries:[{profession:{id:794,name:'Archaeology'},skill_points:800,max_skill_points:800}]});
+ if(u.pathname.endsWith('/reputations'))return ok({reputations:[]});
+ if(u.pathname.endsWith('/achievements'))return ok({achievements:[]});
+ if(u.pathname.endsWith('/quests/completed'))return ok({quests:[{id:1},{id:2}]});
+ if(u.pathname.endsWith('/encounters/raids'))return raidFailure?Response.json({error:'fixture unavailable'},{status:503}):ok(raidResponse);
+ throw Error('Unexpected external request '+u.pathname);
+};
+function request(path,body){return new Request('https://toybox.example.invalid'+path,{method:'POST',headers:{'Content-Type':'application/json',Origin:'https://toybox.example.invalid'},body:JSON.stringify(body)})}
+const context=action=>({params:Promise.resolve({action})});
+try{
+ // Apply only missing test schemas. The production migrations remain unchanged.
+ for(const file of ['0000_living_doorman.sql','0001_strange_morlun.sql'])for(const statement of readFileSync('drizzle/'+file,'utf8').split('--> statement-breakpoint').filter(s=>s.trim())){
+  const table=statement.match(/CREATE TABLE `([^`]+)`/)[1];const existing=await env.DB.prepare('SELECT name FROM sqlite_master WHERE type=\'table\' AND name=?').bind(table).first();if(!existing)await env.DB.prepare(statement).run();
+ }
+ const api=load('app/api/blizzard/[action]/route.ts'),sync=load('app/api/sync/route.ts'),server=load('lib/server-sync.ts'),pure=load('lib/sync.ts'),planner=load('lib/planner.ts');
+ assert.equal((await sync.GET(new Request('https://test/api/sync'))).status,401);
+ actor={userId:'sync-test-a',email:'qa@example.invalid'};
+ await env.DB.batch(['integration_secrets','sync_snapshots','planner_records'].map(t=>env.DB.prepare(`DELETE FROM ${t} WHERE user_id=?`).bind(actor.userId)));
+ assert.equal((await api.POST(request('/api/blizzard/configure',{clientId:'fixture-client-123456',clientSecret:'fixture-secret-123456'}),context('configure'))).status,200);
+ const stored=await env.DB.prepare('SELECT encrypted FROM integration_secrets WHERE user_id=?').bind(actor.userId).first();assert(!stored.encrypted.includes('fixture-secret'));
+ await assert.rejects(()=>server.unseal(stored.encrypted,'different-user:config'));
+ const connect=await api.GET(new Request('https://test/api/blizzard/connect'),context('connect'));const authorize=new URL(connect.headers.get('Location'));
+ assert.equal(authorize.origin,'https://oauth.battle.net');assert.equal(authorize.searchParams.get('scope'),'wow.profile');assert.equal(authorize.searchParams.get('redirect_uri'),server.REDIRECT_URI);
+ const state=authorize.searchParams.get('state');actor={userId:'sync-test-b',email:'qb@example.invalid'};
+ const wrong=await api.GET(new Request(`https://test/api/blizzard/callback?state=${state}&code=fixture`),context('callback'));assert(wrong.headers.get('Location').endsWith('state-error'));
+ actor={userId:'sync-test-a',email:'qa@example.invalid'};
+ const callback=await api.GET(new Request(`https://test/api/blizzard/callback?state=${state}&code=fixture`),context('callback'));assert(callback.headers.get('Location').endsWith('connected'));
+ const replay=await api.GET(new Request(`https://test/api/blizzard/callback?state=${state}&code=fixture`),context('callback'));assert(replay.headers.get('Location').endsWith('state-error'));
+ const response=await api.POST(request('/api/blizzard/sync',{}),context('sync'));assert.equal(response.status,200,await response.clone().text());assert.equal((await response.json()).remaining,0);
+ let view=await (await sync.GET(new Request('https://test/api/sync'))).json();assert.equal(view.connected,true);assert.equal(view.toys.length,2);assert(view.toys.some(t=>t.itemId===188952));assert(view.toys.some(t=>t.itemId===999999));assert(!JSON.stringify(view).includes('fixture-access-token'));assert(!JSON.stringify(view).includes('fixture-secret'));
+ let records=await server.readRecords(actor.userId);assert.equal(records['owned:dominated-hearth'],true);assert.equal(records['owned:1173'],undefined);
+ await env.DB.batch(server.recordStatements(actor.userId,[{key:'settings',value:fixtureSettings}]));
+ const captured=Date.now()-1000;const addon={format:'toybox-addon-v1',version:1,exportedAt:captured,character:{name:'Examplepriest',realm:'Example Realm',classFile:'PRIEST',region:'EU'},ownedToyIds:[122304,900001],toys:[{itemId:122304,name:"Fandral's Seed Pouch"},{itemId:900001,name:'Outside addon toy'}],raidLockouts:[{name:'The Nighthold',difficultyId:14,difficultyName:'Normal',resetAt:captured+600000,encounters:[{name:"Gul'dan",killed:true}]}],questLog:[{id:40000,title:'Weekly fixture',frequency:2,objectives:[{text:'Collect widgets',fulfilled:2,required:5,finished:false}]}],completedQuestIds:[12345],watchedQuests:[{id:12345,completed:true}],weeklyResetAt:captured+600000,dailyResetAt:captured+300000,warnings:[],toysComplete:true,raidsFresh:true};
+ const normalized=pure.parseAddon(addon);assert.equal(normalized.weeklyResetAt,addon.weeklyResetAt);
+ const imported=await sync.POST(request('/api/sync',{action:'addon',payload:addon,actor:'priest'}));assert.equal(imported.status,200,await imported.clone().text());assert.equal((await imported.json()).attempts,1);
+ records=await server.readRecords(actor.userId);const settings=planner.settingsFrom(records);assert.equal(settings.weeklyAnchor,addon.weeklyResetAt);assert.equal(planner.nextReset('weekly',captured,settings),addon.weeklyResetAt);
+ const attempt=Object.keys(records).find(k=>k.startsWith('attempt2:guldan:eu_example-realm_42:Normal:'));assert(attempt);assert(records[attempt]);
+ view=await (await sync.GET(new Request('https://test/api/sync'))).json();assert.equal(view.toys.length,4);assert.equal(view.addonCharacters[0].completedQuestCount,1);assert.deepEqual(view.addonCharacters[0].completedQuestIds,[]);assert.equal(view.addonCharacters[0].questLog[0].objectives[0].fulfilled,2);
+ const stale=await sync.POST(request('/api/sync',{action:'addon',payload:{...addon,exportedAt:captured-10000}}));assert.equal(stale.status,409);
+ const partial={...addon,exportedAt:captured+1,toys:[{itemId:900002,name:'Newly seen during partial scan'}],ownedToyIds:[900002],toysComplete:false,raidsFresh:false,warnings:['Incomplete fixture scan']};assert.equal((await sync.POST(request('/api/sync',{action:'addon',payload:partial}))).status,200);
+ view=await (await sync.GET(new Request('https://test/api/sync'))).json();assert.equal(view.toys.length,5);assert(view.toys.some(t=>t.itemId===900001));assert(view.toys.some(t=>t.itemId===900002));
+ assert.throws(()=>pure.parseAddon({...addon,ownedToyIds:[]}));assert.throws(()=>pure.parseAddon({...addon,exportedAt:Date.now()+999999999}));
+ assert.equal(pure.addonAttemptUpdates({...addon,raidsFresh:false},{}).length,0);
+ assert.equal(pure.addonAttemptUpdates({...addon,character:{...addon.character,name:'Anotherpriest'}},{}).length,0);
+ const quest={...load('lib/catalog.ts').catalog[5],id:'custom-weekly',difficulties:undefined,druidOnly:false,questId:12345,assignment:'priest',cadence:'weekly',custom:true};assert.equal(pure.addonAttemptUpdates(addon,{},settings,[quest]).length,1);
+
+ assert.equal(pure.snapshotIsCurrent(addon,'weekly',addon.weeklyResetAt-1,settings),true);
+ assert.equal(pure.snapshotIsCurrent(addon,'weekly',addon.weeklyResetAt,settings),false);
+ assert.equal(pure.snapshotIsCurrent(addon,'daily',addon.dailyResetAt,settings),false);
+ const fallback={...addon,weeklyResetAt:undefined};assert.equal(pure.snapshotIsCurrent(fallback,'weekly',planner.nextReset('weekly',captured,settings),settings),false);
+ const scoped={...settings,priestRealm:'Example Realm'};
+ assert.equal(pure.addonActor({...addon,character:{...addon.character,realm:'Another realm'}},scoped),null);
+ assert.equal(pure.addonActor({...addon,character:{...addon.character,region:'US'}},settings),null);
+ assert.equal(pure.addonActor({...addon,character:{...addon.character,name:'אחד'}},{...settings,priest:'שני'}),null);
+ assert.equal(pure.addonActor({...addon,character:{...addon.character,name:'Éowyn'}},{...settings,priest:'ÉOWYN'}),'priest');
+ const ready={...addon,completedQuestIds:[],watchedQuests:[],questLog:[{id:12345,title:'Ready weekly',frequency:2,complete:true,objectives:[{text:'Done',fulfilled:5,required:5,finished:true}]}]};
+ assert.equal(pure.questProgressFor(quest,[ready],{},settings,captured+1)[0].state,'ready');
+ assert.equal(pure.addonAttemptUpdates(ready,{},settings,[quest]).length,0);
+ assert.equal(pure.questProgressFor(quest,[addon],{},settings,addon.weeklyResetAt)[0].current,false);
+ assert.throws(()=>pure.parseAddon({...addon,questLog:[{...addon.questLog[0],complete:'yes'}]}));
+ assert.throws(()=>pure.parseAddon({...addon,questLog:[{...addon.questLog[0],objectives:[{text:'Negative',fulfilled:-1,required:5,finished:false}]}]}));
+ await env.DB.batch(server.recordStatements(actor.userId,[{key:'custom:custom-weekly',value:quest}]));
+ const tracked=await (await sync.GET(new Request('https://test/api/sync'))).json();assert.deepEqual(tracked.addonCharacters[0].completedQuestIds,[12345]);
+ assert.equal(pure.questProgressFor(quest,tracked.addonCharacters,{},settings,captured+2)[0].state,'turned-in');
+ const newerAlt={...addon,exportedAt:captured+10,character:{...addon.character,name:'Druid',classFile:'DRUID'},weeklyResetAt:captured+700000,raidLockouts:[],toys:[],ownedToyIds:[]};
+ assert.equal((await sync.POST(request('/api/sync',{action:'addon',payload:newerAlt}))).status,200);
+ const olderRealm={...addon,exportedAt:captured+5,character:{...addon.character,realm:'Older realm'},weeklyResetAt:captured+900000,raidLockouts:[],toys:[],ownedToyIds:[]};
+ assert.equal((await sync.POST(request('/api/sync',{action:'addon',payload:olderRealm}))).status,200);
+ const latestSettings=planner.settingsFrom(await server.readRecords(actor.userId));assert.equal(latestSettings.weeklyAnchor,newerAlt.weeklyResetAt);assert.equal(latestSettings.resetObservedAt,newerAlt.exportedAt);
+ const historical=pure.addonAttemptUpdates(addon,{},latestSettings,[quest]);assert.equal(historical[0].key,planner.attemptKey(quest,'priest','Run',captured,{},settings));
+ const otherRegion={...addon,character:{...addon.character,region:'US'}};assert.equal((await sync.POST(request('/api/sync',{action:'addon',payload:otherRegion,actor:'priest'}))).status,400);
+ await server.saveSecret(actor.userId,'access',{accessToken:'fixture-access-token',expiresAt:Date.now()-1000});
+ const expired=await api.POST(request('/api/blizzard/sync',{}),context('sync'));assert.equal(expired.status,400);
+ await server.saveSecret(actor.userId,'access',{accessToken:'fixture-access-token',expiresAt:Date.now()+3600000});
+ const history=await api.POST(request('/api/blizzard/character',{id:42,realmSlug:'example-realm'}),context('character'));assert.equal(history.status,200);const charResponse=await history.json();assert.equal(charResponse.ref.id,42);assert.equal(charResponse.progress.version,2);assert.equal(charResponse.eligibility.version,2);
+ const profile=await server.snapshot(actor.userId,'profile:42:example-realm');assert.equal(profile.raids.length,4);
+ await env.DB.batch(server.recordStatements(actor.userId,[{key:'settings',value:fixtureSettings}]));
+ const raidSync=await api.POST(request('/api/blizzard/character',{id:42,realmSlug:'example-realm',actor:'priest'}),context('character'));assert.equal(raidSync.status,200);assert.equal((await raidSync.json()).attempts,3);
+ records=await server.readRecords(actor.userId);const reset=planner.weeklyStart(thisWeek);assert.equal(records[`attempt2:guldan:eu_example-realm_42:Normal:${reset}`],true);assert.equal(records[`attempt2:guldan:eu_example-realm_42:Heroic:${reset}`],true);assert.equal(records[`attempt2:guldan:eu_example-realm_42:Raid-Finder:${reset}`],true);assert.equal(records[`attempt2:guldan:eu_example-realm_42:Mythic:${reset}`],undefined);
+ assert.equal((await api.POST(request('/api/blizzard/character',{id:42,realmSlug:'example-realm',actor:'druid'}),context('character'))).status,400);
+ assert.equal((await api.POST(request('/api/blizzard/character',{id:999,realmSlug:'example-realm'}),context('character'))).status,400);
+ const storedProfile=await server.snapshot(actor.userId,'profile:42:example-realm');
+ raidFailure=true;const failedRaid=await api.POST(request('/api/blizzard/character',{id:42,realmSlug:'example-realm'}),context('character'));assert.equal(failedRaid.status,200);assert((await failedRaid.json()).warnings.length);
+ const afterFailure=await server.snapshot(actor.userId,'profile:42:example-realm');assert.deepEqual(afterFailure.raids,storedProfile.raids);assert.equal(afterFailure.raidsFetchedAt,storedProfile.raidsFetchedAt);assert.equal((await server.readRecords(actor.userId))[`attempt2:guldan:eu_example-realm_42:Normal:${reset}`],true);
+ raidFailure=false;raidResponse.expansions[0].instances[0].modes[0].progress.encounters[0].last_kill_timestamp=Date.now()+900000;
+ const malformedRaid=await api.POST(request('/api/blizzard/character',{id:42,realmSlug:'example-realm'}),context('character'));assert((await malformedRaid.json()).warnings.length);assert.deepEqual((await server.snapshot(actor.userId,'profile:42:example-realm')).raids,storedProfile.raids);
+ const backup=await (await sync.GET(new Request('https://test/api/sync?export=1'))).json();assert(!JSON.stringify(backup).includes('fixture-secret'));assert(!JSON.stringify(backup).includes('fixture-access-token'));
+ assert.equal((await api.POST(request('/api/blizzard/disconnect',{}),context('disconnect'))).status,200);
+ view=await (await sync.GET(new Request('https://test/api/sync'))).json();assert.equal(view.connected,false);assert.equal(view.toys.length,5);
+ actor={userId:'sync-test-b',email:'qb@example.invalid'};assert.equal((await (await sync.GET(new Request('https://test/api/sync'))).json()).toys.length,0);
+ actor={userId:'sync-test-a',email:'qa@example.invalid'};await env.DB.batch(['integration_secrets','sync_snapshots','planner_records','oauth_states'].map(t=>env.DB.prepare(`DELETE FROM ${t} WHERE user_id=?`).bind(actor.userId)));
+ console.log('Passed: API raid difficulty-to-attempt updates, class validation, unknown characters, outage/malformed snapshot preservation; OAuth state/user binding and replay protection, encrypted secrets, toy ID→item mapping, all owned toys, addon import, reset anchors, stale/incomplete exports, partial-scan merges, realm/region matching, quest objectives and turn-ins, snapshot expiration, reset ordering, safe backups, disconnect and account isolation.');
+}finally{globalThis.fetch=originalFetch;await proxy.dispose()}

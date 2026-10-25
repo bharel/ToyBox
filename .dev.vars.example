@@ -1,0 +1,3 @@
+# Set your own deployment origin. Never commit .dev.vars.
+TOYBOX_SITE_ORIGIN=https://toybox.example.invalid
+# Configure BLIZZARD_TOKEN_KEY through your runtime secret store.

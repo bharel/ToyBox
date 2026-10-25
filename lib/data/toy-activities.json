@@ -1,0 +1,1173 @@
+{
+  "version": 1,
+  "checkedAt": "2026-10-24",
+  "metadataRevision": "03c63ed885079691df4fecc4ee4b4c8075a7bd8d",
+  "requirementsRevision": "0bb8f4be59bcc0262830400914516ef1698d789e",
+  "notes": "Aiding the Accord and Last Hurrah are excluded: the pinned Retail data marks them removed. Event start times and raw reputation-to-Renown conversions are not guessed.",
+  "activities": [
+    {
+      "id": "rep-tuskarr-feast",
+      "title": "Cook at the Community Feast",
+      "expansion": "Dragonflight",
+      "zone": "The Azure Span · Iskaara · Pleeqi",
+      "kind": "Weekly reputation",
+      "cadence": "weekly",
+      "assignment": "priest",
+      "rewards": [
+        {
+          "id": "item-199892",
+          "name": "Tuskarr Traveling Soup Pot",
+          "itemId": 199892
+        },
+        {
+          "id": "item-199650",
+          "name": "Whale Bone Tea Set",
+          "itemId": 199650
+        },
+        {
+          "id": "item-199894",
+          "name": "Fisherman's Folly",
+          "itemId": 199894
+        },
+        {
+          "id": "item-199896",
+          "name": "Rubbery Fish Head",
+          "itemId": 199896
+        },
+        {
+          "id": "item-199897",
+          "name": "Blue-Covered Beanbag",
+          "itemId": 199897
+        },
+        {
+          "id": "item-199899",
+          "name": "Iskaara Tug Sled",
+          "itemId": 199899
+        },
+        {
+          "id": "item-198827",
+          "name": "Magical Snow Sled",
+          "itemId": 198827
+        }
+      ],
+      "minutes": 20,
+      "description": "Build reputation toward missing toys, then visit the reward vendor.",
+      "steps": [
+        "Check Pleeqi for Community Feast while the event is running. Accept it if offered.",
+        "Follow Big Kinook’s orders until the quest’s tasks are complete.",
+        "Return to Pleeqi and turn it in."
+      ],
+      "prerequisite": "Follow the in-game quest and vendor requirements; unreported access stays unknown.",
+      "reason": "Keep reputation and purchases on your preferred main; toy ownership stays account-wide.",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/0bb8f4be59bcc0262830400914516ef1698d789e/.contrib/.db/standard/06%20-%20Expansion%20Features/10%20-%20Dragonflight/03%20Iskaara%20Tuskarr/Community%20Feast.lua",
+      "checked": "2026-10-24",
+      "color": "gold",
+      "icon": "crown",
+      "priority": 1,
+      "toyRoute": {
+        "kind": "weekly-reputation",
+        "access": "observed",
+        "questIds": [
+          70893
+        ],
+        "warband": true,
+        "notes": "The weekly quest is separate from repeatable feast participation. Check the event on the in-game map; no live event timer is assumed.",
+        "reputation": {
+          "id": 2511,
+          "name": "Iskaara Tuskarr",
+          "accountWide": true
+        }
+      }
+    },
+    {
+      "id": "rep-niffen-weekly",
+      "title": "Help the Loamm Niffen this week",
+      "expansion": "Dragonflight",
+      "zone": "Zaralek Cavern · Loamm · Mimuup",
+      "kind": "Weekly reputation",
+      "cadence": "weekly",
+      "assignment": "priest",
+      "rewards": [
+        {
+          "id": "item-205255",
+          "name": "Niffen Diggin' Mitts",
+          "itemId": 205255
+        },
+        {
+          "id": "item-205963",
+          "name": "Sniffin' Salts",
+          "itemId": 205963
+        }
+      ],
+      "minutes": 30,
+      "description": "Build reputation toward missing toys, then visit the reward vendor.",
+      "steps": [
+        "Check Mimuup for A Worthy Ally: Loamm Niffen. Accept it if offered.",
+        "Do Zaralek quests and events until the reputation objective is complete.",
+        "Return to Mimuup and turn it in."
+      ],
+      "prerequisite": "Follow the in-game quest and vendor requirements; unreported access stays unknown.",
+      "reason": "Keep reputation and purchases on your preferred main; toy ownership stays account-wide.",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/0bb8f4be59bcc0262830400914516ef1698d789e/.contrib/.db/standard/06%20-%20Expansion%20Features/10%20-%20Dragonflight/05%20Loamm%20Niffen/Quests.lua",
+      "checked": "2026-10-24",
+      "color": "gold",
+      "icon": "crown",
+      "priority": 1,
+      "toyRoute": {
+        "kind": "weekly-reputation",
+        "access": "observed",
+        "questIds": [
+          75665
+        ],
+        "warband": true,
+        "notes": "Niffen Diggin’ Mitts come from Like the Niffen Do at Renown 6; Sniffin’ Salts are sold at Renown 11. A weekly turn-in does not learn either toy.",
+        "reputation": {
+          "id": 2564,
+          "name": "Loamm Niffen",
+          "accountWide": true
+        }
+      }
+    },
+    {
+      "id": "rep-maruuk-hunt",
+      "title": "Join your first Grand Hunt of the week",
+      "expansion": "Dragonflight",
+      "zone": "Dragon Isles · active Grand Hunt",
+      "kind": "Weekly reputation",
+      "cadence": "weekly",
+      "assignment": "priest",
+      "rewards": [
+        {
+          "id": "item-198402",
+          "name": "Maruuk Cooking Pot",
+          "itemId": 198402
+        },
+        {
+          "id": "item-200550",
+          "name": "Very Comfortable Pelt",
+          "itemId": 200550
+        },
+        {
+          "id": "item-200551",
+          "name": "Comfortable Pile of Pelts",
+          "itemId": 200551
+        }
+      ],
+      "minutes": 20,
+      "description": "Build reputation toward missing toys, then visit the reward vendor.",
+      "steps": [
+        "Find the active Grand Hunt on the Dragon Isles map and join its current stage.",
+        "Help finish the hunt and loot your first weekly Grand Hunt Spoils.",
+        "Turn in Centaur Hunting Trophies at Maruukai."
+      ],
+      "prerequisite": "Follow the in-game quest and vendor requirements; unreported access stays unknown.",
+      "reason": "Keep reputation and purchases on your preferred main; toy ownership stays account-wide.",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/0bb8f4be59bcc0262830400914516ef1698d789e/.contrib/.db/standard/06%20-%20Expansion%20Features/10%20-%20Dragonflight/02%20Maruuk%20Centaur/Grand%20Hunts.lua",
+      "checked": "2026-10-24",
+      "color": "gold",
+      "icon": "crown",
+      "priority": 1,
+      "toyRoute": {
+        "kind": "weekly-reputation",
+        "access": "observed",
+        "questIds": [
+          70906
+        ],
+        "warband": true,
+        "notes": "This stop tracks the first weekly hunt reward. Further hunts remain possible with different rewards; it is not a weekly participation lockout.",
+        "reputation": {
+          "id": 2503,
+          "name": "Maruuk Centaur",
+          "accountWide": true
+        }
+      }
+    },
+    {
+      "id": "rep-valdrakken-siege",
+      "title": "Help retake Dragonbane Keep",
+      "expansion": "Dragonflight",
+      "zone": "The Waking Shores · Dragonbane Keep",
+      "kind": "Weekly reputation",
+      "cadence": "weekly",
+      "assignment": "priest",
+      "rewards": [
+        {
+          "id": "item-199649",
+          "name": "Dragon Tea Set",
+          "itemId": 199649
+        },
+        {
+          "id": "item-199767",
+          "name": "Red Dragon Banner",
+          "itemId": 199767
+        },
+        {
+          "id": "item-199768",
+          "name": "Black Dragon Banner",
+          "itemId": 199768
+        },
+        {
+          "id": "item-199769",
+          "name": "Blue Dragon Banner",
+          "itemId": 199769
+        },
+        {
+          "id": "item-199770",
+          "name": "Bronze Dragon Banner",
+          "itemId": 199770
+        },
+        {
+          "id": "item-199771",
+          "name": "Green Dragon Banner",
+          "itemId": 199771
+        },
+        {
+          "id": "item-200116",
+          "name": "Everlasting Horn of Lavaswimming",
+          "itemId": 200116
+        }
+      ],
+      "minutes": 20,
+      "description": "Build reputation toward missing toys, then visit the reward vendor.",
+      "steps": [
+        "Join the siege when the Dragonbane Keep event marker shows it available.",
+        "Help the Obsidian Outcasts complete the siege.",
+        "Collect your first weekly reward and open the Strongbox. The horn is a chance drop."
+      ],
+      "prerequisite": "Follow the in-game quest and vendor requirements; unreported access stays unknown.",
+      "reason": "Keep reputation and purchases on your preferred main; toy ownership stays account-wide.",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/0bb8f4be59bcc0262830400914516ef1698d789e/.contrib/.db/standard/06%20-%20Expansion%20Features/10%20-%20Dragonflight/04%20Valdrakken%20Accord/Siege%20on%20Dragonbane%20Keep.lua",
+      "checked": "2026-10-24",
+      "color": "gold",
+      "icon": "crown",
+      "priority": 1,
+      "toyRoute": {
+        "kind": "weekly-reputation",
+        "access": "observed",
+        "questIds": [
+          70866
+        ],
+        "warband": true,
+        "notes": "The first reward is weekly; the event can be repeated. Valdrakken Accord Renown 5 unlocks the event. Everlasting Horn of Lavaswimming is not guaranteed.",
+        "reputation": {
+          "id": 2510,
+          "name": "Valdrakken Accord",
+          "accountWide": true
+        }
+      }
+    },
+    {
+      "id": "rep-soridormi-weekly",
+      "title": "Mend a Time Rift for Soridormi",
+      "expansion": "Dragonflight",
+      "zone": "Thaldraszus · Tyrhold Reservoir · Soridormi",
+      "kind": "Weekly reputation",
+      "cadence": "weekly",
+      "assignment": "priest",
+      "rewards": [
+        {
+          "id": "item-208058",
+          "name": "Minute Glass",
+          "itemId": 208058
+        }
+      ],
+      "minutes": 20,
+      "description": "Build reputation toward missing toys, then visit the reward vendor.",
+      "steps": [
+        "Check Soridormi for When Time Needs Mending. Accept it if offered.",
+        "Join the Time Rift and help the group finish its objectives and final encounter.",
+        "Return to Soridormi and turn it in."
+      ],
+      "prerequisite": "Follow the in-game quest and vendor requirements; unreported access stays unknown.",
+      "reason": "Keep reputation and purchases on your preferred main; toy ownership stays account-wide.",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/0bb8f4be59bcc0262830400914516ef1698d789e/.contrib/.db/standard/02%20-%20Outdoor%20Zones/14%20Dragon%20Isles/Thaldraszus/Time%20Rifts.lua",
+      "checked": "2026-10-24",
+      "color": "gold",
+      "icon": "crown",
+      "priority": 1,
+      "toyRoute": {
+        "kind": "weekly-reputation",
+        "access": "observed",
+        "questIds": [
+          77236
+        ],
+        "warband": true,
+        "notes": "When Time Needs Mending is once per account each week. The Minute Glass reward is a separate one-time claim; reputation and currency do not automatically learn it.",
+        "reputation": {
+          "id": 2550,
+          "name": "Soridormi",
+          "accountWide": true
+        }
+      }
+    },
+    {
+      "id": "rep-expedition-posters",
+      "title": "Check the Expedition’s weekly wanted posters",
+      "expansion": "Dragonflight",
+      "zone": "The Waking Shores · Dragonscale Basecamp",
+      "kind": "Weekly reputation",
+      "cadence": "weekly",
+      "assignment": "priest",
+      "rewards": [
+        {
+          "id": "item-199902",
+          "name": "Wayfinder's Compass",
+          "itemId": 199902
+        },
+        {
+          "id": "item-198720",
+          "name": "Soft Purple Pillow",
+          "itemId": 198720
+        },
+        {
+          "id": "item-198721",
+          "name": "Skinny Reliquary Pillow",
+          "itemId": 198721
+        },
+        {
+          "id": "item-198722",
+          "name": "Small Triangular Pillow",
+          "itemId": 198722
+        },
+        {
+          "id": "item-198728",
+          "name": "Explorers' League Banner",
+          "itemId": 198728
+        },
+        {
+          "id": "item-198729",
+          "name": "Reliquary Banner",
+          "itemId": 198729
+        }
+      ],
+      "minutes": 25,
+      "description": "Build reputation toward missing toys, then visit the reward vendor.",
+      "steps": [
+        "Check the Wanted posters at Dragonscale Basecamp. Accept the current bounties.",
+        "Complete their objectives and return for the reputation rewards.",
+        "Check the Expedition toy vendors when your Renown rewards unlock."
+      ],
+      "prerequisite": "Follow the in-game quest and vendor requirements; unreported access stays unknown.",
+      "reason": "Keep reputation and purchases on your preferred main; toy ownership stays account-wide.",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/0bb8f4be59bcc0262830400914516ef1698d789e/.contrib/.db/standard/06%20-%20Expansion%20Features/10%20-%20Dragonflight/01%20Dragonscale%20Expedition/Quests.lua",
+      "checked": "2026-10-24",
+      "color": "gold",
+      "icon": "crown",
+      "priority": 1,
+      "toyRoute": {
+        "kind": "weekly-reputation",
+        "access": "observed",
+        "questIds": [],
+        "warband": true,
+        "notes": "The available posters are checked in game. This bundled stop uses an optional manual completion; it does not assume every poster was offered or completed.",
+        "reputation": {
+          "id": 2507,
+          "name": "Dragonscale Expedition",
+          "accountWide": true
+        }
+      }
+    },
+    {
+      "id": "toys-tuskarr-vendors",
+      "title": "Pick up your Iskaara toys",
+      "expansion": "Dragonflight",
+      "zone": "The Azure Span · Iskaara",
+      "kind": "Reputation vendor",
+      "cadence": "repeatable",
+      "assignment": "priest",
+      "rewards": [
+        {
+          "id": "item-199892",
+          "name": "Tuskarr Traveling Soup Pot",
+          "itemId": 199892
+        },
+        {
+          "id": "item-199650",
+          "name": "Whale Bone Tea Set",
+          "itemId": 199650
+        },
+        {
+          "id": "item-199894",
+          "name": "Fisherman's Folly",
+          "itemId": 199894
+        },
+        {
+          "id": "item-199896",
+          "name": "Rubbery Fish Head",
+          "itemId": 199896
+        },
+        {
+          "id": "item-199897",
+          "name": "Blue-Covered Beanbag",
+          "itemId": 199897
+        },
+        {
+          "id": "item-199899",
+          "name": "Iskaara Tug Sled",
+          "itemId": 199899
+        },
+        {
+          "id": "item-198827",
+          "name": "Magical Snow Sled",
+          "itemId": 198827
+        }
+      ],
+      "minutes": 10,
+      "description": "Bring Dragon Isles Supplies and the materials listed by each vendor. If a reward is locked, the Community Feast is a useful weekly reputation stop.",
+      "steps": [
+        "Check Lil Ki for Tuskarr Traveling Soup Pot and Whale Bone Tea Set, unlocked at Renown 4.",
+        "Check Nunvuq for Fisherman’s Folly and Rubbery Fish Head at Renown 17; Lontupit offers the Blue-Covered Beanbag later on the Renown track.",
+        "For the sleds, visit Kiopo’s island southeast of Iskaara when Renown 26 is unlocked. Buy and learn only the toys still missing."
+      ],
+      "prerequisite": "Follow the in-game quest and vendor requirements; unreported access stays unknown.",
+      "reason": "Keep reputation and purchases on your preferred main; toy ownership stays account-wide.",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/0bb8f4be59bcc0262830400914516ef1698d789e/.contrib/.db/standard/06%20-%20Expansion%20Features/10%20-%20Dragonflight/03%20Iskaara%20Tuskarr/Vendors.lua",
+      "checked": "2026-10-24",
+      "color": "gold",
+      "icon": "crown",
+      "priority": 1,
+      "toyRoute": {
+        "kind": "vendor",
+        "access": "public",
+        "questIds": [],
+        "warband": true,
+        "notes": "Bring Dragon Isles Supplies and the materials listed by each vendor. If a reward is locked, the Community Feast is a useful weekly reputation stop.",
+        "reputation": {
+          "id": 2511,
+          "name": "Iskaara Tuskarr",
+          "accountWide": true
+        }
+      }
+    },
+    {
+      "id": "toys-expedition-vendors",
+      "title": "Collect Expedition comforts and banners",
+      "expansion": "Dragonflight",
+      "zone": "The Waking Shores · Dragonscale Basecamp",
+      "kind": "Reputation vendor",
+      "cadence": "repeatable",
+      "assignment": "priest",
+      "rewards": [
+        {
+          "id": "item-199902",
+          "name": "Wayfinder's Compass",
+          "itemId": 199902
+        },
+        {
+          "id": "item-198720",
+          "name": "Soft Purple Pillow",
+          "itemId": 198720
+        },
+        {
+          "id": "item-198721",
+          "name": "Skinny Reliquary Pillow",
+          "itemId": 198721
+        },
+        {
+          "id": "item-198722",
+          "name": "Small Triangular Pillow",
+          "itemId": 198722
+        },
+        {
+          "id": "item-198728",
+          "name": "Explorers' League Banner",
+          "itemId": 198728
+        },
+        {
+          "id": "item-198729",
+          "name": "Reliquary Banner",
+          "itemId": 198729
+        }
+      ],
+      "minutes": 10,
+      "description": "Wayfinder’s Compass is a Renown quest reward; the pillows and banners also have vendor/material costs. Check the current reward panel before farming more reputation.",
+      "steps": [
+        "Visit Pathfinder Jeb and claim Wayfinder’s Compass when its Renown 9 quest is offered.",
+        "Check Rae’ana for the three research pillows at Renown 17 and the Expedition vendors for banners at Renown 19.",
+        "If a reward is locked, complete available Expedition world quests and weekly wanted posters, or turn in Dragon Isles Artifacts."
+      ],
+      "prerequisite": "Follow the in-game quest and vendor requirements; unreported access stays unknown.",
+      "reason": "Keep reputation and purchases on your preferred main; toy ownership stays account-wide.",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/0bb8f4be59bcc0262830400914516ef1698d789e/.contrib/.db/standard/06%20-%20Expansion%20Features/10%20-%20Dragonflight/01%20Dragonscale%20Expedition/Vendors.lua",
+      "checked": "2026-10-24",
+      "color": "gold",
+      "icon": "crown",
+      "priority": 1,
+      "toyRoute": {
+        "kind": "vendor",
+        "access": "public",
+        "questIds": [],
+        "warband": true,
+        "notes": "Wayfinder’s Compass is a Renown quest reward; the pillows and banners also have vendor/material costs. Check the current reward panel before farming more reputation.",
+        "reputation": {
+          "id": 2507,
+          "name": "Dragonscale Expedition",
+          "accountWide": true
+        }
+      }
+    },
+    {
+      "id": "toys-maruuk-vendors",
+      "title": "Bring home the Maruuk camp toys",
+      "expansion": "Dragonflight",
+      "zone": "Ohn’ahran Plains · Maruukai",
+      "kind": "Reputation vendor",
+      "cadence": "repeatable",
+      "assignment": "priest",
+      "rewards": [
+        {
+          "id": "item-198402",
+          "name": "Maruuk Cooking Pot",
+          "itemId": 198402
+        },
+        {
+          "id": "item-200550",
+          "name": "Very Comfortable Pelt",
+          "itemId": 200550
+        },
+        {
+          "id": "item-200551",
+          "name": "Comfortable Pile of Pelts",
+          "itemId": 200551
+        }
+      ],
+      "minutes": 10,
+      "description": "A focused route for missing toys.",
+      "steps": [
+        "Visit the Maruukai Renown vendors once your Maruuk Centaur Renown reaches 3.",
+        "Check for Maruuk Cooking Pot, Comfortable Pile of Pelts and Very Comfortable Pelt. Bring the vendor’s requested Supplies and materials.",
+        "If locked, join Grand Hunts and turn in Centaur Hunting Trophies; return when the toys unlock."
+      ],
+      "prerequisite": "Follow the in-game quest and vendor requirements; unreported access stays unknown.",
+      "reason": "Keep reputation and purchases on your preferred main; toy ownership stays account-wide.",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/0bb8f4be59bcc0262830400914516ef1698d789e/.contrib/.db/standard/06%20-%20Expansion%20Features/10%20-%20Dragonflight/02%20Maruuk%20Centaur/Vendors.lua",
+      "checked": "2026-10-24",
+      "color": "gold",
+      "icon": "crown",
+      "priority": 1,
+      "toyRoute": {
+        "kind": "vendor",
+        "access": "public",
+        "questIds": [],
+        "warband": true,
+        "notes": "",
+        "reputation": {
+          "id": 2503,
+          "name": "Maruuk Centaur",
+          "accountWide": true
+        }
+      }
+    },
+    {
+      "id": "toys-valdrakken-vendors",
+      "title": "Shop for dragon tea and banners",
+      "expansion": "Dragonflight",
+      "zone": "Thaldraszus · Valdrakken",
+      "kind": "Reputation vendor",
+      "cadence": "repeatable",
+      "assignment": "priest",
+      "rewards": [
+        {
+          "id": "item-199649",
+          "name": "Dragon Tea Set",
+          "itemId": 199649
+        },
+        {
+          "id": "item-199767",
+          "name": "Red Dragon Banner",
+          "itemId": 199767
+        },
+        {
+          "id": "item-199768",
+          "name": "Black Dragon Banner",
+          "itemId": 199768
+        },
+        {
+          "id": "item-199769",
+          "name": "Blue Dragon Banner",
+          "itemId": 199769
+        },
+        {
+          "id": "item-199770",
+          "name": "Bronze Dragon Banner",
+          "itemId": 199770
+        },
+        {
+          "id": "item-199771",
+          "name": "Green Dragon Banner",
+          "itemId": 199771
+        }
+      ],
+      "minutes": 10,
+      "description": "A focused route for missing toys.",
+      "steps": [
+        "Check the Valdrakken vendors for Dragon Tea Set at Renown 3.",
+        "The five dragon banners unlock at Valdrakken Accord Renown 27. Check the reward vendor and bring the requested Supplies, cloth and gems.",
+        "If still locked, do available Valdrakken Accord world quests and the first weekly Dragonbane Keep reward."
+      ],
+      "prerequisite": "Follow the in-game quest and vendor requirements; unreported access stays unknown.",
+      "reason": "Keep reputation and purchases on your preferred main; toy ownership stays account-wide.",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/0bb8f4be59bcc0262830400914516ef1698d789e/.contrib/.db/standard/06%20-%20Expansion%20Features/10%20-%20Dragonflight/04%20Valdrakken%20Accord/Vendors.lua",
+      "checked": "2026-10-24",
+      "color": "gold",
+      "icon": "crown",
+      "priority": 1,
+      "toyRoute": {
+        "kind": "vendor",
+        "access": "public",
+        "questIds": [],
+        "warband": true,
+        "notes": "",
+        "reputation": {
+          "id": 2510,
+          "name": "Valdrakken Accord",
+          "accountWide": true
+        }
+      }
+    },
+    {
+      "id": "toys-niffen-vendors",
+      "title": "Claim the Niffen’s useful toys",
+      "expansion": "Dragonflight",
+      "zone": "Zaralek Cavern · Loamm",
+      "kind": "Reputation vendor",
+      "cadence": "repeatable",
+      "assignment": "priest",
+      "rewards": [
+        {
+          "id": "item-205255",
+          "name": "Niffen Diggin' Mitts",
+          "itemId": 205255
+        },
+        {
+          "id": "item-205963",
+          "name": "Sniffin' Salts",
+          "itemId": 205963
+        }
+      ],
+      "minutes": 10,
+      "description": "Getting the weekly reputation reward does not claim the Renown quest reward or purchase the vendor toy.",
+      "steps": [
+        "At Renown 6, speak with Newsy and complete Like the Niffen Do for Niffen Diggin’ Mitts.",
+        "At Renown 11, visit Harlowe Marl for Sniffin’ Salts. Check the vendor’s current cost, then buy and learn it.",
+        "If locked, work on A Worthy Ally: Loamm Niffen and other Zaralek reputation sources."
+      ],
+      "prerequisite": "Follow the in-game quest and vendor requirements; unreported access stays unknown.",
+      "reason": "Keep reputation and purchases on your preferred main; toy ownership stays account-wide.",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/0bb8f4be59bcc0262830400914516ef1698d789e/.contrib/.db/standard/06%20-%20Expansion%20Features/10%20-%20Dragonflight/05%20Loamm%20Niffen/Vendors.lua",
+      "checked": "2026-10-24",
+      "color": "gold",
+      "icon": "crown",
+      "priority": 1,
+      "toyRoute": {
+        "kind": "vendor",
+        "access": "public",
+        "questIds": [],
+        "warband": true,
+        "notes": "Getting the weekly reputation reward does not claim the Renown quest reward or purchase the vendor toy.",
+        "reputation": {
+          "id": 2564,
+          "name": "Loamm Niffen",
+          "accountWide": true
+        }
+      }
+    },
+    {
+      "id": "toy-minute-glass",
+      "title": "Claim Soridormi’s Minute Glass",
+      "expansion": "Dragonflight",
+      "zone": "Thaldraszus · Tyrhold Reservoir · Soridormi",
+      "kind": "Reputation vendor",
+      "cadence": "repeatable",
+      "assignment": "priest",
+      "rewards": [
+        {
+          "id": "item-208058",
+          "name": "Minute Glass",
+          "itemId": 208058
+        }
+      ],
+      "minutes": 10,
+      "description": "A focused route for missing toys.",
+      "steps": [
+        "Build Soridormi reputation by participating in Time Rifts and completing the weekly When Time Needs Mending.",
+        "When you reach Future Friend, speak with Soridormi and complete A Foreseeable Friendship.",
+        "Receive and learn Minute Glass; the weekly quest alone does not award it."
+      ],
+      "prerequisite": "Follow the in-game quest and vendor requirements; unreported access stays unknown.",
+      "reason": "Keep reputation and purchases on your preferred main; toy ownership stays account-wide.",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/0bb8f4be59bcc0262830400914516ef1698d789e/.contrib/.db/standard/02%20-%20Outdoor%20Zones/14%20Dragon%20Isles/Thaldraszus/Time%20Rifts.lua",
+      "checked": "2026-10-24",
+      "color": "gold",
+      "icon": "crown",
+      "priority": 1,
+      "toyRoute": {
+        "kind": "vendor",
+        "access": "public",
+        "questIds": [],
+        "warband": true,
+        "notes": "",
+        "reputation": {
+          "id": 2550,
+          "name": "Soridormi",
+          "accountWide": true
+        }
+      }
+    },
+    {
+      "id": "toy-wardens-chest",
+      "title": "Work toward the Wardens’ treasure trap",
+      "expansion": "Legion",
+      "zone": "Azsuna · Wardens’ Redoubt",
+      "kind": "Reputation vendor",
+      "cadence": "repeatable",
+      "assignment": "priest",
+      "rewards": [
+        {
+          "id": "item-130191",
+          "name": "Trapped Treasure Chest Kit",
+          "itemId": 130191
+        }
+      ],
+      "minutes": 15,
+      "description": "This is an ongoing reputation route. Emissaries and world quests are checked in game; they are not assumed to reset weekly.",
+      "steps": [
+        "Visit Marin Bladewing and check the toy at Honored reputation with The Wardens.",
+        "If it is locked, complete available The Wardens world quests and the faction’s emissary when offered.",
+        "Return to the quartermaster, purchase the missing toy and learn it."
+      ],
+      "prerequisite": "Follow the in-game quest and vendor requirements; unreported access stays unknown.",
+      "reason": "Keep reputation and purchases on your preferred main; toy ownership stays account-wide.",
+      "source": "https://worldofwarcraft.blizzard.com/en-us/news/23429409/legion-mounts-pets-and-more",
+      "checked": "2026-10-24",
+      "color": "teal",
+      "icon": "star",
+      "priority": 1,
+      "toyRoute": {
+        "kind": "vendor",
+        "access": "public",
+        "questIds": [],
+        "warband": false,
+        "notes": "This is an ongoing reputation route. Emissaries and world quests are checked in game; they are not assumed to reset weekly.",
+        "reputation": {
+          "id": 1894,
+          "name": "The Wardens",
+          "accountWide": false
+        }
+      },
+      "requirements": {
+        "reputation": {
+          "id": 1894,
+          "raw": 9000
+        },
+        "source": "https://worldofwarcraft.blizzard.com/en-us/news/23429409/legion-mounts-pets-and-more"
+      }
+    },
+    {
+      "id": "toy-valarjar-boat",
+      "title": "Whittle a Vrykul toy boat",
+      "expansion": "Legion",
+      "zone": "Stormheim · Valdisdall",
+      "kind": "Reputation vendor",
+      "cadence": "repeatable",
+      "assignment": "priest",
+      "rewards": [
+        {
+          "id": "item-129367",
+          "name": "Vrykul Toy Boat Kit",
+          "itemId": 129367
+        }
+      ],
+      "minutes": 15,
+      "description": "This is an ongoing reputation route. Emissaries and world quests are checked in game; they are not assumed to reset weekly.",
+      "steps": [
+        "Visit Valdemar Stormseeker and check the toy at Honored reputation with Valarjar.",
+        "If it is locked, complete available Valarjar world quests and the faction’s emissary when offered.",
+        "Return to the quartermaster, purchase the missing toy and learn it."
+      ],
+      "prerequisite": "Follow the in-game quest and vendor requirements; unreported access stays unknown.",
+      "reason": "Keep reputation and purchases on your preferred main; toy ownership stays account-wide.",
+      "source": "https://worldofwarcraft.blizzard.com/en-us/news/23429409/legion-mounts-pets-and-more",
+      "checked": "2026-10-24",
+      "color": "teal",
+      "icon": "star",
+      "priority": 1,
+      "toyRoute": {
+        "kind": "vendor",
+        "access": "public",
+        "questIds": [],
+        "warband": false,
+        "notes": "This is an ongoing reputation route. Emissaries and world quests are checked in game; they are not assumed to reset weekly.",
+        "reputation": {
+          "id": 1948,
+          "name": "Valarjar",
+          "accountWide": false
+        }
+      },
+      "requirements": {
+        "reputation": {
+          "id": 1948,
+          "raw": 9000
+        },
+        "source": "https://worldofwarcraft.blizzard.com/en-us/news/23429409/legion-mounts-pets-and-more"
+      }
+    },
+    {
+      "id": "toy-highmountain-carp",
+      "title": "Add a Whitewater Carp to your toybox",
+      "expansion": "Legion",
+      "zone": "Highmountain · Thunder Totem",
+      "kind": "Reputation vendor",
+      "cadence": "repeatable",
+      "assignment": "priest",
+      "rewards": [
+        {
+          "id": "item-131814",
+          "name": "Whitewater Carp",
+          "itemId": 131814
+        }
+      ],
+      "minutes": 15,
+      "description": "This is an ongoing reputation route. Emissaries and world quests are checked in game; they are not assumed to reset weekly.",
+      "steps": [
+        "Visit Ransa Greyfeather and check the toy at Friendly reputation with Highmountain Tribe.",
+        "If it is locked, complete available Highmountain Tribe world quests and the faction’s emissary when offered.",
+        "Return to the quartermaster, purchase the missing toy and learn it."
+      ],
+      "prerequisite": "Follow the in-game quest and vendor requirements; unreported access stays unknown.",
+      "reason": "Keep reputation and purchases on your preferred main; toy ownership stays account-wide.",
+      "source": "https://worldofwarcraft.blizzard.com/en-us/news/23429409/legion-mounts-pets-and-more",
+      "checked": "2026-10-24",
+      "color": "teal",
+      "icon": "star",
+      "priority": 1,
+      "toyRoute": {
+        "kind": "vendor",
+        "access": "public",
+        "questIds": [],
+        "warband": false,
+        "notes": "This is an ongoing reputation route. Emissaries and world quests are checked in game; they are not assumed to reset weekly.",
+        "reputation": {
+          "id": 1828,
+          "name": "Highmountain Tribe",
+          "accountWide": false
+        }
+      },
+      "requirements": {
+        "reputation": {
+          "id": 1828,
+          "raw": 3000
+        },
+        "source": "https://worldofwarcraft.blizzard.com/en-us/news/23429409/legion-mounts-pets-and-more"
+      }
+    },
+    {
+      "id": "toy-katy-mail",
+      "title": "Earn Katy’s portable mailbox",
+      "expansion": "Legion",
+      "zone": "Legion Dalaran · Postmaster",
+      "kind": "Quest reward",
+      "cadence": "once",
+      "assignment": "priest",
+      "rewards": [
+        {
+          "id": "item-156833",
+          "name": "Katy's Stampwhistle",
+          "itemId": 156833
+        }
+      ],
+      "minutes": 30,
+      "description": "This is a one-time achievement reward. Your quest chain and achievement progress determine the remaining work.",
+      "steps": [
+        "Find Lost Mail in Legion Dalaran, or obtain the starting item from another player.",
+        "Follow the Postmaster quest chain and complete the mail-sorting challenge for Priority Mail.",
+        "Claim and learn Katy’s Stampwhistle."
+      ],
+      "prerequisite": "Follow the in-game quest and vendor requirements; unreported access stays unknown.",
+      "reason": "Keep reputation and purchases on your preferred main; toy ownership stays account-wide.",
+      "source": "https://worldofwarcraft.blizzard.com/en-us/news/23429409/legion-mounts-pets-and-more",
+      "checked": "2026-10-24",
+      "color": "teal",
+      "icon": "star",
+      "priority": 1,
+      "toyRoute": {
+        "kind": "quest",
+        "access": "observed",
+        "questIds": [],
+        "warband": false,
+        "notes": "This is a one-time achievement reward. Your quest chain and achievement progress determine the remaining work."
+      }
+    },
+    {
+      "id": "toy-thistleleaf",
+      "title": "Find the Thistleleaf disguise",
+      "expansion": "Legion",
+      "zone": "Val’sharah · Unguarded Thistleleaf Treasure",
+      "kind": "Treasure",
+      "cadence": "once",
+      "assignment": "priest",
+      "rewards": [
+        {
+          "id": "item-130147",
+          "name": "Thistleleaf Branch",
+          "itemId": 130147
+        }
+      ],
+      "minutes": 15,
+      "description": "A focused route for missing toys.",
+      "steps": [
+        "Travel to Val’sharah and look for the Unguarded Thistleleaf Treasure.",
+        "Loot the treasure and learn Thistleleaf Branch if it is still missing."
+      ],
+      "prerequisite": "Follow the in-game quest and vendor requirements; unreported access stays unknown.",
+      "reason": "Keep reputation and purchases on your preferred main; toy ownership stays account-wide.",
+      "source": "https://worldofwarcraft.blizzard.com/en-us/news/23429409/legion-mounts-pets-and-more",
+      "checked": "2026-10-24",
+      "color": "teal",
+      "icon": "star",
+      "priority": 1,
+      "toyRoute": {
+        "kind": "treasure",
+        "access": "public",
+        "questIds": [],
+        "warband": false,
+        "notes": ""
+      }
+    },
+    {
+      "id": "toy-simulated-life",
+      "title": "Find a little Dalaran magic",
+      "expansion": "Legion",
+      "zone": "Legion Dalaran · Wand of Simulated Life",
+      "kind": "Treasure",
+      "cadence": "once",
+      "assignment": "priest",
+      "rewards": [
+        {
+          "id": "item-143534",
+          "name": "Wand of Simulated Life",
+          "itemId": 143534
+        }
+      ],
+      "minutes": 10,
+      "description": "A focused route for missing toys.",
+      "steps": [
+        "Look for the Wand of Simulated Life treasure in Legion Dalaran.",
+        "Loot it and learn the toy. Use the linked treasure guide if you need help locating it."
+      ],
+      "prerequisite": "Follow the in-game quest and vendor requirements; unreported access stays unknown.",
+      "reason": "Keep reputation and purchases on your preferred main; toy ownership stays account-wide.",
+      "source": "https://worldofwarcraft.blizzard.com/en-us/news/23429409/legion-mounts-pets-and-more",
+      "checked": "2026-10-24",
+      "color": "teal",
+      "icon": "star",
+      "priority": 1,
+      "toyRoute": {
+        "kind": "treasure",
+        "access": "public",
+        "questIds": [],
+        "warband": false,
+        "notes": ""
+      }
+    },
+    {
+      "id": "toy-scarlet-book",
+      "title": "Find a Priest’s confession book",
+      "expansion": "Legion",
+      "zone": "Dalaran · Underbelly · Cravitz Lorent",
+      "kind": "Toy vendor",
+      "cadence": "repeatable",
+      "assignment": "priest",
+      "rewards": [
+        {
+          "id": "item-136927",
+          "name": "Scarlet Confessional Book",
+          "itemId": 136927
+        }
+      ],
+      "minutes": 10,
+      "description": "Cravitz is a roaming vendor; his current presence is not assumed.",
+      "steps": [
+        "On your Priest, look for Cravitz Lorent, the Shady Book Dealer, in Dalaran’s Underbelly.",
+        "If he is present, check Scarlet Confessional Book, purchase it and learn the toy. If absent, return another time."
+      ],
+      "prerequisite": "Follow the in-game quest and vendor requirements; unreported access stays unknown.",
+      "reason": "Keep reputation and purchases on your preferred main; toy ownership stays account-wide.",
+      "source": "https://www.wowhead.com/item=136927/scarlet-confessional-book",
+      "checked": "2026-10-24",
+      "color": "teal",
+      "icon": "star",
+      "priority": 1,
+      "toyRoute": {
+        "kind": "vendor",
+        "access": "public",
+        "questIds": [],
+        "warband": false,
+        "notes": "Cravitz is a roaming vendor; his current presence is not assumed."
+      },
+      "requirements": {
+        "classId": 5,
+        "source": "https://www.wowhead.com/item=136927/scarlet-confessional-book"
+      }
+    },
+    {
+      "id": "toy-wormhole-pandaria",
+      "title": "Make a Pandaria wormhole",
+      "expansion": "Professions",
+      "zone": "Engineering · Pandaria",
+      "kind": "Engineering toy",
+      "cadence": "once",
+      "assignment": "priest",
+      "rewards": [
+        {
+          "id": "item-87215",
+          "name": "Wormhole Generator: Pandaria",
+          "itemId": 87215
+        }
+      ],
+      "minutes": 15,
+      "description": "Knowing Engineering does not prove this recipe is learned. Recipe access and materials are checked in the profession window; crafting and toy ownership are separate.",
+      "steps": [
+        "Open Pandaria Engineering on this character and look up the recipe for Wormhole Generator: Pandaria.",
+        "If the recipe is not learned, check its listed trainer, schematic or research source. Gather the ingredients shown by the recipe.",
+        "Craft the toy when ready, then use it to add it to your Toy Box."
+      ],
+      "prerequisite": "Follow the in-game quest and vendor requirements; unreported access stays unknown.",
+      "reason": "Keep reputation and purchases on your preferred main; toy ownership stays account-wide.",
+      "source": "https://www.wowhead.com/item=87215",
+      "checked": "2026-10-24",
+      "color": "teal",
+      "icon": "star",
+      "priority": 1,
+      "toyRoute": {
+        "kind": "craft",
+        "access": "observed",
+        "questIds": [],
+        "warband": false,
+        "notes": "Knowing Engineering does not prove this recipe is learned. Recipe access and materials are checked in the profession window; crafting and toy ownership are separate."
+      },
+      "requirements": {
+        "professionId": 202,
+        "source": "https://www.wowhead.com/item=87215"
+      }
+    },
+    {
+      "id": "toy-wormhole-draenor",
+      "title": "Make a Draenor wormhole",
+      "expansion": "Professions",
+      "zone": "Engineering · Draenor",
+      "kind": "Engineering toy",
+      "cadence": "once",
+      "assignment": "priest",
+      "rewards": [
+        {
+          "id": "item-112059",
+          "name": "Wormhole Centrifuge",
+          "itemId": 112059
+        }
+      ],
+      "minutes": 15,
+      "description": "Knowing Engineering does not prove this recipe is learned. Recipe access and materials are checked in the profession window; crafting and toy ownership are separate.",
+      "steps": [
+        "Open Draenor Engineering on this character and look up the recipe for Wormhole Centrifuge.",
+        "If the recipe is not learned, check its listed trainer, schematic or research source. Gather the ingredients shown by the recipe.",
+        "Craft the toy when ready, then use it to add it to your Toy Box."
+      ],
+      "prerequisite": "Follow the in-game quest and vendor requirements; unreported access stays unknown.",
+      "reason": "Keep reputation and purchases on your preferred main; toy ownership stays account-wide.",
+      "source": "https://www.wowhead.com/item=112059",
+      "checked": "2026-10-24",
+      "color": "teal",
+      "icon": "star",
+      "priority": 1,
+      "toyRoute": {
+        "kind": "craft",
+        "access": "observed",
+        "questIds": [],
+        "warband": false,
+        "notes": "Knowing Engineering does not prove this recipe is learned. Recipe access and materials are checked in the profession window; crafting and toy ownership are separate."
+      },
+      "requirements": {
+        "professionId": 202,
+        "source": "https://www.wowhead.com/item=112059"
+      }
+    },
+    {
+      "id": "toy-blingtron",
+      "title": "Build Blingtron 5000",
+      "expansion": "Professions",
+      "zone": "Engineering · Draenor",
+      "kind": "Engineering toy",
+      "cadence": "once",
+      "assignment": "priest",
+      "rewards": [
+        {
+          "id": "item-111821",
+          "name": "Blingtron 5000",
+          "itemId": 111821
+        }
+      ],
+      "minutes": 15,
+      "description": "Knowing Engineering does not prove this recipe is learned. Recipe access and materials are checked in the profession window; crafting and toy ownership are separate.",
+      "steps": [
+        "Open Draenor Engineering on this character and look up the recipe for Blingtron 5000.",
+        "If the recipe is not learned, check its listed trainer, schematic or research source. Gather the ingredients shown by the recipe.",
+        "Craft the toy when ready, then use it to add it to your Toy Box."
+      ],
+      "prerequisite": "Follow the in-game quest and vendor requirements; unreported access stays unknown.",
+      "reason": "Keep reputation and purchases on your preferred main; toy ownership stays account-wide.",
+      "source": "https://www.wowhead.com/item=111821",
+      "checked": "2026-10-24",
+      "color": "teal",
+      "icon": "star",
+      "priority": 1,
+      "toyRoute": {
+        "kind": "craft",
+        "access": "observed",
+        "questIds": [],
+        "warband": false,
+        "notes": "Knowing Engineering does not prove this recipe is learned. Recipe access and materials are checked in the profession window; crafting and toy ownership are separate."
+      },
+      "requirements": {
+        "professionId": 202,
+        "source": "https://www.wowhead.com/item=111821"
+      }
+    },
+    {
+      "id": "toy-ai-li",
+      "title": "Hunt for Ai-Li’s Skymirror",
+      "expansion": "Mists of Pandaria",
+      "zone": "Dread Wastes · Ai-Li Skymirror",
+      "kind": "Rare farm",
+      "cadence": "repeatable",
+      "assignment": "priest",
+      "rewards": [
+        {
+          "id": "item-86589",
+          "name": "Ai-Li's Skymirror",
+          "itemId": 86589
+        }
+      ],
+      "minutes": 15,
+      "description": "Spawn and loot availability are checked in game. No daily or weekly loot lockout is asserted.",
+      "steps": [
+        "Look for Ai-Li Skymirror in the Dread Wastes.",
+        "Defeat and loot her when available. Repeat only while you want to keep farming; the toy is a random drop."
+      ],
+      "prerequisite": "Follow the in-game quest and vendor requirements; unreported access stays unknown.",
+      "reason": "Keep reputation and purchases on your preferred main; toy ownership stays account-wide.",
+      "source": "https://www.wowhead.com/item=86589/ai-lis-skymirror",
+      "checked": "2026-10-24",
+      "color": "teal",
+      "icon": "star",
+      "priority": 1,
+      "toyRoute": {
+        "kind": "rare",
+        "access": "observed",
+        "questIds": [],
+        "warband": false,
+        "notes": "Spawn and loot availability are checked in game. No daily or weekly loot lockout is asserted."
+      }
+    }
+  ]
+}

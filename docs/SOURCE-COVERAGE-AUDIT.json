@@ -1,0 +1,192 @@
+{
+  "reviewedAt": "2026-10-24",
+  "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+  "snapshotCounts": {
+    "sourceBranches": 1663,
+    "distinctToys": 1206,
+    "relevantQuestRecords": 4343,
+    "existingClassifierResults": {
+      "ongoing": 1030,
+      "removed": 182,
+      "unknown": 249,
+      "external": 117,
+      "unreleased": 85
+    },
+    "ongoingMetadataBranches": 1030,
+    "ongoingMetadataDistinctToys": 878
+  },
+  "warning": "Counts are audited source metadata candidates under the current availability classifier, not complete walkthroughs or verified current availability. Category sets overlap and are not additive. Existing 1324 guide count includes generic metadata directions.",
+  "categories": [
+    {
+      "category": "vendor",
+      "candidateSourceBranches": 320,
+      "distinctCandidateToys": 247,
+      "locatedSourceBranches": 294,
+      "sourceBranchesWithExplicitCost": 217,
+      "safePromotionCriteria": [
+        "Explicit vendor relationship, NPC and destination.",
+        "All stock prerequisites represented as typed conditions.",
+        "Actual price sourced or observed; unknown prices stay unknown.",
+        "No unresolved conditional code/customCollect/phase requirement."
+      ],
+      "typicalGaps": [
+        "Source-local gold price is often absent; merchant observation needed.",
+        "Vendor stock can require unlocks beyond reputation.",
+        "Intermediate barter-chain vendors must collapse into a single route."
+      ]
+    },
+    {
+      "category": "treasure",
+      "candidateSourceBranches": 100,
+      "distinctCandidateToys": 98,
+      "locatedSourceBranches": 94,
+      "sourceBranchesWithExplicitCost": 17,
+      "safePromotionCriteria": [
+        "Explicit object to reward relationship, object position, and no unresolved puzzle mechanics.",
+        "Hidden tracking quests treated as loot opportunity evidence, never accepted quests.",
+        "Item receipt and learning are separate."
+      ],
+      "typicalGaps": [
+        "Description can encode mandatory keys, interiors, phase or puzzle.",
+        "Missing symbol/objective steps prevent full prerequisite coverage."
+      ]
+    },
+    {
+      "category": "rare",
+      "candidateSourceBranches": 121,
+      "distinctCandidateToys": 111,
+      "locatedSourceBranches": 121,
+      "sourceBranchesWithExplicitCost": 6,
+      "safePromotionCriteria": [
+        "Explicit rare NPC to toy drop relationship and spawn/patrol positions.",
+        "Summon/phase requirements modeled or explicitly absent in checked source.",
+        "Actual lockout scope supported; unknown spawn/drop probability remains unknown."
+      ],
+      "typicalGaps": [
+        "Shared spawn variants are one opportunity.",
+        "Local toy eligibility override can supersede inherited isDaily.",
+        "NPC coordinates may describe summoner/entrance rather than target."
+      ]
+    },
+    {
+      "category": "quest",
+      "candidateSourceBranches": 172,
+      "distinctCandidateToys": 158,
+      "locatedSourceBranches": 147,
+      "sourceBranchesWithExplicitCost": 1,
+      "safePromotionCriteria": [
+        "Starter, objective and turn-in steps have distinct destinations or native waypoint recovery.",
+        "AND/OR prerequisite semantics resolved.",
+        "Required quest item/currency costs modeled."
+      ],
+      "typicalGaps": [
+        "sourceQuests list alone does not state conjunction.",
+        "Questgiver coords do not identify all objectives.",
+        "Faction variants cannot be merged by questID alone."
+      ]
+    },
+    {
+      "category": "instance",
+      "candidateSourceBranches": 43,
+      "distinctCandidateToys": 39,
+      "locatedSourceBranches": 42,
+      "sourceBranchesWithExplicitCost": 1,
+      "safePromotionCriteria": [
+        "Correct instance entrance, interior route and actual boss/loot provider.",
+        "Selectable difficulties separate from ATT aggregate IDs.",
+        "Shared lockout family and target boss kills tracked."
+      ],
+      "typicalGaps": [
+        "ATT instanceID is EJ instance; savedInstanceID is WoW instance map.",
+        "A category and boss ID do not explain traversing a unique encounter.",
+        "Never assume solo readiness from level."
+      ]
+    },
+    {
+      "category": "crafting",
+      "candidateSourceBranches": 97,
+      "distinctCandidateToys": 97,
+      "locatedSourceBranches": 0,
+      "sourceBranchesWithExplicitCost": 23,
+      "safePromotionCriteria": [
+        "Known product, crafting spell, recipe acquisition and ingredients.",
+        "Crafting prerequisites separate from toy use requirements.",
+        "Auction House route only if tradability is supported."
+      ],
+      "typicalGaps": [
+        "Many product records lack recipe linkage in current import.",
+        "Some cost arrays describe alternative ranks, not cumulative costs.",
+        "Profession category alone does not mean every learner needs that profession."
+      ]
+    },
+    {
+      "category": "achievement",
+      "candidateSourceBranches": 52,
+      "distinctCandidateToys": 50,
+      "locatedSourceBranches": 7,
+      "sourceBranchesWithExplicitCost": 2,
+      "safePromotionCriteria": [
+        "Criteria each resolve to concrete actions and scope.",
+        "Achievement reward delivery and toy learning separately tracked."
+      ],
+      "typicalGaps": [
+        "Achievement completion alone is not a walkthrough.",
+        "Account achievement cannot prove this character\u2019s quest access."
+      ]
+    },
+    {
+      "category": "mission",
+      "candidateSourceBranches": 2,
+      "distinctCandidateToys": 2,
+      "locatedSourceBranches": 0,
+      "sourceBranchesWithExplicitCost": 0,
+      "safePromotionCriteria": [
+        "Exact mission system, unlock chain, observed mission availability and reward.",
+        "Player-controlled launch and reward collection."
+      ],
+      "typicalGaps": [
+        "No guaranteed future mission appearance from a static mission ID.",
+        "Follower/building prerequisites and table destination currently incomplete."
+      ]
+    }
+  ],
+  "enrichedImportFields": [
+    "description",
+    "maps",
+    "qss",
+    "qis",
+    "qgs",
+    "providers",
+    "provider",
+    "sourceQuests",
+    "sourceQuestNumRequired",
+    "altQuests",
+    "nextQuests",
+    "isBreadcrumb",
+    "lc",
+    "lockCriteria",
+    "customCollect",
+    "difficulties",
+    "savedInstanceID",
+    "isLockoutShared",
+    "isRaid",
+    "sym",
+    "type",
+    "an",
+    "cost",
+    "b",
+    "spellID",
+    "creatureID",
+    "questID",
+    "objectiveID",
+    "criteriaID",
+    "achID",
+    "isAccountWide"
+  ],
+  "evidenceOnlyWarnings": [
+    "Symbolic sym selection links need resolution before interpreting absent rewards.",
+    "Descriptions are evidence; preserve their entity ownership and write original action text.",
+    "Source structure is needed for ordered sibling secret steps and reward containers.",
+    "ATT CreateRecipe uses recipeID as spellID in src/Classes/Spell.lua; preserve identifier namespaces."
+  ]
+}

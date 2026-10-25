@@ -1,0 +1,28 @@
+import assert from 'node:assert/strict';
+import {moduleLoader,fixtureSettings} from './helpers.mjs';
+const load=moduleLoader(),c=load('lib/toy-catalogue.ts'),d=load('lib/toy-details.ts'),p=load('lib/planner.ts'),{catalog}=load('lib/catalog.ts'),{todayPlan}=load('lib/today.ts');
+const now=Date.parse('2026-10-23T12:00:00Z'),base=c.catalogueToys();
+assert.equal(base.length,1138);assert.equal(new Set(base.map(t=>t.itemId)).size,1138);
+const joined=c.catalogueToys([{toyId:99999,name:'Index only'}],[{toyId:99999,itemId:999998,name:'Learned'}]);assert.equal(joined.filter(t=>t.toyId===99999).length,1);
+const route={path:['Classic','Vendor']};assert.equal(c.routeAvailability(route,1,now).state,'active');
+for(const flag of ['notObtainable','notReleased','resale'])assert.equal(c.routeAvailability({...route,[flag]:true},1,now).state,'excluded');
+assert.equal(c.routeAvailability({path:['Promotion','Blizzard Store']},1,now).state,'excluded');
+const holiday={path:['World Events',"Hallow's End"]};assert.equal(c.routeAvailability(holiday,70722,now).state,'active');
+assert.equal(c.routeAvailability(holiday,70722,Date.parse('2026-10-20T00:00:00Z')-1).state,'unknown');assert.equal(c.routeAvailability(holiday,70722,Date.parse('2026-11-02T00:00:00Z')).state,'unknown');
+for(const id of [131717,131724,187185,187184])assert.equal(c.routeAvailability(route,id,now).state,'unknown');
+assert.equal(c.routeAvailability({path:['World Events','Darkmoon Faire']},1,now).state,'inactive');
+assert.equal(c.routeAvailability({path:['World Events','Darkmoon Faire']},1,Date.parse('2026-10-31T00:00:00Z')).state,'unknown');
+assert.equal(c.routeAvailability({path:['World Events','Timewalking']},1,now).state,'unknown');
+assert.equal(c.routeAvailability({path:['Past Limited Time','Trading Post Originals']},1,now).state,'unknown');
+const anchor=Date.parse('2026-10-21T04:00:00Z'),windowRecords={'routine-anchor:legion-archaeology':anchor,[`rotation2:legion-archaeology:${anchor}`]:{reward:'eye',at:now-1000,end:anchor+14*p.DAY}};const windowView=c.catalogueView(windowRecords,[],undefined,now);assert.equal(windowView.entries.find(t=>t.itemId===131724).availability.state,'active');assert.equal(windowView.entries.find(t=>t.itemId===131717).availability.state,'inactive');assert.equal(c.catalogueView(windowRecords,[],undefined,anchor+14*p.DAY).entries.find(t=>t.itemId===131724).availability.state,'unknown');
+const ownedRemoved=base.find(t=>t.routes.every(r=>r.notObtainable||r.notReleased||r.resale));assert(ownedRemoved);
+assert(c.catalogueView({'owned:item-999997':true},[],undefined,now).entries.some(t=>t.itemId===999997&&t.owned));
+const records={'owned:jaraxxus':true,'note:guldan':'keep','routine-note:legion-archaeology':'keep'};const before=structuredClone(records),v=c.catalogueView(records,[ownedRemoved],undefined,now);assert(v.entries.find(t=>t.itemId===ownedRemoved.itemId).owned);assert.equal(v.counts.owned,2);assert(v.counts.obtainableNow<1138);assert.equal(v.counts.missingObtainable,v.counts.obtainableNow-v.counts.ownedObtainable);assert.deepEqual(records,before);
+// Multiple routes are OR: the highlighted duplicates include a permanent acquisition path.
+const duplicate=base.find(t=>t.routes.length>1&&t.routes.some(r=>c.routeAvailability(r,t.itemId,now).state==='active'));assert(duplicate);assert.equal(v.entries.find(t=>t.itemId===duplicate.itemId).availability.state,'active');
+const jar=catalog.find(a=>a.id==='guldan');const weekly={};weekly[p.attemptKey(jar,'priest','Mythic',now,weekly,fixtureSettings)]=true;assert.equal(p.isComplete(jar,weekly),false);assert.equal(c.ownsToy({itemId:119211},weekly),false);const synced=load('lib/sync.ts').ownedUpdates([{itemId:119211,name:'Jaraxxus'}]);for(const u of synced)weekly[u.key]=u.value;assert.equal(p.isComplete(jar,weekly),true);assert(c.ownsToy({id:'jaraxxus',itemId:119211},weekly));
+const html='<b>Fandral</b><div class="whtt-extra whtt-droppedby">Dropped by: Majordomo Staghelm</div><div class="whtt-extra whtt-dropchance">Drop Chance: 0.45%</div>';
+const parsed=d.parseToyDetails(122304,{tooltip:html},now);assert.equal(parsed.drop.percent,.45);assert.equal(parsed.drop.scope,'pooled');assert.equal(parsed.drop.boss,'Majordomo Staghelm');assert.match(d.rateFor(parsed,'Heroic').context,/not verified for Heroic/);assert.equal(d.rateFor(undefined).label,'Unknown');assert.equal(d.rateFor({...parsed,drop:{...parsed.drop,scope:'difficulty',difficulty:'Normal'}},'Heroic').label,'Unknown');assert.equal(d.rateFor({...parsed,drop:{...parsed.drop,scope:'difficulty',difficulty:'Normal'}},'Normal').label,'~0.45%');assert(!parsed.text.includes('<'));
+assert.equal(d.parseToyDetails(1,{tooltip:'No percentage'},now).drop,undefined);
+const unknownPlan=todayPlan(catalog,{},fixtureSettings,[],now);assert(![...unknownPlan.essential,...unknownPlan.optional].some(u=>u.activity?.id==='guldan'));assert(![...unknownPlan.essential,...unknownPlan.optional,...unknownPlan.unknown,...unknownPlan.blocked].some(u=>u.activity?.id.startsWith('item-')));
+console.log('Passed catalogue: deduplication and ID joins, source exclusions, multiple routes, event boundaries, unknown rotations, owned unavailable toys, matching counts, notes preservation, weekly vs ownership, new sync, pooled vs difficulty rates and unknown fallbacks.');

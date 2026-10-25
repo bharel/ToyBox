@@ -1,0 +1,820 @@
+{
+  "version": 1,
+  "kind": "original-source-checked-walkthrough-candidates",
+  "retailBuild": "12.1.5.70575",
+  "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+  "reviewedAt": "2026-10-25",
+  "sources": [
+    {
+      "id": "att-zones",
+      "url": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "license": "MIT",
+      "use": "Permitted pinned factual import; original Toybox instructions.",
+      "localSourcePath": "work/att-guides-source/db/Standard/Categories/Zones.lua",
+      "sourceSha256": "7ec02fc547b849d115ed6840a5c150d10f22073a1c3dc3efa76bda411d3e38c2",
+      "evidenceRanges": [
+        {
+          "startLine": 74563,
+          "endLine": 74565
+        },
+        {
+          "startLine": 86269,
+          "endLine": 86271
+        },
+        {
+          "startLine": 85563,
+          "endLine": 85574
+        },
+        {
+          "startLine": 138679,
+          "endLine": 138694
+        }
+      ],
+      "excerptPath": "work/research/reliability-catalogue/Zones.lua.excerpts.txt",
+      "excerptSha256": "9c2de8d72080ef877799f479e4ee673e7a3a310857d01645bfed9241a849b9c2"
+    },
+    {
+      "id": "att-character",
+      "url": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Character.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "license": "MIT",
+      "use": "Permitted pinned factual import; original Toybox instructions.",
+      "localSourcePath": "work/att-guides-source/db/Standard/Categories/Character.lua",
+      "sourceSha256": "481d103fde89bba002e69c46b08f7f69689a5b5fa4999207088c022bb2733d0c",
+      "evidenceRanges": [
+        {
+          "startLine": 9002,
+          "endLine": 9019
+        }
+      ],
+      "excerptPath": "work/research/reliability-catalogue/Character.lua.excerpts.txt",
+      "excerptSha256": "dfd41ca51e3bd1883e1ca3d8fc4c9629317530dfd66d52932a0308f66574cb21"
+    },
+    {
+      "id": "wowhead-huggalon",
+      "url": "https://www.wowhead.com/npc=66900/huggalon-the-heart-watcher",
+      "retrievedAt": "2026-10-25",
+      "retrieval": "Search-indexed Retail page, multiple dated player observations.",
+      "license": "Restricted factual consultation",
+      "use": "Location facts only; original prose. Historical combat/solo claims and respawn estimates excluded."
+    },
+    {
+      "id": "wowhead-drained-blood-crystal",
+      "url": "https://www.wowhead.com/item=122460/drained-blood-crystal",
+      "retrievedAt": "2026-10-25",
+      "retrieval": "Search-indexed Retail item page and localized Retail mirrors; no Classic statistics imported.",
+      "license": "Restricted factual consultation",
+      "use": "Item identity, collection search areas, channel interruption recovery. No exact quantity or channel duration."
+    },
+    {
+      "id": "blizzard-blood-moon",
+      "url": "https://worldofwarcraft.blizzard.com/en-us/news/20122590/toy-box-tuesday-reach-for-the-stars",
+      "retrievedAt": "2026-10-25",
+      "retrieval": "Official search-indexed article; direct page returned 403.",
+      "publishedAt": "2016-06-01",
+      "license": "Restricted factual consultation",
+      "use": "Primary corroboration for crystal collection, draining, summon and chance reward. Does not establish current event availability."
+    },
+    {
+      "id": "wowhead-blood-moon",
+      "url": "https://www.wowhead.com/npc=91200/blood-moon",
+      "retrievedAt": "2026-10-25",
+      "retrieval": "Retail NPC identity from search-indexed source.",
+      "license": "Restricted factual consultation",
+      "use": "NPC identity and mechanics only; PTR/Classic figures and old health values excluded."
+    }
+  ],
+  "integrationNotes": [
+    "Replace the existing canonical guide graph; retain raw ATT route IDs and stable existing defeat/remnant/blood-moon/learn action IDs. Do not add catalogue duplicates.",
+    "Source-checked route quality and current event availability are separate. Blood Moon availability remains observation-required; no next spawn time is established.",
+    "These two routes have no quest acceptance or turn-in actions. Do not synthesize them. Quest research outside routes remains a coverage gap.",
+    "B. F. F. Necklace was classified guaranteed-progress by the generic importer; use random-drop with unknown chance and unknown encounter availability. Level alone is not proof of combat suitability.",
+    "Keep manual Continue cursor-only for event observation and summoning. Do not add ownership, kill or unlock facts. A supported NPC sighting can supersede the manual handoff when available.",
+    "itemCount crystal quantity=1 means enough to start, not enough for the whole summon; total required remains unknown. Avoid reserving an invented material amount.",
+    "Travel arrival completes travel only. For the toy learning step, retain ownership-only completion even when a quest/loot tracker is present.",
+    "Current-period daily opportunity evidence must carry a timestamp/reset period; permanent quest flag 39159 alone is not today’s completion.",
+    "Review importer audits before expanding nearby suggestions from catalogue metadata. None of the audit records count as newly completed routes."
+  ],
+  "routes": [
+    {
+      "id": "att-90067-8be736b6758f",
+      "itemId": 90067,
+      "title": "B. F. F. Necklace",
+      "method": "NPC source",
+      "cadence": "repeatable",
+      "outcome": "random-drop",
+      "sourceRouteIds": [
+        "att-90067-8be736b6758f"
+      ],
+      "requirements": {
+        "level": 25
+      },
+      "costs": [],
+      "status": "source-checked-candidate",
+      "sourceChecked": true,
+      "playtested": false,
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "reviewedAt": "2026-10-25",
+      "knownGaps": [],
+      "facts": {
+        "npcId": 66900,
+        "npcName": "Huggalon the Heart Watcher",
+        "originalSourceFacts": {
+          "awp": 50004,
+          "b": 1,
+          "category": "Zones",
+          "coords": {
+            "389": [
+              [
+                65.6,
+                23.8
+              ]
+            ]
+          },
+          "description": "Located in the catacombs.",
+          "headers": [
+            -732,
+            -46
+          ],
+          "itemId": 90067,
+          "lineage": [
+            {
+              "coords": {
+                "389": [
+                  [
+                    65.6,
+                    23.8
+                  ]
+                ]
+              },
+              "description": "Located in the catacombs.",
+              "kind": "NPC",
+              "npcID": 66900,
+              "record": 179025
+            },
+            {
+              "b": 1,
+              "itemID": 90067,
+              "kind": "Toy",
+              "record": 179026
+            }
+          ],
+          "localFacts": {
+            "b": 1,
+            "itemID": 90067,
+            "kind": "Toy",
+            "record": 179026
+          },
+          "lvl": 25,
+          "mapID": 388,
+          "maps": [
+            389
+          ],
+          "npcID": 66900
+        },
+        "factualAssertions": [
+          {
+            "claim": "Toy 90067 drops from NPC 66900 in the Niuzao Catacombs; interior location is map 389 at 65.6,23.8.",
+            "sourceIds": [
+              "att-zones"
+            ],
+            "lineRange": [
+              74563,
+              74565
+            ]
+          },
+          {
+            "claim": "The Townlong cave entrance is approximately 32.8,61.6; the upper right passage leads to Huggalon.",
+            "sourceIds": [
+              "wowhead-huggalon"
+            ],
+            "context": "Multiple independent player location observations on the Retail NPC page, including recent confirmations; historical combat values were discarded."
+          }
+        ],
+        "noAdditionalPrerequisiteClaim": "The pinned Retail route has no quest, profession, faction or reputation gate. Nearby quest references describe navigation rather than a required quest. Actual enemy availability and combat suitability are not inferred.",
+        "dropRate": {
+          "status": "unknown"
+        },
+        "spawnTimer": {
+          "status": "unknown"
+        },
+        "opportunityRule": {
+          "status": "unknown",
+          "reason": "No current per-reset loot cap is established. Do not mark a daily attempt from an unrelated completion flag."
+        }
+      },
+      "walkthrough": {
+        "version": 2,
+        "contentVersion": "reliability-catalogue-1",
+        "routeIds": [
+          "att-90067-8be736b6758f"
+        ],
+        "includesPrerequisites": true,
+        "completeWhen": {
+          "kind": "toyOwned",
+          "itemId": 90067
+        },
+        "nodes": [
+          {
+            "id": "att-90067-8be736b6758f:entrance",
+            "kind": "travel",
+            "text": "Enter Niuzao Catacombs at the marked entrance in Townlong Steppes.",
+            "completeWhen": {
+              "any": [
+                {
+                  "kind": "location",
+                  "mapID": 388,
+                  "x": 0.328,
+                  "y": 0.616,
+                  "radius": 0.012
+                },
+                {
+                  "kind": "location",
+                  "mapID": 389,
+                  "x": 0.5,
+                  "y": 0.5,
+                  "radius": 1
+                },
+                {
+                  "any": [
+                    {
+                      "kind": "itemCount",
+                      "itemId": 90067,
+                      "quantity": 1
+                    },
+                    {
+                      "kind": "toyOwned",
+                      "itemId": 90067
+                    }
+                  ]
+                }
+              ]
+            },
+            "sources": [
+              "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+              "https://www.wowhead.com/npc=66900/huggalon-the-heart-watcher"
+            ],
+            "recovery": {
+              "text": "If the pin appears above or below you, use the outdoor entrance and follow the upper right passage. Do not infer a quest prerequisite from the nearby quest enemy."
+            },
+            "destination": {
+              "mapID": 388,
+              "x": 0.328,
+              "y": 0.616,
+              "label": "Niuzao Catacombs entrance",
+              "directions": "Enter the cave behind the area where Yul Wildpaw appears. Outdoor arrows stop at the entrance."
+            }
+          },
+          {
+            "id": "att-90067-8be736b6758f:interior",
+            "kind": "travel",
+            "text": "Inside the catacombs, take the rising passage on the right near the lower pool. Follow its right branch to Huggalon’s upper alcove.",
+            "completeWhen": {
+              "any": [
+                {
+                  "kind": "location",
+                  "mapID": 389,
+                  "x": 0.656,
+                  "y": 0.238,
+                  "radius": 0.012
+                },
+                {
+                  "any": [
+                    {
+                      "kind": "itemCount",
+                      "itemId": 90067,
+                      "quantity": 1
+                    },
+                    {
+                      "kind": "toyOwned",
+                      "itemId": 90067
+                    }
+                  ]
+                }
+              ]
+            },
+            "sources": [
+              "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+              "https://www.wowhead.com/npc=66900/huggalon-the-heart-watcher"
+            ],
+            "recovery": {
+              "text": "If the pin appears above or below you, use the outdoor entrance and follow the upper right passage. Do not infer a quest prerequisite from the nearby quest enemy."
+            },
+            "destination": {
+              "mapID": 389,
+              "x": 0.656,
+              "y": 0.238,
+              "label": "Huggalon upper alcove",
+              "interior": true,
+              "directions": "Continue through the catacombs. Near the lower pool, take the rising passage on the right, then its right branch. Huggalon is in the upper alcove; do not continue through the opening toward the lower quest enemy."
+            },
+            "after": [
+              "att-90067-8be736b6758f:entrance"
+            ]
+          },
+          {
+            "id": "att-90067-8be736b6758f:defeat",
+            "kind": "loot",
+            "text": "Defeat Huggalon the Heart Watcher and loot B. F. F. Necklace. He may appear neutral; a kill alone does not finish this step.",
+            "completeWhen": {
+              "any": [
+                {
+                  "kind": "itemCount",
+                  "itemId": 90067,
+                  "quantity": 1
+                },
+                {
+                  "kind": "toyOwned",
+                  "itemId": 90067
+                }
+              ]
+            },
+            "sources": [
+              "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+              "https://www.wowhead.com/npc=66900/huggalon-the-heart-watcher"
+            ],
+            "recovery": {
+              "text": "If Huggalon is absent, his next appearance is unknown. Choose another activity rather than following a guessed timer. If combat is unsafe, bring help or defer. Check the corpse and bag space after a kill."
+            },
+            "destination": {
+              "mapID": 389,
+              "x": 0.656,
+              "y": 0.238,
+              "label": "Huggalon upper alcove",
+              "interior": true,
+              "directions": "Continue through the catacombs. Near the lower pool, take the rising passage on the right, then its right branch. Huggalon is in the upper alcove; do not continue through the opening toward the lower quest enemy."
+            },
+            "after": [
+              "att-90067-8be736b6758f:interior"
+            ]
+          },
+          {
+            "id": "att-90067-8be736b6758f:learn",
+            "kind": "learn",
+            "text": "Use B. F. F. Necklace in your bags to add it to the Toy Box.",
+            "completeWhen": {
+              "kind": "toyOwned",
+              "itemId": 90067
+            },
+            "sources": [
+              "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+              "https://www.wowhead.com/npc=66900/huggalon-the-heart-watcher"
+            ],
+            "recovery": {
+              "text": "If the item is missing, check bags, bank and mail. Toy Box ownership, rather than this guide cursor or the kill, completes the goal."
+            },
+            "after": [
+              "att-90067-8be736b6758f:defeat"
+            ],
+            "requires": {
+              "kind": "itemCount",
+              "itemId": 90067,
+              "quantity": 1
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "walkthrough-source-batch-127666",
+      "itemId": 127666,
+      "title": "Vial of Red Goo",
+      "method": "Quest and interaction",
+      "cadence": "daily",
+      "outcome": "random-drop",
+      "sourceRouteIds": [
+        "att-127666-58684616b705"
+      ],
+      "requirements": {
+        "level": 40
+      },
+      "status": "source-checked-candidate",
+      "sourceChecked": true,
+      "playtested": false,
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "reviewedAt": "2026-10-25",
+      "knownGaps": [],
+      "availability": {
+        "status": "observation-required",
+        "reason": "The local Blood Moon event must be seen. Its absence gives no verified next spawn time; this is not a calendar rotation."
+      },
+      "facts": {
+        "npcId": 91227,
+        "summoningNpcId": 91200,
+        "trackingQuestId": 39159,
+        "requiredMaterials": [
+          {
+            "itemId": 122460,
+            "name": "Drained Blood Crystal",
+            "quantity": null,
+            "scope": "character",
+            "acquisition": "Collect locally around Zeth’gol while the event is present. The amount required varies; do not reserve a fixed count."
+          }
+        ],
+        "costsKnown": false,
+        "factualAssertions": [
+          {
+            "claim": "NPC 91227 at Tanaan 22.2,50.6 is summoned by draining the Blood Moon and drops toy 127666; ATT marks the encounter daily with tracking quest 39159.",
+            "sourceIds": [
+              "att-zones"
+            ],
+            "lineRange": [
+              86269,
+              86271
+            ]
+          },
+          {
+            "claim": "Drained Blood Crystal is item 122460 and comes from the surrounding event area.",
+            "sourceIds": [
+              "wowhead-drained-blood-crystal",
+              "blizzard-blood-moon"
+            ]
+          },
+          {
+            "claim": "Finish each crystal channel before moving or using another; nearby huts and ground provide further crystals.",
+            "sourceIds": [
+              "wowhead-drained-blood-crystal"
+            ],
+            "context": "Retail item-page player observations; exact crystal counts, health and channel duration vary by patch and were not imported."
+          }
+        ],
+        "dropRate": {
+          "status": "unknown"
+        },
+        "spawnTimer": {
+          "status": "unknown"
+        },
+        "opportunityRule": {
+          "cadence": "daily",
+          "trackingQuestId": 39159,
+          "negativeCompletionFlagProvesEligibility": false,
+          "reason": "Use dated current-period evidence for a consumed opportunity; an undated permanent quest flag must not establish today’s kill or reward."
+        },
+        "automaticDetectionLimit": "Crystal inventory and toy receipt are observable. A supported fresh NPC observation can establish the spawn; otherwise Continue advances only the cursor after the player sees the Remnant."
+      },
+      "walkthrough": {
+        "version": 2,
+        "contentVersion": "reliability-catalogue-1",
+        "routeIds": [
+          "att-127666-58684616b705"
+        ],
+        "includesPrerequisites": true,
+        "completeWhen": {
+          "kind": "toyOwned",
+          "itemId": 127666
+        },
+        "nodes": [
+          {
+            "id": "walkthrough-source-batch-127666:observe-moon",
+            "kind": "observe",
+            "text": "Inspect the Blood Moon in Zeth’gol. If the moon or its Remnant is present, continue; if neither is there, choose another activity.",
+            "completeWhen": {
+              "any": [
+                {
+                  "kind": "itemCount",
+                  "itemId": 127666,
+                  "quantity": 1
+                },
+                {
+                  "kind": "toyOwned",
+                  "itemId": 127666
+                }
+              ]
+            },
+            "sources": [
+              "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+              "https://worldofwarcraft.blizzard.com/en-us/news/20122590/toy-box-tuesday-reach-for-the-stars",
+              "https://www.wowhead.com/npc=91200/blood-moon"
+            ],
+            "recovery": {
+              "text": "The event has no verified next spawn time here. Do not collect against a guessed deadline or mark the event complete when it disappears."
+            },
+            "destination": {
+              "mapID": 534,
+              "x": 0.222,
+              "y": 0.506,
+              "label": "Blood Moon in Zeth’gol"
+            },
+            "manual": true
+          },
+          {
+            "id": "walkthrough-source-batch-127666:collect-crystals",
+            "kind": "collect",
+            "text": "Collect Drained Blood Crystals from the ground and huts around Zeth’gol. Start here, then keep gathering locally if you run out while draining the moon.",
+            "completeWhen": {
+              "any": [
+                {
+                  "kind": "itemCount",
+                  "itemId": 122460,
+                  "quantity": 1
+                },
+                {
+                  "any": [
+                    {
+                      "kind": "itemCount",
+                      "itemId": 127666,
+                      "quantity": 1
+                    },
+                    {
+                      "kind": "toyOwned",
+                      "itemId": 127666
+                    }
+                  ]
+                }
+              ]
+            },
+            "sources": [
+              "https://www.wowhead.com/item=122460/drained-blood-crystal",
+              "https://worldofwarcraft.blizzard.com/en-us/news/20122590/toy-box-tuesday-reach-for-the-stars"
+            ],
+            "recovery": {
+              "text": "Search the surrounding huts and ground rather than expecting one object to be up at a fixed pin. Recheck your bags. The total needed is variable; one crystal is only enough to begin."
+            },
+            "destination": {
+              "mapID": 534,
+              "x": 0.228,
+              "y": 0.5,
+              "label": "Crystal search area",
+              "directions": "Search the nearby ground and huts around Zeth’gol for Drained Blood Crystals. Other reported search points are 22.2,51.3 and 22.0,49.5; these are search areas, not guaranteed spawned objects."
+            },
+            "after": [
+              "walkthrough-source-batch-127666:observe-moon"
+            ]
+          },
+          {
+            "id": "walkthrough-source-batch-127666:blood-moon",
+            "kind": "summon",
+            "text": "Stand near the Blood Moon and use Drained Blood Crystals. Let each channel finish. Continue gathering and draining until the Remnant appears, then press Continue.",
+            "completeWhen": {
+              "any": [
+                {
+                  "kind": "itemCount",
+                  "itemId": 127666,
+                  "quantity": 1
+                },
+                {
+                  "kind": "toyOwned",
+                  "itemId": 127666
+                }
+              ]
+            },
+            "sources": [
+              "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+              "https://www.wowhead.com/item=122460/drained-blood-crystal",
+              "https://worldofwarcraft.blizzard.com/en-us/news/20122590/toy-box-tuesday-reach-for-the-stars"
+            ],
+            "recovery": {
+              "text": "If crystals run out, return to the collection step. Stop moving during each channel. If the Remnant is already up, proceed to fight it. Continuing records no summon, kill, unlock or ownership."
+            },
+            "destination": {
+              "mapID": 534,
+              "x": 0.222,
+              "y": 0.506,
+              "label": "Blood Moon in Zeth’gol"
+            },
+            "after": [
+              "walkthrough-source-batch-127666:collect-crystals"
+            ],
+            "manual": true
+          },
+          {
+            "id": "walkthrough-source-batch-127666:remnant",
+            "kind": "loot",
+            "text": "Defeat Remnant of the Blood Moon and loot it for Vial of Red Goo. The toy is a drop, so receiving it is separate from killing the enemy.",
+            "completeWhen": {
+              "any": [
+                {
+                  "kind": "itemCount",
+                  "itemId": 127666,
+                  "quantity": 1
+                },
+                {
+                  "kind": "toyOwned",
+                  "itemId": 127666
+                }
+              ]
+            },
+            "sources": [
+              "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+              "https://worldofwarcraft.blizzard.com/en-us/news/20122590/toy-box-tuesday-reach-for-the-stars"
+            ],
+            "recovery": {
+              "text": "If no toy drops, keep the goal open and respect the observed daily loot opportunity. If the enemy is absent, inspect the moon again; do not assume another spawn or a fresh daily opportunity."
+            },
+            "destination": {
+              "mapID": 534,
+              "x": 0.222,
+              "y": 0.506,
+              "label": "Blood Moon in Zeth’gol"
+            },
+            "after": [
+              "walkthrough-source-batch-127666:blood-moon"
+            ]
+          },
+          {
+            "id": "walkthrough-source-batch-127666:learn",
+            "kind": "learn",
+            "text": "Use Vial of Red Goo from your bags to learn the toy.",
+            "completeWhen": {
+              "kind": "toyOwned",
+              "itemId": 127666
+            },
+            "sources": [
+              "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+              "https://worldofwarcraft.blizzard.com/en-us/news/20122590/toy-box-tuesday-reach-for-the-stars"
+            ],
+            "recovery": {
+              "text": "Check bags, bank and mail if the vial is missing. Only Toy Box ownership completes the target; summoning, killing and daily tracking do not."
+            },
+            "after": [
+              "walkthrough-source-batch-127666:remnant"
+            ],
+            "requires": {
+              "kind": "itemCount",
+              "itemId": 127666,
+              "quantity": 1
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "yieldCandidates": [],
+  "yieldGaps": [
+    {
+      "routeId": "walkthrough-source-batch-127666",
+      "reason": "Variable crystal consumption and random drop; no exact deterministic yield/cap combination established for a forecast."
+    },
+    {
+      "routeId": "att-90067-8be736b6758f",
+      "reason": "Drop chance, respawn and per-period opportunity count remain unestablished. No guaranteed completion date."
+    }
+  ],
+  "importerAudits": [
+    {
+      "id": "att-prerequisite-cardinality",
+      "severity": "high",
+      "affectedQuestIds": [
+        65279,
+        65306,
+        65302
+      ],
+      "sourceId": "att-zones",
+      "evidenceLineRanges": [
+        [
+          138679,
+          138685
+        ]
+      ],
+      "finding": "Raw ATT stores sqreq=1 on 65279 and 65306 with sourceQuests [65686,72366]. The flattened quest facts omit sqreq, losing the explicit alternative cardinality. Quest 65302 separately has predecessors 65279 and 65306 with no sqreq=1.",
+      "recommendation": "Retain prerequisite cardinality and author OR only for the explicit alternatives. Do not flatten either list blindly into all or any. Require a documented default interpretation for records without sqreq.",
+      "coverageImpact": "Jar of Excess Slime requires the applicable campaign introduction, then both opening Creektooth quests. Its current partial graph cannot establish a complete fresh-character path."
+    },
+    {
+      "id": "jepetto-talador-phase",
+      "severity": "high",
+      "affectedNpcIds": [
+        84212
+      ],
+      "affectedItemIds": [
+        54343,
+        104324,
+        137663,
+        104323,
+        54438,
+        54437,
+        44606,
+        45057
+      ],
+      "sourceId": "att-zones",
+      "evidenceLineRanges": [
+        [
+          85563,
+          85574
+        ]
+      ],
+      "finding": "The Talador Jepetto vendor record explicitly limits availability to lower levels and warns that the cutoff may be lower than 50. Existing catalogue ongoing status is not character-specific proof of stock.",
+      "recommendation": "Treat this source as phase/level uncertain until the exact merchant and offer are observed. Prefer separately authored capital-city vendor routes where eligible. Do not manufacture an exact maxLevel=49 from the approximate description.",
+      "coverageImpact": "Eight route records need eligibility/availability review; the toys can remain obtainable through their other verified vendors."
+    },
+    {
+      "id": "shadowy-disguise-pet-battle",
+      "severity": "high",
+      "affectedRouteIds": [
+        "att-174830-deb934dcf253"
+      ],
+      "affectedItemIds": [
+        174830
+      ],
+      "sourceId": "att-character",
+      "evidenceLineRanges": [
+        [
+          9002,
+          9019
+        ]
+      ],
+      "finding": "Shadowy Disguise belongs to pet-battle achievement 14020 and challenge quest 58458, with predecessor 58457 and faction breadcrumb variants 58455/58456. It is currently labelled Treasure or encounter. The outdoor questgiver pin is not the complete challenge walkthrough.",
+      "recommendation": "Retain pb, achievement ancestry, quest chain and scope. Classify the route as a pet-battle challenge and leave coverage partial until the actual challenge, access, reward receipt and learning path is authored.",
+      "coverageImpact": "No new playable route should be credited for this record."
+    }
+  ],
+  "researchGaps": [
+    {
+      "itemId": 198090,
+      "sourceRouteId": "att-198090-85a477716a6a",
+      "status": "partial-research",
+      "missingFacts": [
+        "Complete applicable upstream campaign path for 65686 or 72366; precise unlock branch semantics must survive compilation."
+      ],
+      "verifiedQuestChain": [
+        {
+          "questId": 65279,
+          "prerequisites": {
+            "any": [
+              65686,
+              72366
+            ]
+          }
+        },
+        {
+          "questId": 65306,
+          "prerequisites": {
+            "any": [
+              65686,
+              72366
+            ]
+          }
+        },
+        {
+          "questId": 65302,
+          "predecessorIds": [
+            65279,
+            65306
+          ],
+          "semantics": "Check documented default; no sqreq=1 in raw source."
+        },
+        {
+          "questId": 65594,
+          "predecessorIds": [
+            65302
+          ]
+        },
+        {
+          "questId": 65595,
+          "predecessorIds": [
+            65594
+          ]
+        }
+      ]
+    },
+    {
+      "itemId": 129055,
+      "sourceRouteId": "att-129055-2d9268e9bff8",
+      "status": "research-gap",
+      "missingFacts": [
+        "Current precise Shoe Shine Kit schedule and region/server-time interpretation conflict. A visible chest can be used, but no verified calendar window or exact forecast is authored."
+      ]
+    },
+    {
+      "itemId": 80822,
+      "sourceRouteId": "att-80822-e8e46db3eba4",
+      "status": "partial-research",
+      "verifiedFacts": {
+        "starterItemId": 80827,
+        "questId": 30675,
+        "dropNpcIds": [
+          60299,
+          60357,
+          60358
+        ],
+        "objectiveItemId": 80817,
+        "turnIn": "Quest-log completion; no return NPC claimed."
+      },
+      "sources": [
+        "https://www.wowhead.com/item=80827/confusing-treasure-map",
+        "https://www.wowhead.com/quest=30675/buried-hozen-treasure",
+        "https://www.wowhead.com/item=80822/the-golden-banana"
+      ],
+      "missingFacts": [
+        "A current Retail-supported objective destination is not established in this batch; Classic 42.5,87.6 is only a research lead. Automatic reward grant claims are historical and do not replace ownership observation."
+      ]
+    },
+    {
+      "itemId": 109739,
+      "sourceRouteId": "att-109739-05b1d8848e4b",
+      "status": "research-gap",
+      "missingFacts": [
+        "The older Blizzard article describes access, but current ATT notes Alliance local phasing. Exact local prerequisite quest IDs remain unresolved. No complete-path promotion."
+      ]
+    }
+  ],
+  "coverage": {
+    "newCompleteCandidates": 2,
+    "newPlayableToys": 2,
+    "newSourceCheckedCandidates": 2,
+    "newPlaytestedRoutes": 0,
+    "partialOrUnresolvedResearchRecords": 4,
+    "importerAudits": 3
+  }
+}

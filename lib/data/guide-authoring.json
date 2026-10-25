@@ -1,0 +1,146 @@
+{
+  "version": 1,
+  "routes": {
+    "rep-tuskarr-feast": {
+      "destination": {
+        "mapID": 2024,
+        "x": 0.135,
+        "y": 0.485,
+        "label": "Pleeqi, Iskaara"
+      },
+      "npcId": 196620,
+      "questIds": [
+        70893
+      ]
+    },
+    "rep-niffen-weekly": {
+      "destination": {
+        "mapID": 2133,
+        "x": 0.562,
+        "y": 0.562,
+        "label": "Mimuup, Loamm"
+      },
+      "npcId": 204254,
+      "questIds": [
+        75665
+      ]
+    },
+    "rep-soridormi-weekly": {
+      "questIds": [
+        77236
+      ],
+      "npcId": 204450,
+      "destination": {
+        "mapID": 2025,
+        "x": 0.511,
+        "y": 0.571,
+        "label": "Soridormi, Tyrhold Reservoir"
+      }
+    },
+    "rep-maruuk-hunt": {
+      "hiddenRewardFlag": true,
+      "questIds": [
+        70906
+      ]
+    },
+    "rep-valdrakken-siege": {
+      "hiddenRewardFlag": true,
+      "questIds": [
+        70866
+      ]
+    }
+  },
+  "guides": [
+    {
+      "id": "argent-tournament",
+      "title": "Argent Tournament progression",
+      "zone": "Icecrown \u00b7 Argent Tournament Grounds",
+      "expansion": "Wrath of the Lich King",
+      "method": "Reputation",
+      "cadence": "daily",
+      "minutes": 20,
+      "essential": true,
+      "rewards": [
+        45011,
+        45013,
+        45014,
+        45015,
+        45016,
+        45017,
+        45018,
+        45019,
+        45020,
+        45021,
+        46843
+      ],
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/0bb8f4be59bcc0262830400914516ef1698d789e/.contrib/.db/standard/06%20-%20Expansion%20Features/03%20-%20Wrath%20of%20the%20Lich%20King/Argent%20Tournament.lua",
+      "system": "argent",
+      "steps": [
+        "Visit your faction's questgivers at the Argent Tournament Grounds. Accept the introduction or next challenge they offer this character.",
+        "Follow the observed quest objectives. Finish the current Aspirant or city Valiant stage before moving to the next challenge.",
+        "Once a city Champion, take its available Champion dailies. Turn them in and save Champion's Seals for missing toy rewards."
+      ]
+    },
+    {
+      "id": "legion-archaeology",
+      "title": "Dariness's archaeology reward",
+      "zone": "Broken Isles Dalaran \u00b7 Dariness the Learned",
+      "expansion": "Legion",
+      "method": "Archaeology",
+      "cadence": "fortnightly",
+      "minutes": 30,
+      "essential": true,
+      "persistent": true,
+      "rewards": [
+        131717,
+        131724
+      ],
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/0bb8f4be59bcc0262830400914516ef1698d789e/.contrib/.db/standard/10%20-%20Professions/Archaeology.lua",
+      "system": "archaeology",
+      "questIds": [
+        41164,
+        41165,
+        41166,
+        40857,
+        41157,
+        41158,
+        41159,
+        41802,
+        41167,
+        41168,
+        41169,
+        41161,
+        41162,
+        41163,
+        41174,
+        41175,
+        41176,
+        41180,
+        41181,
+        41182,
+        41177,
+        41178,
+        41179,
+        41183,
+        41184,
+        41185,
+        41171,
+        41172,
+        41173,
+        41189,
+        41190,
+        41191,
+        41186,
+        41187,
+        41188,
+        41192,
+        41193
+      ],
+      "steps": [
+        "Speak with Dariness the Learned in Broken Isles Dalaran and accept the current archaeology quest.",
+        "Follow the offered chain. Use the quest log's current objectives and dig-site markers; the rotation is established by the quest you actually observe.",
+        "Complete the final turn-in. A reward item becomes owned only after the game reports the toy learned."
+      ]
+    }
+  ]
+}

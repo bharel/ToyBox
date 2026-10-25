@@ -1,0 +1,5286 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-10-24",
+  "retailBuild": "12.1.5.70575",
+  "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+  "license": "Original Toybox instructions based on pinned MIT facts; separately cited HandyNotes consulted only to corroborate factual details.",
+  "routes": [
+    {
+      "id": "source-batch-118716",
+      "itemId": 118716,
+      "title": "Goren Garb",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceFacts": {
+        "objectID": 234054,
+        "questID": 36203,
+        "mapID": 543,
+        "coords": {
+          "543": [
+            [
+              48.9,
+              47.3
+            ]
+          ]
+        }
+      },
+      "sourceChecked": true,
+      "playtested": false,
+      "availability": "ongoing",
+      "requirements": {
+        "level": 35
+      },
+      "playStyle": "solo",
+      "cadence": "once",
+      "outcome": "guaranteed-progress",
+      "steps": [
+        {
+          "id": "egg",
+          "kind": "loot",
+          "text": "Pick up the strange egg from the Goren Egg treasure in Gorgrond.",
+          "destination": {
+            "mapID": 543,
+            "x": 0.489,
+            "y": 0.473,
+            "label": "Goren Egg"
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 118705,
+                "quantity": 1
+              },
+              {
+                "any": [
+                  {
+                    "kind": "itemCount",
+                    "itemId": 118716,
+                    "quantity": 1
+                  },
+                  {
+                    "kind": "toyOwned",
+                    "itemId": 118716
+                  }
+                ]
+              }
+            ]
+          },
+          "objectId": 234054,
+          "itemId": 118705
+        },
+        {
+          "id": "incubation",
+          "kind": "wait",
+          "text": "Keep the egg while it incubates for seven days, then take the hatched Goren Garb.",
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 118716,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 118716
+              }
+            ]
+          },
+          "details": "The source reports a seven-day transformation. Show a ready estimate only when Toybox observed acquisition; an old egg’s starting time is unknown. The toy still requires learning."
+        },
+        {
+          "id": "learn",
+          "kind": "learn",
+          "text": "Use Goren Garb from your bags to add it to the Toy Box.",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 118716
+          }
+        }
+      ],
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 118716
+      },
+      "unresolved": [],
+      "coverageGaps": [],
+      "timingEvidence": {
+        "kind": "elapsed-transformation",
+        "seconds": 604800,
+        "start": "observed acquisition of item118705",
+        "completion": "observed toy item118716"
+      },
+      "sourceRouteId": "att-118716-6e4ade024b3e"
+    },
+    {
+      "id": "source-batch-127394",
+      "itemId": 127394,
+      "title": "Podling Camouflage",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceFacts": {
+        "objectID": 241599,
+        "questID": 38701,
+        "mapID": 534,
+        "coords": {
+          "534": [
+            [
+              64.7,
+              42.8
+            ]
+          ]
+        }
+      },
+      "sourceChecked": true,
+      "playtested": false,
+      "availability": "ongoing",
+      "requirements": {
+        "level": 40
+      },
+      "playStyle": "solo",
+      "cadence": "once",
+      "outcome": "guaranteed-progress",
+      "steps": [
+        {
+          "id": "soil",
+          "kind": "interaction",
+          "text": "At the tree, pick up Loose Soil and throw it into the branches to knock down the strange fruit.",
+          "destination": {
+            "mapID": 534,
+            "x": 0.647,
+            "y": 0.428,
+            "label": "Strange fruit tree"
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 127396,
+                "quantity": 1
+              },
+              {
+                "kind": "itemCount",
+                "itemId": 127395,
+                "quantity": 1
+              },
+              {
+                "any": [
+                  {
+                    "kind": "itemCount",
+                    "itemId": 127394,
+                    "quantity": 1
+                  },
+                  {
+                    "kind": "toyOwned",
+                    "itemId": 127394
+                  }
+                ]
+              }
+            ]
+          },
+          "objectId": 241599
+        },
+        {
+          "id": "ripen",
+          "kind": "wait",
+          "text": "Keep the strange fruit for fourteen days. Once ripe, open it and take the Podling Camouflage toy.",
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 127394,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 127394
+              }
+            ]
+          },
+          "details": "A timer is an estimate based on observed fruit acquisition; it never substitutes for actual item receipt."
+        },
+        {
+          "id": "learn",
+          "kind": "learn",
+          "text": "Use Podling Camouflage from your bags to add it to the Toy Box.",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 127394
+          }
+        }
+      ],
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 127394
+      },
+      "unresolved": [],
+      "coverageGaps": [],
+      "timingEvidence": {
+        "kind": "elapsed-transformation",
+        "seconds": 1209600,
+        "start": "observed acquisition of item127396",
+        "ripeItemId": 127395
+      },
+      "sourceRouteId": "att-127394-0e687bd86dfc"
+    },
+    {
+      "id": "source-batch-127666",
+      "itemId": 127666,
+      "title": "Vial of Red Goo",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceFacts": {
+        "npcID": 91227,
+        "questID": 39159,
+        "mapID": 534,
+        "coords": {
+          "534": [
+            [
+              22.2,
+              50.6
+            ]
+          ]
+        },
+        "isDaily": true
+      },
+      "sourceChecked": false,
+      "playtested": false,
+      "availability": "ongoing",
+      "requirements": {
+        "level": 40
+      },
+      "playStyle": "solo",
+      "cadence": "daily",
+      "outcome": "random-drop",
+      "steps": [
+        {
+          "id": "blood-moon",
+          "kind": "summon",
+          "text": "Use Drained Blood Crystals on the Blood Moon until its health reaches zero, revealing the Remnant of the Blood Moon.",
+          "destination": {
+            "mapID": 534,
+            "x": 0.222,
+            "y": 0.506,
+            "label": "Blood Moon"
+          },
+          "npcId": 91227
+        },
+        {
+          "id": "remnant",
+          "kind": "loot",
+          "text": "Defeat the Remnant of the Blood Moon and loot for Vial of Red Goo.",
+          "destination": {
+            "mapID": 534,
+            "x": 0.222,
+            "y": 0.506
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 127666,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 127666
+              }
+            ]
+          },
+          "npcId": 91227
+        },
+        {
+          "id": "learn",
+          "kind": "learn",
+          "text": "Use Vial of Red Goo from your bags to add it to the Toy Box.",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 127666
+          }
+        }
+      ],
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 127666
+      },
+      "unresolved": [],
+      "coverageGaps": [
+        "Required Drained Blood Crystal acquisition and item identifier are not established by this source."
+      ],
+      "trackingQuestId": 39159,
+      "sourceRouteId": "att-127666-58684616b705"
+    },
+    {
+      "id": "source-batch-127766",
+      "itemId": 127766,
+      "title": "The Perfect Blossom",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceFacts": {
+        "objectID": 241522,
+        "questID": 38639,
+        "mapID": 534,
+        "coords": {
+          "534": [
+            [
+              40.8,
+              75.6
+            ]
+          ]
+        }
+      },
+      "sourceChecked": true,
+      "playtested": false,
+      "availability": "ongoing",
+      "requirements": {
+        "level": 40
+      },
+      "playStyle": "solo",
+      "cadence": "once",
+      "outcome": "guaranteed-progress",
+      "steps": [
+        {
+          "id": "pollen",
+          "kind": "prepare",
+          "text": "Eat the nearby Mysterious Fruit until you gain Pollen Protection, then collect The Perfect Blossom.",
+          "destination": {
+            "mapID": 534,
+            "x": 0.408,
+            "y": 0.756,
+            "label": "The Perfect Blossom"
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 127766,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 127766
+              }
+            ]
+          },
+          "objectId": 241522,
+          "details": "A chest tracking flag is not an accepted quest. Pollen Protection must be observed in game; its aura ID is not specified by the pinned source."
+        },
+        {
+          "id": "learn",
+          "kind": "learn",
+          "text": "Use The Perfect Blossom from your bags to add it to the Toy Box.",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 127766
+          }
+        }
+      ],
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 127766
+      },
+      "unresolved": [],
+      "coverageGaps": [],
+      "sourceRouteId": "att-127766-d3c0de9c1814"
+    },
+    {
+      "id": "source-batch-128328",
+      "itemId": 128328,
+      "title": "Skoller's Bag of Squirrel Treats",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceFacts": {
+        "npcID": 95650,
+        "mapID": 534,
+        "coords": {
+          "534": [
+            [
+              55.2,
+              75
+            ]
+          ]
+        }
+      },
+      "sourceChecked": true,
+      "playtested": false,
+      "availability": "ongoing",
+      "requirements": {
+        "level": 40
+      },
+      "playStyle": "solo",
+      "cadence": "once",
+      "outcome": "guaranteed-progress",
+      "steps": [
+        {
+          "id": "skoller",
+          "kind": "interaction",
+          "text": "Speak to Skoller and take his Bag of Squirrel Treats.",
+          "destination": {
+            "mapID": 534,
+            "x": 0.552,
+            "y": 0.75,
+            "label": "Skoller"
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 128328,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 128328
+              }
+            ]
+          },
+          "npcId": 95650
+        },
+        {
+          "id": "learn",
+          "kind": "learn",
+          "text": "Use Skoller's Bag of Squirrel Treats from your bags to add it to the Toy Box.",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 128328
+          }
+        }
+      ],
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 128328
+      },
+      "unresolved": [],
+      "coverageGaps": [],
+      "sourceRouteId": "att-128328-d2c46221c175"
+    },
+    {
+      "id": "source-batch-143534",
+      "itemId": 143534,
+      "title": "Wand of Simulated Life",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceFacts": {
+        "objectID": 266851,
+        "mapID": 627,
+        "coords": {
+          "627": [
+            [
+              47.8,
+              41.5
+            ]
+          ]
+        }
+      },
+      "sourceChecked": true,
+      "playtested": false,
+      "availability": "ongoing",
+      "requirements": {
+        "level": 10
+      },
+      "playStyle": "solo",
+      "cadence": "once",
+      "outcome": "guaranteed-progress",
+      "steps": [
+        {
+          "id": "upstairs",
+          "kind": "travel",
+          "text": "Enter the Legerdemain Lounge and take the stairs to the upper floor.",
+          "destination": {
+            "mapID": 627,
+            "x": 0.478,
+            "y": 0.415,
+            "label": "Legerdemain Lounge"
+          }
+        },
+        {
+          "id": "wand",
+          "kind": "loot",
+          "text": "Collect the Wand of Simulated Life from the upstairs table.",
+          "destination": {
+            "mapID": 627,
+            "x": 0.478,
+            "y": 0.415
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 143534,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 143534
+              }
+            ]
+          },
+          "objectId": 266851
+        },
+        {
+          "id": "learn",
+          "kind": "learn",
+          "text": "Use Wand of Simulated Life from your bags to add it to the Toy Box.",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 143534
+          }
+        }
+      ],
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 143534
+      },
+      "unresolved": [],
+      "coverageGaps": [],
+      "sourceRouteId": "att-143534-a7333c5d7192"
+    },
+    {
+      "id": "source-batch-153194",
+      "itemId": 153194,
+      "title": "Legion Communication Orb",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceFacts": {
+        "npcID": 127703,
+        "questID": 48968,
+        "mapID": 885,
+        "coords": {
+          "885": [
+            [
+              58,
+              12
+            ]
+          ]
+        },
+        "isDaily": true
+      },
+      "sourceChecked": false,
+      "playtested": false,
+      "availability": "ongoing",
+      "requirements": {
+        "level": 45
+      },
+      "playStyle": "solo",
+      "cadence": "daily",
+      "outcome": "random-drop",
+      "steps": [
+        {
+          "id": "runes",
+          "kind": "summon",
+          "text": "Run through all three runes around the summoning site to call Doomsayer Suprax.",
+          "destination": {
+            "mapID": 885,
+            "x": 0.58,
+            "y": 0.12,
+            "label": "Doomsayer Suprax"
+          },
+          "npcId": 127703
+        },
+        {
+          "id": "suprax",
+          "kind": "loot",
+          "text": "Defeat Doomsayer Suprax and loot for the communication orb. If his fatal debuff is about to expire, step into a Doom Star to clear it.",
+          "destination": {
+            "mapID": 885,
+            "x": 0.58,
+            "y": 0.12
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 153194,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 153194
+              }
+            ]
+          },
+          "npcId": 127703,
+          "details": "The source says the debuff bypasses immunities. No duration or spawn countdown is assumed."
+        },
+        {
+          "id": "learn",
+          "kind": "learn",
+          "text": "Use Legion Communication Orb from your bags to add it to the Toy Box.",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 153194
+          }
+        }
+      ],
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 153194
+      },
+      "unresolved": [],
+      "coverageGaps": [
+        "The Argus introduction and Antoran Wastes access chain beginning with The Hand of Fate (quest47221) is not authored here."
+      ],
+      "trackingQuestId": 48968,
+      "sourceRouteId": "att-153194-106209118794"
+    },
+    {
+      "id": "source-batch-153293",
+      "itemId": 153293,
+      "title": "Sightless Eye",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceFacts": {
+        "npcID": 127706,
+        "questID": 48971,
+        "cost": [
+          [
+            "i",
+            153226,
+            1
+          ]
+        ],
+        "mapID": 885,
+        "coords": {
+          "885": [
+            [
+              65.4,
+              81.4
+            ]
+          ]
+        },
+        "isDaily": true
+      },
+      "sourceChecked": false,
+      "playtested": false,
+      "availability": "ongoing",
+      "requirements": {
+        "level": 45
+      },
+      "playStyle": "solo",
+      "cadence": "daily",
+      "outcome": "random-drop",
+      "steps": [
+        {
+          "id": "resonator",
+          "kind": "prepare",
+          "text": "For a personal route, obtain an Observer’s Locus Resonator from Orix the All-Seer for 500 Intact Demon Eyes. Another player’s portal is an alternative.",
+          "destination": {
+            "mapID": 885,
+            "x": 0.595,
+            "y": 0.449,
+            "label": "Orix the All-Seer"
+          },
+          "npcId": 128134,
+          "itemId": 153226,
+          "details": "A shared portal does not require purchasing your own resonator. Toybox never buys or uses transport items automatically."
+        },
+        {
+          "id": "locus",
+          "kind": "travel",
+          "text": "Use the resonator or an available shared portal to reach the Observer’s Locus platform.",
+          "destination": {
+            "mapID": 885,
+            "x": 0.654,
+            "y": 0.814,
+            "label": "Observer’s Locus"
+          }
+        },
+        {
+          "id": "observation",
+          "kind": "loot",
+          "text": "Defeat and loot Rezira the Seer for a chance at the Sightless Eye.",
+          "destination": {
+            "mapID": 885,
+            "x": 0.654,
+            "y": 0.814
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 153293,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 153293
+              }
+            ]
+          },
+          "npcId": 127706
+        },
+        {
+          "id": "learn",
+          "kind": "learn",
+          "text": "Use Sightless Eye from your bags to add it to the Toy Box.",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 153293
+          }
+        }
+      ],
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 153293
+      },
+      "unresolved": [],
+      "coverageGaps": [
+        "The Argus introduction and Antoran Wastes access chain beginning with The Hand of Fate (quest47221) is not authored here.",
+        "Intact Demon Eye farming is supplied by the separate All-Seer’s Eye route; transport use remains an observed/manual step."
+      ],
+      "trackingQuestId": 48971,
+      "sourceRouteId": "att-153293-1b124541d4fd"
+    },
+    {
+      "id": "source-batch-153253",
+      "itemId": 153253,
+      "title": "S.F.E. Interceptor",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceFacts": {
+        "npcID": 127700,
+        "questID": 48967,
+        "mapID": 885,
+        "coords": {
+          "885": [
+            [
+              77.5,
+              74.7
+            ]
+          ]
+        },
+        "crs": [
+          127943
+        ],
+        "isDaily": true
+      },
+      "sourceChecked": false,
+      "playtested": false,
+      "availability": "ongoing",
+      "requirements": {
+        "level": 45
+      },
+      "playStyle": "solo",
+      "cadence": "daily",
+      "outcome": "random-drop",
+      "steps": [
+        {
+          "id": "generator",
+          "kind": "loot",
+          "text": "Defeat the demons on the Terminus docks and ship until you obtain a Smashed Portal Generator.",
+          "destination": {
+            "mapID": 885,
+            "x": 0.775,
+            "y": 0.747,
+            "label": "Terminus"
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 152890,
+                "quantity": 1
+              },
+              {
+                "kind": "itemCount",
+                "itemId": 152965,
+                "quantity": 1
+              },
+              {
+                "kind": "questTurnedIn",
+                "questId": 49007,
+                "cadence": "once",
+                "scope": "character"
+              },
+              {
+                "any": [
+                  {
+                    "kind": "itemCount",
+                    "itemId": 153253,
+                    "quantity": 1
+                  },
+                  {
+                    "kind": "toyOwned",
+                    "itemId": 153253
+                  }
+                ]
+              }
+            ]
+          },
+          "itemId": 152890
+        },
+        {
+          "id": "parts",
+          "kind": "loot",
+          "text": "With the broken generator collected, continue defeating the Terminus demons for its other three components.",
+          "destination": {
+            "mapID": 885,
+            "x": 0.775,
+            "y": 0.747
+          },
+          "completeOn": {
+            "any": [
+              {
+                "all": [
+                  {
+                    "kind": "itemCount",
+                    "itemId": 152891,
+                    "quantity": 1
+                  },
+                  {
+                    "kind": "itemCount",
+                    "itemId": 152940,
+                    "quantity": 1
+                  },
+                  {
+                    "kind": "itemCount",
+                    "itemId": 152941,
+                    "quantity": 1
+                  }
+                ]
+              },
+              {
+                "kind": "itemCount",
+                "itemId": 152965,
+                "quantity": 1
+              },
+              {
+                "kind": "questTurnedIn",
+                "questId": 49007,
+                "cadence": "once",
+                "scope": "character"
+              },
+              {
+                "any": [
+                  {
+                    "kind": "itemCount",
+                    "itemId": 153253,
+                    "quantity": 1
+                  },
+                  {
+                    "kind": "toyOwned",
+                    "itemId": 153253
+                  }
+                ]
+              }
+            ]
+          },
+          "itemIds": [
+            152891,
+            152940,
+            152941
+          ],
+          "details": "The other parts only begin dropping after the Smashed Portal Generator has been collected."
+        },
+        {
+          "id": "assemble",
+          "kind": "combine",
+          "text": "Combine all four components into Vishax’s Portal Generator.",
+          "destination": {
+            "mapID": 885,
+            "x": 0.775,
+            "y": 0.747
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 152965,
+                "quantity": 1
+              },
+              {
+                "kind": "questTurnedIn",
+                "questId": 49007,
+                "cadence": "once",
+                "scope": "character"
+              },
+              {
+                "any": [
+                  {
+                    "kind": "itemCount",
+                    "itemId": 153253,
+                    "quantity": 1
+                  },
+                  {
+                    "kind": "toyOwned",
+                    "itemId": 153253
+                  }
+                ]
+              }
+            ]
+          },
+          "itemId": 152965
+        },
+        {
+          "id": "activate",
+          "kind": "quest",
+          "text": "Use the assembled generator to begin the portal quest, power up the portal and follow it to Commander Vishax.",
+          "destination": {
+            "mapID": 885,
+            "x": 0.775,
+            "y": 0.747
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "questTurnedIn",
+                "questId": 49007,
+                "cadence": "once",
+                "scope": "character"
+              },
+              {
+                "any": [
+                  {
+                    "kind": "itemCount",
+                    "itemId": 153253,
+                    "quantity": 1
+                  },
+                  {
+                    "kind": "toyOwned",
+                    "itemId": 153253
+                  }
+                ]
+              }
+            ]
+          },
+          "questId": 49007,
+          "questTitle": "Commander on Deck!"
+        },
+        {
+          "id": "vishax",
+          "kind": "loot",
+          "text": "Defeat Commander Vishax and loot for the S.F.E. Interceptor.",
+          "destination": {
+            "mapID": 885,
+            "x": 0.775,
+            "y": 0.747
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 153253,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 153253
+              }
+            ]
+          },
+          "npcId": 127700
+        },
+        {
+          "id": "learn",
+          "kind": "learn",
+          "text": "Use S.F.E. Interceptor from your bags to add it to the Toy Box.",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 153253
+          }
+        }
+      ],
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 153253
+      },
+      "unresolved": [],
+      "coverageGaps": [
+        "The Argus introduction and Antoran Wastes access chain beginning with The Hand of Fate (quest47221) is not authored here."
+      ],
+      "trackingQuestId": 48967,
+      "sourceRouteId": "att-153253-cb226e74e61d"
+    },
+    {
+      "id": "source-batch-153204",
+      "itemId": 153204,
+      "title": "All-Seer's Eye",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceFacts": {
+        "npcID": 128134,
+        "cost": [
+          [
+            "i",
+            153021,
+            1000
+          ]
+        ],
+        "mapID": 885,
+        "coords": {
+          "885": [
+            [
+              59.5,
+              44.9
+            ]
+          ]
+        }
+      },
+      "sourceChecked": false,
+      "playtested": false,
+      "availability": "ongoing",
+      "requirements": {
+        "level": 45
+      },
+      "playStyle": "solo",
+      "cadence": "once",
+      "outcome": "guaranteed-progress",
+      "steps": [
+        {
+          "id": "focus",
+          "kind": "interaction",
+          "text": "Start at full health and activate an All-Seer Focus to become an Agent of the All-Seer. The focus removes ninety percent of your health, and nearby guards become unfriendly.",
+          "destination": {
+            "mapID": 885,
+            "x": 0.5801,
+            "y": 0.6696,
+            "label": "All-Seer Focus"
+          },
+          "waypoints": [
+            {
+              "mapID": 885,
+              "x": 0.5801,
+              "y": 0.6696
+            },
+            {
+              "mapID": 885,
+              "x": 0.6441,
+              "y": 0.2103
+            },
+            {
+              "mapID": 885,
+              "x": 0.6734,
+              "y": 0.4811
+            }
+          ],
+          "details": "The focus is a gameplay cost. Activate it yourself only when ready; Toybox does not click it."
+        },
+        {
+          "id": "eyes",
+          "kind": "loot",
+          "text": "While the Agent of the All-Seer effect is active, defeat demons on Argus and collect 1,000 Intact Demon Eyes.",
+          "destination": {
+            "mapID": 885,
+            "x": 0.595,
+            "y": 0.449
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 153021,
+                "quantity": 1000
+              },
+              {
+                "any": [
+                  {
+                    "kind": "itemCount",
+                    "itemId": 153204,
+                    "quantity": 1
+                  },
+                  {
+                    "kind": "toyOwned",
+                    "itemId": 153204
+                  }
+                ]
+              }
+            ]
+          },
+          "itemId": 153021,
+          "details": "If the effect expires, return to a focus. Eyes are observed inventory, not estimated from kills."
+        },
+        {
+          "id": "purchase",
+          "kind": "purchase",
+          "text": "Return to Orix the All-Seer and exchange 1,000 eyes for the All-Seer’s Eye toy.",
+          "destination": {
+            "mapID": 885,
+            "x": 0.595,
+            "y": 0.449,
+            "label": "Orix the All-Seer"
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 153204,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 153204
+              }
+            ]
+          },
+          "npcId": 128134
+        },
+        {
+          "id": "learn",
+          "kind": "learn",
+          "text": "Use All-Seer's Eye from your bags to add it to the Toy Box.",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 153204
+          }
+        }
+      ],
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 153204
+      },
+      "unresolved": [],
+      "coverageGaps": [
+        "The Argus introduction and Antoran Wastes access chain beginning with The Hand of Fate (quest47221) is not authored here."
+      ],
+      "costs": [
+        [
+          "i",
+          153021,
+          1000
+        ]
+      ],
+      "sourceRouteId": "att-153204-619b65cd6046"
+    },
+    {
+      "id": "source-batch-163742",
+      "itemId": 163742,
+      "title": "Heartsbane Grimoire",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceFacts": {
+        "objectID": 297892,
+        "questID": 53386,
+        "mapID": 896,
+        "coords": {
+          "896": [
+            [
+              44.2,
+              27.8
+            ]
+          ]
+        }
+      },
+      "sourceChecked": true,
+      "playtested": false,
+      "availability": "ongoing",
+      "requirements": {
+        "level": 20
+      },
+      "playStyle": "solo",
+      "cadence": "once",
+      "outcome": "guaranteed-progress",
+      "steps": [
+        {
+          "id": "grimoire",
+          "kind": "puzzle",
+          "text": "At the runebound chest, choose the directions in this order: Left, Right, Down, Up. Open the chest and take the Heartsbane Grimoire.",
+          "destination": {
+            "mapID": 896,
+            "x": 0.442,
+            "y": 0.278,
+            "label": "Runebound chest"
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 163742,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 163742
+              }
+            ]
+          },
+          "objectId": 297892
+        },
+        {
+          "id": "learn",
+          "kind": "learn",
+          "text": "Use Heartsbane Grimoire from your bags to add it to the Toy Box.",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 163742
+          }
+        }
+      ],
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 163742
+      },
+      "unresolved": [],
+      "coverageGaps": [],
+      "sourceRouteId": "att-163742-8e41a16e9fbd"
+    },
+    {
+      "id": "source-batch-163740",
+      "itemId": 163740,
+      "title": "Drust Ritual Knife",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceFacts": {
+        "objectID": 297893,
+        "questID": 53387,
+        "mapID": 896,
+        "coords": {
+          "896": [
+            [
+              33.68,
+              71.74
+            ]
+          ]
+        }
+      },
+      "sourceChecked": true,
+      "playtested": false,
+      "availability": "ongoing",
+      "requirements": {
+        "level": 20
+      },
+      "playStyle": "solo",
+      "cadence": "once",
+      "outcome": "guaranteed-progress",
+      "steps": [
+        {
+          "id": "knife",
+          "kind": "puzzle",
+          "text": "At the runebound chest, choose the directions in this order: Right, Up, Left, Down. Open the chest and take the Drust Ritual Knife.",
+          "destination": {
+            "mapID": 896,
+            "x": 0.3368,
+            "y": 0.7174,
+            "label": "Runebound chest"
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 163740,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 163740
+              }
+            ]
+          },
+          "objectId": 297893
+        },
+        {
+          "id": "learn",
+          "kind": "learn",
+          "text": "Use Drust Ritual Knife from your bags to add it to the Toy Box.",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 163740
+          }
+        }
+      ],
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 163740
+      },
+      "unresolved": [],
+      "coverageGaps": [],
+      "sourceRouteId": "att-163740-d6d388176ecc"
+    },
+    {
+      "id": "source-batch-170187",
+      "itemId": 170187,
+      "title": "Shadescale",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceFacts": {
+        "npcID": 152552,
+        "questID": 56295,
+        "mapID": 1355,
+        "coords": {
+          "1355": [
+            [
+              63,
+              12
+            ]
+          ]
+        },
+        "isDaily": true
+      },
+      "sourceChecked": true,
+      "playtested": false,
+      "availability": "ongoing",
+      "requirements": {
+        "level": 50
+      },
+      "playStyle": "solo",
+      "cadence": "daily",
+      "outcome": "random-drop",
+      "steps": [
+        {
+          "id": "cavern",
+          "kind": "travel",
+          "text": "Enter the cave and continue to the water at its back. Look overhead for the rare’s flight path.",
+          "destination": {
+            "mapID": 1355,
+            "x": 0.63,
+            "y": 0.12,
+            "label": "Shassera’s cave"
+          }
+        },
+        {
+          "id": "shassera",
+          "kind": "loot",
+          "text": "Tag Shassera as she flies above the water, defeat her and loot for Shadescale.",
+          "destination": {
+            "mapID": 1355,
+            "x": 0.63,
+            "y": 0.12
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 170187,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 170187
+              }
+            ]
+          },
+          "npcId": 152552
+        },
+        {
+          "id": "learn",
+          "kind": "learn",
+          "text": "Use Shadescale from your bags to add it to the Toy Box.",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 170187
+          }
+        }
+      ],
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 170187
+      },
+      "unresolved": [],
+      "coverageGaps": [],
+      "trackingQuestId": 56295,
+      "sourceRouteId": "att-170187-b5a2658ba094"
+    },
+    {
+      "id": "source-batch-170196",
+      "itemId": 170196,
+      "title": "Shirakess Warning Sign",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceFacts": {
+        "npcID": 154148,
+        "questID": 56106,
+        "mapID": 1355,
+        "coords": {
+          "1355": [
+            [
+              65.9,
+              22.9
+            ]
+          ]
+        },
+        "isDaily": true
+      },
+      "sourceChecked": true,
+      "playtested": false,
+      "availability": "ongoing",
+      "requirements": {
+        "level": 50
+      },
+      "playStyle": "solo",
+      "cadence": "daily",
+      "outcome": "random-drop",
+      "steps": [
+        {
+          "id": "specimens",
+          "kind": "summon",
+          "text": "Pop five interactable Undisturbed Specimens around the summoning area. Other players’ contributions count toward the same spawn.",
+          "destination": {
+            "mapID": 1355,
+            "x": 0.659,
+            "y": 0.229,
+            "label": "Shirakess specimens"
+          },
+          "npcId": 154148
+        },
+        {
+          "id": "tidelord",
+          "kind": "loot",
+          "text": "Defeat Tidemistress Leth’sindra when the specimens summon her, then loot for the warning sign.",
+          "destination": {
+            "mapID": 1355,
+            "x": 0.659,
+            "y": 0.229
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 170196,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 170196
+              }
+            ]
+          },
+          "npcId": 154148
+        },
+        {
+          "id": "learn",
+          "kind": "learn",
+          "text": "Use Shirakess Warning Sign from your bags to add it to the Toy Box.",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 170196
+          }
+        }
+      ],
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 170196
+      },
+      "unresolved": [],
+      "coverageGaps": [],
+      "trackingQuestId": 56106,
+      "sourceRouteId": "att-170196-500beeea1c9d"
+    },
+    {
+      "id": "source-batch-184490",
+      "itemId": 184490,
+      "title": "Fae Pipes",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceFacts": {
+        "objectID": 354662,
+        "questID": 61175,
+        "mapID": 1565,
+        "coords": {
+          "1565": [
+            [
+              44.8,
+              75.8
+            ],
+            [
+              46.5,
+              70.1
+            ]
+          ]
+        },
+        "crs": [
+          171475
+        ]
+      },
+      "sourceChecked": true,
+      "playtested": false,
+      "availability": "ongoing",
+      "requirements": {
+        "level": 48
+      },
+      "playStyle": "solo",
+      "cadence": "once",
+      "outcome": "guaranteed-progress",
+      "steps": [
+        {
+          "id": "lamp",
+          "kind": "interaction",
+          "text": "Pick up the Faerie Lamp in the northeast of Eventide Grove.",
+          "destination": {
+            "mapID": 1565,
+            "x": 0.4649,
+            "y": 0.7011,
+            "label": "Faerie Lamp"
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "auraStacks",
+                "spellId": 333923,
+                "quantity": 1
+              },
+              {
+                "any": [
+                  {
+                    "kind": "itemCount",
+                    "itemId": 184490,
+                    "quantity": 1
+                  },
+                  {
+                    "kind": "toyOwned",
+                    "itemId": 184490
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "cache",
+          "kind": "loot",
+          "text": "While the lamp’s effect is active, follow the path back southwest and open the Elusive Faerie Cache.",
+          "destination": {
+            "mapID": 1565,
+            "x": 0.448,
+            "y": 0.758,
+            "label": "Elusive Faerie Cache"
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 184490,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 184490
+              }
+            ]
+          },
+          "objectId": 354662
+        },
+        {
+          "id": "learn",
+          "kind": "learn",
+          "text": "Use Fae Pipes from your bags to add it to the Toy Box.",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 184490
+          }
+        }
+      ],
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 184490
+      },
+      "unresolved": [],
+      "coverageGaps": [],
+      "sources": [
+        "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+        "https://github.com/zarillion/handynotes-plugins/blob/2b1dbb16f6720cc29de759fa324dc6e6bdc49517/plugins/09_Shadowlands/localization/enUS.lua"
+      ],
+      "sourceRouteId": "att-184490-04bd38319f3d"
+    },
+    {
+      "id": "source-batch-184489",
+      "itemId": 184489,
+      "title": "Fae Harp",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceFacts": {
+        "objectID": 355355,
+        "questID": 61165,
+        "mapID": 1565,
+        "coords": {
+          "1565": [
+            [
+              67.8,
+              34.6
+            ]
+          ]
+        }
+      },
+      "sourceChecked": true,
+      "playtested": false,
+      "availability": "ongoing",
+      "requirements": {
+        "level": 48
+      },
+      "playStyle": "group",
+      "cadence": "once",
+      "outcome": "guaranteed-progress",
+      "steps": [
+        {
+          "id": "duet",
+          "kind": "interaction",
+          "text": "Bring a second player to the Harmonic Chest. Have one person play the nearby harp while the other plays the drums to open it.",
+          "destination": {
+            "mapID": 1565,
+            "x": 0.678,
+            "y": 0.346,
+            "label": "Harmonic Chest"
+          },
+          "objectId": 355355
+        },
+        {
+          "id": "harp",
+          "kind": "loot",
+          "text": "Open the unlocked Harmonic Chest and take the Fae Harp.",
+          "destination": {
+            "mapID": 1565,
+            "x": 0.678,
+            "y": 0.346
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 184489,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 184489
+              }
+            ]
+          },
+          "objectId": 355355
+        },
+        {
+          "id": "learn",
+          "kind": "learn",
+          "text": "Use Fae Harp from your bags to add it to the Toy Box.",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 184489
+          }
+        }
+      ],
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 184489
+      },
+      "unresolved": [],
+      "coverageGaps": [],
+      "sourceRouteId": "att-184489-5db98d321845"
+    },
+    {
+      "id": "source-batch-182729",
+      "itemId": 182729,
+      "title": "Hearty Dragon Plume",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceFacts": {
+        "objectID": 354647,
+        "questID": 61067,
+        "mapID": 1565,
+        "coords": {
+          "1565": [
+            [
+              48.2,
+              39.2
+            ]
+          ]
+        }
+      },
+      "sourceChecked": true,
+      "playtested": false,
+      "availability": "ongoing",
+      "requirements": {
+        "level": 10
+      },
+      "playStyle": "solo",
+      "cadence": "once",
+      "outcome": "guaranteed-progress",
+      "steps": [
+        {
+          "id": "path",
+          "kind": "travel",
+          "text": "Start up the path at the marked point, then keep left toward the bridge.",
+          "destination": {
+            "mapID": 1565,
+            "x": 0.481,
+            "y": 0.39,
+            "label": "Path to dragon plume"
+          }
+        },
+        {
+          "id": "bridge",
+          "kind": "travel",
+          "text": "Cross the bridge to the ledge above the treasure. Use the nearby feather for slow fall if needed.",
+          "destination": {
+            "mapID": 1565,
+            "x": 0.461,
+            "y": 0.391,
+            "label": "Bridge"
+          },
+          "waypoints": [
+            {
+              "mapID": 1565,
+              "x": 0.461,
+              "y": 0.391
+            },
+            {
+              "mapID": 1565,
+              "x": 0.489,
+              "y": 0.41,
+              "label": "Slow-fall feather"
+            }
+          ]
+        },
+        {
+          "id": "plume",
+          "kind": "loot",
+          "text": "Drop carefully onto the treasure’s branch and collect the Hearty Dragon Plume.",
+          "destination": {
+            "mapID": 1565,
+            "x": 0.482,
+            "y": 0.392,
+            "label": "Hearty Dragon Plume"
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 182729,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 182729
+              }
+            ]
+          },
+          "objectId": 354647
+        },
+        {
+          "id": "learn",
+          "kind": "learn",
+          "text": "Use Hearty Dragon Plume from your bags to add it to the Toy Box.",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 182729
+          }
+        }
+      ],
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 182729
+      },
+      "unresolved": [],
+      "coverageGaps": [],
+      "sourceRouteId": "att-182729-b7cc057075da"
+    },
+    {
+      "id": "source-batch-184404",
+      "itemId": 184404,
+      "title": "Ever-Abundant Hearth",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceFacts": {
+        "npcID": 171009,
+        "questID": 60998,
+        "mapID": 1533,
+        "coords": {
+          "1533": [
+            [
+              50.8,
+              19.6
+            ]
+          ]
+        },
+        "isDaily": true
+      },
+      "sourceChecked": true,
+      "playtested": false,
+      "availability": "ongoing",
+      "requirements": {
+        "level": 48
+      },
+      "playStyle": "solo",
+      "cadence": "daily",
+      "outcome": "random-drop",
+      "steps": [
+        {
+          "id": "threat",
+          "kind": "summon",
+          "text": "Defeat enemies around the Eternal Forge. Listen to Forge-Keeper Mnemis’s announcements and continue until the threat level reaches Major, dispatching Aegeon.",
+          "destination": {
+            "mapID": 1533,
+            "x": 0.508,
+            "y": 0.196,
+            "label": "Eternal Forge"
+          },
+          "npcId": 171009
+        },
+        {
+          "id": "aegeon",
+          "kind": "loot",
+          "text": "Defeat Enforcer Aegeon and loot for the Ever-Abundant Hearth.",
+          "destination": {
+            "mapID": 1533,
+            "x": 0.508,
+            "y": 0.196
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 184404,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 184404
+              }
+            ]
+          },
+          "npcId": 171009
+        },
+        {
+          "id": "learn",
+          "kind": "learn",
+          "text": "Use Ever-Abundant Hearth from your bags to add it to the Toy Box.",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 184404
+          }
+        }
+      ],
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 184404
+      },
+      "unresolved": [],
+      "coverageGaps": [],
+      "trackingQuestId": 60998,
+      "sourceRouteId": "att-184404-224e925715ed"
+    },
+    {
+      "id": "source-batch-184413",
+      "itemId": 184413,
+      "title": "Mnemonic Attunement Pane",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceFacts": {
+        "npcID": 171008,
+        "questID": 60997,
+        "mapID": 1533,
+        "coords": {
+          "1533": [
+            [
+              43.4,
+              25.2
+            ]
+          ]
+        },
+        "crs": [
+          171018
+        ],
+        "isDaily": true
+      },
+      "sourceChecked": true,
+      "playtested": false,
+      "availability": "ongoing",
+      "requirements": {
+        "level": 48
+      },
+      "playStyle": "solo",
+      "cadence": "daily",
+      "outcome": "random-drop",
+      "steps": [
+        {
+          "id": "fragments",
+          "kind": "summon",
+          "text": "Get an Unstable Memory Fragment’s attention and pull it through other fragments until it reaches ten stacks of Instability and transforms.",
+          "destination": {
+            "mapID": 1533,
+            "x": 0.434,
+            "y": 0.252,
+            "label": "Unstable Memory Fragments"
+          },
+          "npcId": 171018,
+          "details": "If the fragments are absent, this rare cannot currently be summoned. Do not invent a respawn timer."
+        },
+        {
+          "id": "memory",
+          "kind": "loot",
+          "text": "Defeat the transformed Unstable Memory and loot for the Mnemonic Attunement Pane.",
+          "destination": {
+            "mapID": 1533,
+            "x": 0.434,
+            "y": 0.252
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 184413,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 184413
+              }
+            ]
+          },
+          "npcId": 171008
+        },
+        {
+          "id": "learn",
+          "kind": "learn",
+          "text": "Use Mnemonic Attunement Pane from your bags to add it to the Toy Box.",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 184413
+          }
+        }
+      ],
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 184413
+      },
+      "unresolved": [],
+      "coverageGaps": [],
+      "trackingQuestId": 60997,
+      "sourceRouteId": "att-184413-cd552202e2bf"
+    },
+    {
+      "id": "source-batch-183988",
+      "itemId": 183988,
+      "title": "Bondable Val'kyr Diadem",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceFacts": {
+        "objectID": 353941,
+        "questID": 60892,
+        "mapID": 1533,
+        "coords": {
+          "1533": [
+            [
+              70.4,
+              36.4
+            ]
+          ]
+        }
+      },
+      "sourceChecked": true,
+      "playtested": false,
+      "availability": "ongoing",
+      "requirements": {
+        "level": 48
+      },
+      "playStyle": "solo",
+      "cadence": "once",
+      "outcome": "guaranteed-progress",
+      "steps": [
+        {
+          "id": "kneel",
+          "kind": "interaction",
+          "text": "Stand in front of the Gift of Chyrus, kneel with /kneel, then open the treasure and take the diadem.",
+          "destination": {
+            "mapID": 1533,
+            "x": 0.704,
+            "y": 0.364,
+            "label": "Gift of Chyrus"
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 183988,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 183988
+              }
+            ]
+          },
+          "objectId": 353941,
+          "playerAction": "/kneel"
+        },
+        {
+          "id": "learn",
+          "kind": "learn",
+          "text": "Use Bondable Val'kyr Diadem from your bags to add it to the Toy Box.",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 183988
+          }
+        }
+      ],
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 183988
+      },
+      "unresolved": [],
+      "coverageGaps": [],
+      "sourceRouteId": "att-183988-9a02077829f7"
+    },
+    {
+      "id": "source-batch-173984",
+      "itemId": 173984,
+      "title": "Scroll of Aeons",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceFacts": {
+        "objectID": 339601,
+        "questID": 58298,
+        "cost": [
+          [
+            "i",
+            173973,
+            2
+          ]
+        ],
+        "mapID": 1533,
+        "coords": {
+          "1533": [
+            [
+              53.5,
+              80.4
+            ],
+            [
+              54.4,
+              83.8
+            ],
+            [
+              56.1,
+              83
+            ]
+          ]
+        }
+      },
+      "sourceChecked": true,
+      "playtested": false,
+      "availability": "ongoing",
+      "requirements": {
+        "level": 10
+      },
+      "playStyle": "solo",
+      "cadence": "once",
+      "outcome": "guaranteed-progress",
+      "steps": [
+        {
+          "id": "purians",
+          "kind": "loot",
+          "text": "Take two Purians from the bench.",
+          "destination": {
+            "mapID": 1533,
+            "x": 0.543,
+            "y": 0.818,
+            "label": "Purian bench"
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 173973,
+                "quantity": 2
+              },
+              {
+                "any": [
+                  {
+                    "kind": "itemCount",
+                    "itemId": 173984,
+                    "quantity": 1
+                  },
+                  {
+                    "kind": "toyOwned",
+                    "itemId": 173984
+                  }
+                ]
+              }
+            ]
+          },
+          "itemId": 173973
+        },
+        {
+          "id": "first-bowl",
+          "kind": "interaction",
+          "text": "Place one Purian in the first tribute bowl.",
+          "destination": {
+            "mapID": 1533,
+            "x": 0.544,
+            "y": 0.838,
+            "label": "First tribute bowl"
+          }
+        },
+        {
+          "id": "second-bowl",
+          "kind": "interaction",
+          "text": "Place the second Purian in the other tribute bowl.",
+          "destination": {
+            "mapID": 1533,
+            "x": 0.561,
+            "y": 0.83,
+            "label": "Second tribute bowl"
+          }
+        },
+        {
+          "id": "aeons",
+          "kind": "loot",
+          "text": "Follow the trail of light and collect the Scroll of Aeons.",
+          "destination": {
+            "mapID": 1533,
+            "x": 0.535,
+            "y": 0.804,
+            "label": "Scroll of Aeons"
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 173984,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 173984
+              }
+            ]
+          },
+          "objectId": 339601
+        },
+        {
+          "id": "learn",
+          "kind": "learn",
+          "text": "Use Scroll of Aeons from your bags to add it to the Toy Box.",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 173984
+          }
+        }
+      ],
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 173984
+      },
+      "unresolved": [],
+      "coverageGaps": [],
+      "sourceRouteId": "att-173984-b02785fa5ed2"
+    },
+    {
+      "id": "source-batch-187339",
+      "itemId": 187339,
+      "title": "Silver Shardhide Whistle",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceFacts": {
+        "objectID": 369183,
+        "questID": 64241,
+        "mapID": 1961,
+        "coords": {
+          "1961": [
+            [
+              47.5,
+              29.2
+            ]
+          ]
+        }
+      },
+      "sourceChecked": true,
+      "playtested": false,
+      "availability": "ongoing",
+      "requirements": {
+        "level": 50
+      },
+      "playStyle": "solo",
+      "cadence": "once",
+      "outcome": "guaranteed-progress",
+      "steps": [
+        {
+          "id": "moth",
+          "kind": "interaction",
+          "text": "Find a sparkling Noxious Moth in Mauler’s Outlook and click it to gain the Shardhide extra action.",
+          "destination": {
+            "mapID": 1961,
+            "x": 0.475,
+            "y": 0.292,
+            "label": "Mauler’s Outlook"
+          }
+        },
+        {
+          "id": "nest",
+          "kind": "interaction",
+          "text": "Use the granted extra action to ride a Shardhide into the tree, knocking down the Precarious Silk Nest.",
+          "destination": {
+            "mapID": 1961,
+            "x": 0.475,
+            "y": 0.292
+          }
+        },
+        {
+          "id": "whistle",
+          "kind": "loot",
+          "text": "Open the fallen nest and take the Silver Shardhide Whistle.",
+          "destination": {
+            "mapID": 1961,
+            "x": 0.475,
+            "y": 0.292
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 187339,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 187339
+              }
+            ]
+          },
+          "objectId": 369183
+        },
+        {
+          "id": "learn",
+          "kind": "learn",
+          "text": "Use Silver Shardhide Whistle from your bags to add it to the Toy Box.",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 187339
+          }
+        }
+      ],
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 187339
+      },
+      "unresolved": [],
+      "coverageGaps": [],
+      "sourceRouteId": "att-187339-b658060feca2"
+    },
+    {
+      "id": "source-batch-187051",
+      "itemId": 187051,
+      "title": "Forgotten Feather",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceFacts": {
+        "objectID": 369149,
+        "questID": 64234,
+        "mapID": 1961,
+        "coords": {
+          "1961": [
+            [
+              68.9,
+              29.9
+            ]
+          ]
+        }
+      },
+      "sourceChecked": true,
+      "playtested": false,
+      "availability": "ongoing",
+      "requirements": {
+        "level": 50
+      },
+      "playStyle": "solo",
+      "cadence": "once",
+      "outcome": "guaranteed-progress",
+      "steps": [
+        {
+          "id": "island",
+          "kind": "travel",
+          "text": "From the marked launch point, use a Goblin Glider or another available safe route to reach the island.",
+          "destination": {
+            "mapID": 1961,
+            "x": 0.638,
+            "y": 0.289,
+            "label": "Glider launch point"
+          },
+          "details": "Toybox never activates a glider automatically. Do not assume a character has one."
+        },
+        {
+          "id": "feather",
+          "kind": "loot",
+          "text": "Collect the Forgotten Feather on the island.",
+          "destination": {
+            "mapID": 1961,
+            "x": 0.689,
+            "y": 0.299,
+            "label": "Forgotten Feather"
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 187051,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 187051
+              }
+            ]
+          },
+          "objectId": 369149
+        },
+        {
+          "id": "learn",
+          "kind": "learn",
+          "text": "Use Forgotten Feather from your bags to add it to the Toy Box.",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 187051
+          }
+        }
+      ],
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 187051
+      },
+      "unresolved": [],
+      "coverageGaps": [],
+      "sourceRouteId": "att-187051-727e47405e74"
+    },
+    {
+      "id": "source-batch-181825",
+      "itemId": 181825,
+      "title": "Phial of Ravenous Slime",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceFacts": {
+        "objectID": 355865,
+        "questID": 61444,
+        "mapID": 1536,
+        "coords": {
+          "1536": [
+            [
+              59.8,
+              79
+            ]
+          ]
+        }
+      },
+      "sourceChecked": true,
+      "playtested": false,
+      "availability": "ongoing",
+      "requirements": {
+        "level": 10
+      },
+      "playStyle": "solo",
+      "cadence": "once",
+      "outcome": "guaranteed-progress",
+      "steps": [
+        {
+          "id": "bottle",
+          "kind": "interaction",
+          "text": "Pick up the Empty Plague Bottle from the table next to the vat.",
+          "destination": {
+            "mapID": 1536,
+            "x": 0.598,
+            "y": 0.79,
+            "label": "Vat of Conspicuous Slime"
+          }
+        },
+        {
+          "id": "vat",
+          "kind": "loot",
+          "text": "With the bottle collected, click the vat of slime and take the Phial of Ravenous Slime.",
+          "destination": {
+            "mapID": 1536,
+            "x": 0.598,
+            "y": 0.79
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 181825,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 181825
+              }
+            ]
+          },
+          "objectId": 355865
+        },
+        {
+          "id": "learn",
+          "kind": "learn",
+          "text": "Use Phial of Ravenous Slime from your bags to add it to the Toy Box.",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 181825
+          }
+        }
+      ],
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 181825
+      },
+      "unresolved": [],
+      "coverageGaps": [],
+      "sources": [
+        "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+        "https://github.com/zarillion/handynotes-plugins/blob/2b1dbb16f6720cc29de759fa324dc6e6bdc49517/plugins/09_Shadowlands/localization/enUS.lua"
+      ],
+      "sourceRouteId": "att-181825-46f4e7973de7"
+    },
+    {
+      "id": "source-batch-180873",
+      "itemId": 180873,
+      "title": "Smolderheart",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceFacts": {
+        "npcID": 160857,
+        "questID": 58263,
+        "mapID": 1525,
+        "coords": {
+          "1525": [
+            [
+              34,
+              55.5
+            ]
+          ]
+        },
+        "isDaily": true
+      },
+      "sourceChecked": true,
+      "playtested": false,
+      "availability": "ongoing",
+      "requirements": {
+        "level": 48
+      },
+      "playStyle": "solo",
+      "cadence": "daily",
+      "outcome": "random-drop",
+      "steps": [
+        {
+          "id": "remnants",
+          "kind": "summon",
+          "text": "Pick up the sparkling Remnants of Light scattered through the Ember Ward. Use their extra action on nearby ghouls or outcasts until a ghoul’s shout announces Sire Ladinas.",
+          "destination": {
+            "mapID": 1525,
+            "x": 0.34,
+            "y": 0.555,
+            "label": "Ember Ward"
+          },
+          "npcId": 160857
+        },
+        {
+          "id": "ladinas",
+          "kind": "loot",
+          "text": "Defeat Sire Ladinas and loot for Smolderheart.",
+          "destination": {
+            "mapID": 1525,
+            "x": 0.34,
+            "y": 0.555
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 180873,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 180873
+              }
+            ]
+          },
+          "npcId": 160857
+        },
+        {
+          "id": "learn",
+          "kind": "learn",
+          "text": "Use Smolderheart from your bags to add it to the Toy Box.",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 180873
+          }
+        }
+      ],
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 180873
+      },
+      "unresolved": [],
+      "coverageGaps": [],
+      "trackingQuestId": 58263,
+      "sourceRouteId": "att-180873-5c6ab2a97af6"
+    },
+    {
+      "id": "source-batch-180993",
+      "itemId": 180993,
+      "title": "Bat Visage Bobber",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceFacts": {
+        "objectID": 357565,
+        "questID": 62196,
+        "mapID": 1525,
+        "coords": {
+          "1525": [
+            [
+              73.7,
+              75.4
+            ]
+          ]
+        },
+        "crs": [
+          173634
+        ]
+      },
+      "sourceChecked": true,
+      "playtested": false,
+      "availability": "ongoing",
+      "requirements": {
+        "level": 10
+      },
+      "playStyle": "solo",
+      "cadence": "once",
+      "outcome": "guaranteed-progress",
+      "steps": [
+        {
+          "id": "rod",
+          "kind": "summon",
+          "text": "Click the fishing rod at the marked fishing spot to call Muckribbon.",
+          "destination": {
+            "mapID": 1525,
+            "x": 0.737,
+            "y": 0.754,
+            "label": "Fishing rod"
+          },
+          "objectId": 357565,
+          "npcId": 173634
+        },
+        {
+          "id": "muckribbon",
+          "kind": "loot",
+          "text": "Defeat Muckribbon and loot the reward for the Bat Visage Bobber.",
+          "destination": {
+            "mapID": 1525,
+            "x": 0.737,
+            "y": 0.754
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 180993,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 180993
+              }
+            ]
+          },
+          "npcId": 173634
+        },
+        {
+          "id": "learn",
+          "kind": "learn",
+          "text": "Use Bat Visage Bobber from your bags to add it to the Toy Box.",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 180993
+          }
+        }
+      ],
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 180993
+      },
+      "unresolved": [],
+      "coverageGaps": [],
+      "sourceRouteId": "att-180993-a76f17404051"
+    },
+    {
+      "id": "source-batch-182694",
+      "itemId": 182694,
+      "title": "Stylish Black Parasol",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceFacts": {
+        "objectID": 357487,
+        "questID": 61999,
+        "mapID": 1525,
+        "coords": {
+          "1525": [
+            [
+              38.4,
+              44.2
+            ]
+          ]
+        }
+      },
+      "sourceChecked": true,
+      "playtested": false,
+      "availability": "ongoing",
+      "requirements": {
+        "level": 48
+      },
+      "playStyle": "solo",
+      "cadence": "once",
+      "outcome": "guaranteed-progress",
+      "steps": [
+        {
+          "id": "stairs",
+          "kind": "travel",
+          "text": "Take the stairs starting at the marked point and follow them up toward the treasure.",
+          "destination": {
+            "mapID": 1525,
+            "x": 0.413,
+            "y": 0.449,
+            "label": "Stairs to the parasol"
+          }
+        },
+        {
+          "id": "parasol",
+          "kind": "loot",
+          "text": "Collect the Stylish Black Parasol at the top.",
+          "destination": {
+            "mapID": 1525,
+            "x": 0.384,
+            "y": 0.442,
+            "label": "Stylish Black Parasol"
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 182694,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 182694
+              }
+            ]
+          },
+          "objectId": 357487
+        },
+        {
+          "id": "learn",
+          "kind": "learn",
+          "text": "Use Stylish Black Parasol from your bags to add it to the Toy Box.",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 182694
+          }
+        }
+      ],
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 182694
+      },
+      "unresolved": [],
+      "coverageGaps": [],
+      "sourceRouteId": "att-182694-1daccf19c731"
+    },
+    {
+      "id": "source-batch-183986",
+      "itemId": 183986,
+      "title": "Bondable Sinstone",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceFacts": {
+        "objectID": 357697,
+        "questID": 62199,
+        "mapID": 1525,
+        "coords": {
+          "1525": [
+            [
+              62.8,
+              75.3
+            ],
+            [
+              63,
+              72.1
+            ]
+          ]
+        }
+      },
+      "sourceChecked": true,
+      "playtested": false,
+      "availability": "ongoing",
+      "requirements": {
+        "level": 48
+      },
+      "playStyle": "solo",
+      "cadence": "once",
+      "outcome": "guaranteed-progress",
+      "steps": [
+        {
+          "id": "rites",
+          "kind": "interaction",
+          "text": "Use the Ingress and Egress Rites at the marked point to reveal the hidden chest.",
+          "destination": {
+            "mapID": 1525,
+            "x": 0.63,
+            "y": 0.721,
+            "label": "Ingress and Egress Rites"
+          }
+        },
+        {
+          "id": "sinstone",
+          "kind": "loot",
+          "text": "While the rites’ effect is active, open the revealed chest and take the Bondable Sinstone.",
+          "destination": {
+            "mapID": 1525,
+            "x": 0.628,
+            "y": 0.753,
+            "label": "Hidden sinstone chest"
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 183986,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 183986
+              }
+            ]
+          },
+          "objectId": 357697
+        },
+        {
+          "id": "learn",
+          "kind": "learn",
+          "text": "Use Bondable Sinstone from your bags to add it to the Toy Box.",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 183986
+          }
+        }
+      ],
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 183986
+      },
+      "unresolved": [],
+      "coverageGaps": [],
+      "sourceRouteId": "att-183986-331b9f2d05ef"
+    },
+    {
+      "id": "source-batch-190926",
+      "itemId": 190926,
+      "title": "Infested Automa Core",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceFacts": {
+        "objectID": 375495,
+        "questID": 65572,
+        "mapID": 1970,
+        "coords": {
+          "1970": [
+            [
+              52,
+              80
+            ]
+          ]
+        }
+      },
+      "sourceChecked": true,
+      "playtested": false,
+      "availability": "ongoing",
+      "requirements": {
+        "level": 60
+      },
+      "playStyle": "solo",
+      "cadence": "once",
+      "outcome": "guaranteed-progress",
+      "steps": [
+        {
+          "id": "runes",
+          "kind": "puzzle",
+          "text": "At Catalyst Wards, activate all four switches: behind the entrance lock, in the southwest room, in the southern room with the guardian, and in the southeast room. This powers the central teleporter.",
+          "destination": {
+            "mapID": 1970,
+            "x": 0.52,
+            "y": 0.8,
+            "label": "Catalyst Wards"
+          },
+          "details": "All four switches use NPC185390. The southern room contains NPC181652. Proximity does not prove interaction; use Continue after activating the switches.",
+          "npcId": 185390
+        },
+        {
+          "id": "teleporter",
+          "kind": "loot",
+          "text": "Use the activated central teleporter, then open the treasure for the Infested Automa Core.",
+          "destination": {
+            "mapID": 1970,
+            "x": 0.52,
+            "y": 0.8
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 190926,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 190926
+              }
+            ]
+          },
+          "objectId": 375495
+        },
+        {
+          "id": "learn",
+          "kind": "learn",
+          "text": "Use Infested Automa Core from your bags to add it to the Toy Box.",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 190926
+          }
+        }
+      ],
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 190926
+      },
+      "unresolved": [],
+      "coverageGaps": [],
+      "sourceRouteId": "att-190926-abe487b30123",
+      "sources": [
+        "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+        "https://github.com/zarillion/handynotes-plugins/blob/2b1dbb16f6720cc29de759fa324dc6e6bdc49517/plugins/09_Shadowlands/localization/enUS.lua"
+      ]
+    },
+    {
+      "id": "source-batch-190734",
+      "itemId": 190734,
+      "title": "Makaris's Satchel of Mines",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceFacts": {
+        "objectID": 375404,
+        "questID": 65611,
+        "cost": [
+          [
+            "i",
+            190197,
+            1
+          ]
+        ],
+        "mapID": 1970,
+        "coords": {
+          "1970": [
+            [
+              60,
+              25.8
+            ],
+            [
+              60.9,
+              37.9
+            ],
+            [
+              61.4,
+              17.6
+            ],
+            [
+              63.2,
+              26
+            ],
+            [
+              64.8,
+              33.7
+            ],
+            [
+              66,
+              26.9
+            ]
+          ]
+        }
+      },
+      "sourceChecked": true,
+      "playtested": false,
+      "availability": "ongoing",
+      "requirements": {
+        "level": 11
+      },
+      "playStyle": "solo",
+      "cadence": "once",
+      "outcome": "random-drop",
+      "steps": [
+        {
+          "id": "fragments",
+          "kind": "loot",
+          "text": "Defeat enemies around the Sandworn chest area until you collect five Sandworn Chest Key Fragments.",
+          "destination": {
+            "mapID": 1970,
+            "x": 0.632,
+            "y": 0.26
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 190198,
+                "quantity": 5
+              },
+              {
+                "kind": "itemCount",
+                "itemId": 190197,
+                "quantity": 1
+              },
+              {
+                "any": [
+                  {
+                    "kind": "itemCount",
+                    "itemId": 190734,
+                    "quantity": 1
+                  },
+                  {
+                    "kind": "toyOwned",
+                    "itemId": 190734
+                  }
+                ]
+              }
+            ]
+          },
+          "itemId": 190198
+        },
+        {
+          "id": "key",
+          "kind": "combine",
+          "text": "Combine five fragments into a Sandworn Chest Key.",
+          "destination": {
+            "mapID": 1970,
+            "x": 0.632,
+            "y": 0.26
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 190197,
+                "quantity": 1
+              },
+              {
+                "any": [
+                  {
+                    "kind": "itemCount",
+                    "itemId": 190734,
+                    "quantity": 1
+                  },
+                  {
+                    "kind": "toyOwned",
+                    "itemId": 190734
+                  }
+                ]
+              }
+            ]
+          },
+          "itemId": 190197
+        },
+        {
+          "id": "sandworn",
+          "kind": "loot",
+          "text": "Find a Sandworn Chest at one of the marked sites, unlock it with the key and loot for Makaris’s Satchel of Mines.",
+          "destination": {
+            "mapID": 1970,
+            "x": 0.632,
+            "y": 0.26
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 190734,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 190734
+              }
+            ]
+          },
+          "objectId": 375404,
+          "waypoints": [
+            {
+              "mapID": 1970,
+              "x": 0.6,
+              "y": 0.258
+            },
+            {
+              "mapID": 1970,
+              "x": 0.609,
+              "y": 0.379
+            },
+            {
+              "mapID": 1970,
+              "x": 0.614,
+              "y": 0.176
+            },
+            {
+              "mapID": 1970,
+              "x": 0.632,
+              "y": 0.26
+            },
+            {
+              "mapID": 1970,
+              "x": 0.648,
+              "y": 0.337
+            },
+            {
+              "mapID": 1970,
+              "x": 0.66,
+              "y": 0.269
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "kind": "learn",
+          "text": "Use Makaris's Satchel of Mines from your bags to add it to the Toy Box.",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 190734
+          }
+        }
+      ],
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 190734
+      },
+      "unresolved": [],
+      "coverageGaps": [],
+      "sourceRouteId": "att-190734-784da932e901"
+    },
+    {
+      "id": "source-batch-206993",
+      "itemId": 206993,
+      "title": "Investi-gator's Pocketwatch",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceFacts": {
+        "npcID": 201664,
+        "questID": 75479,
+        "sourceQuests": [
+          75986
+        ],
+        "cost": [
+          [
+            "i",
+            208448,
+            1
+          ]
+        ],
+        "mapID": 2025,
+        "coords": {
+          "2025": [
+            [
+              52.3,
+              81.4
+            ],
+            [
+              54.6,
+              85.9
+            ]
+          ]
+        },
+        "isDaily": true
+      },
+      "sourceChecked": false,
+      "playtested": false,
+      "availability": "ongoing",
+      "requirements": {
+        "level": 40
+      },
+      "playStyle": "solo",
+      "cadence": "daily",
+      "outcome": "random-drop",
+      "steps": [
+        {
+          "id": "metronographer",
+          "kind": "interaction",
+          "text": "At the Everywhen Inn, go upstairs and borrow Melly’s Metronographer. Use it near Bartender Bob to reveal Bartender Blob.",
+          "destination": {
+            "mapID": 2025,
+            "x": 0.523,
+            "y": 0.814,
+            "label": "Everywhen Inn"
+          },
+          "npcId": 204990,
+          "itemId": 208449,
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 208449,
+                "quantity": 1
+              },
+              {
+                "kind": "itemCount",
+                "itemId": 208448,
+                "quantity": 1
+              },
+              {
+                "kind": "itemCount",
+                "itemId": 206993,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 206993
+              }
+            ]
+          }
+        },
+        {
+          "id": "infinitea",
+          "kind": "purchase",
+          "text": "Use Melly’s Metronographer near Bartender Bob downstairs. Buy Infinitea from the revealed Bartender Blob only when ready; it expires after thirty seconds.",
+          "destination": {
+            "mapID": 2025,
+            "x": 0.521,
+            "y": 0.814,
+            "label": "Bartender Blob"
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 208448,
+                "quantity": 1
+              },
+              {
+                "any": [
+                  {
+                    "kind": "itemCount",
+                    "itemId": 206993,
+                    "quantity": 1
+                  },
+                  {
+                    "kind": "toyOwned",
+                    "itemId": 206993
+                  }
+                ]
+              }
+            ]
+          },
+          "npcId": 207463,
+          "itemId": 208448
+        },
+        {
+          "id": "tea-time",
+          "kind": "summon",
+          "text": "Reach the waterfall before the Infinitea expires, drink it, then interact with the newly visible Time-Soaked Clock to summon the rare.",
+          "destination": {
+            "mapID": 2025,
+            "x": 0.546,
+            "y": 0.859,
+            "label": "Infinitea summoning point"
+          }
+        },
+        {
+          "id": "investigator",
+          "kind": "loot",
+          "text": "Defeat the summoned rare and loot for the Investi-gator’s Pocketwatch.",
+          "destination": {
+            "mapID": 2025,
+            "x": 0.546,
+            "y": 0.859
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 206993,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 206993
+              }
+            ]
+          },
+          "npcId": 201664
+        },
+        {
+          "id": "learn",
+          "kind": "learn",
+          "text": "Use Investi-gator's Pocketwatch from your bags to add it to the Toy Box.",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 206993
+          }
+        }
+      ],
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 206993
+      },
+      "unresolved": [],
+      "coverageGaps": [
+        "Required quest75986 and its prerequisite chain (76552, then74476 or74942, then75966) are not authored in this route."
+      ],
+      "trackingQuestId": 75479,
+      "sourceRouteId": "att-206993-a61fd715fecd",
+      "sources": [
+        "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+        "https://github.com/zarillion/handynotes-plugins/blob/2b1dbb16f6720cc29de759fa324dc6e6bdc49517/plugins/10_Dragonflight/localization/enUS.lua"
+      ],
+      "timingEvidence": {
+        "itemId": 208448,
+        "durationSeconds": 30,
+        "starts": "observed purchase"
+      }
+    },
+    {
+      "id": "source-batch-200999",
+      "itemId": 200999,
+      "title": "The Super Shellkhan Gang",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceFacts": {
+        "npcID": 191305,
+        "questID": 74085,
+        "cost": [
+          [
+            "i",
+            200949,
+            1
+          ]
+        ],
+        "mapID": 2025,
+        "coords": {
+          "2024": [
+            [
+              45.63,
+              54.82
+            ]
+          ],
+          "2025": [
+            [
+              38.5,
+              68.2
+            ]
+          ]
+        },
+        "isDaily": true
+      },
+      "sourceChecked": true,
+      "playtested": false,
+      "availability": "ongoing",
+      "requirements": {
+        "level": 60
+      },
+      "playStyle": "solo",
+      "cadence": "daily",
+      "outcome": "random-drop",
+      "steps": [
+        {
+          "id": "check-delivery",
+          "kind": "observe",
+          "text": "Check that Patient Vaargo and The Great Shellkhan are present before collecting the fish. You can activate this delivery once per character per week.",
+          "destination": {
+            "mapID": 2025,
+            "x": 0.385,
+            "y": 0.682,
+            "label": "Patient Vaargo"
+          },
+          "npcId": 191416
+        },
+        {
+          "id": "gleamfish",
+          "kind": "loot",
+          "text": "When ready, pick up a Case of Fresh Gleamfish from Kauriq Gleamlet in the Azure Span. Deliver it within three minutes.",
+          "destination": {
+            "mapID": 2024,
+            "x": 0.4563,
+            "y": 0.5482,
+            "label": "Case of Fresh Gleamfish"
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 200949,
+                "quantity": 1
+              },
+              {
+                "any": [
+                  {
+                    "kind": "itemCount",
+                    "itemId": 200999,
+                    "quantity": 1
+                  },
+                  {
+                    "kind": "toyOwned",
+                    "itemId": 200999
+                  }
+                ]
+              }
+            ]
+          },
+          "objectId": 383625,
+          "itemId": 200949
+        },
+        {
+          "id": "delivery",
+          "kind": "interaction",
+          "text": "Return the case to Patient Vaargo within three minutes to activate The Great Shellkhan.",
+          "destination": {
+            "mapID": 2025,
+            "x": 0.385,
+            "y": 0.682,
+            "label": "Super Shellkhan"
+          },
+          "npcId": 191416
+        },
+        {
+          "id": "shellkhan",
+          "kind": "loot",
+          "text": "Defeat The Great Shellkhan and loot for The Super Shellkhan Gang.",
+          "destination": {
+            "mapID": 2025,
+            "x": 0.385,
+            "y": 0.682
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 200999,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 200999
+              }
+            ]
+          },
+          "npcId": 191305
+        },
+        {
+          "id": "learn",
+          "kind": "learn",
+          "text": "Use The Super Shellkhan Gang from your bags to add it to the Toy Box.",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 200999
+          }
+        }
+      ],
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 200999
+      },
+      "unresolved": [],
+      "coverageGaps": [],
+      "trackingQuestId": 74085,
+      "sourceRouteId": "att-200999-3330092c1135",
+      "sources": [
+        "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+        "https://github.com/zarillion/handynotes-plugins/blob/2b1dbb16f6720cc29de759fa324dc6e6bdc49517/plugins/10_Dragonflight/localization/enUS.lua"
+      ],
+      "timingEvidence": {
+        "deliverySeconds": 180,
+        "activationCadence": "weekly",
+        "activationScope": "character",
+        "rareLootCadence": "daily"
+      }
+    },
+    {
+      "id": "source-batch-224554",
+      "itemId": 224554,
+      "title": "Silver Linin' Scepter",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceFacts": {
+        "objectID": 441800,
+        "questID": 82005
+      },
+      "sourceChecked": true,
+      "playtested": false,
+      "availability": "ongoing",
+      "requirements": {
+        "level": 75
+      },
+      "playStyle": "solo",
+      "cadence": "once",
+      "outcome": "guaranteed-progress",
+      "steps": [
+        {
+          "id": "captain-82025",
+          "kind": "interaction",
+          "text": "Board the patrolling airship and speak with Sky-Captain Aerthin. These pins mark its patrol, not a stationary landing point.",
+          "destination": {
+            "mapID": 2215,
+            "x": 0.33,
+            "y": 0.43,
+            "label": "Sky-Captain Aerthin"
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "questTurnedIn",
+                "questId": 82025,
+                "cadence": "once",
+                "scope": "character"
+              },
+              {
+                "any": [
+                  {
+                    "kind": "itemCount",
+                    "itemId": 224554,
+                    "quantity": 1
+                  },
+                  {
+                    "kind": "toyOwned",
+                    "itemId": 224554
+                  }
+                ]
+              }
+            ]
+          },
+          "npcId": 222323,
+          "waypoints": [
+            {
+              "mapID": 2215,
+              "x": 0.33,
+              "y": 0.43
+            },
+            {
+              "mapID": 2215,
+              "x": 0.342,
+              "y": 0.454
+            }
+          ]
+        },
+        {
+          "id": "captain-82024",
+          "kind": "interaction",
+          "text": "Board the patrolling airship and speak with Sky-Captain Clairmonte. These pins mark its patrol, not a stationary landing point.",
+          "destination": {
+            "mapID": 2215,
+            "x": 0.446,
+            "y": 0.458,
+            "label": "Sky-Captain Clairmonte"
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "questTurnedIn",
+                "questId": 82024,
+                "cadence": "once",
+                "scope": "character"
+              },
+              {
+                "any": [
+                  {
+                    "kind": "itemCount",
+                    "itemId": 224554,
+                    "quantity": 1
+                  },
+                  {
+                    "kind": "toyOwned",
+                    "itemId": 224554
+                  }
+                ]
+              }
+            ]
+          },
+          "npcId": 222311,
+          "waypoints": [
+            {
+              "mapID": 2215,
+              "x": 0.446,
+              "y": 0.458
+            },
+            {
+              "mapID": 2215,
+              "x": 0.342,
+              "y": 0.454
+            }
+          ]
+        },
+        {
+          "id": "captain-82012",
+          "kind": "interaction",
+          "text": "Board the patrolling airship and speak with Sky-Captain Dornald. These pins mark its patrol, not a stationary landing point.",
+          "destination": {
+            "mapID": 2215,
+            "x": 0.454,
+            "y": 0.474,
+            "label": "Sky-Captain Dornald"
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "questTurnedIn",
+                "questId": 82012,
+                "cadence": "once",
+                "scope": "character"
+              },
+              {
+                "any": [
+                  {
+                    "kind": "itemCount",
+                    "itemId": 224554,
+                    "quantity": 1
+                  },
+                  {
+                    "kind": "toyOwned",
+                    "itemId": 224554
+                  }
+                ]
+              }
+            ]
+          },
+          "npcId": 222333,
+          "waypoints": [
+            {
+              "mapID": 2215,
+              "x": 0.454,
+              "y": 0.474
+            },
+            {
+              "mapID": 2215,
+              "x": 0.58,
+              "y": 0.402
+            }
+          ]
+        },
+        {
+          "id": "captain-82026",
+          "kind": "interaction",
+          "text": "Board the patrolling airship and speak with Sky-Captain Onaro. These pins mark its patrol, not a stationary landing point.",
+          "destination": {
+            "mapID": 2215,
+            "x": 0.454,
+            "y": 0.474,
+            "label": "Sky-Captain Onaro"
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "questTurnedIn",
+                "questId": 82026,
+                "cadence": "once",
+                "scope": "character"
+              },
+              {
+                "any": [
+                  {
+                    "kind": "itemCount",
+                    "itemId": 224554,
+                    "quantity": 1
+                  },
+                  {
+                    "kind": "toyOwned",
+                    "itemId": 224554
+                  }
+                ]
+              }
+            ]
+          },
+          "npcId": 222337,
+          "waypoints": [
+            {
+              "mapID": 2215,
+              "x": 0.454,
+              "y": 0.474
+            },
+            {
+              "mapID": 2215,
+              "x": 0.58,
+              "y": 0.402
+            }
+          ]
+        },
+        {
+          "id": "sunken-cache",
+          "kind": "loot",
+          "text": "After meeting all four captains, dive to the Sunken Cache and open it for the Silver Linin’ Scepter.",
+          "destination": {
+            "mapID": 2215,
+            "x": 0.459,
+            "y": 0.451,
+            "label": "Sunken Cache"
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 224554,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 224554
+              }
+            ]
+          },
+          "objectId": 441800
+        },
+        {
+          "id": "learn",
+          "kind": "learn",
+          "text": "Use Silver Linin' Scepter from your bags to add it to the Toy Box.",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 224554
+          }
+        }
+      ],
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 224554
+      },
+      "unresolved": [],
+      "coverageGaps": [],
+      "questIds": [
+        82025,
+        82024,
+        82012,
+        82026
+      ],
+      "details": "The four captain checkpoints are a verified all-of requirement, not an inferred unordered quest chain.",
+      "sourceRouteId": "att-224554-c777d8bc42bd"
+    },
+    {
+      "id": "source-batch-224585",
+      "itemId": 224585,
+      "title": "Hanna's Locket",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceFacts": {
+        "objectID": 443318,
+        "npcID": 222940,
+        "questID": 83242
+      },
+      "sourceChecked": true,
+      "playtested": false,
+      "availability": "ongoing",
+      "requirements": {
+        "level": 70
+      },
+      "playStyle": "solo",
+      "cadence": "once",
+      "outcome": "guaranteed-progress",
+      "steps": [
+        {
+          "id": "branch",
+          "kind": "interaction",
+          "text": "Speak to Freysworn Letitia and take the Crab-Guiding Branch.",
+          "destination": {
+            "mapID": 2248,
+            "x": 0.486,
+            "y": 0.3,
+            "label": "Freysworn Letitia"
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 224185,
+                "quantity": 1
+              },
+              {
+                "any": [
+                  {
+                    "kind": "questTurnedIn",
+                    "questId": 82751,
+                    "cadence": "once",
+                    "scope": "character"
+                  },
+                  {
+                    "kind": "questTurnedIn",
+                    "questId": 82752,
+                    "cadence": "once",
+                    "scope": "character"
+                  },
+                  {
+                    "kind": "questTurnedIn",
+                    "questId": 82753,
+                    "cadence": "once",
+                    "scope": "character"
+                  },
+                  {
+                    "kind": "questTurnedIn",
+                    "questId": 82754,
+                    "cadence": "once",
+                    "scope": "character"
+                  },
+                  {
+                    "kind": "questTurnedIn",
+                    "questId": 82755,
+                    "cadence": "once",
+                    "scope": "character"
+                  },
+                  {
+                    "kind": "questTurnedIn",
+                    "questId": 82756,
+                    "cadence": "once",
+                    "scope": "character"
+                  }
+                ]
+              },
+              {
+                "any": [
+                  {
+                    "kind": "itemCount",
+                    "itemId": 224585,
+                    "quantity": 1
+                  },
+                  {
+                    "kind": "toyOwned",
+                    "itemId": 224585
+                  }
+                ]
+              }
+            ]
+          },
+          "npcId": 222940,
+          "itemId": 224185
+        },
+        {
+          "id": "shellcrab-1",
+          "kind": "interaction",
+          "text": "Find the Pearlescent Shellcrab at the marked location and use the Crab-Guiding Branch to guide it.",
+          "destination": {
+            "mapID": 2248,
+            "x": 0.507,
+            "y": 0.706,
+            "label": "Pearlescent Shellcrab 1"
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "questTurnedIn",
+                "questId": 82751,
+                "cadence": "once",
+                "scope": "character"
+              },
+              {
+                "any": [
+                  {
+                    "kind": "itemCount",
+                    "itemId": 224585,
+                    "quantity": 1
+                  },
+                  {
+                    "kind": "toyOwned",
+                    "itemId": 224585
+                  }
+                ]
+              }
+            ]
+          },
+          "npcId": 224548,
+          "itemId": 224185
+        },
+        {
+          "id": "shellcrab-2",
+          "kind": "interaction",
+          "text": "Find the Pearlescent Shellcrab at the marked location and use the Crab-Guiding Branch to guide it.",
+          "destination": {
+            "mapID": 2248,
+            "x": 0.749,
+            "y": 0.494,
+            "label": "Pearlescent Shellcrab 2"
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "questTurnedIn",
+                "questId": 82752,
+                "cadence": "once",
+                "scope": "character"
+              },
+              {
+                "any": [
+                  {
+                    "kind": "itemCount",
+                    "itemId": 224585,
+                    "quantity": 1
+                  },
+                  {
+                    "kind": "toyOwned",
+                    "itemId": 224585
+                  }
+                ]
+              }
+            ]
+          },
+          "npcId": 224548,
+          "itemId": 224185
+        },
+        {
+          "id": "shellcrab-3",
+          "kind": "interaction",
+          "text": "Find the Pearlescent Shellcrab at the marked location and use the Crab-Guiding Branch to guide it.",
+          "destination": {
+            "mapID": 2248,
+            "x": 0.708,
+            "y": 0.2,
+            "label": "Pearlescent Shellcrab 3"
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "questTurnedIn",
+                "questId": 82753,
+                "cadence": "once",
+                "scope": "character"
+              },
+              {
+                "any": [
+                  {
+                    "kind": "itemCount",
+                    "itemId": 224585,
+                    "quantity": 1
+                  },
+                  {
+                    "kind": "toyOwned",
+                    "itemId": 224585
+                  }
+                ]
+              }
+            ]
+          },
+          "npcId": 224548,
+          "itemId": 224185
+        },
+        {
+          "id": "shellcrab-4",
+          "kind": "interaction",
+          "text": "Find the Pearlescent Shellcrab at the marked location and use the Crab-Guiding Branch to guide it.",
+          "destination": {
+            "mapID": 2248,
+            "x": 0.419,
+            "y": 0.27,
+            "label": "Pearlescent Shellcrab 4"
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "questTurnedIn",
+                "questId": 82754,
+                "cadence": "once",
+                "scope": "character"
+              },
+              {
+                "any": [
+                  {
+                    "kind": "itemCount",
+                    "itemId": 224585,
+                    "quantity": 1
+                  },
+                  {
+                    "kind": "toyOwned",
+                    "itemId": 224585
+                  }
+                ]
+              }
+            ]
+          },
+          "npcId": 224548,
+          "itemId": 224185
+        },
+        {
+          "id": "shellcrab-5",
+          "kind": "interaction",
+          "text": "Find the Pearlescent Shellcrab at the marked location and use the Crab-Guiding Branch to guide it.",
+          "destination": {
+            "mapID": 2248,
+            "x": 0.197,
+            "y": 0.584,
+            "label": "Pearlescent Shellcrab 5"
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "questTurnedIn",
+                "questId": 82755,
+                "cadence": "once",
+                "scope": "character"
+              },
+              {
+                "any": [
+                  {
+                    "kind": "itemCount",
+                    "itemId": 224585,
+                    "quantity": 1
+                  },
+                  {
+                    "kind": "toyOwned",
+                    "itemId": 224585
+                  }
+                ]
+              }
+            ]
+          },
+          "npcId": 224548,
+          "itemId": 224185
+        },
+        {
+          "id": "shellcrab-6",
+          "kind": "interaction",
+          "text": "Find the Pearlescent Shellcrab on the tree branch and use the Crab-Guiding Branch to guide it.",
+          "destination": {
+            "mapID": 2248,
+            "x": 0.383,
+            "y": 0.42,
+            "label": "Pearlescent Shellcrab 6"
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "questTurnedIn",
+                "questId": 82756,
+                "cadence": "once",
+                "scope": "character"
+              },
+              {
+                "any": [
+                  {
+                    "kind": "itemCount",
+                    "itemId": 224585,
+                    "quantity": 1
+                  },
+                  {
+                    "kind": "toyOwned",
+                    "itemId": 224585
+                  }
+                ]
+              }
+            ]
+          },
+          "npcId": 224548,
+          "itemId": 224185
+        },
+        {
+          "id": "tree-treasure",
+          "kind": "loot",
+          "text": "Return to Freysworn Letitia after guiding all six crabs and open the Tree’s Treasure for Hanna’s Locket.",
+          "destination": {
+            "mapID": 2248,
+            "x": 0.486,
+            "y": 0.3,
+            "label": "Tree’s Treasure"
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 224585,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 224585
+              }
+            ]
+          },
+          "objectId": 443318
+        },
+        {
+          "id": "learn",
+          "kind": "learn",
+          "text": "Use Hanna's Locket from your bags to add it to the Toy Box.",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 224585
+          }
+        }
+      ],
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 224585
+      },
+      "unresolved": [],
+      "coverageGaps": [],
+      "questIds": [
+        82751,
+        82752,
+        82753,
+        82754,
+        82755,
+        82756
+      ],
+      "sourceRouteId": "att-224585-b96217a2b1f4"
+    },
+    {
+      "id": "source-batch-224783",
+      "itemId": 224783,
+      "title": "Sovereign's Finery Chest",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceFacts": {
+        "objectID": 433733,
+        "questID": 80485,
+        "cost": [
+          [
+            "i",
+            217960,
+            1
+          ]
+        ],
+        "mapID": 2214,
+        "coords": {
+          "2214": [
+            [
+              46.3,
+              53.5
+            ]
+          ]
+        }
+      },
+      "sourceChecked": false,
+      "playtested": false,
+      "availability": "ongoing",
+      "requirements": {
+        "level": 73
+      },
+      "playStyle": "solo",
+      "cadence": "once",
+      "outcome": "guaranteed-progress",
+      "steps": [
+        {
+          "id": "buried-key",
+          "kind": "loot",
+          "text": "Search the nearby Buried Treasure for the key to the Sovereign’s Finery Chest.",
+          "destination": {
+            "mapID": 2214,
+            "x": 0.463,
+            "y": 0.535,
+            "label": "Sovereign’s Finery Chest"
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 217960,
+                "quantity": 1
+              },
+              {
+                "any": [
+                  {
+                    "kind": "itemCount",
+                    "itemId": 224783,
+                    "quantity": 1
+                  },
+                  {
+                    "kind": "toyOwned",
+                    "itemId": 224783
+                  }
+                ]
+              }
+            ]
+          },
+          "itemId": 217960
+        },
+        {
+          "id": "finery",
+          "kind": "loot",
+          "text": "Use the key to unlock the Sovereign’s Finery Chest and take the toy.",
+          "destination": {
+            "mapID": 2214,
+            "x": 0.463,
+            "y": 0.535
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 224783,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 224783
+              }
+            ]
+          },
+          "objectId": 433733
+        },
+        {
+          "id": "learn",
+          "kind": "learn",
+          "text": "Use Sovereign's Finery Chest from your bags to add it to the Toy Box.",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 224783
+          }
+        }
+      ],
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 224783
+      },
+      "unresolved": [],
+      "coverageGaps": [
+        "This source does not identify the prerequisite Buried Treasure object or its precise location; key acquisition needs that final factual lookup."
+      ],
+      "sourceRouteId": "att-224783-31637ebf468d"
+    },
+    {
+      "id": "source-batch-279054",
+      "itemId": 279054,
+      "title": "Idol of Blue Water and Blue Sky",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceFacts": {
+        "objectID": 619906,
+        "questID": 94569,
+        "cost": [
+          [
+            "i",
+            265602,
+            1
+          ]
+        ],
+        "mapID": 2512,
+        "coords": {
+          "2512": [
+            [
+              71.9,
+              66.7
+            ]
+          ]
+        },
+        "crs": [
+          258255
+        ]
+      },
+      "sourceChecked": false,
+      "playtested": false,
+      "availability": "ongoing",
+      "requirements": {
+        "level": 90
+      },
+      "playStyle": "solo",
+      "cadence": "once",
+      "outcome": "guaranteed-progress",
+      "steps": [
+        {
+          "id": "morsel",
+          "kind": "loot",
+          "text": "Fish a Grisly Morsel from the Grisly Cod Pool.",
+          "destination": {
+            "mapID": 2512,
+            "x": 0.734,
+            "y": 0.661,
+            "label": "Grisly Cod Pool"
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 265525,
+                "quantity": 1
+              },
+              {
+                "kind": "itemCount",
+                "itemId": 265610,
+                "quantity": 1
+              },
+              {
+                "kind": "itemCount",
+                "itemId": 265603,
+                "quantity": 1
+              },
+              {
+                "kind": "itemCount",
+                "itemId": 265602,
+                "quantity": 1
+              },
+              {
+                "any": [
+                  {
+                    "kind": "itemCount",
+                    "itemId": 279054,
+                    "quantity": 1
+                  },
+                  {
+                    "kind": "toyOwned",
+                    "itemId": 279054
+                  }
+                ]
+              }
+            ]
+          },
+          "objectId": 619768,
+          "itemId": 265525
+        },
+        {
+          "id": "dolphin",
+          "kind": "interaction",
+          "text": "Feed the morsel to the Hungry Dolphin so it accompanies you underwater. Stay submerged while it helps you search.",
+          "destination": {
+            "mapID": 2512,
+            "x": 0.725,
+            "y": 0.67,
+            "label": "Hungry Dolphin"
+          },
+          "npcId": 258076
+        },
+        {
+          "id": "first-half",
+          "kind": "loot",
+          "text": "With the dolphin accompanying you, search the first underwater site for a half of the key.",
+          "destination": {
+            "mapID": 2512,
+            "x": 0.731,
+            "y": 0.67,
+            "label": "First key piece"
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 265610,
+                "quantity": 1
+              },
+              {
+                "kind": "itemCount",
+                "itemId": 265602,
+                "quantity": 1
+              },
+              {
+                "any": [
+                  {
+                    "kind": "itemCount",
+                    "itemId": 279054,
+                    "quantity": 1
+                  },
+                  {
+                    "kind": "toyOwned",
+                    "itemId": 279054
+                  }
+                ]
+              }
+            ]
+          },
+          "objectId": 619921,
+          "itemId": 265610
+        },
+        {
+          "id": "second-half",
+          "kind": "loot",
+          "text": "Stay underwater and search the second site for the other key half.",
+          "destination": {
+            "mapID": 2512,
+            "x": 0.724,
+            "y": 0.684,
+            "label": "Second key piece"
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 265603,
+                "quantity": 1
+              },
+              {
+                "kind": "itemCount",
+                "itemId": 265602,
+                "quantity": 1
+              },
+              {
+                "any": [
+                  {
+                    "kind": "itemCount",
+                    "itemId": 279054,
+                    "quantity": 1
+                  },
+                  {
+                    "kind": "toyOwned",
+                    "itemId": 279054
+                  }
+                ]
+              }
+            ]
+          },
+          "objectId": 619908,
+          "itemId": 265603
+        },
+        {
+          "id": "join-key",
+          "kind": "combine",
+          "text": "Combine both key halves into the completed key.",
+          "destination": {
+            "mapID": 2512,
+            "x": 0.719,
+            "y": 0.667
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 265602,
+                "quantity": 1
+              },
+              {
+                "any": [
+                  {
+                    "kind": "itemCount",
+                    "itemId": 279054,
+                    "quantity": 1
+                  },
+                  {
+                    "kind": "toyOwned",
+                    "itemId": 279054
+                  }
+                ]
+              }
+            ]
+          },
+          "itemId": 265602
+        },
+        {
+          "id": "sea-chest",
+          "kind": "loot",
+          "text": "Unlock the underwater treasure with the completed key and take the idol.",
+          "destination": {
+            "mapID": 2512,
+            "x": 0.719,
+            "y": 0.667,
+            "label": "Underwater treasure"
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 279054,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 279054
+              }
+            ]
+          },
+          "objectId": 619906
+        },
+        {
+          "id": "learn",
+          "kind": "learn",
+          "text": "Use Idol of Blue Water and Blue Sky from your bags to add it to the Toy Box.",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 279054
+          }
+        }
+      ],
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 279054
+      },
+      "unresolved": [],
+      "coverageGaps": [
+        "The Coiled Isle introduction and underwater access prerequisites are not authored here; the puzzle itself is fully described."
+      ],
+      "sourceRouteId": "att-279054-4bf3acb97a67"
+    },
+    {
+      "id": "source-batch-274921",
+      "itemId": 274921,
+      "title": "Pearl of Jubilation",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceFacts": {
+        "objectID": 649085,
+        "questID": 95995,
+        "cost": [
+          [
+            "i",
+            271881,
+            1
+          ]
+        ],
+        "mapID": 2512,
+        "coords": {
+          "2512": [
+            [
+              70.6,
+              76.6
+            ]
+          ]
+        },
+        "crs": [
+          263347
+        ]
+      },
+      "sourceChecked": false,
+      "playtested": false,
+      "availability": "ongoing",
+      "requirements": {
+        "level": 90
+      },
+      "playStyle": "solo",
+      "cadence": "once",
+      "outcome": "guaranteed-progress",
+      "steps": [
+        {
+          "id": "pearl",
+          "kind": "loot",
+          "text": "Search the Bubbling Clams underwater south of Nacretta’s cave until you obtain a Luminescent Pearl.",
+          "destination": {
+            "mapID": 2512,
+            "x": 0.696,
+            "y": 0.825,
+            "label": "Bubbling Clams"
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 271815,
+                "quantity": 1
+              },
+              {
+                "kind": "itemCount",
+                "itemId": 271881,
+                "quantity": 1
+              },
+              {
+                "kind": "questTurnedIn",
+                "questId": 96001,
+                "cadence": "once",
+                "scope": "character"
+              },
+              {
+                "any": [
+                  {
+                    "kind": "itemCount",
+                    "itemId": 274921,
+                    "quantity": 1
+                  },
+                  {
+                    "kind": "toyOwned",
+                    "itemId": 274921
+                  }
+                ]
+              }
+            ]
+          },
+          "objectId": 648981,
+          "itemId": 271815,
+          "waypoints": [
+            {
+              "mapID": 2512,
+              "x": 0.673,
+              "y": 0.792
+            },
+            {
+              "mapID": 2512,
+              "x": 0.68,
+              "y": 0.803
+            },
+            {
+              "mapID": 2512,
+              "x": 0.696,
+              "y": 0.825
+            },
+            {
+              "mapID": 2512,
+              "x": 0.71,
+              "y": 0.817
+            },
+            {
+              "mapID": 2512,
+              "x": 0.713,
+              "y": 0.833
+            },
+            {
+              "mapID": 2512,
+              "x": 0.719,
+              "y": 0.829
+            }
+          ]
+        },
+        {
+          "id": "nacretta",
+          "kind": "interaction",
+          "text": "Enter the cave and present the pearl to Nacretta. Wait for the exchange before looking for the dropped key.",
+          "destination": {
+            "mapID": 2512,
+            "x": 0.702,
+            "y": 0.77,
+            "label": "Nacretta"
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "questTurnedIn",
+                "questId": 96001,
+                "cadence": "once",
+                "scope": "character"
+              },
+              {
+                "kind": "questTurnedIn",
+                "questId": 96002,
+                "cadence": "once",
+                "scope": "character"
+              },
+              {
+                "kind": "itemCount",
+                "itemId": 271881,
+                "quantity": 1
+              },
+              {
+                "any": [
+                  {
+                    "kind": "itemCount",
+                    "itemId": 274921,
+                    "quantity": 1
+                  },
+                  {
+                    "kind": "toyOwned",
+                    "itemId": 274921
+                  }
+                ]
+              }
+            ]
+          },
+          "npcId": 263347
+        },
+        {
+          "id": "dropped-key",
+          "kind": "loot",
+          "text": "Pick up the key Nacretta drops.",
+          "destination": {
+            "mapID": 2512,
+            "x": 0.706,
+            "y": 0.771,
+            "label": "Dropped Key"
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 271881,
+                "quantity": 1
+              },
+              {
+                "any": [
+                  {
+                    "kind": "itemCount",
+                    "itemId": 274921,
+                    "quantity": 1
+                  },
+                  {
+                    "kind": "toyOwned",
+                    "itemId": 274921
+                  }
+                ]
+              }
+            ]
+          },
+          "objectId": 649082,
+          "itemId": 271881
+        },
+        {
+          "id": "pearl-chest",
+          "kind": "loot",
+          "text": "Use the key on the nearby chest and take the Pearl of Jubilation.",
+          "destination": {
+            "mapID": 2512,
+            "x": 0.706,
+            "y": 0.766,
+            "label": "Pearl chest"
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 274921,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 274921
+              }
+            ]
+          },
+          "objectId": 649085
+        },
+        {
+          "id": "learn",
+          "kind": "learn",
+          "text": "Use Pearl of Jubilation from your bags to add it to the Toy Box.",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 274921
+          }
+        }
+      ],
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 274921
+      },
+      "unresolved": [],
+      "coverageGaps": [
+        "The Coiled Isle introduction and cave-access prerequisites are not authored here; the pearl exchange is fully described."
+      ],
+      "questIds": [
+        96001,
+        96002
+      ],
+      "sourceRouteId": "att-274921-ea961aa04392"
+    },
+    {
+      "id": "source-batch-279021",
+      "itemId": 279021,
+      "title": "Forgotten Memento",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceFacts": {
+        "objectID": 645549,
+        "questID": 95956,
+        "mapID": 2512,
+        "coords": {
+          "2512": [
+            [
+              67.3,
+              48.5
+            ]
+          ]
+        },
+        "providers": [
+          [
+            "n",
+            263244
+          ],
+          [
+            "o",
+            645553
+          ]
+        ],
+        "crs": [
+          265506
+        ]
+      },
+      "sourceChecked": false,
+      "playtested": false,
+      "availability": "ongoing",
+      "requirements": {
+        "level": 90
+      },
+      "playStyle": "solo",
+      "cadence": "once",
+      "outcome": "guaranteed-progress",
+      "steps": [
+        {
+          "id": "forgotten-soldier",
+          "kind": "interaction",
+          "text": "Speak to the Forgotten Soldier and read the Nameless Grave before following the story into the Ring of Glory.",
+          "destination": {
+            "mapID": 2512,
+            "x": 0.673,
+            "y": 0.485,
+            "label": "Nameless Grave"
+          },
+          "npcId": 263244,
+          "objectId": 645553
+        },
+        {
+          "id": "zuzan",
+          "kind": "interaction",
+          "text": "Speak to Zuzan, seated across from the Ring of Glory vendors.",
+          "destination": {
+            "mapID": 2512,
+            "x": 0.69,
+            "y": 0.527,
+            "label": "Zuzan"
+          },
+          "npcId": 263241
+        },
+        {
+          "id": "zanja",
+          "kind": "interaction",
+          "text": "Climb to Zan’ja on the Defiant Ring pillar and speak to him.",
+          "destination": {
+            "mapID": 2512,
+            "x": 0.704,
+            "y": 0.584,
+            "label": "Zan’ja"
+          },
+          "npcId": 263242
+        },
+        {
+          "id": "ruko",
+          "kind": "interaction",
+          "text": "Speak to Ru’ko, meditating on an arch above the Ring of Glory.",
+          "destination": {
+            "mapID": 2512,
+            "x": 0.664,
+            "y": 0.572,
+            "label": "Ru’ko"
+          },
+          "npcId": 263243
+        },
+        {
+          "id": "memento",
+          "kind": "loot",
+          "text": "Return to the Nameless Grave and collect the Forgotten Memento.",
+          "destination": {
+            "mapID": 2512,
+            "x": 0.673,
+            "y": 0.485,
+            "label": "Grave of Someone Forgotten"
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 279021,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 279021
+              }
+            ]
+          },
+          "objectId": 645549
+        },
+        {
+          "id": "learn",
+          "kind": "learn",
+          "text": "Use Forgotten Memento from your bags to add it to the Toy Box.",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 279021
+          }
+        }
+      ],
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 279021
+      },
+      "unresolved": [],
+      "coverageGaps": [
+        "The Coiled Isle introduction is not authored. The source supplies no individual dialogue checkpoint flags, so these interactions use cursor Continue until reward evidence is observed."
+      ],
+      "sourceRouteId": "att-279021-6cf5bc296d61"
+    },
+    {
+      "id": "source-batch-279052",
+      "itemId": 279052,
+      "title": "Ancient Amani Mask",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceFacts": {
+        "objectID": 645208,
+        "questID": 95907,
+        "cost": [
+          [
+            "i",
+            271423,
+            1
+          ]
+        ],
+        "mapID": 2512,
+        "coords": {
+          "2512": [
+            [
+              65.4,
+              5.6
+            ]
+          ]
+        },
+        "crs": [
+          265506
+        ]
+      },
+      "sourceChecked": false,
+      "playtested": false,
+      "availability": "ongoing",
+      "requirements": {
+        "level": 90
+      },
+      "playStyle": "solo",
+      "cadence": "once",
+      "outcome": "guaranteed-progress",
+      "steps": [
+        {
+          "id": "brinetail",
+          "kind": "loot",
+          "text": "Defeat Glittering Grouper Brinetails at the marked underwater sites until you have three Diver’s Key Fragments.",
+          "destination": {
+            "mapID": 2512,
+            "x": 0.636,
+            "y": 0.132,
+            "label": "Glittering Grouper Brinetails"
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 271424,
+                "quantity": 3
+              },
+              {
+                "kind": "itemCount",
+                "itemId": 271423,
+                "quantity": 1
+              },
+              {
+                "any": [
+                  {
+                    "kind": "itemCount",
+                    "itemId": 279052,
+                    "quantity": 1
+                  },
+                  {
+                    "kind": "toyOwned",
+                    "itemId": 279052
+                  }
+                ]
+              }
+            ]
+          },
+          "npcId": 263081,
+          "itemId": 271424,
+          "waypoints": [
+            {
+              "mapID": 2512,
+              "x": 0.612,
+              "y": 0.14
+            },
+            {
+              "mapID": 2512,
+              "x": 0.636,
+              "y": 0.132
+            },
+            {
+              "mapID": 2512,
+              "x": 0.654,
+              "y": 0.056
+            },
+            {
+              "mapID": 2512,
+              "x": 0.672,
+              "y": 0.05
+            }
+          ]
+        },
+        {
+          "id": "diver-key",
+          "kind": "combine",
+          "text": "Combine the three fragments into a Diver’s Key.",
+          "destination": {
+            "mapID": 2512,
+            "x": 0.654,
+            "y": 0.056
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 271423,
+                "quantity": 1
+              },
+              {
+                "any": [
+                  {
+                    "kind": "itemCount",
+                    "itemId": 279052,
+                    "quantity": 1
+                  },
+                  {
+                    "kind": "toyOwned",
+                    "itemId": 279052
+                  }
+                ]
+              }
+            ]
+          },
+          "itemId": 271423
+        },
+        {
+          "id": "amani-mask",
+          "kind": "loot",
+          "text": "Use the key on the submerged treasure and collect the Ancient Amani Mask.",
+          "destination": {
+            "mapID": 2512,
+            "x": 0.654,
+            "y": 0.056,
+            "label": "Diver’s treasure"
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 279052,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 279052
+              }
+            ]
+          },
+          "objectId": 645208
+        },
+        {
+          "id": "learn",
+          "kind": "learn",
+          "text": "Use Ancient Amani Mask from your bags to add it to the Toy Box.",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 279052
+          }
+        }
+      ],
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 279052
+      },
+      "unresolved": [],
+      "coverageGaps": [
+        "The Coiled Isle introduction and underwater access prerequisites are not authored here."
+      ],
+      "sourceRouteId": "att-279052-3a0578849630"
+    },
+    {
+      "id": "source-batch-140632",
+      "itemId": 140632,
+      "title": "Lava Fountain",
+      "source": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/ExpansionFeatures.lua",
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "sourceFacts": {
+        "objectID": 247043,
+        "npcID": 103004,
+        "questID": 41116,
+        "coords": {
+          "726": [
+            [
+              25.2,
+              51.3
+            ]
+          ]
+        }
+      },
+      "sourceChecked": false,
+      "playtested": false,
+      "availability": "ongoing",
+      "requirements": {
+        "classIds": [
+          7
+        ]
+      },
+      "playStyle": "solo",
+      "cadence": "once",
+      "outcome": "guaranteed-progress",
+      "steps": [
+        {
+          "id": "board",
+          "kind": "interaction",
+          "text": "Stand facing the board with your back to Puzzlemaster Lo. Label its five rows left-to-right A–E, F–J, K–O, P–T and U–Y.",
+          "destination": {
+            "mapID": 726,
+            "x": 0.252,
+            "y": 0.502,
+            "label": "Puzzlemaster Lo"
+          },
+          "npcId": 103004,
+          "completeOn": {
+            "any": [
+              {
+                "kind": "questTurnedIn",
+                "questId": 41071,
+                "cadence": "once",
+                "scope": "character"
+              },
+              {
+                "kind": "questTurnedIn",
+                "questId": 41072,
+                "cadence": "once",
+                "scope": "character"
+              },
+              {
+                "kind": "questTurnedIn",
+                "questId": 41073,
+                "cadence": "once",
+                "scope": "character"
+              },
+              {
+                "kind": "questTurnedIn",
+                "questId": 41074,
+                "cadence": "once",
+                "scope": "character"
+              },
+              {
+                "kind": "questTurnedIn",
+                "questId": 41075,
+                "cadence": "once",
+                "scope": "character"
+              },
+              {
+                "kind": "itemCount",
+                "itemId": 140632,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 140632
+              }
+            ]
+          }
+        },
+        {
+          "id": "puzzle-1",
+          "kind": "puzzle",
+          "text": "For level 1, activate these board positions: A, E, M, U, Y. Confirm the board has advanced before continuing.",
+          "destination": {
+            "mapID": 726,
+            "x": 0.252,
+            "y": 0.502,
+            "label": "Puzzlemaster Lo"
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "questTurnedIn",
+                "questId": 41071,
+                "cadence": "once",
+                "scope": "character"
+              },
+              {
+                "kind": "questTurnedIn",
+                "questId": 41072,
+                "cadence": "once",
+                "scope": "character"
+              },
+              {
+                "kind": "questTurnedIn",
+                "questId": 41073,
+                "cadence": "once",
+                "scope": "character"
+              },
+              {
+                "kind": "questTurnedIn",
+                "questId": 41074,
+                "cadence": "once",
+                "scope": "character"
+              },
+              {
+                "kind": "questTurnedIn",
+                "questId": 41075,
+                "cadence": "once",
+                "scope": "character"
+              },
+              {
+                "kind": "itemCount",
+                "itemId": 140632,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 140632
+              }
+            ]
+          }
+        },
+        {
+          "id": "puzzle-2",
+          "kind": "puzzle",
+          "text": "For level 2, activate these board positions: C, K, M, O, W. Confirm the board has advanced before continuing.",
+          "destination": {
+            "mapID": 726,
+            "x": 0.252,
+            "y": 0.502,
+            "label": "Puzzlemaster Lo"
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "questTurnedIn",
+                "questId": 41072,
+                "cadence": "once",
+                "scope": "character"
+              },
+              {
+                "kind": "questTurnedIn",
+                "questId": 41073,
+                "cadence": "once",
+                "scope": "character"
+              },
+              {
+                "kind": "questTurnedIn",
+                "questId": 41074,
+                "cadence": "once",
+                "scope": "character"
+              },
+              {
+                "kind": "questTurnedIn",
+                "questId": 41075,
+                "cadence": "once",
+                "scope": "character"
+              },
+              {
+                "kind": "itemCount",
+                "itemId": 140632,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 140632
+              }
+            ]
+          }
+        },
+        {
+          "id": "puzzle-3",
+          "kind": "puzzle",
+          "text": "For level 3, activate these board positions: B, K, L, O, V. Confirm the board has advanced before continuing.",
+          "destination": {
+            "mapID": 726,
+            "x": 0.252,
+            "y": 0.502,
+            "label": "Puzzlemaster Lo"
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "questTurnedIn",
+                "questId": 41073,
+                "cadence": "once",
+                "scope": "character"
+              },
+              {
+                "kind": "questTurnedIn",
+                "questId": 41074,
+                "cadence": "once",
+                "scope": "character"
+              },
+              {
+                "kind": "questTurnedIn",
+                "questId": 41075,
+                "cadence": "once",
+                "scope": "character"
+              },
+              {
+                "kind": "itemCount",
+                "itemId": 140632,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 140632
+              }
+            ]
+          }
+        },
+        {
+          "id": "puzzle-4",
+          "kind": "puzzle",
+          "text": "For level 4, activate these board positions: A, E, F, G, H, I, J, K, O, Q, S, W. Confirm the board has advanced before continuing.",
+          "destination": {
+            "mapID": 726,
+            "x": 0.252,
+            "y": 0.502,
+            "label": "Puzzlemaster Lo"
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "questTurnedIn",
+                "questId": 41074,
+                "cadence": "once",
+                "scope": "character"
+              },
+              {
+                "kind": "questTurnedIn",
+                "questId": 41075,
+                "cadence": "once",
+                "scope": "character"
+              },
+              {
+                "kind": "itemCount",
+                "itemId": 140632,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 140632
+              }
+            ]
+          }
+        },
+        {
+          "id": "puzzle-5",
+          "kind": "puzzle",
+          "text": "For level 5, activate these board positions: D, E, F, G, I, J, K, L, M, Q, R, S, U, W, X. Confirm the board has advanced before continuing.",
+          "destination": {
+            "mapID": 726,
+            "x": 0.252,
+            "y": 0.502,
+            "label": "Puzzlemaster Lo"
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "questTurnedIn",
+                "questId": 41075,
+                "cadence": "once",
+                "scope": "character"
+              },
+              {
+                "kind": "itemCount",
+                "itemId": 140632,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 140632
+              }
+            ]
+          }
+        },
+        {
+          "id": "puzzle-reward",
+          "kind": "loot",
+          "text": "After completing all five levels, open Puzzlemaster Lo’s chest and take the Lava Fountain.",
+          "destination": {
+            "mapID": 726,
+            "x": 0.252,
+            "y": 0.513,
+            "label": "Puzzlemaster’s chest"
+          },
+          "completeOn": {
+            "any": [
+              {
+                "kind": "itemCount",
+                "itemId": 140632,
+                "quantity": 1
+              },
+              {
+                "kind": "toyOwned",
+                "itemId": 140632
+              }
+            ]
+          },
+          "objectId": 247043
+        },
+        {
+          "id": "learn",
+          "kind": "learn",
+          "text": "Use Lava Fountain from your bags to add it to the Toy Box.",
+          "completeOn": {
+            "kind": "toyOwned",
+            "itemId": 140632
+          }
+        }
+      ],
+      "finalCompletion": {
+        "kind": "toyOwned",
+        "itemId": 140632
+      },
+      "unresolved": [],
+      "coverageGaps": [
+        "Shaman class-hall introduction and access to the Maelstrom order hall are not authored here. The five puzzle levels have observed hidden completion flags41071–41075."
+      ],
+      "sourceRouteId": "att-140632-d25327523edd",
+      "questIds": [
+        41071,
+        41072,
+        41073,
+        41074,
+        41075
+      ]
+    }
+  ]
+}

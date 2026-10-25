@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "release": "2.4.0",
+  "retailBuild": "12.1.5.70575",
+  "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+  "reviewedAt": "2026-10-25",
+  "baselineRelease": "2.3.0",
+  "inputs": ["lib/data/catalogue-vendor-paths.json", "lib/data/catalogue-instance-paths.json", "lib/data/catalogue-crafting-walkthroughs.json", "lib/data/catalogue-quest-paths.json"]
+}

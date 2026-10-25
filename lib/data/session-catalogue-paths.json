@@ -1,0 +1,2018 @@
+{
+  "version": 1,
+  "kind": "original-source-checked-walkthrough-candidates",
+  "retailBuild": "12.1.5.70575",
+  "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+  "reviewedAt": "2026-10-25",
+  "sources": [
+    {
+      "id": "att-retail-zones",
+      "url": "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+      "revision": "52895ee664b61e08f091d514fe1556568d411570",
+      "license": "MIT",
+      "use": "Pinned factual import; original Toybox instructions."
+    },
+    {
+      "id": "wowhead-holed-up",
+      "url": "https://www.wowhead.com/quest=30682/holed-up",
+      "retrievedAt": "2026-10-25",
+      "use": "Factual consultation: four rescue objectives, building locations and quest ender; older comments corroborated against pinned Retail quest record. No guide files copied."
+    },
+    {
+      "id": "wowhead-slovan",
+      "url": "https://www.wowhead.com/quest=30169/raid-leader-slovan",
+      "retrievedAt": "2026-10-25",
+      "use": "Factual consultation: target, den behind Krasari Falls, same start/ender. Conflicting objective coordinates are not imported."
+    },
+    {
+      "id": "wowhead-gokklok",
+      "url": "https://www.wowhead.com/de/npc=62767/gokklok",
+      "retrievedAt": "2026-10-25",
+      "use": "Retail NPC and player observations: kill starts reward quest; no copied solo estimates or obsolete health values."
+    },
+    {
+      "id": "wowhead-gold",
+      "url": "https://www.wowhead.com/mx/quest=31083/promesas-de-oro",
+      "retrievedAt": "2026-10-25",
+      "use": "Retail quest objective and reward relationship: report to Chief Rikkitun for the shell."
+    },
+    {
+      "id": "wowhead-rikkitun",
+      "url": "https://www.wowhead.com/es/quest=31084/ligan-el-encanto",
+      "retrievedAt": "2026-10-25",
+      "use": "Factual consultation only: village arrival point near Chief Rikkitun; use native quest turn-in waypoint for exact position."
+    },
+    {
+      "id": "wowhead-companions",
+      "url": "https://www.wowhead.com/quest=66226/emotional-support-companions",
+      "retrievedAt": "2026-10-25",
+      "use": "Factual consultation: waterfall cave entrance, four rescue mechanisms, reward. Original condensed instructions; do not import comments."
+    }
+  ],
+  "integrationNotes": [
+    "Replace the listed canonical source route graph rather than adding duplicate catalogue routes.",
+    "Use per-action destinations. Quest targets and turn-in NPCs can differ from the accepting NPC.",
+    "For Timeless Isle candidates remove inherited opportunityCompleteWhen conditions based only on hidden quest tracking flags. Keep actual loot eligibility unknown unless observed.",
+    "Mad Merchant presence observation must match NPC 108468; a generic recently opened merchant interface is not proof.",
+    "Native quest waypoints override authored arrival pins where available. Manual Continue and arrival never establish an interaction.",
+    "These are source-checked content candidates, not recorded in-game playtests. Current game observations take precedence; older comments were used for stable mechanics and corroborated where available.",
+    "Merchant interface conditions carrying npcId require exact NPC matching in both interpreters; older interfaceObserved handlers that ignore npcId must not make the Prismatic Bauble purchase ready."
+  ],
+  "routes": [
+    {
+      "id": "att-88579-104472f6f244",
+      "itemId": 88579,
+      "title": "Jin Warmkeg's Brew",
+      "method": "Quest",
+      "cadence": "once",
+      "sourceRouteIds": [
+        "att-88579-104472f6f244"
+      ],
+      "requirements": {
+        "level": 20
+      },
+      "status": "source-checked-candidate",
+      "sourceChecked": true,
+      "playtested": false,
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "reviewedAt": "2026-10-25",
+      "knownGaps": [],
+      "facts": {
+        "originalSourceFacts": {
+          "awp": 50004,
+          "b": 1,
+          "category": "Zones",
+          "coords": {
+            "379": [
+              [
+                42.9,
+                88.3
+              ]
+            ]
+          },
+          "headers": [
+            -732,
+            -45
+          ],
+          "itemId": 88579,
+          "lineage": [
+            {
+              "coords": {
+                "379": [
+                  [
+                    42.9,
+                    88.3
+                  ]
+                ]
+              },
+              "kind": "Quest",
+              "lvl": 20,
+              "qgs": [
+                60178
+              ],
+              "questID": 30682,
+              "record": 173736
+            },
+            {
+              "b": 1,
+              "itemID": 88579,
+              "kind": "Toy",
+              "record": 173737
+            }
+          ],
+          "localFacts": {
+            "b": 1,
+            "itemID": 88579,
+            "kind": "Toy",
+            "record": 173737
+          },
+          "lvl": 20,
+          "mapID": 379,
+          "maps": [
+            380,
+            381,
+            382,
+            383,
+            384,
+            385,
+            386,
+            387,
+            434,
+            843
+          ],
+          "qgs": [
+            60178
+          ],
+          "questID": 30682
+        },
+        "questId": 30682,
+        "acceptNpcId": 60178,
+        "turnInNpcId": 60161,
+        "noAdditionalPrerequisiteClaim": "The pinned Retail quest has no predecessor relation; the quest must actually be offered. Historical comments agree it is a standalone rescue quest."
+      },
+      "walkthrough": {
+        "version": 2,
+        "contentVersion": "session-catalogue-1",
+        "routeIds": [
+          "att-88579-104472f6f244"
+        ],
+        "includesPrerequisites": true,
+        "completeWhen": {
+          "kind": "toyOwned",
+          "itemId": 88579
+        },
+        "nodes": [
+          {
+            "id": "att-88579-104472f6f244:q30682:accept",
+            "kind": "accept",
+            "text": "Find Sya Zhong in a building in Firebough Nook and take Holed Up. Speak to her to bring her out with you.",
+            "sources": [
+              "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+              "https://www.wowhead.com/quest=30682/holed-up"
+            ],
+            "recovery": {
+              "text": "If the indicated action is unavailable, preserve the current game evidence and choose another activity; browsing never establishes completion."
+            },
+            "completeWhen": {
+              "any": [
+                {
+                  "kind": "questInLog",
+                  "questId": 30682
+                },
+                {
+                  "kind": "questTurnedIn",
+                  "questId": 30682,
+                  "cadence": "once"
+                },
+                {
+                  "kind": "itemCount",
+                  "itemId": 88579,
+                  "quantity": 1
+                },
+                {
+                  "kind": "toyOwned",
+                  "itemId": 88579
+                }
+              ]
+            },
+            "destination": {
+              "mapID": 379,
+              "x": 0.429,
+              "y": 0.883,
+              "label": "Sya Zhong in Firebough Nook"
+            },
+            "questId": 30682
+          },
+          {
+            "id": "att-88579-104472f6f244:q30682:objective-4",
+            "kind": "objective",
+            "text": "Rescue Sya Zhong. Speak to the questgiver in her building.",
+            "sources": [
+              "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+              "https://www.wowhead.com/quest=30682/holed-up"
+            ],
+            "recovery": {
+              "text": "Use the live objective marker and search inside the nearby houses. The rescue only counts when the game updates that person’s objective."
+            },
+            "completeWhen": {
+              "any": [
+                {
+                  "kind": "questTurnedIn",
+                  "questId": 30682,
+                  "cadence": "once"
+                },
+                {
+                  "kind": "questObjective",
+                  "questId": 30682,
+                  "objectiveIndex": 4
+                },
+                {
+                  "kind": "itemCount",
+                  "itemId": 88579,
+                  "quantity": 1
+                },
+                {
+                  "kind": "toyOwned",
+                  "itemId": 88579
+                }
+              ]
+            },
+            "destination": {
+              "mapID": 379,
+              "x": 0.429,
+              "y": 0.883,
+              "label": "Sya Zhong"
+            },
+            "questId": 30682,
+            "objectiveIndex": 4,
+            "requires": {
+              "kind": "questInLog",
+              "questId": 30682
+            },
+            "after": [
+              "att-88579-104472f6f244:q30682:accept"
+            ]
+          },
+          {
+            "id": "att-88579-104472f6f244:q30682:objective-2",
+            "kind": "objective",
+            "text": "Rescue Ya Firebough. Check the building at the marked location.",
+            "sources": [
+              "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+              "https://www.wowhead.com/quest=30682/holed-up"
+            ],
+            "recovery": {
+              "text": "Use the live objective marker and search inside the nearby houses. The rescue only counts when the game updates that person’s objective."
+            },
+            "completeWhen": {
+              "any": [
+                {
+                  "kind": "questTurnedIn",
+                  "questId": 30682,
+                  "cadence": "once"
+                },
+                {
+                  "kind": "questObjective",
+                  "questId": 30682,
+                  "objectiveIndex": 2
+                },
+                {
+                  "kind": "itemCount",
+                  "itemId": 88579,
+                  "quantity": 1
+                },
+                {
+                  "kind": "toyOwned",
+                  "itemId": 88579
+                }
+              ]
+            },
+            "destination": {
+              "mapID": 379,
+              "x": 0.41,
+              "y": 0.87,
+              "label": "Ya Firebough"
+            },
+            "questId": 30682,
+            "objectiveIndex": 2,
+            "requires": {
+              "kind": "questInLog",
+              "questId": 30682
+            },
+            "after": [
+              "att-88579-104472f6f244:q30682:accept"
+            ]
+          },
+          {
+            "id": "att-88579-104472f6f244:q30682:objective-3",
+            "kind": "objective",
+            "text": "Rescue Old Lady Fung. Find her shelter inside the building.",
+            "sources": [
+              "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+              "https://www.wowhead.com/quest=30682/holed-up"
+            ],
+            "recovery": {
+              "text": "Use the live objective marker and search inside the nearby houses. The rescue only counts when the game updates that person’s objective."
+            },
+            "completeWhen": {
+              "any": [
+                {
+                  "kind": "questTurnedIn",
+                  "questId": 30682,
+                  "cadence": "once"
+                },
+                {
+                  "kind": "questObjective",
+                  "questId": 30682,
+                  "objectiveIndex": 3
+                },
+                {
+                  "kind": "itemCount",
+                  "itemId": 88579,
+                  "quantity": 1
+                },
+                {
+                  "kind": "toyOwned",
+                  "itemId": 88579
+                }
+              ]
+            },
+            "destination": {
+              "mapID": 379,
+              "x": 0.428,
+              "y": 0.857,
+              "label": "Old Lady Fung"
+            },
+            "questId": 30682,
+            "objectiveIndex": 3,
+            "requires": {
+              "kind": "questInLog",
+              "questId": 30682
+            },
+            "after": [
+              "att-88579-104472f6f244:q30682:accept"
+            ]
+          },
+          {
+            "id": "att-88579-104472f6f244:q30682:objective-1",
+            "kind": "objective",
+            "text": "Rescue Jin Warmkeg. Look inside the house and speak to Jin.",
+            "sources": [
+              "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+              "https://www.wowhead.com/quest=30682/holed-up"
+            ],
+            "recovery": {
+              "text": "Use the live objective marker and search inside the nearby houses. The rescue only counts when the game updates that person’s objective."
+            },
+            "completeWhen": {
+              "any": [
+                {
+                  "kind": "questTurnedIn",
+                  "questId": 30682,
+                  "cadence": "once"
+                },
+                {
+                  "kind": "questObjective",
+                  "questId": 30682,
+                  "objectiveIndex": 1
+                },
+                {
+                  "kind": "itemCount",
+                  "itemId": 88579,
+                  "quantity": 1
+                },
+                {
+                  "kind": "toyOwned",
+                  "itemId": 88579
+                }
+              ]
+            },
+            "destination": {
+              "mapID": 379,
+              "x": 0.438,
+              "y": 0.862,
+              "label": "Jin Warmkeg"
+            },
+            "questId": 30682,
+            "objectiveIndex": 1,
+            "requires": {
+              "kind": "questInLog",
+              "questId": 30682
+            },
+            "after": [
+              "att-88579-104472f6f244:q30682:accept"
+            ]
+          },
+          {
+            "id": "att-88579-104472f6f244:q30682:turnin",
+            "kind": "turnin",
+            "text": "Return and turn in Holed Up. Review the displayed reward before accepting it.",
+            "sources": [
+              "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+              "https://www.wowhead.com/quest=30682/holed-up"
+            ],
+            "recovery": {
+              "text": "If the indicated action is unavailable, preserve the current game evidence and choose another activity; browsing never establishes completion."
+            },
+            "completeWhen": {
+              "any": [
+                {
+                  "kind": "questTurnedIn",
+                  "questId": 30682,
+                  "cadence": "once"
+                },
+                {
+                  "kind": "itemCount",
+                  "itemId": 88579,
+                  "quantity": 1
+                },
+                {
+                  "kind": "toyOwned",
+                  "itemId": 88579
+                }
+              ]
+            },
+            "destination": {
+              "mapID": 379,
+              "x": 0.444,
+              "y": 0.899,
+              "label": "Shado-Master Chong inside Shado-Pan Fallback"
+            },
+            "questId": 30682,
+            "nativeWaypoint": true,
+            "requires": {
+              "kind": "questObjectivesComplete",
+              "questId": 30682
+            },
+            "after": [
+              "att-88579-104472f6f244:q30682:objective-4",
+              "att-88579-104472f6f244:q30682:objective-2",
+              "att-88579-104472f6f244:q30682:objective-3",
+              "att-88579-104472f6f244:q30682:objective-1"
+            ]
+          },
+          {
+            "id": "att-88579-104472f6f244:learn",
+            "kind": "learn",
+            "text": "Use Jin Warmkeg's Brew from your bags to add it to your Toy Box.",
+            "sources": [
+              "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua"
+            ],
+            "recovery": {
+              "text": "If the reward is missing, inspect the quest reward and your bags. Completing the encounter or quest does not prove the toy was received or learned."
+            },
+            "completeWhen": {
+              "kind": "toyOwned",
+              "itemId": 88579
+            },
+            "requires": {
+              "kind": "itemCount",
+              "itemId": 88579,
+              "quantity": 1
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "att-88387-ccd0a4ba46a2",
+      "itemId": 88387,
+      "title": "Shushen's Spittoon",
+      "method": "Quest",
+      "cadence": "once",
+      "sourceRouteIds": [
+        "att-88387-ccd0a4ba46a2"
+      ],
+      "requirements": {
+        "level": 15
+      },
+      "status": "source-checked-candidate",
+      "sourceChecked": true,
+      "playtested": false,
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "reviewedAt": "2026-10-25",
+      "knownGaps": [],
+      "facts": {
+        "originalSourceFacts": {
+          "awp": 50004,
+          "b": 1,
+          "category": "Zones",
+          "coords": {
+            "418": [
+              [
+                29.7,
+                39
+              ]
+            ]
+          },
+          "headers": [
+            -732,
+            -45
+          ],
+          "itemId": 88387,
+          "lineage": [
+            {
+              "coords": {
+                "418": [
+                  [
+                    29.7,
+                    39
+                  ]
+                ]
+              },
+              "kind": "Quest",
+              "lvl": 15,
+              "qgs": [
+                58278
+              ],
+              "questID": 30169,
+              "record": 173103
+            },
+            {
+              "b": 1,
+              "itemID": 88387,
+              "kind": "Toy",
+              "record": 173104
+            }
+          ],
+          "localFacts": {
+            "b": 1,
+            "itemID": 88387,
+            "kind": "Toy",
+            "record": 173104
+          },
+          "lvl": 15,
+          "mapID": 418,
+          "maps": [
+            419,
+            420,
+            421
+          ],
+          "qgs": [
+            58278
+          ],
+          "questID": 30169
+        },
+        "questId": 30169,
+        "acceptNpcId": 58278,
+        "turnInNpcId": 58278,
+        "objectivePinPolicy": "Use current quest waypoint; old comments disagree on Slovan coordinates."
+      },
+      "walkthrough": {
+        "version": 2,
+        "contentVersion": "session-catalogue-1",
+        "routeIds": [
+          "att-88387-ccd0a4ba46a2"
+        ],
+        "includesPrerequisites": true,
+        "completeWhen": {
+          "kind": "toyOwned",
+          "itemId": 88387
+        },
+        "nodes": [
+          {
+            "id": "att-88387-ccd0a4ba46a2:q30169:accept",
+            "kind": "accept",
+            "text": "Accept Raid Leader Slovan from the marked questgiver.",
+            "sources": [
+              "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+              "https://www.wowhead.com/quest=30169/raid-leader-slovan"
+            ],
+            "recovery": {
+              "text": "If the indicated action is unavailable, preserve the current game evidence and choose another activity; browsing never establishes completion."
+            },
+            "completeWhen": {
+              "any": [
+                {
+                  "kind": "questInLog",
+                  "questId": 30169
+                },
+                {
+                  "kind": "questTurnedIn",
+                  "questId": 30169,
+                  "cadence": "once"
+                },
+                {
+                  "kind": "itemCount",
+                  "itemId": 88387,
+                  "quantity": 1
+                },
+                {
+                  "kind": "toyOwned",
+                  "itemId": 88387
+                }
+              ]
+            },
+            "destination": {
+              "mapID": 418,
+              "x": 0.297,
+              "y": 0.39,
+              "label": "Tired Shushen"
+            },
+            "questId": 30169
+          },
+          {
+            "id": "att-88387-ccd0a4ba46a2:q30169:objective",
+            "kind": "objective",
+            "text": "Enter the saurok den behind Krasari Falls and defeat Slovan. Follow the live quest marker for the den rather than an old coordinate report.",
+            "sources": [
+              "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+              "https://www.wowhead.com/quest=30169/raid-leader-slovan"
+            ],
+            "recovery": {
+              "text": "Look behind the waterfall for the den. If the quest is not offered, check level and existing completion; do not invent a prerequisite chain or solo capability."
+            },
+            "completeWhen": {
+              "any": [
+                {
+                  "kind": "questTurnedIn",
+                  "questId": 30169,
+                  "cadence": "once"
+                },
+                {
+                  "kind": "questObjectivesComplete",
+                  "questId": 30169
+                },
+                {
+                  "kind": "itemCount",
+                  "itemId": 88387,
+                  "quantity": 1
+                },
+                {
+                  "kind": "toyOwned",
+                  "itemId": 88387
+                }
+              ]
+            },
+            "questId": 30169,
+            "nativeWaypoint": true,
+            "requires": {
+              "kind": "questInLog",
+              "questId": 30169
+            },
+            "after": [
+              "att-88387-ccd0a4ba46a2:q30169:accept"
+            ]
+          },
+          {
+            "id": "att-88387-ccd0a4ba46a2:q30169:turnin",
+            "kind": "turnin",
+            "text": "Return and turn in Raid Leader Slovan. Review the displayed reward before accepting it.",
+            "sources": [
+              "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+              "https://www.wowhead.com/quest=30169/raid-leader-slovan"
+            ],
+            "recovery": {
+              "text": "If the indicated action is unavailable, preserve the current game evidence and choose another activity; browsing never establishes completion."
+            },
+            "completeWhen": {
+              "any": [
+                {
+                  "kind": "questTurnedIn",
+                  "questId": 30169,
+                  "cadence": "once"
+                },
+                {
+                  "kind": "itemCount",
+                  "itemId": 88387,
+                  "quantity": 1
+                },
+                {
+                  "kind": "toyOwned",
+                  "itemId": 88387
+                }
+              ]
+            },
+            "destination": {
+              "mapID": 418,
+              "x": 0.297,
+              "y": 0.39,
+              "label": "Tired Shushen"
+            },
+            "questId": 30169,
+            "nativeWaypoint": true,
+            "requires": {
+              "kind": "questObjectivesComplete",
+              "questId": 30169
+            },
+            "after": [
+              "att-88387-ccd0a4ba46a2:q30169:objective"
+            ]
+          },
+          {
+            "id": "att-88387-ccd0a4ba46a2:learn",
+            "kind": "learn",
+            "text": "Use Shushen's Spittoon from your bags to add it to your Toy Box.",
+            "sources": [
+              "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua"
+            ],
+            "recovery": {
+              "text": "If the reward is missing, inspect the quest reward and your bags. Completing the encounter or quest does not prove the toy was received or learned."
+            },
+            "completeWhen": {
+              "kind": "toyOwned",
+              "itemId": 88387
+            },
+            "requires": {
+              "kind": "itemCount",
+              "itemId": 88387,
+              "quantity": 1
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "att-88417-67c99d9834d2",
+      "itemId": 88417,
+      "title": "Gokk'lok's Shell",
+      "method": "Quest",
+      "cadence": "once",
+      "sourceRouteIds": [
+        "att-88417-67c99d9834d2"
+      ],
+      "requirements": {
+        "level": 30
+      },
+      "status": "source-checked-candidate",
+      "sourceChecked": true,
+      "playtested": false,
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "reviewedAt": "2026-10-25",
+      "knownGaps": [],
+      "facts": {
+        "originalSourceFacts": {
+          "awp": 50004,
+          "b": 1,
+          "category": "Zones",
+          "coords": {
+            "422": [
+              [
+                27.4,
+                16.2
+              ]
+            ]
+          },
+          "headers": [
+            -732,
+            -45
+          ],
+          "itemId": 88417,
+          "lineage": [
+            {
+              "coords": {
+                "422": [
+                  [
+                    27.4,
+                    16.2
+                  ]
+                ]
+              },
+              "kind": "Quest",
+              "lvl": 30,
+              "qgs": [
+                62767
+              ],
+              "questID": 31083,
+              "record": 171799
+            },
+            {
+              "b": 1,
+              "itemID": 88417,
+              "kind": "Toy",
+              "record": 171800
+            }
+          ],
+          "localFacts": {
+            "b": 1,
+            "itemID": 88417,
+            "kind": "Toy",
+            "record": 171800
+          },
+          "lvl": 30,
+          "mapID": 422,
+          "qgs": [
+            62767
+          ],
+          "questID": 31083
+        },
+        "questId": 31083,
+        "triggerNpcId": 62767,
+        "acceptMechanism": "Killing Gokk'lok offers Promises of Gold; NPC 62767 is not a friendly questgiver.",
+        "turnInNpcName": "Chief Rikkitun",
+        "villagePointIsArrivalNotExactNpc": true
+      },
+      "walkthrough": {
+        "version": 2,
+        "contentVersion": "session-catalogue-1",
+        "routeIds": [
+          "att-88417-67c99d9834d2"
+        ],
+        "includesPrerequisites": true,
+        "completeWhen": {
+          "kind": "toyOwned",
+          "itemId": 88417
+        },
+        "nodes": [
+          {
+            "id": "att-88417-67c99d9834d2:q31083:trigger",
+            "kind": "loot",
+            "text": "Swim to Gokk'lok off the northwestern coast of Dread Wastes and defeat the giant clam. Deal with the creatures that join the fight, then wait for the quest offer.",
+            "sources": [
+              "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+              "https://www.wowhead.com/de/npc=62767/gokklok"
+            ],
+            "recovery": {
+              "text": "The fight is underwater. Watch your actual breathing and combat state. Do not rely on historical health totals, respawn timers or claims of solo capability."
+            },
+            "completeWhen": {
+              "any": [
+                {
+                  "kind": "questInLog",
+                  "questId": 31083
+                },
+                {
+                  "kind": "questTurnedIn",
+                  "questId": 31083,
+                  "cadence": "once"
+                },
+                {
+                  "kind": "itemCount",
+                  "itemId": 88417,
+                  "quantity": 1
+                },
+                {
+                  "kind": "toyOwned",
+                  "itemId": 88417
+                }
+              ]
+            },
+            "destination": {
+              "mapID": 422,
+              "x": 0.274,
+              "y": 0.162,
+              "label": "Gokk'lok's Grotto"
+            }
+          },
+          {
+            "id": "att-88417-67c99d9834d2:q31083:accept",
+            "kind": "accept",
+            "text": "Accept the Promises of Gold quest offered after the encounter.",
+            "sources": [
+              "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+              "https://www.wowhead.com/de/npc=62767/gokklok",
+              "https://www.wowhead.com/mx/quest=31083/promesas-de-oro"
+            ],
+            "recovery": {
+              "text": "If the offer is absent, inspect your quest log for Promises of Gold and your completion history before repeating the encounter."
+            },
+            "completeWhen": {
+              "any": [
+                {
+                  "kind": "questInLog",
+                  "questId": 31083
+                },
+                {
+                  "kind": "questTurnedIn",
+                  "questId": 31083,
+                  "cadence": "once"
+                },
+                {
+                  "kind": "itemCount",
+                  "itemId": 88417,
+                  "quantity": 1
+                },
+                {
+                  "kind": "toyOwned",
+                  "itemId": 88417
+                }
+              ]
+            },
+            "questId": 31083,
+            "after": [
+              "att-88417-67c99d9834d2:q31083:trigger"
+            ]
+          },
+          {
+            "id": "att-88417-67c99d9834d2:q31083:turnin",
+            "kind": "turnin",
+            "text": "Go ashore to Rikkitun Village and deliver Promises of Gold to Chief Rikkitun. Follow the live turn-in marker for his current position.",
+            "sources": [
+              "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+              "https://www.wowhead.com/mx/quest=31083/promesas-de-oro",
+              "https://www.wowhead.com/es/quest=31084/ligan-el-encanto"
+            ],
+            "recovery": {
+              "text": "If the indicated action is unavailable, preserve the current game evidence and choose another activity; browsing never establishes completion."
+            },
+            "completeWhen": {
+              "any": [
+                {
+                  "kind": "questTurnedIn",
+                  "questId": 31083,
+                  "cadence": "once"
+                },
+                {
+                  "kind": "itemCount",
+                  "itemId": 88417,
+                  "quantity": 1
+                },
+                {
+                  "kind": "toyOwned",
+                  "itemId": 88417
+                }
+              ]
+            },
+            "destination": {
+              "mapID": 422,
+              "x": 0.384,
+              "y": 0.174,
+              "label": "Rikkitun Village arrival"
+            },
+            "questId": 31083,
+            "nativeWaypoint": true,
+            "requires": {
+              "kind": "questObjectivesComplete",
+              "questId": 31083
+            },
+            "after": [
+              "att-88417-67c99d9834d2:q31083:accept"
+            ]
+          },
+          {
+            "id": "att-88417-67c99d9834d2:learn",
+            "kind": "learn",
+            "text": "Use Gokk'lok's Shell from your bags to add it to your Toy Box.",
+            "sources": [
+              "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua"
+            ],
+            "recovery": {
+              "text": "If the reward is missing, inspect the quest reward and your bags. Completing the encounter or quest does not prove the toy was received or learned."
+            },
+            "completeWhen": {
+              "kind": "toyOwned",
+              "itemId": 88417
+            },
+            "requires": {
+              "kind": "itemCount",
+              "itemId": 88417,
+              "quantity": 1
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "att-198039-595ad513b4cc",
+      "itemId": 198039,
+      "title": "Rock of Appreciation",
+      "method": "Quest",
+      "cadence": "once",
+      "sourceRouteIds": [
+        "att-198039-595ad513b4cc"
+      ],
+      "requirements": {
+        "level": 20
+      },
+      "status": "source-checked-candidate",
+      "sourceChecked": true,
+      "playtested": false,
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "reviewedAt": "2026-10-25",
+      "knownGaps": [],
+      "facts": {
+        "originalSourceFacts": {
+          "awp": 100002,
+          "b": 1,
+          "category": "Zones",
+          "coords": {
+            "2023": [
+              [
+                47,
+                71.2
+              ]
+            ]
+          },
+          "headers": [
+            -732,
+            -45
+          ],
+          "itemId": 198039,
+          "lineage": [
+            {
+              "coords": {
+                "2023": [
+                  [
+                    47,
+                    71.2
+                  ]
+                ]
+              },
+              "kind": "Quest",
+              "lvl": 20,
+              "qgs": [
+                187796
+              ],
+              "questID": 66226,
+              "record": 228175
+            },
+            {
+              "b": 1,
+              "itemID": 198039,
+              "kind": "Toy",
+              "record": 228176
+            }
+          ],
+          "localFacts": {
+            "b": 1,
+            "itemID": 198039,
+            "kind": "Toy",
+            "record": 228176
+          },
+          "lvl": 20,
+          "mapID": 2023,
+          "qgs": [
+            187796
+          ],
+          "questID": 66226
+        },
+        "questId": 66226,
+        "questgiverNpcId": 187796,
+        "questgiverName": "Initiate Kittileg",
+        "sourceNpcPoint": {
+          "mapID": 2023,
+          "x": 0.47,
+          "y": 0.712,
+          "label": "Questgiver below the map marker"
+        },
+        "entranceSeparateFromNpc": true
+      },
+      "walkthrough": {
+        "version": 2,
+        "contentVersion": "session-catalogue-1",
+        "routeIds": [
+          "att-198039-595ad513b4cc"
+        ],
+        "includesPrerequisites": true,
+        "completeWhen": {
+          "kind": "toyOwned",
+          "itemId": 198039
+        },
+        "nodes": [
+          {
+            "id": "att-198039-595ad513b4cc:q66226:accept",
+            "kind": "accept",
+            "text": "Enter the cave behind the waterfall and accept Emotional Support Companions from Initiate Kittileg.",
+            "sources": [
+              "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+              "https://www.wowhead.com/quest=66226/emotional-support-companions"
+            ],
+            "recovery": {
+              "text": "If the indicated action is unavailable, preserve the current game evidence and choose another activity; browsing never establishes completion."
+            },
+            "completeWhen": {
+              "any": [
+                {
+                  "kind": "questInLog",
+                  "questId": 66226
+                },
+                {
+                  "kind": "questTurnedIn",
+                  "questId": 66226,
+                  "cadence": "once"
+                },
+                {
+                  "kind": "itemCount",
+                  "itemId": 198039,
+                  "quantity": 1
+                },
+                {
+                  "kind": "toyOwned",
+                  "itemId": 198039
+                }
+              ]
+            },
+            "destination": {
+              "mapID": 2023,
+              "x": 0.4698,
+              "y": 0.7013,
+              "label": "Waterfall cave entrance at Ridgewater Retreat"
+            },
+            "questId": 66226
+          },
+          {
+            "id": "att-198039-595ad513b4cc:q66226:objective",
+            "kind": "objective",
+            "text": "Rescue the four animals in Ridgewater Retreat: release Raidu from the incense container, then find the rabbit in the nearby basket; untie Taichek from the large rock; free Dumen from the fire; and uncover Ongke beside the grassy rock and fish remains. Use the live markers to find the remaining animal.",
+            "sources": [
+              "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+              "https://www.wowhead.com/quest=66226/emotional-support-companions"
+            ],
+            "recovery": {
+              "text": "The rabbit requires a second interaction after leaving the container. Ongke can blend into the ground. Target the named animal and follow its live objective rather than treating arrival as rescue."
+            },
+            "completeWhen": {
+              "any": [
+                {
+                  "kind": "questTurnedIn",
+                  "questId": 66226,
+                  "cadence": "once"
+                },
+                {
+                  "kind": "questObjectivesComplete",
+                  "questId": 66226
+                },
+                {
+                  "kind": "itemCount",
+                  "itemId": 198039,
+                  "quantity": 1
+                },
+                {
+                  "kind": "toyOwned",
+                  "itemId": 198039
+                }
+              ]
+            },
+            "questId": 66226,
+            "nativeWaypoint": true,
+            "requires": {
+              "kind": "questInLog",
+              "questId": 66226
+            },
+            "after": [
+              "att-198039-595ad513b4cc:q66226:accept"
+            ]
+          },
+          {
+            "id": "att-198039-595ad513b4cc:q66226:turnin",
+            "kind": "turnin",
+            "text": "Return and turn in Emotional Support Companions. Review the displayed reward before accepting it.",
+            "sources": [
+              "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua",
+              "https://www.wowhead.com/quest=66226/emotional-support-companions"
+            ],
+            "recovery": {
+              "text": "If the indicated action is unavailable, preserve the current game evidence and choose another activity; browsing never establishes completion."
+            },
+            "completeWhen": {
+              "any": [
+                {
+                  "kind": "questTurnedIn",
+                  "questId": 66226,
+                  "cadence": "once"
+                },
+                {
+                  "kind": "itemCount",
+                  "itemId": 198039,
+                  "quantity": 1
+                },
+                {
+                  "kind": "toyOwned",
+                  "itemId": 198039
+                }
+              ]
+            },
+            "destination": {
+              "mapID": 2023,
+              "x": 0.4698,
+              "y": 0.7013,
+              "label": "Waterfall cave entrance at Ridgewater Retreat"
+            },
+            "questId": 66226,
+            "nativeWaypoint": true,
+            "requires": {
+              "kind": "questObjectivesComplete",
+              "questId": 66226
+            },
+            "after": [
+              "att-198039-595ad513b4cc:q66226:objective"
+            ]
+          },
+          {
+            "id": "att-198039-595ad513b4cc:learn",
+            "kind": "learn",
+            "text": "Use Rock of Appreciation from your bags to add it to your Toy Box.",
+            "sources": [
+              "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua"
+            ],
+            "recovery": {
+              "text": "If the reward is missing, inspect the quest reward and your bags. Completing the encounter or quest does not prove the toy was received or learned."
+            },
+            "completeWhen": {
+              "kind": "toyOwned",
+              "itemId": 198039
+            },
+            "requires": {
+              "kind": "itemCount",
+              "itemId": 198039,
+              "quantity": 1
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "att-86584-03894f9bdbdb",
+      "itemId": 86584,
+      "title": "Hardened Shell",
+      "method": "Rare",
+      "cadence": "repeatable",
+      "sourceRouteIds": [
+        "att-86584-03894f9bdbdb"
+      ],
+      "requirements": {
+        "level": 10
+      },
+      "status": "source-checked-candidate",
+      "sourceChecked": true,
+      "playtested": false,
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "reviewedAt": "2026-10-25",
+      "knownGaps": [],
+      "facts": {
+        "originalSourceFacts": {
+          "awp": 50400,
+          "b": 1,
+          "category": "Zones",
+          "coords": {
+            "554": [
+              [
+                20.6,
+                43.2
+              ],
+              [
+                26.6,
+                72.4
+              ]
+            ]
+          },
+          "description": "Travel along the beach and kill Great Turtles — whenever one respawns, there's a chance it will respawn as a Great Turtle Furyshell instead of the normal mob.",
+          "headers": [
+            -732,
+            -46
+          ],
+          "isDaily": 1,
+          "itemId": 86584,
+          "lineage": [
+            {
+              "coords": {
+                "554": [
+                  [
+                    20.6,
+                    43.2
+                  ],
+                  [
+                    26.6,
+                    72.4
+                  ]
+                ]
+              },
+              "description": "Travel along the beach and kill Great Turtles — whenever one respawns, there's a chance it will respawn as a Great Turtle Furyshell instead of the normal mob.",
+              "isDaily": 1,
+              "kind": "NPC",
+              "npcID": 73161,
+              "questID": 33297,
+              "record": 177701
+            },
+            {
+              "b": 1,
+              "itemID": 86584,
+              "kind": "Toy",
+              "lvl": 10,
+              "record": 177702
+            }
+          ],
+          "localFacts": {
+            "b": 1,
+            "itemID": 86584,
+            "kind": "Toy",
+            "lvl": 10,
+            "record": 177702
+          },
+          "lvl": 10,
+          "mapID": 554,
+          "maps": [
+            555
+          ],
+          "npcID": 73161,
+          "questID": 33297
+        },
+        "npcId": 73161,
+        "hiddenTrackingQuestId": 33297,
+        "requiresAcceptableQuest": false
+      },
+      "walkthrough": {
+        "version": 2,
+        "contentVersion": "session-catalogue-1",
+        "routeIds": [
+          "att-86584-03894f9bdbdb"
+        ],
+        "includesPrerequisites": true,
+        "completeWhen": {
+          "kind": "toyOwned",
+          "itemId": 86584
+        },
+        "nodes": [
+          {
+            "id": "att-86584-03894f9bdbdb:spawn",
+            "kind": "summon",
+            "text": "Search the western shore for Great Turtle Furyshell. If only ordinary Great Turtles are present, defeat them and inspect later replacements for the rare.",
+            "sources": [
+              "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua"
+            ],
+            "recovery": {
+              "text": "The replacement is random. No spawn countdown or number of kills is established. Chelon is a separate route for the same toy."
+            },
+            "completeWhen": {
+              "any": [
+                {
+                  "kind": "itemCount",
+                  "itemId": 86584,
+                  "quantity": 1
+                },
+                {
+                  "kind": "toyOwned",
+                  "itemId": 86584
+                }
+              ]
+            },
+            "destination": {
+              "mapID": 554,
+              "x": 0.20600000000000002,
+              "y": 0.43200000000000005,
+              "label": "Timeless Isle furyshell"
+            },
+            "manual": true
+          },
+          {
+            "id": "att-86584-03894f9bdbdb:defeat",
+            "kind": "loot",
+            "text": "Defeat Great Turtle Furyshell when it appears and loot it for Hardened Shell.",
+            "sources": [
+              "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua"
+            ],
+            "recovery": {
+              "text": "A kill or the daily tracking flag does not establish that this toy dropped or that toy loot is exhausted. Use observed loot eligibility; the drop chance and respawn time remain unknown."
+            },
+            "completeWhen": {
+              "any": [
+                {
+                  "kind": "itemCount",
+                  "itemId": 86584,
+                  "quantity": 1
+                },
+                {
+                  "kind": "toyOwned",
+                  "itemId": 86584
+                }
+              ]
+            },
+            "destination": {
+              "mapID": 554,
+              "x": 0.20600000000000002,
+              "y": 0.43200000000000005,
+              "label": "Timeless Isle furyshell"
+            }
+          },
+          {
+            "id": "att-86584-03894f9bdbdb:learn",
+            "kind": "learn",
+            "text": "Use Hardened Shell from your bags to add it to your Toy Box.",
+            "sources": [
+              "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua"
+            ],
+            "recovery": {
+              "text": "If the reward is missing, inspect the quest reward and your bags. Completing the encounter or quest does not prove the toy was received or learned."
+            },
+            "completeWhen": {
+              "kind": "toyOwned",
+              "itemId": 86584
+            },
+            "requires": {
+              "kind": "itemCount",
+              "itemId": 86584,
+              "quantity": 1
+            }
+          }
+        ]
+      },
+      "lootPolicy": {
+        "kind": "unknown",
+        "hiddenTrackingQuestId": 33297,
+        "trackingFlagDoesNotEstablishLootConsumption": true
+      },
+      "attemptPolicy": "Use a bounded optional farming block. Unknown spawn time and loot reset stay unknown."
+    },
+    {
+      "id": "att-86584-360748cc9706",
+      "itemId": 86584,
+      "title": "Hardened Shell",
+      "method": "Rare",
+      "cadence": "repeatable",
+      "sourceRouteIds": [
+        "att-86584-360748cc9706"
+      ],
+      "requirements": {
+        "level": 10
+      },
+      "status": "source-checked-candidate",
+      "sourceChecked": true,
+      "playtested": false,
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "reviewedAt": "2026-10-25",
+      "knownGaps": [],
+      "facts": {
+        "originalSourceFacts": {
+          "awp": 50400,
+          "b": 1,
+          "category": "Zones",
+          "coords": {
+            "554": [
+              [
+                25.2,
+                35.8
+              ]
+            ]
+          },
+          "description": "Click on Conspicuously Empty Shell to spawn Chelon.",
+          "headers": [
+            -732,
+            -46
+          ],
+          "isDaily": 1,
+          "itemId": 86584,
+          "lineage": [
+            {
+              "coords": {
+                "554": [
+                  [
+                    25.2,
+                    35.8
+                  ]
+                ]
+              },
+              "description": "Click on Conspicuously Empty Shell to spawn Chelon.",
+              "isDaily": 1,
+              "kind": "NPC",
+              "npcID": 72045,
+              "providers": [
+                [
+                  "o",
+                  221027
+                ]
+              ],
+              "questID": 32966,
+              "record": 177663
+            },
+            {
+              "b": 1,
+              "itemID": 86584,
+              "kind": "Toy",
+              "lvl": 10,
+              "record": 177664
+            }
+          ],
+          "localFacts": {
+            "b": 1,
+            "itemID": 86584,
+            "kind": "Toy",
+            "lvl": 10,
+            "record": 177664
+          },
+          "lvl": 10,
+          "mapID": 554,
+          "maps": [
+            555
+          ],
+          "npcID": 72045,
+          "providers": [
+            [
+              "o",
+              221027
+            ]
+          ],
+          "questID": 32966
+        },
+        "npcId": 72045,
+        "hiddenTrackingQuestId": 32966,
+        "requiresAcceptableQuest": false
+      },
+      "walkthrough": {
+        "version": 2,
+        "contentVersion": "session-catalogue-1",
+        "routeIds": [
+          "att-86584-360748cc9706"
+        ],
+        "includesPrerequisites": true,
+        "completeWhen": {
+          "kind": "toyOwned",
+          "itemId": 86584
+        },
+        "nodes": [
+          {
+            "id": "att-86584-360748cc9706:spawn",
+            "kind": "summon",
+            "text": "At the marked shore location, interact with the Conspicuously Empty Shell to summon Chelon.",
+            "sources": [
+              "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua"
+            ],
+            "recovery": {
+              "text": "If the shell or Chelon is absent, the respawn time is unknown. Choose the Furyshell route or another planned activity instead of waiting indefinitely."
+            },
+            "completeWhen": {
+              "any": [
+                {
+                  "kind": "itemCount",
+                  "itemId": 86584,
+                  "quantity": 1
+                },
+                {
+                  "kind": "toyOwned",
+                  "itemId": 86584
+                }
+              ]
+            },
+            "destination": {
+              "mapID": 554,
+              "x": 0.252,
+              "y": 0.358,
+              "label": "Timeless Isle chelon"
+            },
+            "manual": true
+          },
+          {
+            "id": "att-86584-360748cc9706:defeat",
+            "kind": "loot",
+            "text": "Defeat the summoned Chelon and loot it for Hardened Shell.",
+            "sources": [
+              "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua"
+            ],
+            "recovery": {
+              "text": "A kill or the daily tracking flag does not establish that this toy dropped or that toy loot is exhausted. Use observed loot eligibility; the drop chance and respawn time remain unknown."
+            },
+            "completeWhen": {
+              "any": [
+                {
+                  "kind": "itemCount",
+                  "itemId": 86584,
+                  "quantity": 1
+                },
+                {
+                  "kind": "toyOwned",
+                  "itemId": 86584
+                }
+              ]
+            },
+            "destination": {
+              "mapID": 554,
+              "x": 0.252,
+              "y": 0.358,
+              "label": "Timeless Isle chelon"
+            }
+          },
+          {
+            "id": "att-86584-360748cc9706:learn",
+            "kind": "learn",
+            "text": "Use Hardened Shell from your bags to add it to your Toy Box.",
+            "sources": [
+              "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua"
+            ],
+            "recovery": {
+              "text": "If the reward is missing, inspect the quest reward and your bags. Completing the encounter or quest does not prove the toy was received or learned."
+            },
+            "completeWhen": {
+              "kind": "toyOwned",
+              "itemId": 86584
+            },
+            "requires": {
+              "kind": "itemCount",
+              "itemId": 86584,
+              "quantity": 1
+            }
+          }
+        ]
+      },
+      "lootPolicy": {
+        "kind": "unknown",
+        "hiddenTrackingQuestId": 32966,
+        "trackingFlagDoesNotEstablishLootConsumption": true
+      },
+      "attemptPolicy": "Use a bounded optional farming block. Unknown spawn time and loot reset stay unknown."
+    },
+    {
+      "id": "att-104302-2fb2039fa867",
+      "itemId": 104302,
+      "title": "Blackflame Daggers",
+      "method": "Rare",
+      "cadence": "repeatable",
+      "sourceRouteIds": [
+        "att-104302-2fb2039fa867"
+      ],
+      "requirements": {
+        "level": 30
+      },
+      "status": "source-checked-candidate",
+      "sourceChecked": true,
+      "playtested": false,
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "reviewedAt": "2026-10-25",
+      "knownGaps": [],
+      "facts": {
+        "originalSourceFacts": {
+          "awp": 50400,
+          "b": 1,
+          "category": "Zones",
+          "coords": {
+            "554": [
+              [
+                60.6,
+                48.4
+              ],
+              [
+                65.4,
+                60.2
+              ]
+            ]
+          },
+          "description": "This rare patrols all the way down the pathway from the upper bridge to the lower one.",
+          "headers": [
+            -732,
+            -46
+          ],
+          "isDaily": 1,
+          "itemId": 104302,
+          "lineage": [
+            {
+              "coords": {
+                "554": [
+                  [
+                    60.6,
+                    48.4
+                  ],
+                  [
+                    65.4,
+                    60.2
+                  ]
+                ]
+              },
+              "description": "This rare patrols all the way down the pathway from the upper bridge to the lower one.",
+              "isDaily": 1,
+              "kind": "NPC",
+              "npcID": 73171,
+              "questID": 33299,
+              "record": 177657
+            },
+            {
+              "b": 1,
+              "itemID": 104302,
+              "kind": "Toy",
+              "record": 177659
+            }
+          ],
+          "localFacts": {
+            "b": 1,
+            "itemID": 104302,
+            "kind": "Toy",
+            "record": 177659
+          },
+          "lvl": 30,
+          "mapID": 554,
+          "maps": [
+            555
+          ],
+          "npcID": 73171,
+          "questID": 33299
+        },
+        "npcId": 73171,
+        "hiddenTrackingQuestId": 33299,
+        "requiresAcceptableQuest": false
+      },
+      "walkthrough": {
+        "version": 2,
+        "contentVersion": "session-catalogue-1",
+        "routeIds": [
+          "att-104302-2fb2039fa867"
+        ],
+        "includesPrerequisites": true,
+        "completeWhen": {
+          "kind": "toyOwned",
+          "itemId": 104302
+        },
+        "nodes": [
+          {
+            "id": "att-104302-2fb2039fa867:defeat",
+            "kind": "loot",
+            "text": "Search the path between the upper and lower bridge for Cinderfall, defeat it and loot for Blackflame Daggers. Use Next pin to inspect the other patrol endpoint.",
+            "sources": [
+              "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua"
+            ],
+            "recovery": {
+              "text": "A kill or the daily tracking flag does not establish that this toy dropped or that toy loot is exhausted. Use observed loot eligibility; the drop chance and respawn time remain unknown."
+            },
+            "completeWhen": {
+              "any": [
+                {
+                  "kind": "itemCount",
+                  "itemId": 104302,
+                  "quantity": 1
+                },
+                {
+                  "kind": "toyOwned",
+                  "itemId": 104302
+                }
+              ]
+            },
+            "destination": {
+              "mapID": 554,
+              "x": 0.606,
+              "y": 0.484,
+              "label": "Timeless Isle cinderfall"
+            },
+            "waypoints": [
+              {
+                "mapID": 554,
+                "x": 0.606,
+                "y": 0.484,
+                "label": "Cinderfall patrol endpoint"
+              },
+              {
+                "mapID": 554,
+                "x": 0.654,
+                "y": 0.602,
+                "label": "Cinderfall patrol endpoint"
+              }
+            ]
+          },
+          {
+            "id": "att-104302-2fb2039fa867:learn",
+            "kind": "learn",
+            "text": "Use Blackflame Daggers from your bags to add it to your Toy Box.",
+            "sources": [
+              "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua"
+            ],
+            "recovery": {
+              "text": "If the reward is missing, inspect the quest reward and your bags. Completing the encounter or quest does not prove the toy was received or learned."
+            },
+            "completeWhen": {
+              "kind": "toyOwned",
+              "itemId": 104302
+            },
+            "requires": {
+              "kind": "itemCount",
+              "itemId": 104302,
+              "quantity": 1
+            }
+          }
+        ]
+      },
+      "lootPolicy": {
+        "kind": "unknown",
+        "hiddenTrackingQuestId": 33299,
+        "trackingFlagDoesNotEstablishLootConsumption": true
+      },
+      "attemptPolicy": "Use a bounded optional farming block. Unknown spawn time and loot reset stay unknown."
+    },
+    {
+      "id": "att-140309-6b9529cbb604",
+      "itemId": 140309,
+      "title": "Prismatic Bauble",
+      "method": "Vendor",
+      "cadence": "once",
+      "sourceRouteIds": [
+        "att-140309-6b9529cbb604"
+      ],
+      "requirements": {
+        "level": 10
+      },
+      "status": "source-checked-candidate",
+      "sourceChecked": true,
+      "playtested": false,
+      "sourceRevision": "52895ee664b61e08f091d514fe1556568d411570",
+      "reviewedAt": "2026-10-25",
+      "knownGaps": [],
+      "facts": {
+        "originalSourceFacts": {
+          "awp": 70003,
+          "b": 1,
+          "category": "Zones",
+          "coords": {
+            "627": [
+              [
+                43.2,
+                46.6
+              ]
+            ]
+          },
+          "cost": 2500000000,
+          "description": "This vendor is not always present.",
+          "headers": [
+            -732,
+            -58
+          ],
+          "isRaid": 1,
+          "itemId": 140309,
+          "lineage": [
+            {
+              "coords": {
+                "627": [
+                  [
+                    43.2,
+                    46.6
+                  ]
+                ]
+              },
+              "description": "This vendor is not always present.",
+              "kind": "NPC",
+              "npcID": 108468,
+              "record": 190301
+            },
+            {
+              "b": 1,
+              "cost": 2500000000,
+              "itemID": 140309,
+              "kind": "Toy",
+              "record": 190305
+            }
+          ],
+          "localFacts": {
+            "b": 1,
+            "cost": 2500000000,
+            "itemID": 140309,
+            "kind": "Toy",
+            "record": 190305
+          },
+          "lvl": 10,
+          "mapID": 627,
+          "maps": [
+            629
+          ],
+          "npcID": 108468
+        },
+        "vendorNpcId": 108468,
+        "vendorName": "The Mad Merchant",
+        "priceCopper": 2500000000,
+        "priceGold": 250000,
+        "location": "The Wonderworks toy shop, Legion Dalaran"
+      },
+      "walkthrough": {
+        "version": 2,
+        "contentVersion": "session-catalogue-1",
+        "routeIds": [
+          "att-140309-6b9529cbb604"
+        ],
+        "includesPrerequisites": true,
+        "completeWhen": {
+          "kind": "toyOwned",
+          "itemId": 140309
+        },
+        "nodes": [
+          {
+            "id": "att-140309-6b9529cbb604:vendor-observation",
+            "kind": "observe",
+            "text": "Visit The Wonderworks in Legion Dalaran and look for the Mad Merchant. Open his shop if he is present.",
+            "sources": [
+              "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua"
+            ],
+            "recovery": {
+              "text": "His presence is intermittent and the source gives no reliable schedule. Keep the goal followed and choose another activity if he is absent; do not show a spawn countdown."
+            },
+            "completeWhen": {
+              "any": [
+                {
+                  "kind": "itemCount",
+                  "itemId": 140309,
+                  "quantity": 1
+                },
+                {
+                  "kind": "toyOwned",
+                  "itemId": 140309
+                }
+              ]
+            },
+            "destination": {
+              "mapID": 627,
+              "x": 0.432,
+              "y": 0.466,
+              "label": "The Mad Merchant in The Wonderworks"
+            },
+            "observation": {
+              "interface": "merchant",
+              "npcId": 108468
+            },
+            "manual": true
+          },
+          {
+            "id": "att-140309-6b9529cbb604:vendor",
+            "kind": "purchase",
+            "text": "Check the displayed Prismatic Bauble price. The pinned price is 250,000 gold; buy it yourself only if the current price and your available gold are acceptable.",
+            "sources": [
+              "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua"
+            ],
+            "recovery": {
+              "text": "Other purchases may use the same gold. Recheck the combined preparation list and the merchant’s live price; Toybox must not buy or spend automatically."
+            },
+            "completeWhen": {
+              "any": [
+                {
+                  "kind": "itemCount",
+                  "itemId": 140309,
+                  "quantity": 1
+                },
+                {
+                  "kind": "toyOwned",
+                  "itemId": 140309
+                }
+              ]
+            },
+            "destination": {
+              "mapID": 627,
+              "x": 0.432,
+              "y": 0.466,
+              "label": "The Mad Merchant in The Wonderworks"
+            },
+            "costs": [
+              [
+                "g",
+                2500000000
+              ]
+            ],
+            "requires": {
+              "kind": "interfaceObserved",
+              "interface": "merchant",
+              "npcId": 108468
+            }
+          },
+          {
+            "id": "att-140309-6b9529cbb604:learn",
+            "kind": "learn",
+            "text": "Use Prismatic Bauble from your bags to add it to your Toy Box.",
+            "sources": [
+              "https://github.com/ATTWoWAddon/AllTheThings/blob/52895ee664b61e08f091d514fe1556568d411570/db/Standard/Categories/Zones.lua"
+            ],
+            "recovery": {
+              "text": "If the reward is missing, inspect the quest reward and your bags. Completing the encounter or quest does not prove the toy was received or learned."
+            },
+            "completeWhen": {
+              "kind": "toyOwned",
+              "itemId": 140309
+            },
+            "requires": {
+              "kind": "itemCount",
+              "itemId": 140309,
+              "quantity": 1
+            }
+          }
+        ]
+      },
+      "costs": [
+        [
+          "g",
+          2500000000
+        ]
+      ],
+      "availability": {
+        "kind": "observed-vendor",
+        "npcId": 108468,
+        "schedule": "unknown",
+        "doNotInferPresenceFromGold": true
+      }
+    }
+  ],
+  "researchGaps": [
+    {
+      "itemId": 134024,
+      "sourceRouteId": "att-134024-d225c63d87ac",
+      "missingFacts": [
+        "Cursed Swabby Helmet needs a complete acquisition path for item 104015 (Barnacle Encrusted Key) from NPC 71920 before opening the sunken chest. Do not call the treasure route complete without that path."
+      ]
+    },
+    {
+      "itemId": 203757,
+      "sourceRouteId": "att-203757-c5b1e97bb7fa",
+      "missingFacts": [
+        "The interior object coordinate is known but whether the current Zul'Gurub secrets unlock is required needs corroboration; do not infer access from level or Heroic difficulty alone."
+      ]
+    },
+    {
+      "itemId": 129055,
+      "sourceRouteId": "att-129055-2d9268e9bff8",
+      "missingFacts": [
+        "Shoe Shine Kit source wording conflicts between Saturday midnight and Saturday-to-Sunday transition. Region/server time and current window must be verified before scheduling."
+      ]
+    },
+    {
+      "itemId": 167698,
+      "sourceRouteId": "att-167698-db7a0682fd8f",
+      "missingFacts": [
+        "Secret Fish Goggles requires achievement 13489 and a full secret-fish catch walkthrough; vendor presence alone is insufficient. Do not automatically delete old inventory items."
+      ]
+    },
+    {
+      "itemId": 32782,
+      "sourceRouteId": "att-32782-1ee9659d91ab",
+      "missingFacts": [
+        "Time-Lost Figurine needs the full Adversarial Blood/Ishaal's Almanac prerequisites, source relationships for all four summoning items and a current Terokk loot opportunity rule. The eight-step source hint alone is not complete."
+      ]
+    }
+  ]
+}

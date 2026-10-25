@@ -1,0 +1,24 @@
+## Interface: 120105, 120107, 120100, 120001, 120000, 110207
+## Title: Toybox Guides
+## Notes: In-game toy collection guides, Today planning, live progress and optional companion sync.
+## Author: Bar's Toybox
+## Version: 2.4.0
+## OptionalDeps: TomTom, Mapzeroth, Mapzeroth-Rebuild, AllTheThings, SavedInstances
+## SavedVariables: ToyboxExportDB
+Core.lua
+Data.lua
+Engine.lua
+Conditions.lua
+Systems.lua
+Walkthrough.lua
+Session.lua
+Guidance.lua
+Forecast.lua
+Navigation.lua
+Sync.lua
+Reports.lua
+Inbox.lua
+UI.lua
+Integration.lua
+ToyboxExport.lua
+Bindings.xml

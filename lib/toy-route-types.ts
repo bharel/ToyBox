@@ -1,0 +1,1 @@
+export type ToyRoute={kind:'weekly-reputation'|'vendor'|'treasure'|'quest'|'craft'|'rare';access:'public'|'observed';questIds:number[];warband:boolean;reputation?:{id:number;name:string;accountWide:boolean};notes:string};
